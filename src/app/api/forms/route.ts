@@ -76,7 +76,7 @@ export async function POST(request: Request) {
 
     const apiKey = process.env.RESEND_API_KEY;
     const fromEmail =
-      process.env.RESEND_FROM_EMAIL || "The Cereal Boxes <onboarding@resend.dev>";
+      process.env.RESEND_FROM_EMAIL || "ZEEPACK <onboarding@resend.dev>";
 
     if (!apiKey) {
       return NextResponse.json(
@@ -94,7 +94,7 @@ export async function POST(request: Request) {
       headers: {
         Authorization: `Bearer ${apiKey}`,
         "Content-Type": "application/json",
-        "User-Agent": "thecerealboxes-forms/1.0",
+        "User-Agent": "zeepack-forms/1.0",
       },
       body: JSON.stringify({
         from: fromEmail,

@@ -19,7 +19,7 @@ export function createMetadata({
   keywords = [],
   noindex = false,
   image = "/og-default.jpg",
-  imageAlt = "The Cereal Boxes premium custom cereal packaging",
+  imageAlt = "ZEEPACK premium custom packaging",
 }: MetadataInput): Metadata {
   const url = new URL(path, siteConfig.siteUrl).toString();
   const imageUrl = new URL(image, siteConfig.siteUrl).toString();

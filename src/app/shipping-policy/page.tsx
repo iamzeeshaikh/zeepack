@@ -2,9 +2,9 @@ import { Container } from "@/components/ui/container";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
-  title: "Shipping Policy | The Cereal Boxes",
-  description: "Read the shipping policy for custom cereal box orders from The Cereal Boxes.",
-  path: "/shipping-policy/",
+  title: "Shipping Policy | ZEEPACK",
+  description: "Read the shipping policy for packaging orders from ZEEPACK.",
+  path: "/shipping-policy",
 });
 
 export default function ShippingPolicyPage() {
@@ -22,4 +22,3 @@ export default function ShippingPolicyPage() {
     </section>
   );
 }
-

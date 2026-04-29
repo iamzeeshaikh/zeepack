@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Menu, PhoneCall, X } from "lucide-react";
+import { Mail, Menu, PhoneCall, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -57,8 +57,15 @@ export function Header() {
               <PhoneCall className="size-4" />
               {siteConfig.phone}
             </Link>
-            <Button href="/request-a-quote/" variant="secondary">
-              Request a Quote
+              <Link
+                href={`mailto:${siteConfig.email}`}
+                className="inline-flex items-center gap-2 rounded-full border border-[rgba(21,36,58,0.08)] bg-white px-4 py-2.5 text-sm font-semibold text-[var(--color-ink)] transition hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
+              >
+                <Mail className="size-4" />
+                {siteConfig.email}
+              </Link>
+            <Button href="/quote" variant="secondary">
+              Get a Quote
             </Button>
           </div>
 
@@ -101,7 +108,7 @@ export function Header() {
                 ))}
             </div>
 
-            <Button href="/request-a-quote/" variant="secondary" className="justify-center">
+            <Button href="/quote" variant="secondary" className="justify-center">
               Get Custom Quote
             </Button>
           </Container>

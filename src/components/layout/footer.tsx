@@ -4,25 +4,17 @@ import { Mail, MapPin, PhoneCall } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Logo } from "@/components/ui/logo";
-import { contentPages } from "@/data/catalog";
+import { categories } from "@/data/categories";
 import {
   footerLegalLinks,
   footerQuickLinks,
   siteConfig,
 } from "@/data/site";
 
-const productLinks = contentPages
-  .filter((page) =>
-    [
-      "cereal-boxes",
-      "custom-printed-cereal-boxes",
-      "blank-cereal-boxes",
-      "mini-cereal-boxes",
-      "cereal-mylar-bags",
-      "wholesale-cereal-boxes",
-    ].includes(page.slug),
-  )
-  .map((page) => ({ label: page.title, href: `/${page.slug}/` }));
+const productLinks = categories.slice(0, 6).map((category) => ({
+  label: category.name,
+  href: `/products/${category.slug}`,
+}));
 
 export function Footer() {
   return (
@@ -31,22 +23,22 @@ export function Footer() {
         <div className="grid gap-8 rounded-[32px] border border-white/10 bg-white/4 p-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
           <div>
             <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/60">
-              Ready To Price Your Project?
+              Start Your Packaging Brief
             </p>
             <h2 className="mt-3 max-w-3xl font-display text-4xl leading-[0.95] tracking-[-0.04em] text-white sm:text-5xl">
-              Premium custom cereal packaging built for retail, launches, and nationwide wholesale supply.
+              Build packaging that feels considered, premium, and aligned with the brand you are growing.
             </h2>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
-            <Button href="/request-a-quote/" variant="secondary">
-              Request a Quote
+            <Button href="/quote" variant="secondary">
+              Get a Quote
             </Button>
             <Button
-              href="/contact-us/"
+              href="/contact"
               variant="ghost"
               className="border-white/12 bg-white/6 text-white hover:bg-white/10"
             >
-              Talk to Packaging Expert
+              Talk to Packaging Team
             </Button>
           </div>
         </div>

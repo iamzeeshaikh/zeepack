@@ -15,49 +15,88 @@ export function Logo({
   compact = false,
   className,
 }: LogoProps) {
-  const dark = theme === "dark";
+  const isDark = theme === "dark";
 
   return (
     <Link
       href={href}
-      aria-label="The Cereal Boxes home"
-      className={cn("inline-flex items-center gap-3", className)}
+      aria-label="ZEEPACK home"
+      className={cn("inline-flex items-center", className)}
     >
-      <div
-        className={cn(
-          "relative inline-flex items-center justify-center overflow-hidden rounded-2xl border",
-          compact ? "h-10 w-10" : "h-12 w-12",
-          dark
-            ? "border-white/15 bg-white/8"
-            : "border-[rgba(21,36,58,0.08)] bg-[linear-gradient(180deg,#fff5d1,#f7d66f)]",
-        )}
-      >
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.65),transparent_48%)]" />
-        <div className="relative grid place-items-center rounded-xl bg-[var(--color-ink)] text-[var(--color-gold-strong)] shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
-          <span className={cn("font-display font-bold leading-none", compact ? "text-base" : "text-lg")}>
-            CB
+      <div className="inline-flex items-center gap-1.5">
+        <div
+          className={cn(
+            "relative inline-flex items-center justify-center overflow-hidden rounded-[15px] border shadow-[0_14px_28px_rgba(17,17,17,0.06)]",
+            compact ? "h-10 w-10" : "h-11 w-11",
+            isDark
+              ? "border-white/12 bg-white/[0.06]"
+              : "border-[rgba(17,17,17,0.07)] bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(238,230,218,0.92))]",
+          )}
+        >
+          <div
+            className={cn(
+              "absolute inset-0",
+              isDark
+                ? "bg-[radial-gradient(circle_at_30%_22%,rgba(198,169,114,0.18),transparent_44%),linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.01))]"
+                : "bg-[radial-gradient(circle_at_30%_22%,rgba(198,169,114,0.12),transparent_44%)]",
+            )}
+          />
+
+          <svg
+            viewBox="0 0 56 56"
+            aria-hidden="true"
+            className={cn("relative", compact ? "h-6 w-6" : "h-6.5 w-6.5")}
+            fill="none"
+          >
+            <path
+              d="M16 15.5H40L20.5 40H39.5"
+              stroke={isDark ? "#F8F5EF" : "#111111"}
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M16.5 15.5H40"
+              stroke="#C6A972"
+              strokeWidth="2.3"
+              strokeLinecap="round"
+            />
+            <path
+              d="M21 40H39.5"
+              stroke="#C6A972"
+              strokeWidth="2.3"
+              strokeLinecap="round"
+            />
+            <path
+              d="M33.5 21V31"
+              stroke="#C6A972"
+              strokeWidth="1.8"
+              strokeLinecap="round"
+              opacity="0.82"
+            />
+          </svg>
+        </div>
+
+        <div className="flex flex-col items-start justify-center">
+          <span
+            className={cn(
+              "font-display text-[1.16rem] font-bold uppercase italic leading-none tracking-[0.18em]",
+              compact && "text-[0.98rem]",
+              isDark ? "text-white" : "text-[var(--color-primary)]",
+            )}
+          >
+            ZEE
+          </span>
+          <span
+            className={cn(
+              "-mt-0.5 font-display text-[1.16rem] font-bold uppercase italic leading-none tracking-[0.18em]",
+              compact && "text-[0.98rem]",
+              isDark ? "text-white" : "text-[var(--color-primary)]",
+            )}
+          >
+            PACK
           </span>
         </div>
-      </div>
-
-      <div className="flex flex-col leading-none">
-        <span
-          className={cn(
-            "font-body text-[0.62rem] font-semibold uppercase tracking-[0.28em]",
-            dark ? "text-white/68" : "text-[var(--color-muted)]",
-          )}
-        >
-          Premium Packaging
-        </span>
-        <span
-          className={cn(
-            "font-display text-[1.28rem] font-semibold tracking-[-0.03em]",
-            compact && "text-[1.06rem]",
-            dark ? "text-white" : "text-[var(--color-ink)]",
-          )}
-        >
-          The Cereal Boxes
-        </span>
       </div>
     </Link>
   );

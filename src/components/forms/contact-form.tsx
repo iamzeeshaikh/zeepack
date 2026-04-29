@@ -71,7 +71,7 @@ export function ContactForm() {
       </div>
       <textarea
         className="input-shell mt-4 min-h-36 resize-none"
-        placeholder="Tell us about your cereal packaging project"
+        placeholder="Tell us about your packaging project"
         value={form.message}
         onChange={(event) => setForm((current) => ({ ...current, message: event.target.value }))}
         required

@@ -50,7 +50,7 @@ export function buildFormEmailHtml(formType: FormType, payload: FormPayload) {
     <div style="background:#FFF9EE;padding:32px;font-family:Arial,sans-serif;color:#15243A;">
       <div style="max-width:760px;margin:0 auto;background:#FFFFFF;border:1px solid rgba(21,36,58,0.08);border-radius:24px;overflow:hidden;">
         <div style="padding:28px 32px;background:linear-gradient(180deg,#FFF4C8,#FFF9EE);border-bottom:1px solid #E7E1D3;">
-          <p style="margin:0 0 10px;font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:#697386;font-weight:700;">The Cereal Boxes</p>
+          <p style="margin:0 0 10px;font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:#697386;font-weight:700;">ZEEPACK</p>
           <h1 style="margin:0;font-size:30px;line-height:1.1;font-weight:700;color:#15243A;">${titleMap[formType]}</h1>
           <p style="margin:14px 0 0;font-size:15px;line-height:1.8;color:#5F6878;">
             A new website form submission has been received at ${siteConfig.domain}.

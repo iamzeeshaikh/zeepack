@@ -1,18 +1,29 @@
 import { FAQAccordion } from "@/components/ui/faq-accordion";
-import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { Container } from "@/components/ui/container";
-import { PageHero } from "@/components/ui/page-hero";
-import { contentPages } from "@/data/catalog";
-import { homepageFaqs } from "@/data/site";
+import { Reveal } from "@/components/ui/reveal";
+import { SectionHeading } from "@/components/ui/section-heading";
+import {
+  aboutFaqs,
+  contactFaqs,
+  homeFaqs,
+  quoteFaqs,
+  sustainabilityFaqs,
+} from "@/data/faqs";
 import { buildFaqSchema, createMetadata } from "@/lib/seo";
 
-const faqItems = [...homepageFaqs, ...contentPages.slice(0, 6).flatMap((page) => page.faq)].slice(0, 12);
+const faqItems = [
+  ...homeFaqs.slice(0, 4),
+  ...aboutFaqs.slice(0, 3),
+  ...contactFaqs.slice(0, 3),
+  ...quoteFaqs.slice(0, 3),
+  ...sustainabilityFaqs.slice(0, 3),
+];
 
 export const metadata = createMetadata({
-  title: "FAQ | The Cereal Boxes",
+  title: "FAQ | ZEEPACK",
   description:
-    "Frequently asked questions about custom cereal boxes, printing, materials, dimensions, minimum orders, wholesale production, and cereal packaging support.",
-  path: "/faq/",
+    "Frequently asked questions about premium custom packaging, materials, finishes, quote requests, low minimums, and packaging support from ZEEPACK.",
+  path: "/faq",
 });
 
 export default function FAQPage() {
@@ -20,15 +31,16 @@ export default function FAQPage() {
 
   return (
     <>
-      <PageHero
-        eyebrow="FAQ"
-        title="Answers to common cereal packaging, print, and quote questions."
-        description="This FAQ page helps buyers understand custom cereal box sizes, printing, low MOQ support, wholesale production, food packaging options, and project timelines."
-      />
       <section className="section-space">
         <Container>
-          <div className="surface-card p-7 sm:p-9">
-            <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "FAQ" }]} />
+          <Reveal>
+            <SectionHeading
+              eyebrow="FAQ"
+              title="Answers to common packaging, materials, and quote questions."
+              description="This page combines the questions brands most often ask while evaluating premium packaging for launches, gifting, retail, and e-commerce."
+            />
+          </Reveal>
+          <div className="surface-card mt-10 p-7 sm:p-9">
             <FAQAccordion items={faqItems} />
           </div>
         </Container>
@@ -40,4 +52,3 @@ export default function FAQPage() {
     </>
   );
 }
-

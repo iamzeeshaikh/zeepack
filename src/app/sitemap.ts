@@ -1,34 +1,41 @@
 import type { MetadataRoute } from "next";
 
-import { blogPosts, contentPages } from "@/data/catalog";
+import { categories } from "@/data/categories";
+import { industries } from "@/data/industries";
+import { productStyles } from "@/data/product-styles";
 import { footerLegalLinks, siteConfig } from "@/data/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
     "/",
-    "/about-us/",
-    "/contact-us/",
-    "/request-a-quote/",
-    "/faq/",
-    "/blog/",
-    "/html-sitemap/",
+    "/about",
+    "/contact",
+    "/quote",
+    "/products",
+    "/industries",
+    "/sustainability",
+    "/faq",
+    "/html-sitemap",
     ...footerLegalLinks.map((item) => item.href),
   ].map((path) => ({
     url: `${siteConfig.siteUrl}${path}`,
     lastModified: new Date(),
   }));
 
-  const contentUrls = contentPages
-    .filter((page) => !page.noindex)
-    .map((page) => ({
-      url: `${siteConfig.siteUrl}/${page.slug}/`,
-      lastModified: new Date(),
-    }));
-
-  const blogUrls = blogPosts.map((post) => ({
-    url: `${siteConfig.siteUrl}/blog/${post.slug}/`,
-    lastModified: new Date(post.publishedAt),
+  const categoryUrls = categories.map((category) => ({
+    url: `${siteConfig.siteUrl}/products/${category.slug}`,
+    lastModified: new Date(),
   }));
 
-  return [...staticPages, ...contentUrls, ...blogUrls];
+  const styleUrls = productStyles.map((style) => ({
+    url: `${siteConfig.siteUrl}/products/styles/${style.slug}`,
+    lastModified: new Date(),
+  }));
+
+  const industryUrls = industries.map((industry) => ({
+    url: `${siteConfig.siteUrl}/industries/${industry.slug}`,
+    lastModified: new Date(),
+  }));
+
+  return [...staticPages, ...categoryUrls, ...styleUrls, ...industryUrls];
 }

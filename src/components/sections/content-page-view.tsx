@@ -23,7 +23,7 @@ export function ContentPageView({
             <Breadcrumbs
               items={[
                 { label: "Home", href: "/" },
-                { label: page.kind === "guide" ? "Resources" : "Cereal Boxes", href: page.kind === "guide" ? "/blog/" : "/cereal-boxes/" },
+                { label: page.kind === "guide" ? "Resources" : "Products", href: page.kind === "guide" ? "/about" : "/products" },
                 { label: page.title },
               ]}
             />
@@ -38,11 +38,11 @@ export function ContentPageView({
                   {page.intro}
                 </p>
                 <div className="mt-7 flex flex-wrap gap-3">
-                  <Button href="/request-a-quote/" variant="secondary">
+                  <Button href="/quote" variant="secondary">
                     Get Custom Quote
                   </Button>
-                  <Button href="/contact-us/" variant="ghost">
-                    Talk to Packaging Expert
+                  <Button href="/contact" variant="ghost">
+                    Talk to Packaging Team
                   </Button>
                 </div>
               </div>
@@ -126,11 +126,11 @@ export function ContentPageView({
                       Related Pages
                     </p>
                     <h2 className="mt-3 text-3xl text-[var(--color-ink)] sm:text-4xl">
-                      Keep exploring cereal packaging options.
+                      Keep exploring packaging options.
                     </h2>
                   </div>
-                  <Link href="/cereal-boxes/" className="micro-link">
-                    See all cereal box pages
+                  <Link href="/products" className="micro-link">
+                    See all product pages
                   </Link>
                 </div>
                 <div className="mt-8 editorial-grid">
@@ -167,10 +167,10 @@ export function ContentPageView({
                 Why Brands Choose Us
               </p>
               <ul className="mt-4 grid gap-3 text-sm leading-7 text-[var(--color-ink)]">
-                <li>Low minimums for new cereal product launches</li>
-                <li>Premium retail printing and finishing options</li>
-                <li>Custom sizes, shapes, inserts, and structural guidance</li>
-                <li>Wholesale-friendly planning for repeat packaging runs</li>
+                <li>Low minimums for growing premium brands</li>
+                <li>Material, finish, and structural guidance</li>
+                <li>Custom sizes, inserts, and presentation-led packaging routes</li>
+                <li>Clearer planning for launch and repeat production runs</li>
               </ul>
             </div>
           </div>

@@ -1,23 +1,23 @@
 import {
-  BadgeCheck,
   Boxes,
-  Factory,
-  FileBadge2,
+  CircleGauge,
+  Layers3,
+  Mail,
+  MapPin,
   Palette,
   PhoneCall,
-  Printer,
   ShieldCheck,
   Sparkles,
-  Store,
+  SwatchBook,
   Truck,
   type LucideIcon,
 } from "lucide-react";
 
 export const siteConfig = {
-  name: "The Cereal Boxes",
-  domain: "thecerealboxes.com",
-  siteUrl: "https://thecerealboxes.com",
-  email: "Info@thecerealboxes.com",
+  name: "ZEEPACK",
+  domain: "zeepack.co",
+  siteUrl: "https://zeepack.co",
+  email: "Info@zeepack.co",
   phone: "(503) 358-0443",
   phoneHref: "tel:+15033580443",
   address: "2975 Coburn Hollow Road Bloomington, IL 61701 United States",
@@ -26,130 +26,77 @@ export const siteConfig = {
   postalCode: "61701",
   country: "US",
   description:
-    "The Cereal Boxes manufactures premium custom cereal boxes, printed cereal packaging, mini cereal boxes, blank cereal boxes, cereal mylar bags, and retail-ready food packaging for brands across the USA.",
+    "ZEEPACK creates premium custom packaging for modern brands across retail, gifting, and e-commerce with a focus on structure, materials, finishing, and refined presentation.",
 };
 
 export const navigation = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about-us/" },
-  { label: "Cereal Boxes", href: "/cereal-boxes/" },
-  { label: "Custom Printed", href: "/custom-printed-cereal-boxes/" },
-  { label: "Blank / Plain", href: "/blank-cereal-boxes/" },
-  { label: "Mini / Small", href: "/mini-cereal-boxes/" },
-  { label: "Specialty / Theme", href: "/limited-edition-cereal-boxes/" },
-  { label: "Mylar Bags", href: "/cereal-mylar-bags/" },
-  { label: "Blog", href: "/blog/" },
-  { label: "Contact", href: "/contact-us/" },
+  { label: "Products", href: "/products" },
+  { label: "Industries", href: "/industries" },
+  { label: "Sustainability", href: "/sustainability" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const productMenuGroups = [
   {
     title: "Core Packaging",
     items: [
-      {
-        label: "Cereal Boxes",
-        href: "/cereal-boxes/",
-        description: "Cornerstone category for custom cereal packaging.",
-      },
-      {
-        label: "Custom Printed",
-        href: "/custom-printed-cereal-boxes/",
-        description: "Retail-ready printed cereal box packaging.",
-      },
-      {
-        label: "Custom Breakfast",
-        href: "/custom-breakfast-cereal-boxes/",
-        description: "Food-grade packaging for breakfast cereal brands.",
-      },
-      {
-        label: "Wholesale",
-        href: "/wholesale-cereal-boxes/",
-        description: "Bulk ordering support for large production runs.",
-      },
+      { label: "Rigid Boxes", href: "/products/rigid-boxes" },
+      { label: "Mailer Boxes", href: "/products/mailer-boxes" },
+      { label: "Folding Cartons", href: "/products/folding-cartons" },
+      { label: "Product Boxes", href: "/products/product-boxes" },
     ],
   },
   {
-    title: "Sizes And Styles",
+    title: "Premium Categories",
     items: [
-      {
-        label: "Mini Cereal Boxes",
-        href: "/mini-cereal-boxes/",
-        description: "Sampling, hotels, school packs, and promo formats.",
-      },
-      {
-        label: "Small Cereal Boxes",
-        href: "/small-cereal-boxes/",
-        description: "Compact retail cartons with strong shelf appeal.",
-      },
-      {
-        label: "12 oz Cereal Box",
-        href: "/12-oz-cereal-box/",
-        description: "A strong size page for common retail pack formats.",
-      },
-      {
-        label: "Gable Cereal Box",
-        href: "/gable-cereal-box/",
-        description: "Handled cereal packaging for events and gift sets.",
-      },
+      { label: "Candle Packaging", href: "/products/candle-boxes" },
+      { label: "Cosmetic Packaging", href: "/products/cosmetic-boxes" },
+      { label: "Perfume Boxes", href: "/products/perfume-boxes" },
+      { label: "Jewelry Boxes", href: "/products/jewelry-boxes" },
     ],
   },
   {
-    title: "Materials And Looks",
+    title: "Supporting Layers",
     items: [
-      {
-        label: "Blank Cereal Boxes",
-        href: "/blank-cereal-boxes/",
-        description: "Plain cartons ready for labels, sleeves, or hand finishing.",
-      },
-      {
-        label: "Cardboard Cereal Box",
-        href: "/cardboard-cereal-box/",
-        description: "Paperboard and SBS solutions for dry food packaging.",
-      },
-      {
-        label: "Custom Colorful",
-        href: "/custom-colorful-cereal-boxes/",
-        description: "High-impact packaging with vibrant custom print.",
-      },
-      {
-        label: "Cereal Mylar Bags",
-        href: "/cereal-mylar-bags/",
-        description: "Barrier bag packaging for freshness and flexibility.",
-      },
+      { label: "Tissue Paper", href: "/products/custom-tissue-paper" },
+      { label: "Paper Bags", href: "/products/paper-bags" },
+      { label: "Sleeves", href: "/products/sleeves" },
+      { label: "Inserts", href: "/products/inserts" },
     ],
   },
 ];
 
 export const footerQuickLinks = [
   { label: "Home", href: "/" },
-  { label: "About Us", href: "/about-us/" },
-  { label: "Contact Us", href: "/contact-us/" },
-  { label: "Request a Quote", href: "/request-a-quote/" },
-  { label: "FAQ", href: "/faq/" },
-  { label: "Blog", href: "/blog/" },
-  { label: "HTML Sitemap", href: "/html-sitemap/" },
+  { label: "Products", href: "/products" },
+  { label: "Industries", href: "/industries" },
+  { label: "Sustainability", href: "/sustainability" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
+  { label: "Quote", href: "/quote" },
 ];
 
 export const footerLegalLinks = [
-  { label: "Privacy Policy", href: "/privacy-policy/" },
-  { label: "Terms & Conditions", href: "/terms-conditions/" },
-  { label: "Shipping Policy", href: "/shipping-policy/" },
-  { label: "Refund / Returns Policy", href: "/refund-returns-policy/" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms & Conditions", href: "/terms-conditions" },
+  { label: "Shipping Policy", href: "/shipping-policy" },
+  { label: "Refund / Returns Policy", href: "/refund-returns-policy" },
 ];
 
 export const homeTrustBadges = [
-  "Low minimum order support",
-  "Fast turnaround planning",
-  "Food-grade material options",
-  "Free design support",
-  "Wholesale production capacity",
+  "Low minimums for many premium formats",
+  "Custom sizes and structured guidance",
+  "Finishing-led premium presentation",
+  "Support across launch and repeat production",
 ];
 
 export const homeStats = [
-  { value: "250+", label: "Custom cereal box concepts developed" },
-  { value: "48 hrs", label: "Typical quote response window" },
-  { value: "Low MOQ", label: "Flexible entry point for growing brands" },
-  { value: "USA", label: "Nationwide packaging supply support" },
+  { value: "250+", label: "Packaging directions shaped" },
+  { value: "48 hrs", label: "Typical initial quote response" },
+  { value: "Low MOQ", label: "Flexible entry for growing brands" },
+  { value: "USA", label: "Packaging support nationwide" },
 ];
 
 export const trustHighlights: Array<{
@@ -158,162 +105,143 @@ export const trustHighlights: Array<{
   icon: LucideIcon;
 }> = [
   {
-    title: "Retail-Ready Engineering",
+    title: "Presentation First",
     description:
-      "Structures developed for shelf presentation, shipping protection, and strong front-panel branding.",
-    icon: Store,
+      "Every structure is shaped around how the product should feel at first touch, on shelf, and during unboxing.",
+    icon: Sparkles,
   },
   {
-    title: "Premium Printing",
+    title: "Structured Materials",
     description:
-      "CMYK, Pantone, foil, spot UV, matte, gloss, and tactile finishes for stronger shelf impact.",
-    icon: Printer,
+      "Board grade, wrap, insert, and print direction are selected to match both the product and the intended level of perception.",
+    icon: Layers3,
   },
   {
-    title: "Custom Structures",
+    title: "Premium Finishing",
     description:
-      "Standard tuck cartons, gable styles, inserts, promotional mini cartons, and subscription-ready formats.",
-    icon: Boxes,
-  },
-  {
-    title: "Low Minimums",
-    description:
-      "Support for launches, pilot runs, seasonal concepts, and scaling orders without forcing oversized commitments.",
-    icon: FileBadge2,
-  },
-  {
-    title: "Food Packaging Suitability",
-    description:
-      "Paperboard and barrier solutions selected around dry food packaging requirements and product freshness goals.",
-    icon: ShieldCheck,
-  },
-  {
-    title: "Wholesale Capacity",
-    description:
-      "Built to support regional grocery launches, club store programs, and larger recurring production schedules.",
-    icon: Factory,
-  },
-  {
-    title: "Design Support",
-    description:
-      "We help refine artwork zones, panel hierarchy, dielines, barcode placement, and finish strategy before production.",
+      "Foil, embossing, soft-touch, spot UV, and restrained finish systems can all be aligned with the brand aesthetic.",
     icon: Palette,
   },
   {
-    title: "Nationwide Delivery",
+    title: "Low Minimum Flexibility",
     description:
-      "Reliable quote handling and project coordination for cereal brands, co-packers, and retailers across the USA.",
+      "Growing brands, launch kits, and boutique runs can still pursue premium packaging without overshooting practical quantities.",
+    icon: CircleGauge,
+  },
+  {
+    title: "Insert Support",
+    description:
+      "Protective and presentation-led inserts help improve fit, reduce movement, and create a cleaner reveal.",
+    icon: Boxes,
+  },
+  {
+    title: "Sustainable Direction",
+    description:
+      "Responsible material routes, lower-ink choices, and simplified structures can be explored without losing refinement.",
+    icon: ShieldCheck,
+  },
+  {
+    title: "Brand Consistency",
+    description:
+      "Packaging systems can be built across multiple SKUs, launches, and touchpoints with more cohesive visual logic.",
+    icon: SwatchBook,
+  },
+  {
+    title: "Delivery Planning",
+    description:
+      "Retail, gifting, and e-commerce requirements are considered early so structure and finish remain commercially practical.",
     icon: Truck,
   },
 ];
 
 export const customizationOptions = [
-  "Custom sizes and panel depths",
-  "Reverse tuck, straight tuck, auto-lock, and gable structures",
-  "Inside printing and inserts for premium presentation",
-  "Kraft, SBS, corrugated, and recyclable paperboard",
-  "Matte, gloss, AQ, soft-touch, emboss, deboss, and foil finishes",
-  "Window patching, perforations, and promotional add-ons",
+  "Custom box sizes and panel depths",
+  "Rigid, carton, mailer, sleeve, and insert systems",
+  "Interior print and insert-led organization",
+  "Foil, embossing, debossing, matte, gloss, and soft-touch finishes",
+  "Paperboard, rigid board, kraft, corrugated, and recycled-content options",
+  "Premium gifting, retail, and direct-to-consumer packaging directions",
 ];
 
 export const materialOptions = [
-  "SBS paperboard for high-quality retail print",
-  "Natural kraft for eco-forward or artisanal shelf presence",
-  "Cardboard and paperboard layers for lightweight protection",
-  "Barrier-compatible cereal bag and carton combinations",
+  "Rigid chipboard and premium wraps",
+  "SBS and carton board structures",
+  "Kraft and natural-finish stocks",
+  "Corrugated and shipping-support formats",
 ];
 
 export const processSteps = [
   {
-    title: "Share Your Specs",
+    title: "Share the brief",
     description:
-      "Send your product size, quantity, artwork status, and any packaging goals through the quote form.",
+      "Start with the product type, quantity, dimensions, and the level of presentation you want the packaging to deliver.",
   },
   {
-    title: "Review Structure",
+    title: "Shape the direction",
     description:
-      "We recommend the right cereal box style, board grade, print method, and finish package for your use case.",
+      "We review suitable structures, material routes, inserts, and finishing options around the project goals.",
   },
   {
-    title: "Approve Artwork",
+    title: "Approve the details",
     description:
-      "Dielines, print zones, barcodes, nutrition panels, and messaging hierarchy are aligned before production.",
+      "Sizing, artwork placement, print logic, and finishing strategy are aligned before production moves forward.",
   },
   {
-    title: "Produce And Deliver",
+    title: "Produce and deliver",
     description:
-      "Your custom cereal boxes move into production and ship with timeline coordination based on project scope.",
-  },
-];
-
-export const industries = [
-  {
-    title: "Breakfast Brands",
-    description: "Retail cereal launches, organic lines, and family-focused food brands.",
-  },
-  {
-    title: "Private Label",
-    description: "Cost-aware packaging systems for store brands and multi-SKU programs.",
-  },
-  {
-    title: "Promotional Campaigns",
-    description: "Limited-edition cereal box graphics for seasonal launches and collaborations.",
-  },
-  {
-    title: "Hospitality And Sample Packs",
-    description: "Mini cereal boxes for hotels, schools, travel packs, and trial sizes.",
+      "Once approved, the packaging moves into production with clearer structure, expectation, and output quality.",
   },
 ];
 
 export const homepageFaqs = [
   {
-    question: "Do you offer custom cereal boxes in low minimum quantities?",
+    question: "What kinds of packaging does ZEEPACK create?",
     answer:
-      "Yes. We support low minimum order projects for launch runs, specialty products, and testing new retail concepts, while also supporting larger wholesale volumes.",
+      "ZEEPACK develops rigid boxes, folding cartons, mailers, product boxes, tissue paper, sleeves, paper bags, inserts, and related premium packaging layers for modern brands.",
   },
   {
-    question: "Can The Cereal Boxes help with custom sizes and dielines?",
+    question: "Can you support low minimum custom packaging projects?",
     answer:
-      "Yes. We can work from your exact dimensions or help define the right length, width, depth, panel layout, and insert approach for your cereal packaging.",
+      "Yes. Many premium formats are available in lower minimum quantities depending on the structure, material route, and finishing complexity.",
   },
   {
-    question: "Are food-grade materials available for cereal packaging?",
+    question: "Do you offer sustainable packaging options?",
     answer:
-      "We offer packaging material options commonly used for dry food applications, including paperboard cartons and related bag-and-box packaging formats for freshness and compliance planning.",
+      "Yes. Recyclable boards, kraft stocks, reduced-plastic directions, and more efficient structures can all be explored where they suit the product and brand.",
   },
   {
-    question: "Do you manufacture blank cereal boxes and printed cereal boxes?",
+    question: "How do I request a packaging quote?",
     answer:
-      "Yes. We support blank, plain, and fully custom printed cereal boxes depending on whether you need unlabeled stock cartons or a complete branded retail package.",
+      "You can use the quote page or contact us directly with your product type, quantity, approximate dimensions, material preferences, and any finishing notes.",
   },
 ];
 
 export const serviceReasons = [
-  "Fast quote handling with a packaging expert",
-  "Support for low MOQ and bulk ordering",
-  "Premium finishes for standout shelf presence",
-  "Custom inserts, windows, and promotional pack formats",
-  "Consistent NAP and local business signals for trust",
-  "Built for crawlability, indexation, and long-term SEO scale",
+  "Packaging direction that feels more considered",
+  "Low minimum options across many premium formats",
+  "Guidance on materials, structure, and finishing",
+  "Insert planning for protection and presentation",
+  "Retail, gifting, and e-commerce packaging support",
+  "Clearer quote conversations and project handoff",
 ];
 
 export const contactCards = [
   {
-    title: "Call Now",
+    title: "Call",
     value: siteConfig.phone,
     href: siteConfig.phoneHref,
     icon: PhoneCall,
   },
   {
-    title: "Email Us",
+    title: "Email",
     value: siteConfig.email,
     href: `mailto:${siteConfig.email}`,
-    icon: BadgeCheck,
+    icon: Mail,
   },
   {
-    title: "Office Address",
+    title: "Address",
     value: siteConfig.address,
     href: "https://maps.google.com/?q=2975+Coburn+Hollow+Road+Bloomington+IL+61701",
-    icon: Sparkles,
+    icon: MapPin,
   },
 ];
