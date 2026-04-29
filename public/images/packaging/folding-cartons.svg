@@ -1,0 +1,8 @@
+<svg width="1000" height="760" viewBox="0 0 1000 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1000" height="760" fill="#F8F5EF"/>
+  <rect x="240" y="140" width="220" height="470" rx="18" fill="#EEE6DA"/>
+  <rect x="474" y="174" width="292" height="402" rx="20" fill="#FFFFFF"/>
+  <rect x="540" y="248" width="160" height="22" rx="11" fill="#C6A972"/>
+  <rect x="540" y="292" width="130" height="14" rx="7" fill="#8B7D6B"/>
+  <rect x="540" y="324" width="149" height="14" rx="7" fill="#8B7D6B" opacity="0.75"/>
+</svg>

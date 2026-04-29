@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+:root {
+  --color-shell: #fffaf1;
+  --color-background: #fffdf8;
+  --color-ink: #15243a;
+  --color-ink-soft: #24344d;
+  --color-gold: #f4c95d;
+  --color-gold-strong: #ffc947;
+  --color-accent: #e8603a;
+  --color-cream: #f7efd8;
+  --color-card: rgba(255, 255, 255, 0.88);
+  --color-muted: #5f6878;
+  --color-border: rgba(21, 36, 58, 0.1);
+}
+
+@theme inline {
+  --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Times New Roman", serif;
+  --font-body: "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-[var(--color-border)];
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-[var(--color-background)] font-body text-[var(--color-ink)] antialiased;
+    background-image:
+      radial-gradient(circle at top left, rgba(244, 201, 93, 0.18), transparent 28%),
+      radial-gradient(circle at top right, rgba(232, 96, 58, 0.08), transparent 22%);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display tracking-[-0.04em];
+  }
+
+  a,
+  button,
+  input,
+  select,
+  textarea {
+    @apply outline-none;
+  }
+
+  ::selection {
+    background: rgba(244, 201, 93, 0.3);
+  }
+}
+
+@layer components {
+  .section-space {
+    @apply py-18 sm:py-24;
+  }
+
+  .surface-card {
+    @apply rounded-[28px] border border-[rgba(21,36,58,0.08)] bg-[var(--color-card)] shadow-[0_18px_44px_rgba(21,36,58,0.08)] backdrop-blur;
+  }
+
+  .hero-shell {
+    @apply relative overflow-hidden rounded-[34px] border border-[rgba(21,36,58,0.08)] bg-[linear-gradient(135deg,rgba(255,255,255,0.96),rgba(247,239,216,0.92))] shadow-[0_24px_60px_rgba(21,36,58,0.08)];
+  }
+
+  .chip {
+    @apply inline-flex items-center rounded-full border border-[rgba(21,36,58,0.08)] bg-white px-3 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-[var(--color-ink)];
+  }
+
+  .input-shell {
+    @apply w-full rounded-2xl border border-[rgba(21,36,58,0.1)] bg-white px-4 py-3.5 text-sm text-[var(--color-ink)] shadow-[0_10px_20px_rgba(21,36,58,0.04)] placeholder:text-[var(--color-muted)] transition focus:border-[var(--color-accent)] focus:shadow-[0_0_0_4px_rgba(232,96,58,0.12)];
+  }
+
+  .micro-link {
+    @apply inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-accent)] transition hover:text-[var(--color-ink)];
+  }
+
+  .editorial-grid {
+    @apply grid gap-6 md:grid-cols-2 xl:grid-cols-3;
+  }
+}
