@@ -131,7 +131,6 @@ export function ProductsExplorer({ categories }: { categories: Category[] }) {
                 src={category.image}
                 alt={`${category.name} packaging category`}
                 fill
-                unoptimized
                 sizes="(min-width: 1280px) 28vw, (min-width: 768px) 50vw, 100vw"
                 className="object-cover transition duration-500 group-hover:scale-[1.03]"
               />

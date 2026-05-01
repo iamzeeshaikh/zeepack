@@ -27,7 +27,6 @@ export function CategoryCard({
           src={image}
           alt={`${title} packaging mockup`}
           fill
-          unoptimized
           sizes="(min-width: 1280px) 25vw, (min-width: 768px) 50vw, 100vw"
           className="object-cover transition duration-700 group-hover:scale-[1.06]"
         />

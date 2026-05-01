@@ -16,7 +16,12 @@ import { CategoryCard } from "@/components/ui/category-card";
 import { getCategoryBySlug } from "@/data/categories";
 import { getIndustryBySlug, industries } from "@/data/industries";
 import { industryPageContent } from "@/data/industry-page-content";
-import { buildFaqSchema, buildServiceSchema, createMetadata } from "@/lib/seo";
+import {
+  buildBreadcrumbSchema,
+  buildFaqSchema,
+  buildServiceSchema,
+  createMetadata,
+} from "@/lib/seo";
 
 export function generateStaticParams() {
   return industries.map((industry) => ({ slug: industry.slug }));
@@ -69,6 +74,11 @@ export default async function IndustryDetailPage({
     .map((categorySlug) => getCategoryBySlug(categorySlug))
     .filter((item): item is NonNullable<typeof item> => Boolean(item));
   const faqSchema = buildFaqSchema(content.faqs);
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Industries", path: "/industries" },
+    { name: industry.name, path: `/industries/${industry.slug}` },
+  ]);
   const serviceSchema = buildServiceSchema({
     name: `${industry.name} Packaging`,
     description: content.heroDescription,
@@ -118,6 +128,18 @@ export default async function IndustryDetailPage({
                     {paragraph}
                   </p>
                 ))}
+                {recommendedCategories[0] ? (
+                  <p className="mt-4">
+                    Brands in this category often start by comparing structures such as{" "}
+                    <Link
+                      href={`/products/${recommendedCategories[0].slug}`}
+                      className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4"
+                    >
+                      {recommendedCategories[0].name.toLowerCase()}
+                    </Link>{" "}
+                    when deciding how much structure, print presence, and product support the packaging should carry.
+                  </p>
+                ) : null}
               </>
             )}
           </>
@@ -302,6 +324,10 @@ export default async function IndustryDetailPage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
     </>
   );

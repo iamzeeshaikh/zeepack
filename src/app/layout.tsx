@@ -4,7 +4,12 @@ import Link from "next/link";
 import { AnnouncementBar } from "@/components/layout/announcement-bar";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
-import { buildLocalBusinessSchema, buildOrganizationSchema, createMetadata } from "@/lib/seo";
+import {
+  buildLocalBusinessSchema,
+  buildOrganizationSchema,
+  buildWebsiteSchema,
+  createMetadata,
+} from "@/lib/seo";
 
 import "./globals.css";
 
@@ -33,6 +38,7 @@ export default function RootLayout({
 }>) {
   const organizationSchema = buildOrganizationSchema();
   const localBusinessSchema = buildLocalBusinessSchema();
+  const websiteSchema = buildWebsiteSchema();
 
   return (
     <html lang="en">
@@ -66,6 +72,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </body>
     </html>

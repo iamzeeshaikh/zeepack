@@ -30,7 +30,6 @@ export function ProductShowcase() {
             src={item.image}
             alt={item.title}
             fill
-            unoptimized
             sizes="(min-width: 1024px) 45vw, 100vw"
             className="object-cover transition duration-500 group-hover:scale-[1.03]"
           />

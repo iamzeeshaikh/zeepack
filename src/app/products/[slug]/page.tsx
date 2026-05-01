@@ -434,7 +434,6 @@ export default async function ProductCategoryPage({
                       src={image}
                       alt={`${category.name} gallery visual ${index + 1}`}
                       fill
-                      unoptimized
                       sizes="(min-width: 768px) 33vw, 100vw"
                       className="object-cover"
                     />

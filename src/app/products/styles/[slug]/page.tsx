@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import {
@@ -18,7 +19,12 @@ import {
   getRelatedProductStyles,
   productStyles,
 } from "@/data/product-styles";
-import { buildFaqSchema, buildProductSchema, createMetadata } from "@/lib/seo";
+import {
+  buildBreadcrumbSchema,
+  buildFaqSchema,
+  buildProductSchema,
+  createMetadata,
+} from "@/lib/seo";
 
 export function generateStaticParams() {
   return productStyles.map((style) => ({ slug: style.slug }));
@@ -63,6 +69,12 @@ export default async function ProductStylePage({
 
   const relatedStyles = getRelatedProductStyles(style);
   const faqSchema = buildFaqSchema(style.faq);
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Products", path: "/products" },
+    { name: category.name, path: `/products/${category.slug}` },
+    { name: style.title, path: `/products/styles/${style.slug}` },
+  ]);
   const productSchema = buildProductSchema({
     name: style.title,
     description: style.overview,
@@ -96,6 +108,16 @@ export default async function ProductStylePage({
           <>
             <p>{style.overview}</p>
             <p className="mt-4">{style.dimensionsCopy}</p>
+            <p className="mt-4">
+              This style is usually reviewed alongside{" "}
+              <Link
+                href={`/products/${category.slug}`}
+                className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4"
+              >
+                {category.name.toLowerCase()}
+              </Link>{" "}
+              when brands are narrowing structure, finish direction, and product fit.
+            </p>
           </>
         }
         image={{
@@ -165,7 +187,6 @@ export default async function ProductStylePage({
                       src={image}
                       alt={`${style.title} gallery image ${index + 1}`}
                       fill
-                      unoptimized
                       sizes="(min-width: 768px) 33vw, 100vw"
                       className="object-cover"
                     />
@@ -234,6 +255,10 @@ export default async function ProductStylePage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
     </>
   );
