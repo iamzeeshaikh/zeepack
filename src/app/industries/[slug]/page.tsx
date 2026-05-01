@@ -152,7 +152,7 @@ export default async function IndustryDetailPage({
               body: "Balanced formats for cream jars and skincare products where structure, fit, and branding all need to feel more exact.",
             },
           ]}
-          columns={4}
+          columns={3}
         />
       ) : null}
 
