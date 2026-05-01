@@ -1,9 +1,9 @@
+.git
+.gitignore
 .next
 .next-stale-*
 node_modules
-.DS_Store
-*.log
-dist
 coverage
+dist
 zeepack-assets
-.vercel
+*.log
