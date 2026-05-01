@@ -13,6 +13,11 @@ type HeroMetric = {
   value: string;
 };
 
+type HeroHighlight = {
+  text: string;
+  icon?: LucideIcon;
+};
+
 type EditorialHeroProps = {
   eyebrow: string;
   title: ReactNode;
@@ -21,7 +26,7 @@ type EditorialHeroProps = {
     src: string;
     alt: string;
   };
-  highlights?: string[];
+  highlights?: Array<string | HeroHighlight>;
   metrics?: HeroMetric[];
   aside?: ReactNode;
   titleClassName?: string;
@@ -42,7 +47,14 @@ type VisualSpotlightProps = {
     alt: string;
   };
   reverse?: boolean;
-  stats?: string[];
+  stats?: Array<
+    | string
+    | {
+        title: string;
+        description?: string;
+        icon?: LucideIcon;
+      }
+  >;
 };
 
 type NumberedStep = {
@@ -83,14 +95,24 @@ export function EditorialHero({
 
             {highlights.length ? (
               <div className="mt-8 flex flex-wrap gap-3">
-                {highlights.map((highlight) => (
-                  <span
-                    key={highlight}
-                    className="inline-flex items-center rounded-full border border-[rgba(17,17,17,0.08)] bg-white/82 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-taupe)] shadow-[0_10px_26px_rgba(17,17,17,0.04)]"
-                  >
-                    {highlight}
-                  </span>
-                ))}
+                {highlights.map((highlight, index) => {
+                  const item =
+                    typeof highlight === "string"
+                      ? { text: highlight }
+                      : highlight;
+
+                  return (
+                    <span
+                      key={`${item.text}-${index}`}
+                      className="inline-flex items-center gap-2 rounded-full border border-[rgba(17,17,17,0.08)] bg-white/88 px-4 py-2.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--color-taupe)] shadow-[0_10px_26px_rgba(17,17,17,0.04)]"
+                    >
+                      {item.icon ? (
+                        <item.icon className="size-4 shrink-0 text-[var(--color-gold)]" />
+                      ) : null}
+                      {item.text}
+                    </span>
+                  );
+                })}
               </div>
             ) : null}
 
@@ -225,15 +247,32 @@ export function VisualSpotlight({
             </div>
 
             {stats.length ? (
-              <div className="mt-8 grid gap-3 sm:grid-cols-2">
-                {stats.map((item) => (
-                  <div
-                    key={item}
-                    className="rounded-[22px] border border-[rgba(17,17,17,0.08)] bg-[var(--color-surface)] px-4 py-4 text-sm font-medium text-[var(--color-primary)]"
-                  >
-                    {item}
-                  </div>
-                ))}
+              <div className="mt-8 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+                {stats.map((item, index) => {
+                  const stat =
+                    typeof item === "string"
+                      ? { title: item }
+                      : item;
+
+                  return (
+                    <div
+                      key={`${stat.title}-${index}`}
+                      className="rounded-[24px] border border-[rgba(17,17,17,0.08)] bg-[linear-gradient(180deg,rgba(248,245,239,0.94),rgba(255,255,255,0.88))] px-5 py-5 shadow-[0_12px_28px_rgba(17,17,17,0.04)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_38px_rgba(17,17,17,0.07)]"
+                    >
+                      {stat.icon ? (
+                        <stat.icon className="size-5 text-[var(--color-gold)]" />
+                      ) : null}
+                      <p className="mt-4 text-base font-semibold text-[var(--color-primary)]">
+                        {stat.title}
+                      </p>
+                      {stat.description ? (
+                        <p className="mt-2 text-sm leading-6 text-[var(--color-muted)]">
+                          {stat.description}
+                        </p>
+                      ) : null}
+                    </div>
+                  );
+                })}
               </div>
             ) : null}
           </div>

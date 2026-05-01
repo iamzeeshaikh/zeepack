@@ -58,9 +58,9 @@ const defaultFinishes = [
 export const industryPageContent: Record<string, IndustryPageContent> = {
   cosmetics: {
     eyebrow: "Packaging for Beauty Brands",
-    heroTitle: "Luxury Packaging for Cosmetic Brands",
+    heroTitle: "Custom Cosmetic Packaging Boxes for Beauty Brands",
     heroDescription:
-      "Developed for skincare, makeup, fragrance, and wellness brands that need shelf presence, premium perception, and cleaner product support across retail and direct-to-consumer channels.",
+      "Developed for skincare, makeup, fragrance, and wellness brands that need custom cosmetic packaging, stronger beauty packaging, cleaner cosmetic boxes, and more refined skincare packaging across retail and direct-to-consumer channels, including brands sourcing cosmetic boxes USA support.",
     trustPills: [
       "Custom Sizes",
       "Premium Finishes",
@@ -120,8 +120,8 @@ export const industryPageContent: Record<string, IndustryPageContent> = {
         icon: Sparkles,
       },
       {
-        title: "Insert-ready structures",
-        description: "Supports bottles, jars, and multi-piece sets with cleaner internal organization.",
+        title: "Custom sizes",
+        description: "Each format can be shaped around jars, bottles, palettes, and sets so the final pack feels more precise.",
         icon: Boxes,
       },
       {
@@ -130,8 +130,8 @@ export const industryPageContent: Record<string, IndustryPageContent> = {
         icon: Palette,
       },
       {
-        title: "Launch and gifting support",
-        description: "Strong for campaign kits, influencer mailers, and higher-value presentation sets.",
+        title: "Fast production planning",
+        description: "Launch timelines, campaign kits, and replenishment runs can be scoped with clearer production expectations.",
         icon: BadgeCheck,
       },
       {
@@ -140,8 +140,8 @@ export const industryPageContent: Record<string, IndustryPageContent> = {
         icon: CircleGauge,
       },
       {
-        title: "Retail and DTC alignment",
-        description: "A single packaging system can be shaped for both shelf appeal and shipping needs.",
+        title: "USA delivery support",
+        description: "Structured production and delivery planning helps brands coordinate retail drops and direct-to-consumer movement across the USA for beauty packaging programs.",
         icon: Truck,
       },
     ],

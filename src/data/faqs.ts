@@ -1,108 +1,63 @@
 export const homeFaqs = [
   {
-    question: "What is your minimum order quantity?",
+    question: "What types of custom packaging does ZEEPACK offer?",
     answer:
-      "Minimums vary by packaging style, structure, and finish, but ZEEPACK supports low minimum options for many premium formats.",
+      "ZEEPACK supports premium rigid boxes, mailer boxes, folding cartons, product boxes, tissue paper, sleeves, inserts, paper bags, and other packaging layers for retail, gifting, and direct-to-consumer use.",
   },
   {
-    question: "Can you create fully custom sizes?",
+    question: "Can I order custom packaging boxes in my own size?",
     answer:
       "Yes. We develop custom sizes around your product, insert needs, and presentation goals rather than relying on fixed stock formats.",
   },
   {
-    question: "What is the usual turnaround time?",
+    question: "What is the minimum order quantity?",
     answer:
-      "Turnaround depends on complexity, finish combinations, and order volume. Many projects move through production in roughly two to three weeks after approval.",
+      "Minimums vary by packaging style, structure, and finish, but low minimum options are available across many premium formats.",
   },
   {
-    question: "Do you offer sustainable materials?",
+    question: "Do you offer premium finishes such as foil stamping or embossing?",
     answer:
-      "Yes. Recyclable papers, recycled-content boards, molded pulp inserts, and lower-impact ink options can all be explored where suitable.",
+      "Yes. Common finishing options include foil stamping, embossing, debossing, soft-touch lamination, spot UV, matte coatings, and other presentation-led details.",
   },
   {
-    question: "What printing options are available?",
+    question: "Can you help with packaging for product launches?",
     answer:
-      "We support offset printing, CMYK, Pantone matching, interior printing, minimal ink directions, and presentation-led print strategies depending on the structure.",
+      "Yes. We regularly help brands shape launch packaging for new products, seasonal drops, gifting programs, and first-run collections.",
   },
   {
-    question: "What finishing options do you offer?",
+    question: "Are sustainable packaging options available?",
     answer:
-      "Common finish routes include foil stamping, embossing, debossing, soft-touch lamination, spot UV, matte coatings, textured wraps, ribbon closures, and magnetic details.",
-  },
-  {
-    question: "Do you provide samples?",
-    answer:
-      "Yes. Depending on the project, we can discuss material samples, reference samples, or production-style sampling before final approval.",
+      "Yes. Recyclable board options, kraft materials, reduced-waste structures, reusable premium boxes, and right-sized packaging can all be explored where they fit the project.",
   },
   {
     question: "Can I print my logo on packaging?",
     answer:
-      "Yes. Logos can be printed, foil stamped, embossed, debossed, or applied in a more understated way depending on the brand direction.",
+      "Yes. Logos can be printed, foil stamped, embossed, debossed, or handled in a more understated way depending on the brand direction.",
   },
   {
-    question: "What materials do you use?",
+    question: "What materials are available?",
     answer:
-      "We work across rigid board, SBS paperboard, kraft stocks, corrugated structures, specialty wraps, textured papers, and selected recycled-content options.",
+      "We work across rigid board, SBS paperboard, kraft stocks, corrugated structures, textured wraps, specialty papers, and selected recycled-content options.",
   },
   {
-    question: "Do you ship internationally?",
-      answer:
-      "Yes. We support domestic and international delivery depending on project scope, packaging format, and production planning.",
-  },
-  {
-    question: "Can you help with packaging design?",
+    question: "How long does production usually take?",
     answer:
-      "Yes. We can help shape structure, material direction, finishing choices, and presentation logic even if your packaging system is still taking form.",
+      "Timing depends on structure, quantity, and finishing complexity. Many projects move into production after approval within a timeframe that is discussed during the quote process.",
   },
   {
-    question: "Are inserts available?",
+    question: "Do you offer packaging for cosmetics, candles, jewelry, and ecommerce brands?",
     answer:
-      "Yes. Inserts can be developed in paperboard, foam, molded pulp, or specialty structures to improve fit, protection, and presentation.",
+      "Yes. We support brands across beauty, candles, jewelry, fashion, food and gifting, and ecommerce where packaging needs to balance presentation with practical performance.",
   },
   {
-    question: "Can I reorder easily?",
+    question: "Can I request inserts for product protection?",
     answer:
-      "Yes. Once specifications are finalized, repeat runs are much simpler to manage and help keep presentation consistent across future orders.",
+      "Yes. Inserts can be developed to improve product fit, reduce movement, support presentation, and create a cleaner unboxing experience.",
   },
   {
-    question: "Do you offer bulk discounts?",
+    question: "How do I get a custom packaging quote?",
     answer:
-      "Yes. Larger quantities often create better unit economics, especially when the structure and finish route stay consistent.",
-  },
-  {
-    question: "How do I get a quote?",
-    answer:
-      "You can use the quote form or contact us directly with your product type, quantity, dimensions, material preferences, and any finishing notes.",
-  },
-  {
-    question: "What are custom packaging boxes?",
-    answer:
-      "Custom packaging boxes are packaging structures made specifically for a product's dimensions, protection needs, branding direction, and presentation goals. They help brands create a more premium, recognizable, and better-fitting packaging experience than stock boxes.",
-  },
-  {
-    question: "How much does custom packaging cost?",
-    answer:
-      "Custom packaging cost depends on box style, size, material, print coverage, finishing, insert complexity, and order volume. Luxury packaging usually costs more than plain stock packaging because it includes structural customization, higher-grade materials, and premium finishing details.",
-  },
-  {
-    question: "What is luxury packaging?",
-    answer:
-      "Luxury packaging is packaging designed to elevate brand perception through better materials, precise structure, premium finishes, and a more intentional unboxing experience. It is often used by cosmetics, fragrance, jewelry, apparel, and premium gifting brands to create stronger first impressions.",
-  },
-  {
-    question: "Can packaging be made for launches and limited runs?",
-    answer:
-      "Yes. We support growing brands, launch kits, and boutique collections where flexibility and presentation both matter.",
-  },
-  {
-    question: "Can you match our existing brand aesthetic?",
-    answer:
-      "Yes. We tailor structure, color, finish, and material feel around the way your brand already presents itself across product and retail touchpoints.",
-  },
-  {
-    question: "What information helps make a quote more accurate?",
-    answer:
-      "The most useful details are product type, quantity, dimensions, material preferences, print direction, finishing requirements, and timing expectations.",
+      "You can request a quote by sharing your product type, estimated quantity, dimensions, material preferences, and any print or finishing requirements through the quote page or contact form.",
   },
 ];
 

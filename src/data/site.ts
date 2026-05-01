@@ -75,7 +75,24 @@ export const footerQuickLinks = [
   { label: "Sustainability", href: "/sustainability" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
-  { label: "Quote", href: "/quote" },
+];
+
+export const footerProductLinks = [
+  { label: "Luxury Rigid Boxes", href: "/products/rigid-boxes" },
+  { label: "Mailer Boxes", href: "/products/mailer-boxes" },
+  { label: "Folding Cartons", href: "/products/folding-cartons" },
+  { label: "Product Boxes", href: "/products/product-boxes" },
+  { label: "Candle Packaging", href: "/products/candle-boxes" },
+  { label: "Cosmetic Packaging", href: "/products/cosmetic-boxes" },
+];
+
+export const footerPopularSearches = [
+  { label: "Custom Packaging Boxes", href: "/products/product-boxes" },
+  { label: "Custom Printed Boxes", href: "/products/product-boxes" },
+  { label: "Luxury Packaging", href: "/products/rigid-boxes" },
+  { label: "Premium Packaging", href: "/products" },
+  { label: "Mailer Boxes", href: "/products/mailer-boxes" },
+  { label: "Rigid Boxes", href: "/products/rigid-boxes" },
 ];
 
 export const footerLegalLinks = [

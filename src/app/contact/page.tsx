@@ -1,17 +1,16 @@
 import {
   Boxes,
-  Layers3,
-  Palette,
-  Sparkles,
+  CheckCircle2,
+  CircleDot,
+  MessageCircle,
+  ShieldCheck,
+  TimerReset,
 } from "lucide-react";
 
 import { ContactForm } from "@/components/forms/contact-form";
 import {
   EditorialHero,
-  EditorialListSection,
-  IconFeatureGrid,
 } from "@/components/sections/editorial-page-sections";
-import { CTASection } from "@/components/ui/cta-section";
 import { Container } from "@/components/ui/container";
 import { FAQAccordion } from "@/components/ui/faq-accordion";
 import { Reveal } from "@/components/ui/reveal";
@@ -21,7 +20,7 @@ import { contactCards, siteConfig } from "@/data/site";
 import { buildFaqSchema, createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
-  title: "Contact ZEEPACK | Let’s Talk About Your Packaging Project",
+  title: "Contact ZEEPACK | Let's Talk About Your Packaging Project",
   description:
     "Contact ZEEPACK to discuss custom packaging sizes, materials, finishes, inserts, launch packaging, and ongoing supply needs.",
   path: "/contact",
@@ -33,38 +32,30 @@ export const metadata = createMetadata({
   ],
 });
 
-const helpItems = [
-  {
-    title: "Custom sizes",
-    description: "Packaging shaped around the product rather than pushed into a stock format.",
-    icon: Boxes,
-  },
-  {
-    title: "Materials",
-    description: "Board, wrap, insert, and sustainability direction based on the actual use case.",
-    icon: Layers3,
-  },
-  {
-    title: "Finishes",
-    description: "Guidance on foil, embossing, matte, soft-touch, and other premium finish routes.",
-    icon: Palette,
-  },
-  {
-    title: "Launch packaging",
-    description: "Support for launch kits, gifting, seasonal drops, and boutique first runs.",
-    icon: Sparkles,
-  },
-];
+const trustedMarks = ["Beauty Launch Teams", "Retail Packaging Buyers", "Fragrance Brands", "Growing Ecommerce Labels"];
 
 export default function ContactPage() {
   const faqSchema = buildFaqSchema(contactFaqs);
+  const contactPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    name: "Contact ZEEPACK",
+    url: `${siteConfig.siteUrl}/contact`,
+    about: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      email: siteConfig.email,
+      telephone: siteConfig.phone,
+    },
+  };
+  const whatsappHref = "https://wa.me/15033580443";
 
   return (
     <>
       <EditorialHero
         eyebrow="Contact ZEEPACK"
-        title="Let’s Talk About Your Packaging Project"
-        description="Whether you are launching something new or refining an existing product, we are here to help shape the packaging direction with clearer structure, material guidance, and presentation logic."
+        title="Let's Talk About Your Packaging Project"
+        description="Whether you are launching something new or refining an existing product, we are here to help shape the packaging direction with clearer structure, material guidance, and presentation logic. We respond within 24 hours on most working days."
         image={{
           src: "/images/real/cosmetic-boxes.webp",
           alt: "ZEEPACK contact page premium packaging visual.",
@@ -89,16 +80,41 @@ export default function ContactPage() {
         }
       />
 
-      <IconFeatureGrid
-        eyebrow="What We Can Help With"
-        title="Start your packaging request with the details that matter most."
-        description="If your requirements are still taking shape, that is fine. We can still help organize the brief around the right next step."
-        items={helpItems}
-      />
+      <section className="pb-6 -mt-10 relative z-10">
+        <Container>
+          <div className="rounded-[28px] border border-[rgba(17,17,17,0.07)] bg-white/86 px-5 py-5 shadow-[0_18px_44px_rgba(17,17,17,0.06)] backdrop-blur">
+            <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+              <div>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--color-taupe)]">
+                  Trusted by brands like
+                </p>
+                <p className="mt-2 text-sm leading-7 text-[var(--color-muted)]">
+                  Growing and established teams that need structured packaging guidance, premium presentation, and a reliable response window.
+                </p>
+              </div>
+              <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+                {trustedMarks.map((mark) => (
+                  <div
+                    key={mark}
+                    className="flex min-h-[128px] flex-col items-center justify-center rounded-[22px] border border-[rgba(17,17,17,0.08)] bg-[linear-gradient(180deg,rgba(248,245,239,0.95),rgba(255,255,255,0.9))] px-5 py-5 text-center shadow-[0_10px_24px_rgba(17,17,17,0.03)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_30px_rgba(17,17,17,0.05)]"
+                  >
+                    <span className="inline-flex size-9 items-center justify-center rounded-full bg-white shadow-[0_8px_18px_rgba(17,17,17,0.05)]">
+                      <CircleDot className="size-4 text-[var(--color-gold)]" />
+                    </span>
+                    <span className="mt-4 max-w-[11ch] text-[0.98rem] font-semibold leading-8 text-[var(--color-primary)]">
+                      {mark}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
 
       <section className="section-space bg-[linear-gradient(180deg,rgba(255,255,255,0.58),rgba(248,245,239,0.82))]">
-        <Container className="grid gap-8 xl:grid-cols-[0.92fr_1.08fr] xl:items-start">
-          <Reveal>
+        <Container className="grid gap-8 xl:grid-cols-[1.04fr_0.96fr] xl:items-start">
+          <Reveal className="xl:order-2">
             <div className="surface-card p-8 sm:p-10">
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--color-taupe)]">
                 Start Your Packaging Request
@@ -110,22 +126,17 @@ export default function ContactPage() {
                 Fill out the form and share your requirements. The more detail you can provide around product type, quantity, dimensions, material direction, and finish expectations, the easier it is to shape a more useful response.
               </p>
 
-              <div className="mt-8 grid gap-3">
-                {[
-                  "Custom sizes",
-                  "Materials",
-                  "Finishes",
-                  "Inserts",
-                  "Launch packaging",
-                  "Ongoing supply",
-                ].map((item) => (
-                  <div
-                    key={item}
-                    className="rounded-[22px] border border-[rgba(17,17,17,0.08)] bg-[var(--color-surface)] px-4 py-4 text-sm font-medium text-[var(--color-primary)]"
-                  >
-                    {item}
-                  </div>
-                ))}
+              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                <div className="rounded-[22px] border border-[rgba(17,17,17,0.08)] bg-[var(--color-surface)] px-5 py-5">
+                  <TimerReset className="size-5 text-[var(--color-gold)]" />
+                  <p className="mt-3 text-sm font-semibold text-[var(--color-primary)]">We respond within 24 hours</p>
+                  <p className="mt-2 text-sm leading-6 text-[var(--color-muted)]">Most enquiries receive a first reply within one working day.</p>
+                </div>
+                <div className="rounded-[22px] border border-[rgba(17,17,17,0.08)] bg-white/86 px-5 py-5">
+                  <ShieldCheck className="size-5 text-[var(--color-gold)]" />
+                  <p className="mt-3 text-sm font-semibold text-[var(--color-primary)]">Clearer packaging guidance</p>
+                  <p className="mt-2 text-sm leading-6 text-[var(--color-muted)]">We help narrow structure, materials, and finish choices before production moves forward.</p>
+                </div>
               </div>
 
               <div className="mt-10 rounded-[24px] border border-[rgba(17,17,17,0.08)] bg-white/86 px-5 py-5">
@@ -136,27 +147,70 @@ export default function ContactPage() {
                 <p className="mt-2 text-sm leading-7 text-[var(--color-primary)]">{siteConfig.phone}</p>
                 <p className="mt-2 text-sm leading-7 text-[var(--color-primary)]">{siteConfig.email}</p>
               </div>
+
+              <div className="mt-6 rounded-[24px] border border-[rgba(17,17,17,0.08)] bg-white/86 px-5 py-5">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[var(--color-taupe)]">
+                  Client Perspective
+                </p>
+                <p className="mt-3 text-base leading-7 text-[var(--color-primary)]">
+                  “The team helped us move from vague packaging ideas to a much cleaner launch-ready direction without slowing the timeline.”
+                </p>
+              </div>
             </div>
           </Reveal>
 
-          <Reveal delay={0.08}>
+          <Reveal delay={0.08} className="xl:order-1 xl:sticky xl:top-28">
             <ContactForm />
           </Reveal>
         </Container>
       </section>
 
-      <EditorialListSection
-        eyebrow="Why Reach Out"
-        title="A useful packaging conversation usually starts before every detail is finalized."
-        items={[
-          { title: "Packaging direction", body: "Clarify whether the project should lean toward rigid, carton, mailer, sleeve, insert, or a wider packaging system." },
-          { title: "Material options", body: "Compare paperboard, rigid board, kraft, textured wraps, and lower-impact routes based on the product and brand." },
-          { title: "Pricing guidance", body: "A cleaner brief helps shape more realistic expectations around quantity, finish, and structure." },
-          { title: "Structure planning", body: "Determine how the packaging should open, protect, carry, or present the product." },
-          { title: "Launch support", body: "Useful for new launches, campaign kits, gifting programs, and premium first runs." },
-        ]}
-        columns={3}
-      />
+      <section className="section-space pt-0">
+        <Container>
+          <Reveal>
+            <SectionHeading
+              eyebrow="Why Reach Out"
+              title="A quicker conversation usually starts with the right details."
+              description="These are the main topics we can help clarify early, without turning the page into a long detour from the form."
+            />
+          </Reveal>
+          <div className="mt-8 grid gap-4 md:grid-cols-2">
+            {[
+              { title: "Packaging direction", body: "Clarify whether the project should lean toward rigid, carton, mailer, sleeve, insert, or a wider packaging system.", icon: Boxes },
+              { title: "Pricing and structure", body: "Compare material routes, quantity expectations, and structural choices before production planning starts.", icon: CheckCircle2 },
+            ].map((item) => (
+              <Reveal key={item.title}>
+                <div className="surface-card p-6">
+                  <item.icon className="size-5 text-[var(--color-gold)]" />
+                  <h3 className="mt-4 text-xl font-semibold text-[var(--color-primary)]">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-[var(--color-muted)]">{item.body}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className="section-space pt-0">
+        <Container>
+          <Reveal>
+            <SectionHeading
+              eyebrow="Location"
+              title="Visit or locate the ZEEPACK office."
+              description="The address is available for reference, planning, and shipment coordination."
+            />
+          </Reveal>
+          <div className="mt-8 overflow-hidden rounded-[30px] border border-[rgba(17,17,17,0.08)] bg-white shadow-[0_18px_44px_rgba(17,17,17,0.06)]">
+            <iframe
+              title="ZEEPACK office map"
+              src="https://www.google.com/maps?q=2975%20Coburn%20Hollow%20Road%20Bloomington%2C%20IL%2061701%20United%20States&z=14&output=embed"
+              className="h-[360px] w-full border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        </Container>
+      </section>
 
       <section className="section-space">
         <Container>
@@ -173,19 +227,25 @@ export default function ContactPage() {
         </Container>
       </section>
 
-      <CTASection
-        title="Tell us what you are working on and we will help shape it."
-        description="Packaging gets easier to evaluate when the product, quantity, materials, and presentation goals are all part of the same conversation."
-        primaryLabel="Start Your Quote"
-        primaryHref="/quote"
-        secondaryLabel="Email ZEEPACK"
-        secondaryHref={`mailto:${siteConfig.email}`}
-      />
-
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageSchema) }}
+      />
+
+      <a
+        href={whatsappHref}
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Chat on WhatsApp"
+        className="fixed bottom-5 right-5 z-40 inline-flex items-center gap-2 rounded-full bg-[#111111] px-5 py-3 text-sm font-semibold text-white shadow-[0_20px_40px_rgba(17,17,17,0.24)] transition hover:-translate-y-0.5 hover:bg-[#1f1f1f]"
+      >
+        <MessageCircle className="size-4" />
+        WhatsApp
+      </a>
     </>
   );
 }

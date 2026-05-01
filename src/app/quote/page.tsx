@@ -1,3 +1,10 @@
+import {
+  Boxes,
+  CircleGauge,
+  Palette,
+  Sparkles,
+} from "lucide-react";
+
 import { QuoteForm } from "@/components/forms/quote-form";
 import {
   EditorialHero,
@@ -12,12 +19,6 @@ import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { quoteFaqs } from "@/data/faqs";
 import { buildFaqSchema, createMetadata } from "@/lib/seo";
-import {
-  Boxes,
-  CircleGauge,
-  Palette,
-  Sparkles,
-} from "lucide-react";
 
 export const metadata = createMetadata({
   title: "Get a Quote | Premium Custom Packaging by ZEEPACK",
@@ -39,7 +40,7 @@ export default function QuotePage() {
     <>
       <EditorialHero
         eyebrow="Custom Quote"
-        title="Tell us what you need and let’s shape the right packaging direction."
+        title="Tell us what you need and let's shape the right packaging direction."
         description="The strongest quote requests do more than ask for a price. They define the kind of packaging experience your brand needs so structure, materials, and finishing can be evaluated more clearly."
         image={{
           src: "/images/real/rigid-boxes.webp",

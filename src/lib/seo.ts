@@ -86,6 +86,16 @@ export function buildOrganizationSchema() {
   };
 }
 
+export function buildWebsiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: siteConfig.name,
+    url: siteConfig.siteUrl,
+    inLanguage: "en-US",
+  };
+}
+
 export function buildLocalBusinessSchema() {
   return {
     "@context": "https://schema.org",

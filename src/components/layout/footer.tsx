@@ -4,17 +4,13 @@ import { Mail, MapPin, PhoneCall } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Logo } from "@/components/ui/logo";
-import { categories } from "@/data/categories";
 import {
+  footerPopularSearches,
+  footerProductLinks,
   footerLegalLinks,
   footerQuickLinks,
   siteConfig,
 } from "@/data/site";
-
-const productLinks = categories.slice(0, 6).map((category) => ({
-  label: category.name,
-  href: `/products/${category.slug}`,
-}));
 
 export function Footer() {
   return (
@@ -43,7 +39,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 grid gap-10 lg:grid-cols-[1.2fr_0.85fr_0.85fr_0.85fr_1fr]">
+        <div className="mt-14 grid gap-10 lg:grid-cols-[1.25fr_0.78fr_0.88fr_0.88fr_0.78fr_1fr]">
           <div className="max-w-md">
             <Logo theme="dark" />
             <p className="mt-5 text-sm leading-7 text-white/72">
@@ -52,7 +48,8 @@ export function Footer() {
           </div>
 
           <FooterColumn title="Quick Links" items={footerQuickLinks} />
-          <FooterColumn title="Product Links" items={productLinks} />
+          <FooterColumn title="Product Links" items={footerProductLinks} />
+          <FooterColumn title="Popular Searches" items={footerPopularSearches} />
           <FooterColumn title="Legal" items={footerLegalLinks} />
 
           <div>
@@ -97,8 +94,12 @@ function FooterColumn({
         {title}
       </h3>
       <div className="mt-5 grid gap-3">
-        {items.map((item) => (
-          <Link key={item.href} href={item.href} className="text-sm text-white/78 transition hover:text-[var(--color-gold-strong)]">
+        {items.map((item, index) => (
+          <Link
+            key={`${title}-${item.label}-${item.href}-${index}`}
+            href={item.href}
+            className="text-sm text-white/78 transition hover:text-[var(--color-gold-strong)]"
+          >
             {item.label}
           </Link>
         ))}
