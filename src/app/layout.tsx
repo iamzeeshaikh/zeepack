@@ -16,6 +16,15 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://zeepack.co"),
   applicationName: "ZEEPACK",
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    shortcut: ["/icon.svg"],
+    apple: [
+      { url: "/apple-icon.svg", type: "image/svg+xml" },
+    ],
+  },
   ...createMetadata({
     title: "ZEEPACK | Premium Custom Packaging For Modern Brands",
     description:
