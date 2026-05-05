@@ -25,6 +25,7 @@ import { CategoryCard } from "@/components/ui/category-card";
 import { Container } from "@/components/ui/container";
 import { CTASection } from "@/components/ui/cta-section";
 import { FAQAccordion } from "@/components/ui/faq-accordion";
+import { ProductTrustStrip } from "@/components/ui/product-trust-strip";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { categories, type Category, getCategoryBySlug } from "@/data/categories";
@@ -39,6 +40,7 @@ import {
 import {
   buildBreadcrumbSchema,
   buildFaqSchema,
+  buildProductSchema,
   buildServiceSchema,
   createMetadata,
 } from "@/lib/seo";
@@ -164,6 +166,23 @@ export default async function ProductCategoryPage({
     description: category.seoBody,
     path: `/products/${category.slug}`,
   });
+  const productSchema = buildProductSchema({
+    name: category.name,
+    description: category.seoBody,
+    path: `/products/${category.slug}`,
+    image: category.image,
+    category: "Premium custom packaging",
+    offers: {
+      price: "0.30",
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+    },
+    additionalProperty: [
+      { name: "Pricing Note", value: "Starting from $0.30 per piece" },
+      { name: "Material Options", value: category.materials.join(", ") },
+      { name: "Finishing Options", value: category.finishes.join(", ") },
+    ],
+  });
 
   return (
     <>
@@ -180,6 +199,8 @@ export default async function ProductCategoryPage({
           icon: pickFeatureIcon(text),
         }))}
       />
+
+      <ProductTrustStrip />
 
       <VisualSpotlight
         eyebrow="Intro"
@@ -524,6 +545,10 @@ export default async function ProductCategoryPage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
       />
     </>
   );

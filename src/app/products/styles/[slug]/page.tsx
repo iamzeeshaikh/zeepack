@@ -10,6 +10,7 @@ import {
 import { CTASection } from "@/components/ui/cta-section";
 import { Container } from "@/components/ui/container";
 import { FAQAccordion } from "@/components/ui/faq-accordion";
+import { ProductTrustStrip } from "@/components/ui/product-trust-strip";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { CategoryCard } from "@/components/ui/category-card";
@@ -22,6 +23,7 @@ import {
 import {
   buildBreadcrumbSchema,
   buildFaqSchema,
+  buildProductSchema,
   buildServiceSchema,
   createMetadata,
 } from "@/lib/seo";
@@ -80,6 +82,24 @@ export default async function ProductStylePage({
     description: style.overview,
     path: `/products/styles/${style.slug}`,
   });
+  const productSchema = buildProductSchema({
+    name: style.title,
+    description: style.overview,
+    path: `/products/styles/${style.slug}`,
+    image: style.image,
+    category: `${category.name} style`,
+    offers: {
+      price: "0.30",
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+    },
+    additionalProperty: [
+      { name: "Pricing Note", value: "Starting from $0.30 per piece" },
+      { name: "Use Cases", value: style.useCases.join(", ") },
+      { name: "Materials", value: style.materialOptions.join(", ") },
+      { name: "Finishes", value: style.finishOptions.join(", ") },
+    ],
+  });
 
   return (
     <>
@@ -93,6 +113,8 @@ export default async function ProductStylePage({
         }}
         highlights={style.useCases.slice(0, 4)}
       />
+
+      <ProductTrustStrip />
 
       <VisualSpotlight
         eyebrow="Style Overview"
@@ -248,6 +270,10 @@ export default async function ProductStylePage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
       />
       <script
         type="application/ld+json"

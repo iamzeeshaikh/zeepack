@@ -158,6 +158,11 @@ export function buildProductSchema(input: {
   path: string;
   image: string;
   category: string;
+  offers?: {
+    price: string;
+    priceCurrency: string;
+    availability: string;
+  };
   additionalProperty?: Array<{ name: string; value: string }>;
 }) {
   return {
@@ -176,6 +181,15 @@ export function buildProductSchema(input: {
       "@type": "Organization",
       name: siteConfig.name,
     },
+    offers: input.offers
+      ? {
+          "@type": "Offer",
+          price: input.offers.price,
+          priceCurrency: input.offers.priceCurrency,
+          availability: input.offers.availability,
+          url: new URL(input.path, siteConfig.siteUrl).toString(),
+        }
+      : undefined,
     additionalProperty: input.additionalProperty?.map((item) => ({
       "@type": "PropertyValue",
       name: item.name,
