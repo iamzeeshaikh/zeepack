@@ -16,6 +16,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://zeepack.co"),
   applicationName: "ZEEPACK",
+  verification: {
+    google: "EfvJft8c2Dnd7TqDIIr-320Wyq2HMQDJ606bEFEv6r0",
+  },
   icons: {
     icon: [
       { url: "/icon.svg", type: "image/svg+xml" },
