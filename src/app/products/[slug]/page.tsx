@@ -39,7 +39,7 @@ import {
 import {
   buildBreadcrumbSchema,
   buildFaqSchema,
-  buildProductSchema,
+  buildServiceSchema,
   createMetadata,
 } from "@/lib/seo";
 
@@ -159,17 +159,10 @@ export default async function ProductCategoryPage({
     { name: "Products", path: "/products" },
     { name: category.name, path: `/products/${category.slug}` },
   ]);
-  const productSchema = buildProductSchema({
+  const serviceSchema = buildServiceSchema({
     name: category.name,
     description: category.seoBody,
     path: `/products/${category.slug}`,
-    image: category.image,
-    category: "Premium custom packaging",
-    additionalProperty: [
-      { name: "Materials", value: category.materials.join(", ") },
-      { name: "Finishes", value: category.finishes.join(", ") },
-      { name: "Industries", value: category.industries.join(", ") },
-    ],
   });
 
   return (
@@ -530,7 +523,7 @@ export default async function ProductCategoryPage({
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
     </>
   );
