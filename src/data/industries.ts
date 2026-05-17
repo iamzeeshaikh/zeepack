@@ -13,7 +13,7 @@ export const industries: Industry[] = [
     name: "Cosmetics",
     description:
       "Packaging for skincare, beauty, fragrance, and wellness brands that need precision, clarity, and elevated shelf appeal.",
-    image: "/images/curated/skin-care-oil-box.webp",
+    image: "/images/products/serum-boxes.jpg",
     highlights: [
       "Retail presentation",
       "Fine-detail finishing",
@@ -31,7 +31,7 @@ export const industries: Industry[] = [
     name: "Candles",
     description:
       "Boutique packaging for home fragrance and candle collections with a balance of protection and gifting appeal.",
-    image: "/images/curated/magnetic-candle-box.webp",
+    image: "/images/products/candle-boxes-1.webp",
     highlights: [
       "Insert-led protection",
       "Seasonal gifting formats",
@@ -49,7 +49,7 @@ export const industries: Industry[] = [
     name: "Fashion",
     description:
       "Premium packaging systems for apparel, accessories, and boutique retail brands that want a considered arrival experience.",
-    image: "/images/curated/paper-lunch-bag.webp",
+    image: "/images/industries/apparel.webp",
     highlights: [
       "Luxury retail bags",
       "Tissue-led unboxing",
@@ -67,7 +67,7 @@ export const industries: Industry[] = [
     name: "Jewelry",
     description:
       "Compact, tactile presentation packaging for jewelry collections where fit, softness, and perceived value matter.",
-    image: "/images/curated/bracelet-packaging.webp",
+    image: "/images/industries/jewelry.webp",
     highlights: [
       "Keepsake presentation",
       "Compact premium boxes",
@@ -85,7 +85,7 @@ export const industries: Industry[] = [
     name: "Food & Confectionery",
     description:
       "Refined packaging for chocolates, confectionery, and gourmet products that need structure, story, and premium shelf presence.",
-    image: "/images/curated/bon-bon-box.webp",
+    image: "/images/industries/food.jpg",
     highlights: [
       "Gifting presentation",
       "Retail-ready formats",
@@ -103,7 +103,7 @@ export const industries: Industry[] = [
     name: "E-commerce",
     description:
       "Packaging systems for modern online brands that need shipping-ready structure with a more memorable brand experience.",
-    image: "/images/curated/foldable-mailer-box.webp",
+    image: "/images/industries/ecommerce.webp",
     highlights: [
       "Fulfillment-friendly formats",
       "Branded arrival experience",

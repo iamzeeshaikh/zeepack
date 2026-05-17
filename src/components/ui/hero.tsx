@@ -150,12 +150,12 @@ export function Hero() {
               {/* Ground shadow */}
               <div className="pointer-events-none absolute inset-x-[12%] bottom-[3%] h-[10%] rounded-full bg-[rgba(17,17,17,0.10)] blur-3xl" />
               <Image
-                src="/images/clean/retail-ready-packaging-1.webp"
+                src="/images/products/retail-ready-packaging.webp"
                 alt="Premium custom packaging boxes by ZEEPACK — luxury presentation packaging for modern brands"
                 fill
                 priority
                 sizes="(min-width: 1024px) 44vw, 100vw"
-                className="object-contain p-5 sm:p-7 drop-shadow-[0_28px_56px_rgba(17,17,17,0.18)]"
+                className="object-cover"
               />
             </div>
 

@@ -42,7 +42,7 @@ export default function SustainabilityPage() {
         title="Sustainable Packaging That Still Feels Premium"
         description="Modern brands expect more from packaging not just in presentation, but in responsibility. At ZEEPACK, we focus on packaging solutions that balance refined design with smarter material choices and reduced waste wherever possible."
         image={{
-          src: "/images/real/sustainable-packaging.webp",
+          src: "/images/products/eco-friendly-packaging.png",
           alt: "Sustainable premium packaging by ZEEPACK.",
         }}
         highlights={["Recyclable options", "Kraft finishes", "Reduced plastic", "Efficient structures"]}
@@ -58,7 +58,7 @@ export default function SustainabilityPage() {
         title="Sustainability should support great packaging, not limit it."
         description="Our approach focuses on material selection, efficient structures, and thoughtful production without compromising the premium look and feel your brand needs. The goal is not to make every package look natural or stripped back. It is to make packaging decisions more disciplined and more responsible where they can be."
         image={{
-          src: "/images/curated/mycelium-box.webp",
+          src: "/images/products/kraft-boxes.jpg",
           alt: "Considered sustainable packaging materials.",
         }}
         stats={[

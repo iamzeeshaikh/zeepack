@@ -24,7 +24,7 @@ export const categories: Category[] = [
       "Premium presentation boxes with refined structure, tactile finishes, and elevated unboxing impact.",
     intro:
       "Luxury rigid boxes are designed for brands that need presence, precision, and a memorable reveal. They are ideal for gifting, product launches, and premium retail presentation.",
-    image: "/images/curated/rigid-setup-box.webp",
+    image: "/images/products/rigid-setup-boxes.jpg",
     type: "boxes",
     heroLabel: "Signature packaging",
     keyFeatures: [
@@ -76,7 +76,7 @@ export const categories: Category[] = [
       "Durable shipping-ready mailers with premium print treatment for subscription, e-commerce, and launches.",
     intro:
       "Mailer boxes bring together protective performance and premium brand presentation. They are ideal for direct-to-consumer brands that want a stronger arrival experience without sacrificing utility.",
-    image: "/images/curated/foldable-mailer-box.webp",
+    image: "/images/products/mailer-boxes.jpg",
     type: "boxes",
     heroLabel: "DTC-ready packaging",
     keyFeatures: [
@@ -127,7 +127,7 @@ export const categories: Category[] = [
       "Clean, efficient carton packaging for retail products that still feels elevated and design-led.",
     intro:
       "Folding cartons suit brands that need strong visual branding, efficient storage, and versatile finishing. They work especially well in cosmetics, confectionery, wellness, and retail packaging programs.",
-    image: "/images/curated/skin-care-oil-box.webp",
+    image: "/images/products/folding-cartons.webp",
     type: "boxes",
     heroLabel: "Retail-ready packaging",
     keyFeatures: [
@@ -229,7 +229,7 @@ export const categories: Category[] = [
       "Refined packaging for candles, gift sets, and home fragrance collections with boutique presentation.",
     intro:
       "Candle packaging should protect glassware, communicate fragrance quality, and feel worthy of display. We create structures that support both brand perception and practical shipment needs.",
-    image: "/images/curated/magnetic-candle-box.webp",
+    image: "/images/products/candle-boxes-1.webp",
     type: "boxes",
     heroLabel: "Boutique presentation",
     keyFeatures: [
@@ -280,7 +280,7 @@ export const categories: Category[] = [
       "Luxury cosmetic boxes for skincare, makeup, and wellness products that need precision and shelf appeal.",
     intro:
       "Cosmetic packaging needs to balance visual clarity, structural consistency, and tactile quality. We help premium beauty brands develop boxes that feel polished across every customer touchpoint.",
-    image: "/images/curated/skin-care-oil-box.webp",
+    image: "/images/products/serum-boxes.jpg",
     type: "boxes",
     heroLabel: "Beauty-ready packaging",
     keyFeatures: [
@@ -331,7 +331,7 @@ export const categories: Category[] = [
       "Elegant fragrance packaging with strong structure, detailed finishing, and collector-level presentation.",
     intro:
       "Perfume packaging deserves a sense of ceremony. We create fragrance boxes with premium materials, secure inserts, and high-end surface finishes that strengthen perception at first touch.",
-    image: "/images/clean/perfume-boxes.png",
+    image: "/images/products/perfume-boxes.png",
     type: "boxes",
     heroLabel: "Fragrance presentation",
     keyFeatures: [
@@ -382,7 +382,7 @@ export const categories: Category[] = [
       "Refined jewelry presentation boxes designed for tactility, protection, and an elevated gifting moment.",
     intro:
       "Jewelry packaging must feel intimate, precise, and unmistakably premium. We develop compact, detail-rich formats that support gifting, keepsake presentation, and retail display.",
-    image: "/images/curated/bracelet-packaging.webp",
+    image: "/images/products/jewelry-boxes.webp",
     type: "boxes",
     heroLabel: "Presentation-first packaging",
     keyFeatures: [
@@ -481,7 +481,7 @@ export const categories: Category[] = [
       "Retail-ready paper bags with elegant construction, premium handles, and refined brand presence.",
     intro:
       "Paper bags should feel as considered as the packaging inside them. We create premium bag formats for boutiques, gifting, retail counters, and event packaging.",
-    image: "/images/curated/paper-lunch-bag.webp",
+    image: "/images/products/paper-bags.webp",
     type: "accessories",
     heroLabel: "Retail finishing touch",
     keyFeatures: [
@@ -632,7 +632,7 @@ export const categories: Category[] = [
       "Protective and presentation-focused inserts tailored to product fit, organization, and premium reveal.",
     intro:
       "Inserts help packaging feel precise. They improve product security, add order to the reveal, and elevate perceived value when developed as part of the full packaging system.",
-    image: "/images/curated/retail-insert-tray.webp",
+    image: "/images/products/display-boxes.jpg",
     type: "sustainable",
     heroLabel: "Structure and protection",
     keyFeatures: [
@@ -682,7 +682,7 @@ export const categories: Category[] = [
       "Lower-impact packaging strategies using recyclable structures, efficient materials, and elegant restraint.",
     intro:
       "Sustainable packaging at ZEEPACK is about smart decisions, not performative claims. We help brands reduce excess, choose more responsible materials, and build premium experiences with a lighter footprint.",
-    image: "/images/curated/mycelium-box.webp",
+    image: "/images/products/eco-friendly-packaging.png",
     type: "sustainable",
     heroLabel: "Eco-conscious strategy",
     keyFeatures: [
