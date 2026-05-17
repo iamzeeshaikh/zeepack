@@ -10,8 +10,10 @@
   --color-gold: #c6a972;
   --color-gold-strong: #d7b57a;
   --color-accent: #c6a972;
+  --color-cta: #e8603a;
+  --color-cta-hover: #d45530;
   --color-cream: #eee6da;
-  --color-card: rgba(255, 255, 255, 0.88);
+  --color-card: rgba(255, 255, 255, 0.90);
   --color-muted: #6d655a;
   --color-taupe: #8b7d6b;
   --color-surface: #f4eee3;
@@ -21,6 +23,21 @@
 @theme inline {
   --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Times New Roman", serif;
   --font-body: "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
 }
 
 @layer base {
@@ -35,8 +52,8 @@
   body {
     @apply bg-[var(--color-background)] font-body text-[var(--color-ink)] antialiased;
     background-image:
-      radial-gradient(circle at top left, rgba(198, 169, 114, 0.16), transparent 28%),
-      radial-gradient(circle at top right, rgba(139, 125, 107, 0.08), transparent 22%);
+      radial-gradient(circle at top left, rgba(198, 169, 114, 0.14), transparent 30%),
+      radial-gradient(circle at top right, rgba(139, 125, 107, 0.07), transparent 24%);
   }
 
   h1,
@@ -55,21 +72,21 @@
   }
 
   ::selection {
-    background: rgba(244, 201, 93, 0.3);
+    background: rgba(232, 96, 58, 0.18);
   }
 }
 
 @layer components {
   .section-space {
-    @apply py-18 sm:py-24;
+    @apply py-20 sm:py-28;
   }
 
   .surface-card {
-    @apply rounded-[28px] border border-[rgba(17,17,17,0.08)] bg-[var(--color-card)] shadow-[0_18px_44px_rgba(17,17,17,0.08)] backdrop-blur;
+    @apply rounded-[28px] border border-[rgba(17,17,17,0.07)] bg-white/92 shadow-[0_2px_4px_rgba(17,17,17,0.04),0_18px_44px_rgba(17,17,17,0.07)] backdrop-blur;
   }
 
   .hero-shell {
-    @apply relative overflow-hidden rounded-[34px] border border-[rgba(17,17,17,0.08)] bg-[linear-gradient(135deg,rgba(255,255,255,0.96),rgba(238,230,218,0.92))] shadow-[0_24px_60px_rgba(17,17,17,0.08)];
+    @apply relative overflow-hidden rounded-[40px] border border-[rgba(17,17,17,0.07)] bg-[linear-gradient(145deg,rgba(255,255,255,0.98),rgba(238,230,218,0.90))] shadow-[0_32px_72px_rgba(17,17,17,0.10)];
   }
 
   .chip {
@@ -77,14 +94,49 @@
   }
 
   .input-shell {
-    @apply w-full rounded-2xl border border-[rgba(17,17,17,0.1)] bg-white px-4 py-3.5 text-sm text-[var(--color-ink)] shadow-[0_10px_20px_rgba(17,17,17,0.04)] placeholder:text-[var(--color-muted)] transition focus:border-[var(--color-accent)] focus:shadow-[0_0_0_4px_rgba(198,169,114,0.12)];
+    @apply w-full rounded-2xl border border-[rgba(17,17,17,0.10)] bg-white px-4 py-3.5 text-sm text-[var(--color-ink)] shadow-[0_10px_20px_rgba(17,17,17,0.04)] placeholder:text-[var(--color-muted)] transition focus:border-[var(--color-cta)] focus:shadow-[0_0_0_4px_rgba(232,96,58,0.10)];
   }
 
   .micro-link {
-    @apply inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-accent)] transition hover:text-[var(--color-ink)];
+    @apply inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-cta)] transition hover:text-[var(--color-ink)];
   }
 
   .editorial-grid {
     @apply grid gap-6 md:grid-cols-2 xl:grid-cols-3;
+  }
+
+  .marquee-track {
+    animation: marquee 32s linear infinite;
+    will-change: transform;
+  }
+
+  .marquee-track-reverse {
+    animation: marquee-reverse 32s linear infinite;
+    will-change: transform;
+  }
+
+  .marquee-track:hover,
+  .marquee-track-reverse:hover {
+    animation-play-state: paused;
+  }
+
+  .float-card {
+    animation: float 5s ease-in-out infinite;
+  }
+
+  .float-card-delayed {
+    animation: float 5s ease-in-out 2.5s infinite;
+  }
+
+  .editorial-image-frame {
+    @apply rounded-[28px] border border-[rgba(17,17,17,0.07)] bg-[linear-gradient(145deg,rgba(255,255,255,0.96),rgba(238,230,218,0.88))] shadow-[0_16px_40px_rgba(17,17,17,0.08)];
+  }
+
+  .product-card {
+    @apply flex h-full flex-col overflow-hidden rounded-[24px] border border-[rgba(17,17,17,0.07)] bg-white shadow-[0_2px_4px_rgba(17,17,17,0.04),0_14px_28px_rgba(17,17,17,0.06)] transition duration-300 hover:-translate-y-2 hover:shadow-[0_8px_16px_rgba(17,17,17,0.06),0_28px_56px_rgba(17,17,17,0.10)];
+  }
+
+  .section-dark {
+    @apply relative overflow-hidden bg-[#0e0d0b];
   }
 }

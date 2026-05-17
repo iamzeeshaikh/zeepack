@@ -1,22 +1,45 @@
 import Link from "next/link";
+import { PhoneCall } from "lucide-react";
 
-import { Container } from "@/components/ui/container";
 import { siteConfig } from "@/data/site";
+
+const tickers = [
+  "Low MOQ available",
+  "Custom sizes on every format",
+  "Premium finishes · Foil · Emboss · Soft-touch",
+  "48-hour quote response",
+  "USA-wide packaging support",
+  "Rigid boxes · Mailers · Cartons · Bags",
+  "Luxury packaging for modern brands",
+];
 
 export function AnnouncementBar() {
   return (
-    <div className="border-b border-[rgba(255,215,100,0.12)] bg-[var(--color-ink)] py-2 text-white">
-      <Container className="flex items-center justify-between gap-4 text-[11px] sm:text-[12px]">
-        <p className="truncate text-white/72">
-          Luxury custom packaging for modern brands. Low minimums available. Fully custom sizes. Premium finishes.
-        </p>
+    <div className="relative overflow-hidden border-b border-white/[0.06] bg-[#0e0d0b] py-2.5">
+      <div className="flex w-max items-center marquee-track">
+        {[...tickers, ...tickers, ...tickers, ...tickers].map((item, i) => (
+          <span
+            key={i}
+            className="flex shrink-0 items-center gap-5 px-6 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/60"
+          >
+            {item}
+            <span className="h-1 w-1 shrink-0 rounded-full bg-[var(--color-gold)] opacity-70" />
+          </span>
+        ))}
+      </div>
+
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-[linear-gradient(90deg,#0e0d0b,transparent)]" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-[linear-gradient(270deg,#0e0d0b,transparent)]" />
+
+      <div className="absolute inset-y-0 right-0 hidden items-center gap-4 pr-5 sm:flex">
         <Link
-          href={`mailto:${siteConfig.email}`}
-          className="hidden shrink-0 font-semibold text-[var(--color-gold-strong)] transition hover:text-white sm:inline-flex"
+          href={siteConfig.phoneHref}
+          className="flex items-center gap-2 text-[11px] font-semibold text-[var(--color-gold)] transition hover:text-white"
         >
-          {siteConfig.email}
+          <PhoneCall className="size-3.5" />
+          {siteConfig.phone}
         </Link>
-      </Container>
+      </div>
     </div>
   );
 }

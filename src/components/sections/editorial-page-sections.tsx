@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import type { LucideIcon } from "lucide-react";
 import { ArrowRight } from "lucide-react";
 
+import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -73,23 +74,26 @@ export function EditorialHero({
   titleClassName,
 }: EditorialHeroProps) {
   return (
-    <section className="relative overflow-hidden border-b border-[var(--color-border)] bg-[radial-gradient(circle_at_top_left,_rgba(198,169,114,0.2),_transparent_32%),linear-gradient(180deg,rgba(255,255,255,0.86),rgba(248,245,239,0.98))] py-20 sm:py-24">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-[560px] bg-[radial-gradient(circle_at_82%_22%,rgba(198,169,114,0.12),transparent_24%)]" />
+    <section className="relative overflow-hidden border-b border-[rgba(17,17,17,0.06)] bg-[radial-gradient(ellipse_60%_60%_at_5%_0%,rgba(198,169,114,0.18),transparent_38%),linear-gradient(180deg,rgba(255,255,255,0.90),rgba(248,245,239,0.98))] py-20 sm:py-28">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[480px] bg-[radial-gradient(circle_at_88%_18%,rgba(232,96,58,0.05),transparent_28%)]" />
       <Container className="relative grid gap-12 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:items-center">
         <Reveal>
           <div className="max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[var(--color-taupe)]">
-              {eyebrow}
-            </p>
+            <div className="mb-4 flex items-center gap-3">
+              <span className="h-px w-7 bg-[var(--color-gold)] opacity-70" />
+              <p className="text-[11px] font-semibold uppercase tracking-[0.30em] text-[var(--color-taupe)]">
+                {eyebrow}
+              </p>
+            </div>
             <h1
               className={cn(
-                "mt-5 font-display text-[2.95rem] leading-[0.92] tracking-[-0.05em] text-[var(--color-primary)] sm:text-[4rem] lg:text-[4.8rem]",
+                "font-display text-[2.8rem] leading-[0.92] tracking-[-0.05em] text-[var(--color-primary)] sm:text-[3.8rem] lg:text-[4.6rem]",
                 titleClassName,
               )}
             >
               {title}
             </h1>
-            <div className="mt-6 max-w-xl text-lg leading-8 text-[var(--color-muted)]">
+            <div className="mt-6 max-w-xl text-[1.02rem] leading-[1.85] text-[var(--color-muted)]">
               {description}
             </div>
 
@@ -104,7 +108,7 @@ export function EditorialHero({
                   return (
                     <span
                       key={`${item.text}-${index}`}
-                      className="inline-flex items-center gap-2 rounded-full border border-[rgba(17,17,17,0.08)] bg-white/88 px-4 py-2.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--color-taupe)] shadow-[0_10px_26px_rgba(17,17,17,0.04)]"
+                      className="inline-flex items-center gap-2 rounded-full border border-[rgba(17,17,17,0.07)] bg-white/90 px-4 py-2.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--color-taupe)] shadow-[0_4px_16px_rgba(17,17,17,0.05)]"
                     >
                       {item.icon ? (
                         <item.icon className="size-4 shrink-0 text-[var(--color-gold)]" />
@@ -115,6 +119,15 @@ export function EditorialHero({
                 })}
               </div>
             ) : null}
+
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <Button href="/quote" variant="secondary" icon={<ArrowRight className="size-4" />}>
+                Get a Custom Quote
+              </Button>
+              <Button href="/contact" variant="ghost">
+                Talk to Packaging Team
+              </Button>
+            </div>
 
             {metrics.length ? (
               <div className="mt-10 grid gap-4 sm:grid-cols-3">

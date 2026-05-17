@@ -5,11 +5,13 @@ import { cn } from "@/lib/utils";
 
 const variants = {
   primary:
-    "bg-[var(--color-ink)] text-white shadow-[0_18px_45px_rgba(21,36,58,0.18)] hover:-translate-y-0.5 hover:bg-[var(--color-ink-soft)]",
+    "bg-[var(--color-ink)] text-white shadow-[0_12px_32px_rgba(17,17,17,0.22)] hover:-translate-y-0.5 hover:bg-[var(--color-ink-soft)]",
   secondary:
-    "bg-[var(--color-accent)] text-white shadow-[0_16px_35px_rgba(232,96,58,0.24)] hover:-translate-y-0.5 hover:brightness-105",
+    "bg-[var(--color-cta)] text-white shadow-[0_14px_32px_rgba(232,96,58,0.28)] hover:-translate-y-0.5 hover:bg-[var(--color-cta-hover)]",
   ghost:
-    "border border-[var(--color-border)] bg-white/80 text-[var(--color-ink)] hover:-translate-y-0.5 hover:border-[var(--color-accent)] hover:bg-white",
+    "border border-[var(--color-border)] bg-white/80 text-[var(--color-ink)] hover:-translate-y-0.5 hover:border-[rgba(17,17,17,0.18)] hover:bg-white hover:shadow-[0_8px_24px_rgba(17,17,17,0.08)]",
+  gold:
+    "bg-[var(--color-gold)] text-[var(--color-ink)] shadow-[0_14px_32px_rgba(198,169,114,0.30)] hover:-translate-y-0.5 hover:brightness-105",
 };
 
 type ButtonProps = {

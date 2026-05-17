@@ -73,17 +73,17 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
 
-        <div className="fixed inset-x-0 bottom-0 z-40 border-t border-[rgba(17,17,17,0.08)] bg-white/96 p-3 shadow-[0_-18px_36px_rgba(17,17,17,0.08)] backdrop-blur sm:hidden">
+        <div className="fixed inset-x-0 bottom-0 z-40 border-t border-[rgba(17,17,17,0.08)] bg-white/97 p-3 shadow-[0_-16px_32px_rgba(17,17,17,0.09)] backdrop-blur-xl sm:hidden">
           <div className="mx-auto flex max-w-7xl gap-3 px-2">
             <a
               href="tel:+15033580443"
-              className="flex-1 rounded-full border border-[rgba(17,17,17,0.08)] bg-[var(--color-shell)] px-4 py-3 text-center text-sm font-semibold text-[var(--color-primary)]"
+              className="flex-1 rounded-full border border-[rgba(17,17,17,0.09)] bg-[var(--color-shell)] px-4 py-3 text-center text-sm font-semibold text-[var(--color-primary)]"
             >
               Call Now
             </a>
             <Link
               href="/quote"
-              className="flex-1 rounded-full bg-[var(--color-gold)] px-4 py-3 text-center text-sm font-semibold text-[var(--color-primary)] shadow-[0_18px_30px_rgba(198,169,114,0.24)]"
+              className="flex-1 rounded-full bg-[var(--color-cta)] px-4 py-3 text-center text-sm font-semibold text-white shadow-[0_14px_28px_rgba(232,96,58,0.28)]"
             >
               Get Custom Quote
             </Link>

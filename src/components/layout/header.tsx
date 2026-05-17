@@ -1,7 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
-import { ChevronDown, Mail, Menu, PhoneCall, X } from "lucide-react";
+import { ArrowRight, ChevronDown, Menu, PhoneCall, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 
@@ -14,7 +15,28 @@ import { cn } from "@/lib/utils";
 
 type MenuKey = "products" | "industries" | null;
 
-const MENU_CLOSE_DELAY = 160;
+const MENU_CLOSE_DELAY = 180;
+
+const featuredProducts = [
+  {
+    title: "Luxury Rigid Boxes",
+    href: "/products/rigid-boxes",
+    image: "/images/curated/rigid-setup-box.webp",
+    tag: "Best Seller",
+  },
+  {
+    title: "Mailer Boxes",
+    href: "/products/mailer-boxes",
+    image: "/images/curated/foldable-mailer-box.webp",
+    tag: "DTC Ready",
+  },
+  {
+    title: "Candle Packaging",
+    href: "/products/candle-boxes",
+    image: "/images/curated/magnetic-candle-box.webp",
+    tag: "Premium",
+  },
+];
 
 export function Header() {
   const pathname = usePathname();
@@ -32,9 +54,7 @@ export function Header() {
 
   useEffect(() => {
     return () => {
-      if (closeTimerRef.current) {
-        window.clearTimeout(closeTimerRef.current);
-      }
+      if (closeTimerRef.current) window.clearTimeout(closeTimerRef.current);
     };
   }, []);
 
@@ -52,9 +72,7 @@ export function Header() {
 
   const scheduleCloseMenu = () => {
     clearCloseTimer();
-    closeTimerRef.current = window.setTimeout(() => {
-      setOpenMenu(null);
-    }, MENU_CLOSE_DELAY);
+    closeTimerRef.current = window.setTimeout(() => setOpenMenu(null), MENU_CLOSE_DELAY);
   };
 
   const primaryNav = useMemo(
@@ -66,19 +84,20 @@ export function Header() {
     <header className="sticky top-0 z-50">
       <div
         className={cn(
-          "border-b border-[rgba(17,17,17,0.08)] bg-[rgba(248,245,239,0.86)] backdrop-blur-xl transition",
-          scrolled && "bg-[rgba(248,245,239,0.96)] shadow-[0_18px_44px_rgba(17,17,17,0.08)]",
+          "border-b border-[rgba(17,17,17,0.07)] bg-[rgba(253,251,247,0.88)] backdrop-blur-xl transition duration-300",
+          scrolled && "bg-[rgba(253,251,247,0.97)] shadow-[0_1px_0_rgba(17,17,17,0.06),0_16px_40px_rgba(17,17,17,0.07)]",
         )}
       >
-        <Container className="flex items-center justify-between gap-4 py-4">
+        <Container className="flex items-center justify-between gap-4 py-3.5">
           <Logo />
 
-          <nav className="hidden items-center gap-5 lg:flex xl:gap-6" aria-label="Primary navigation">
+          {/* Desktop nav */}
+          <nav className="hidden items-center gap-1 lg:flex xl:gap-1.5" aria-label="Primary navigation">
             {primaryNav.slice(0, 1).map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className={cn(navLinkClasses, isActivePath(pathname, item.href) && "text-[var(--color-accent)]")}
+                className={cn(navLinkClasses, isActivePath(pathname, item.href) && "text-[var(--color-cta)]")}
               >
                 {item.label}
               </Link>
@@ -112,37 +131,32 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={cn(navLinkClasses, isActivePath(pathname, item.href) && "text-[var(--color-accent)]")}
+                className={cn(navLinkClasses, isActivePath(pathname, item.href) && "text-[var(--color-cta)]")}
               >
                 {item.label}
               </Link>
             ))}
           </nav>
 
-          <div className="hidden items-center gap-2 lg:flex xl:gap-3">
+          {/* Desktop CTA */}
+          <div className="hidden items-center gap-2 lg:flex xl:gap-2.5">
             <Link
               href={siteConfig.phoneHref}
-              className="inline-flex items-center gap-2 rounded-full border border-[rgba(17,17,17,0.08)] bg-white px-3.5 py-2.5 text-sm font-semibold text-[var(--color-primary)] transition hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] xl:px-4"
+              className="inline-flex items-center gap-2 rounded-full border border-[rgba(17,17,17,0.08)] bg-white px-3.5 py-2.5 text-[13px] font-semibold text-[var(--color-primary)] transition hover:border-[var(--color-cta)] hover:text-[var(--color-cta)] xl:px-4"
             >
               <PhoneCall className="size-4" />
               {siteConfig.phone}
             </Link>
-            <Link
-              href={`mailto:${siteConfig.email}`}
-              className="inline-flex items-center gap-2 rounded-full border border-[rgba(17,17,17,0.08)] bg-white px-3.5 py-2.5 text-sm font-semibold text-[var(--color-primary)] transition hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] xl:px-4"
-            >
-              <Mail className="size-4" />
-              {siteConfig.email}
-            </Link>
-            <Button href="/quote" variant="secondary" className="px-4 xl:px-5">
+            <Button href="/quote" variant="secondary" className="px-5 py-2.5 text-[13px]">
               Get a Quote
             </Button>
           </div>
 
+          {/* Mobile burger */}
           <button
             type="button"
-            className="inline-flex rounded-full border border-[rgba(17,17,17,0.08)] bg-white p-3 text-[var(--color-primary)] lg:hidden"
-            onClick={() => setOpen((value) => !value)}
+            className="inline-flex rounded-full border border-[rgba(17,17,17,0.08)] bg-white p-2.5 text-[var(--color-primary)] transition hover:bg-[var(--color-shell)] lg:hidden"
+            onClick={() => setOpen((v) => !v)}
             aria-label={open ? "Close menu" : "Open menu"}
           >
             {open ? <X className="size-5" /> : <Menu className="size-5" />}
@@ -150,42 +164,54 @@ export function Header() {
         </Container>
       </div>
 
+      {/* Mobile drawer */}
       {open ? (
-        <div className="border-b border-[rgba(17,17,17,0.08)] bg-[var(--color-shell)] lg:hidden">
-          <Container className="grid gap-4 py-5">
+        <div className="border-b border-[rgba(17,17,17,0.07)] bg-[var(--color-shell)] lg:hidden">
+          <Container className="grid gap-3 py-5">
             {navigation.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
                 className={cn(
-                  "rounded-2xl border border-[rgba(17,17,17,0.08)] bg-white px-4 py-3 text-sm font-semibold text-[var(--color-primary)]",
-                  isActivePath(pathname, item.href) && "border-[var(--color-accent)] text-[var(--color-accent)]",
+                  "rounded-2xl border border-[rgba(17,17,17,0.07)] bg-white px-5 py-3.5 text-sm font-semibold text-[var(--color-primary)] transition hover:border-[var(--color-cta)] hover:text-[var(--color-cta)]",
+                  isActivePath(pathname, item.href) && "border-[var(--color-cta)] text-[var(--color-cta)]",
                 )}
               >
                 {item.label}
               </Link>
             ))}
 
-            <div className="grid gap-3 rounded-[24px] border border-[rgba(17,17,17,0.08)] bg-white p-4">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--color-muted)]">
-                Featured Categories
+            <div className="rounded-[24px] border border-[rgba(17,17,17,0.07)] bg-white p-4">
+              <p className="px-1 text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--color-muted)]">
+                Featured Products
               </p>
-              {productMenuGroups.flatMap((group) => group.items).slice(0, 8).map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setOpen(false)}
-                  className="text-sm font-medium text-[var(--color-primary)]"
-                >
-                  {item.label}
-                </Link>
-              ))}
+              <div className="mt-3 grid grid-cols-2 gap-3">
+                {productMenuGroups.flatMap((g) => g.items).slice(0, 6).map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setOpen(false)}
+                    className="rounded-[16px] border border-[rgba(17,17,17,0.07)] px-3 py-2.5 text-[13px] font-medium text-[var(--color-primary)] transition hover:text-[var(--color-cta)]"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
             </div>
 
-            <Button href="/quote" variant="secondary" className="justify-center">
-              Get Custom Quote
-            </Button>
+            <div className="grid grid-cols-2 gap-3">
+              <Link
+                href={siteConfig.phoneHref}
+                className="flex items-center justify-center gap-2 rounded-2xl border border-[rgba(17,17,17,0.08)] bg-white px-4 py-3 text-sm font-semibold text-[var(--color-primary)]"
+              >
+                <PhoneCall className="size-4" />
+                Call
+              </Link>
+              <Button href="/quote" variant="secondary" className="justify-center py-3">
+                Get Quote
+              </Button>
+            </div>
           </Container>
         </div>
       ) : null}
@@ -219,21 +245,17 @@ function DesktopMenuTrigger({
       onMouseLeave={onClose}
       onFocusCapture={() => onOpen(menuKey)}
       onBlurCapture={(event) => {
-        if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
-          onClose();
-        }
+        if (!event.currentTarget.contains(event.relatedTarget as Node | null)) onClose();
       }}
     >
       <button
         type="button"
         aria-expanded={isOpen}
         aria-haspopup="menu"
-        className={cn(navLinkClasses, isActive && "text-[var(--color-accent)]")}
+        className={cn(navLinkClasses, isActive && "text-[var(--color-cta)]")}
       >
         <span>{label}</span>
-        <ChevronDown
-          className={cn("size-4 transition duration-300", isOpen && "rotate-180")}
-        />
+        <ChevronDown className={cn("size-4 transition duration-300", isOpen && "rotate-180")} />
       </button>
 
       <div
@@ -244,10 +266,10 @@ function DesktopMenuTrigger({
       >
         <div
           className={cn(
-            "relative pt-2 transition duration-200 before:absolute before:left-0 before:right-0 before:top-0 before:h-2 before:content-['']",
+            "relative pt-3 transition duration-200 before:absolute before:left-0 before:right-0 before:top-0 before:h-3 before:content-['']",
             isOpen
               ? "pointer-events-auto translate-y-0 opacity-100"
-              : "pointer-events-none -translate-y-1 opacity-0",
+              : "pointer-events-none -translate-y-2 opacity-0",
           )}
           onMouseEnter={onClearClose}
         >
@@ -260,50 +282,86 @@ function DesktopMenuTrigger({
 
 function ProductsMenu() {
   return (
-    <div className="w-[min(620px,calc(100vw-2rem))] rounded-[26px] border border-[rgba(17,17,17,0.08)] bg-[rgba(255,255,255,0.97)] p-4 shadow-[0_24px_80px_rgba(17,17,17,0.12)] backdrop-blur-2xl">
-      <div className="rounded-[22px] bg-[linear-gradient(180deg,rgba(248,245,239,0.96),rgba(238,230,218,0.88))] p-4">
+    <div className="w-[min(700px,calc(100vw-2rem))] rounded-[28px] border border-[rgba(17,17,17,0.07)] bg-[rgba(255,255,255,0.98)] p-5 shadow-[0_24px_80px_rgba(17,17,17,0.14)] backdrop-blur-2xl">
+      {/* Header strip */}
+      <div className="rounded-[20px] bg-[linear-gradient(145deg,rgba(248,245,239,0.96),rgba(238,230,218,0.88))] p-5">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-          <div className="max-w-[29rem]">
+          <div className="max-w-xs">
             <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[var(--color-taupe)]">
               Product Collection
             </p>
-            <h3 className="mt-2 font-display text-[1.45rem] leading-[0.98] tracking-[-0.035em] text-[var(--color-primary)]">
-              Explore premium packaging formats.
+            <h3 className="mt-2 font-display text-[1.5rem] leading-[0.96] tracking-[-0.035em] text-[var(--color-primary)]">
+              Premium packaging formats for every brand.
             </h3>
-            <p className="mt-2 text-[12px] leading-5 text-[var(--color-muted)]">
-              Rigid boxes, mailers, cartons, and supporting layers shaped around presentation, structure, and brand perception.
-            </p>
           </div>
-          <Button href="/products" variant="ghost" className="px-4 py-2.5">
+          <Link
+            href="/products"
+            className="inline-flex shrink-0 items-center gap-2 rounded-full border border-[rgba(17,17,17,0.10)] bg-white px-4 py-2.5 text-[13px] font-semibold text-[var(--color-primary)] transition hover:text-[var(--color-cta)]"
+          >
             View All Products
-          </Button>
+            <ArrowRight className="size-3.5" />
+          </Link>
         </div>
       </div>
 
-      <div className="mt-4 grid gap-3 md:grid-cols-3">
-        {productMenuGroups.map((group) => (
-          <div
-            key={group.title}
-            className="rounded-[20px] bg-[linear-gradient(180deg,rgba(255,255,255,0.88),rgba(248,245,239,0.74))] p-3.5"
-          >
-            <p className="px-1 text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--color-taupe)]">
-              {group.title}
-            </p>
-            <div className="mt-2.5 space-y-1">
-              {group.items.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="group block rounded-[14px] border border-transparent px-3 py-2.5 transition duration-300 hover:border-[rgba(17,17,17,0.08)] hover:bg-white"
-                >
-                  <p className="text-[14px] font-semibold leading-5 text-[var(--color-primary)] transition group-hover:text-[var(--color-accent)]">
-                    {item.label}
-                  </p>
-                </Link>
-              ))}
+      <div className="mt-4 grid grid-cols-[1fr_1.6fr] gap-4">
+        {/* Featured product images */}
+        <div className="grid gap-3">
+          {featuredProducts.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="group relative flex items-center gap-3 overflow-hidden rounded-[16px] border border-[rgba(17,17,17,0.07)] bg-[linear-gradient(145deg,rgba(248,245,239,0.80),rgba(238,230,218,0.96))] p-2.5 transition hover:border-[rgba(17,17,17,0.12)] hover:shadow-[0_8px_24px_rgba(17,17,17,0.08)]"
+            >
+              <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-[12px] bg-[var(--color-shell)]">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  sizes="56px"
+                  className="object-cover transition duration-300 group-hover:scale-105"
+                />
+              </div>
+              <div className="min-w-0">
+                <p className="text-[13px] font-semibold leading-tight text-[var(--color-primary)] transition group-hover:text-[var(--color-cta)]">
+                  {item.title}
+                </p>
+                {item.tag ? (
+                  <span className="mt-1 inline-block text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--color-taupe)]">
+                    {item.tag}
+                  </span>
+                ) : null}
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        {/* Category columns */}
+        <div className="grid gap-3 sm:grid-cols-3">
+          {productMenuGroups.map((group) => (
+            <div
+              key={group.title}
+              className="rounded-[18px] bg-[linear-gradient(160deg,rgba(255,255,255,0.82),rgba(248,245,239,0.68))] p-3.5"
+            >
+              <p className="px-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-[var(--color-taupe)]">
+                {group.title}
+              </p>
+              <div className="mt-2.5 space-y-0.5">
+                {group.items.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="group block rounded-[12px] border border-transparent px-2.5 py-2 transition hover:border-[rgba(17,17,17,0.07)] hover:bg-white"
+                  >
+                    <p className="text-[13px] font-semibold leading-5 text-[var(--color-primary)] transition group-hover:text-[var(--color-cta)]">
+                      {item.label}
+                    </p>
+                  </Link>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -311,44 +369,42 @@ function ProductsMenu() {
 
 function IndustriesMenu() {
   return (
-    <div className="w-[min(620px,calc(100vw-2rem))] rounded-[26px] border border-[rgba(17,17,17,0.08)] bg-[rgba(255,255,255,0.97)] p-4 shadow-[0_24px_80px_rgba(17,17,17,0.12)] backdrop-blur-2xl">
-      <div className="rounded-[22px] bg-[linear-gradient(180deg,rgba(248,245,239,0.96),rgba(238,230,218,0.88))] p-4">
+    <div className="w-[min(640px,calc(100vw-2rem))] rounded-[28px] border border-[rgba(17,17,17,0.07)] bg-[rgba(255,255,255,0.98)] p-5 shadow-[0_24px_80px_rgba(17,17,17,0.14)] backdrop-blur-2xl">
+      {/* Header strip */}
+      <div className="rounded-[20px] bg-[linear-gradient(145deg,rgba(248,245,239,0.96),rgba(238,230,218,0.88))] p-5">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-          <div className="max-w-[29rem]">
+          <div className="max-w-xs">
             <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[var(--color-taupe)]">
               Industry Solutions
             </p>
-            <h3 className="mt-2 font-display text-[1.45rem] leading-[0.98] tracking-[-0.035em] text-[var(--color-primary)]">
+            <h3 className="mt-2 font-display text-[1.5rem] leading-[0.96] tracking-[-0.035em] text-[var(--color-primary)]">
               Packaging shaped around your category.
             </h3>
-            <p className="mt-2 text-[12px] leading-5 text-[var(--color-muted)]">
-              Solutions for beauty, candles, jewelry, fashion, food, and e-commerce brands that need stronger product presentation.
-            </p>
           </div>
-          <Button href="/industries" variant="ghost" className="px-4 py-2.5">
-            View All Industries
-          </Button>
+          <Link
+            href="/industries"
+            className="inline-flex shrink-0 items-center gap-2 rounded-full border border-[rgba(17,17,17,0.10)] bg-white px-4 py-2.5 text-[13px] font-semibold text-[var(--color-primary)] transition hover:text-[var(--color-cta)]"
+          >
+            All Industries
+            <ArrowRight className="size-3.5" />
+          </Link>
         </div>
       </div>
 
-      <div className="mt-4 grid gap-3 md:grid-cols-3">
+      <div className="mt-4 grid gap-3 sm:grid-cols-3">
         {industries.map((industry) => (
-          <div
+          <Link
             key={industry.slug}
-            className="rounded-[20px] bg-[linear-gradient(180deg,rgba(248,245,239,0.88),rgba(255,255,255,0.78))] p-3.5"
+            href={`/industries/${industry.slug}`}
+            className="group rounded-[18px] border border-[rgba(17,17,17,0.07)] bg-[linear-gradient(160deg,rgba(255,255,255,0.82),rgba(248,245,239,0.70))] p-4 transition hover:border-[rgba(17,17,17,0.11)] hover:shadow-[0_8px_24px_rgba(17,17,17,0.07)]"
           >
-            <Link
-              href={`/industries/${industry.slug}`}
-              className="group block rounded-[14px] border border-transparent px-3 py-2.5 transition duration-300 hover:border-[rgba(17,17,17,0.08)] hover:bg-white"
-            >
-              <p className="text-[14px] font-semibold leading-5 text-[var(--color-primary)] transition group-hover:text-[var(--color-accent)]">
-                {industry.name}
-              </p>
-              <p className="mt-2 text-[12px] leading-5 text-[var(--color-muted)]">
-                {industry.description}
-              </p>
-            </Link>
-          </div>
+            <p className="text-[14px] font-semibold leading-5 text-[var(--color-primary)] transition group-hover:text-[var(--color-cta)]">
+              {industry.name}
+            </p>
+            <p className="mt-2 text-[12px] leading-5 text-[var(--color-muted)]">
+              {industry.description}
+            </p>
+          </Link>
         ))}
       </div>
     </div>
@@ -361,4 +417,4 @@ function isActivePath(pathname: string, href: string) {
 }
 
 const navLinkClasses =
-  "inline-flex items-center gap-2 py-2 text-sm font-semibold text-[var(--color-primary)] transition hover:text-[var(--color-accent)]";
+  "inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-[13.5px] font-semibold text-[var(--color-primary)] transition hover:bg-[rgba(17,17,17,0.05)] hover:text-[var(--color-cta)]";
