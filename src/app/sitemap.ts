@@ -6,7 +6,7 @@ import { productStyles } from "@/data/product-styles";
 import { footerLegalLinks, siteConfig } from "@/data/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date("2026-05-01T00:00:00.000Z");
+  const lastModified = new Date("2026-05-17T00:00:00.000Z");
 
   const staticPages = [
     "/",

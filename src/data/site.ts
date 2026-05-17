@@ -34,6 +34,7 @@ export const navigation = [
   { label: "Products", href: "/products" },
   { label: "Industries", href: "/industries" },
   { label: "Sustainability", href: "/sustainability" },
+  { label: "FAQ", href: "/faq" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
@@ -64,6 +65,8 @@ export const productMenuGroups = [
       { label: "Paper Bags", href: "/products/paper-bags" },
       { label: "Sleeves", href: "/products/sleeves" },
       { label: "Inserts", href: "/products/inserts" },
+      { label: "Labels & Stickers", href: "/products/labels-and-stickers" },
+      { label: "Sustainable Packaging", href: "/products/sustainable-packaging" },
     ],
   },
 ];
@@ -73,8 +76,10 @@ export const footerQuickLinks = [
   { label: "Products", href: "/products" },
   { label: "Industries", href: "/industries" },
   { label: "Sustainability", href: "/sustainability" },
+  { label: "FAQ", href: "/faq" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
+  { label: "Get a Quote", href: "/quote" },
 ];
 
 export const footerProductLinks = [
@@ -84,6 +89,14 @@ export const footerProductLinks = [
   { label: "Product Boxes", href: "/products/product-boxes" },
   { label: "Candle Packaging", href: "/products/candle-boxes" },
   { label: "Cosmetic Packaging", href: "/products/cosmetic-boxes" },
+  { label: "Perfume Boxes", href: "/products/perfume-boxes" },
+  { label: "Jewelry Boxes", href: "/products/jewelry-boxes" },
+  { label: "Tissue Paper", href: "/products/custom-tissue-paper" },
+  { label: "Paper Bags", href: "/products/paper-bags" },
+  { label: "Sleeves", href: "/products/sleeves" },
+  { label: "Labels & Stickers", href: "/products/labels-and-stickers" },
+  { label: "Custom Inserts", href: "/products/inserts" },
+  { label: "Sustainable Packaging", href: "/products/sustainable-packaging" },
 ];
 
 export const footerPopularSearches = [
