@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Sparkles } from "lucide-react";
 
 import {
   EditorialHero,
@@ -254,13 +255,66 @@ export default async function ProductStylePage({
         </Container>
       </section>
 
+      {/* Configurator promo */}
+      <section className="section-space pt-0">
+        <Container>
+          <Reveal>
+            <div className="relative overflow-hidden rounded-[28px] bg-[var(--color-primary)] px-8 py-11 sm:px-12 sm:py-14">
+              <div
+                className="pointer-events-none absolute inset-0 opacity-[0.05]"
+                style={{
+                  backgroundImage:
+                    "radial-gradient(circle at 20% 60%, #C6A972 0%, transparent 55%), radial-gradient(circle at 80% 20%, #C6A972 0%, transparent 50%)",
+                }}
+              />
+              <div className="relative flex flex-col items-start gap-6 lg:flex-row lg:items-center lg:justify-between">
+                <div>
+                  <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-[var(--color-taupe)]">
+                    Interactive Configurator
+                  </p>
+                  <h2 className="mt-2.5 font-display text-2xl font-bold leading-tight text-white sm:text-3xl">
+                    Customize Your {category.name}
+                  </h2>
+                  <p className="mt-2 max-w-lg text-sm leading-7 text-[rgba(255,255,255,0.6)]">
+                    Choose size, material, finish, quantity, and add-ons. Submit your quote directly — no page reload, no redirects.
+                  </p>
+                  <div className="mt-4 flex flex-wrap gap-x-5 gap-y-1.5">
+                    {["8 finish options", "Custom sizes", "Free design support", "24-hr response"].map((f) => (
+                      <span key={f} className="flex items-center gap-1.5 text-[12px] text-[rgba(255,255,255,0.5)]">
+                        <span className="h-1 w-1 rounded-full bg-[var(--color-taupe)]" />
+                        {f}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div className="flex flex-shrink-0 flex-col gap-2.5 sm:flex-row lg:flex-col xl:flex-row">
+                  <Link
+                    href={`/customize?type=${category.slug}`}
+                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[var(--color-cta)] px-7 py-3.5 text-sm font-bold text-white transition-opacity hover:opacity-90"
+                  >
+                    <Sparkles className="h-4 w-4" />
+                    Start Customizing
+                  </Link>
+                  <Link
+                    href="/quote"
+                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full border border-[rgba(255,255,255,0.18)] px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:border-[rgba(255,255,255,0.45)]"
+                  >
+                    Get a Quote
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+        </Container>
+      </section>
+
       <CTASection
         title={`Ready to price ${style.title.toLowerCase()}?`}
         description="Share the dimensions, quantity, and finish direction so we can shape the right premium packaging route around the product."
         primaryLabel="Get a Quote"
         primaryHref="/quote"
-        secondaryLabel={`View ${category.name}`}
-        secondaryHref={`/products/${category.slug}`}
+        secondaryLabel="Customize Your Box"
+        secondaryHref={`/customize?type=${category.slug}`}
       />
 
       <script

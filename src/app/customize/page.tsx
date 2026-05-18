@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { PackagingConfigurator } from "@/components/ui/packaging-configurator";
 import { buildBreadcrumbSchema, createMetadata } from "@/lib/seo";
 
@@ -36,7 +37,9 @@ export default function CustomizePage() {
         </p>
       </div>
 
-      <PackagingConfigurator />
+      <Suspense>
+        <PackagingConfigurator />
+      </Suspense>
 
       <script
         type="application/ld+json"

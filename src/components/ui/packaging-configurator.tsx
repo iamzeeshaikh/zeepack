@@ -1,8 +1,8 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { Check, ChevronRight, PhoneCall, Sparkles } from "lucide-react";
 
 import { submitFormRequest } from "@/lib/form-client";
@@ -226,8 +226,17 @@ function SummaryRow({ label, value }: { label: string; value?: string }) {
 
 export function PackagingConfigurator() {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const formRef = useRef<HTMLDivElement>(null);
   const [sel, setSel] = useState<Sel>(INITIAL);
+
+  // Pre-select box type from URL ?type= param
+  useEffect(() => {
+    const type = searchParams.get("type");
+    if (type && BOX_TYPES.some((b) => b.id === type)) {
+      setSel((s) => ({ ...s, boxType: type }));
+    }
+  }, [searchParams]);
   const [contact, setContact] = useState<ContactForm>({ name: "", email: "", phone: "", company: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState("");
