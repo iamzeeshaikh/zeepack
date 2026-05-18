@@ -334,21 +334,21 @@ function DesktopMenuTrigger({
 
 function ProductsMenu() {
   return (
-    <div className="w-[min(820px,calc(100vw-2rem))] rounded-[28px] border border-[rgba(17,17,17,0.07)] bg-[rgba(255,255,255,0.98)] p-5 shadow-[0_24px_80px_rgba(17,17,17,0.14)] backdrop-blur-2xl">
+    <div className="w-[min(760px,calc(100vw-2rem))] rounded-[28px] border border-[rgba(17,17,17,0.07)] bg-[rgba(255,255,255,0.98)] p-5 shadow-[0_24px_80px_rgba(17,17,17,0.14)] backdrop-blur-2xl">
       {/* Header strip */}
-      <div className="rounded-[20px] bg-[linear-gradient(145deg,rgba(248,245,239,0.96),rgba(238,230,218,0.88))] p-5">
+      <div className="rounded-[20px] bg-[linear-gradient(145deg,rgba(248,245,239,0.96),rgba(238,230,218,0.88))] p-4">
         <div className="flex items-center justify-between gap-4">
           <div>
             <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[var(--color-taupe)]">
               Product Collection
             </p>
             <h3 className="mt-1 font-display text-[1.35rem] leading-[0.96] tracking-[-0.035em] text-[var(--color-primary)]">
-              Premium packaging formats for every brand.
+              Premium packaging for every brand.
             </h3>
           </div>
           <Link
             href="/products"
-            className="inline-flex shrink-0 items-center gap-2 rounded-full border border-[rgba(17,17,17,0.10)] bg-white px-4 py-2.5 text-[13px] font-semibold text-[var(--color-primary)] transition hover:text-[var(--color-cta)]"
+            className="inline-flex shrink-0 items-center gap-2 rounded-full border border-[rgba(17,17,17,0.10)] bg-white px-4 py-2 text-[13px] font-semibold text-[var(--color-primary)] transition hover:text-[var(--color-cta)]"
           >
             View All Products
             <ArrowRight className="size-3.5" />
@@ -356,64 +356,62 @@ function ProductsMenu() {
         </div>
       </div>
 
-      <div className="mt-4 grid grid-cols-[168px_1fr] gap-4">
-        {/* Featured product images */}
-        <div className="grid gap-3">
-          {featuredProducts.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="group relative flex items-center gap-3 overflow-hidden rounded-[16px] border border-[rgba(17,17,17,0.07)] bg-[linear-gradient(145deg,rgba(248,245,239,0.80),rgba(238,230,218,0.96))] p-2.5 transition hover:border-[rgba(17,17,17,0.12)] hover:shadow-[0_8px_24px_rgba(17,17,17,0.08)]"
-            >
-              <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-[12px] bg-[var(--color-shell)]">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  sizes="56px"
-                  className="object-cover transition duration-300 group-hover:scale-105"
-                />
-              </div>
-              <div className="min-w-0">
-                <p className="text-[13px] font-semibold leading-tight text-[var(--color-primary)] transition group-hover:text-[var(--color-cta)]">
-                  {item.title}
-                </p>
-                {item.tag ? (
-                  <span className="mt-1 inline-block text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--color-taupe)]">
-                    {item.tag}
-                  </span>
-                ) : null}
-              </div>
-            </Link>
-          ))}
-        </div>
-
-        {/* Category columns */}
-        <div className="grid grid-cols-3 gap-3">
-          {productMenuGroups.map((group) => (
-            <div
-              key={group.title}
-              className="rounded-[18px] bg-[linear-gradient(160deg,rgba(255,255,255,0.82),rgba(248,245,239,0.68))] p-3.5"
-            >
-              <p className="px-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-[var(--color-taupe)]">
-                {group.title}
-              </p>
-              <div className="mt-2.5 space-y-0.5">
-                {group.items.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="group block rounded-[12px] border border-transparent px-2.5 py-2 transition hover:border-[rgba(17,17,17,0.07)] hover:bg-white"
-                  >
-                    <p className="text-[13px] font-semibold leading-5 text-[var(--color-primary)] transition group-hover:text-[var(--color-cta)]">
-                      {item.label}
-                    </p>
-                  </Link>
-                ))}
-              </div>
+      {/* Featured products — horizontal strip */}
+      <div className="mt-3 grid grid-cols-3 gap-2.5">
+        {featuredProducts.map((item) => (
+          <Link
+            key={item.href}
+            href={item.href}
+            className="group flex items-center gap-2.5 overflow-hidden rounded-[16px] border border-[rgba(17,17,17,0.07)] bg-[linear-gradient(145deg,rgba(248,245,239,0.80),rgba(238,230,218,0.96))] p-2.5 transition hover:border-[rgba(17,17,17,0.12)] hover:shadow-[0_8px_24px_rgba(17,17,17,0.07)]"
+          >
+            <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-[10px] bg-[var(--color-shell)]">
+              <Image
+                src={item.image}
+                alt={item.title}
+                fill
+                sizes="44px"
+                className="object-cover transition duration-300 group-hover:scale-105"
+              />
             </div>
-          ))}
-        </div>
+            <div className="min-w-0">
+              <p className="truncate text-[13px] font-semibold leading-tight text-[var(--color-primary)] transition group-hover:text-[var(--color-cta)]">
+                {item.title}
+              </p>
+              {item.tag ? (
+                <span className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--color-taupe)]">
+                  {item.tag}
+                </span>
+              ) : null}
+            </div>
+          </Link>
+        ))}
+      </div>
+
+      {/* Category columns — full width */}
+      <div className="mt-2.5 grid grid-cols-3 gap-2.5">
+        {productMenuGroups.map((group) => (
+          <div
+            key={group.title}
+            className="rounded-[18px] bg-[linear-gradient(160deg,rgba(255,255,255,0.82),rgba(248,245,239,0.68))] p-3.5"
+          >
+            <p className="px-1 text-[10.5px] font-semibold uppercase tracking-[0.22em] text-[var(--color-taupe)]">
+              {group.title}
+            </p>
+            <div className="mt-2 space-y-px">
+              {group.items.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="group block rounded-[10px] border border-transparent px-2 py-1.5 transition hover:border-[rgba(17,17,17,0.07)] hover:bg-white"
+                >
+                  <p className="whitespace-nowrap text-[13px] font-medium leading-5 text-[var(--color-primary)] transition group-hover:text-[var(--color-cta)]">
+                    {item.label}
+                  </p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
