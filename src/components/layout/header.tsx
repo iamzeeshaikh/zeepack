@@ -392,7 +392,7 @@ function IndustriesMenu() {
       </div>
 
       <div className="mt-4 grid gap-3 sm:grid-cols-3">
-        {industries.map((industry) => (
+        {industries.slice(0, 18).map((industry) => (
           <Link
             key={industry.slug}
             href={`/industries/${industry.slug}`}
