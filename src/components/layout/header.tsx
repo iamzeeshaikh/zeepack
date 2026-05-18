@@ -334,15 +334,15 @@ function DesktopMenuTrigger({
 
 function ProductsMenu() {
   return (
-    <div className="w-[min(700px,calc(100vw-2rem))] rounded-[28px] border border-[rgba(17,17,17,0.07)] bg-[rgba(255,255,255,0.98)] p-5 shadow-[0_24px_80px_rgba(17,17,17,0.14)] backdrop-blur-2xl">
+    <div className="w-[min(820px,calc(100vw-2rem))] rounded-[28px] border border-[rgba(17,17,17,0.07)] bg-[rgba(255,255,255,0.98)] p-5 shadow-[0_24px_80px_rgba(17,17,17,0.14)] backdrop-blur-2xl">
       {/* Header strip */}
       <div className="rounded-[20px] bg-[linear-gradient(145deg,rgba(248,245,239,0.96),rgba(238,230,218,0.88))] p-5">
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-          <div className="max-w-xs">
+        <div className="flex items-center justify-between gap-4">
+          <div>
             <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[var(--color-taupe)]">
               Product Collection
             </p>
-            <h3 className="mt-2 font-display text-[1.5rem] leading-[0.96] tracking-[-0.035em] text-[var(--color-primary)]">
+            <h3 className="mt-1 font-display text-[1.35rem] leading-[0.96] tracking-[-0.035em] text-[var(--color-primary)]">
               Premium packaging formats for every brand.
             </h3>
           </div>
@@ -356,7 +356,7 @@ function ProductsMenu() {
         </div>
       </div>
 
-      <div className="mt-4 grid grid-cols-[1fr_1.6fr] gap-4">
+      <div className="mt-4 grid grid-cols-[168px_1fr] gap-4">
         {/* Featured product images */}
         <div className="grid gap-3">
           {featuredProducts.map((item) => (
@@ -389,7 +389,7 @@ function ProductsMenu() {
         </div>
 
         {/* Category columns */}
-        <div className="grid gap-3 sm:grid-cols-3">
+        <div className="grid grid-cols-3 gap-3">
           {productMenuGroups.map((group) => (
             <div
               key={group.title}
