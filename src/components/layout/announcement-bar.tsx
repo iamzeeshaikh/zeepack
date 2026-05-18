@@ -7,7 +7,7 @@ const tickers = [
   "Low MOQ available",
   "Custom sizes on every format",
   "Premium finishes · Foil · Emboss · Soft-touch",
-  "48-hour quote response",
+  "24-hour quote response",
   "USA-wide packaging support",
   "Rigid boxes · Mailers · Cartons · Bags",
   "Luxury packaging for modern brands",

@@ -10,7 +10,7 @@ import { Container } from "@/components/ui/container";
 
 const stats = [
   { value: "250+", label: "Brand projects" },
-  { value: "48 hrs", label: "Quote response" },
+  { value: "24 hrs", label: "Quote response" },
   { value: "Low MOQ", label: "Flexible runs" },
 ];
 

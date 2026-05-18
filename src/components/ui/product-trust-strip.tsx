@@ -13,7 +13,7 @@ const trustItems = [
     icon: Ruler,
   },
   {
-    title: "Typical response within 48 hours",
+    title: "Typical response within 24 hours",
     icon: Clock3,
   },
   {

@@ -80,7 +80,7 @@ export function CTASection({
             <div className="mt-12 flex flex-wrap gap-x-10 gap-y-5 border-t border-white/10 pt-8">
               {[
                 { value: "250+", label: "Brand projects" },
-                { value: "48 hrs", label: "Typical quote response" },
+                { value: "24 hrs", label: "Typical quote response" },
                 { value: "Low MOQ", label: "Flexible runs" },
                 { value: "USA", label: "Nationwide support" },
               ].map((stat) => (

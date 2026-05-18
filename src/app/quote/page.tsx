@@ -48,7 +48,7 @@ export default function QuotePage() {
         }}
         highlights={["Low minimums", "Custom sizing", "Premium finishes", "Insert options"]}
         metrics={[
-          { value: "48 hrs", label: "Typical first response" },
+          { value: "24 hrs", label: "Typical first response" },
           { value: "Low MOQ", label: "Flexible entry point" },
           { value: "USA", label: "Support nationwide" },
         ]}

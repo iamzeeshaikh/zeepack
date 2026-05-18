@@ -146,7 +146,7 @@ export const homeTrustBadges = [
 
 export const homeStats = [
   { value: "250+", label: "Packaging directions shaped" },
-  { value: "48 hrs", label: "Typical initial quote response" },
+  { value: "24 hrs", label: "Typical initial quote response" },
   { value: "Low MOQ", label: "Flexible entry for growing brands" },
   { value: "USA", label: "Packaging support nationwide" },
 ];
