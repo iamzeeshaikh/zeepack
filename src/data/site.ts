@@ -90,32 +90,19 @@ export const footerQuickLinks = [
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
   { label: "Get a Quote", href: "/quote" },
+  { label: "HTML Sitemap", href: "/html-sitemap" },
 ];
 
 export const footerProductLinks = [
   { label: "Luxury Rigid Boxes", href: "/products/rigid-boxes" },
   { label: "Mailer Boxes", href: "/products/mailer-boxes" },
   { label: "Folding Cartons", href: "/products/folding-cartons" },
-  { label: "Product Boxes", href: "/products/product-boxes" },
   { label: "Candle Packaging", href: "/products/candle-boxes" },
   { label: "Cosmetic Packaging", href: "/products/cosmetic-boxes" },
   { label: "Perfume Boxes", href: "/products/perfume-boxes" },
   { label: "Jewelry Boxes", href: "/products/jewelry-boxes" },
   { label: "Gift Boxes", href: "/products/gift-boxes" },
-  { label: "Window Boxes", href: "/products/window-boxes" },
-  { label: "Kraft Boxes", href: "/products/kraft-boxes" },
-  { label: "Display Boxes", href: "/products/display-boxes" },
-  { label: "Soap Boxes", href: "/products/soap-boxes" },
-  { label: "Wax Melt Boxes", href: "/products/wax-melt-boxes" },
-  { label: "Food Boxes", href: "/products/food-boxes" },
-  { label: "Bakery Boxes", href: "/products/bakery-boxes" },
   { label: "CBD Packaging", href: "/products/cbd-packaging" },
-  { label: "Supplement Packaging", href: "/products/supplement-packaging" },
-  { label: "Tissue Paper", href: "/products/custom-tissue-paper" },
-  { label: "Paper Bags", href: "/products/paper-bags" },
-  { label: "Sleeves", href: "/products/sleeves" },
-  { label: "Labels & Stickers", href: "/products/labels-and-stickers" },
-  { label: "Custom Inserts", href: "/products/inserts" },
   { label: "Sustainable Packaging", href: "/products/sustainable-packaging" },
 ];
 
