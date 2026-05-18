@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 
 import { categories } from "@/data/categories";
 import { industries } from "@/data/industries";
+import { locationSlugs } from "@/data/locations";
 import { productStyles } from "@/data/product-styles";
 import { footerLegalLinks, siteConfig } from "@/data/site";
 
@@ -47,5 +48,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticPages, ...categoryUrls, ...styleUrls, ...industryUrls];
+  const usaPageUrl = {
+    url: `${siteConfig.siteUrl}/custom-packaging-usa`,
+    lastModified,
+    changeFrequency: "monthly" as const,
+    priority: 0.85,
+  };
+
+  const locationUrls = locationSlugs.map((slug) => ({
+    url: `${siteConfig.siteUrl}/${slug}`,
+    lastModified,
+    changeFrequency: "monthly" as const,
+    priority: slug.includes("custom-packaging-") ? 0.75 : 0.7,
+  }));
+
+  return [...staticPages, ...categoryUrls, ...styleUrls, ...industryUrls, usaPageUrl, ...locationUrls];
 }
