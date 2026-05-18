@@ -113,6 +113,10 @@ export default async function ProductStylePage({
           alt: `${style.title} packaging by ZEEPACK.`,
         }}
         highlights={style.useCases.slice(0, 4)}
+        primaryLabel="Customize Your Box"
+        primaryHref={`/customize?type=${category.slug}`}
+        secondaryLabel="Get a Quote"
+        secondaryHref="/quote"
       />
 
       <ProductTrustStrip />

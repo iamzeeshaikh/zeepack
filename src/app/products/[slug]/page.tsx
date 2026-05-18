@@ -198,6 +198,10 @@ export default async function ProductCategoryPage({
           text,
           icon: pickFeatureIcon(text),
         }))}
+        primaryLabel="Customize Your Box"
+        primaryHref={`/customize?type=${category.slug}`}
+        secondaryLabel="Get a Quote"
+        secondaryHref="/quote"
       />
 
       <ProductTrustStrip />

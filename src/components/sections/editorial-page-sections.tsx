@@ -31,6 +31,10 @@ type EditorialHeroProps = {
   metrics?: HeroMetric[];
   aside?: ReactNode;
   titleClassName?: string;
+  primaryLabel?: string;
+  primaryHref?: string;
+  secondaryLabel?: string;
+  secondaryHref?: string;
 };
 
 type IconListItem = {
@@ -72,6 +76,10 @@ export function EditorialHero({
   metrics = [],
   aside,
   titleClassName,
+  primaryLabel = "Get a Custom Quote",
+  primaryHref = "/quote",
+  secondaryLabel = "Talk to Packaging Team",
+  secondaryHref = "/contact",
 }: EditorialHeroProps) {
   return (
     <section className="relative overflow-hidden border-b border-[rgba(17,17,17,0.06)] bg-[radial-gradient(ellipse_60%_60%_at_5%_0%,rgba(198,169,114,0.18),transparent_38%),linear-gradient(180deg,rgba(255,255,255,0.90),rgba(248,245,239,0.98))] py-20 sm:py-28">
@@ -121,11 +129,11 @@ export function EditorialHero({
             ) : null}
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Button href="/quote" variant="secondary" icon={<ArrowRight className="size-4" />}>
-                Get a Custom Quote
+              <Button href={primaryHref} variant="secondary" icon={<ArrowRight className="size-4" />}>
+                {primaryLabel}
               </Button>
-              <Button href="/contact" variant="ghost">
-                Talk to Packaging Team
+              <Button href={secondaryHref} variant="ghost">
+                {secondaryLabel}
               </Button>
             </div>
 
