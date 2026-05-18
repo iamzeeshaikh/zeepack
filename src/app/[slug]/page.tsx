@@ -13,6 +13,7 @@ import { Container } from "@/components/ui/container";
 import { FAQAccordion } from "@/components/ui/faq-accordion";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { industries } from "@/data/industries";
 import { getLocationBySlug, locationSlugs, type LocationData } from "@/data/locations";
 import {
   buildBreadcrumbSchema,
@@ -24,6 +25,65 @@ import {
 export function generateStaticParams() {
   return locationSlugs.map((slug) => ({ slug }));
 }
+
+// Map human-readable location industry labels → industry page slugs
+const industrySlugMap: Record<string, string> = {
+  "Beauty & Cosmetics": "cosmetics",
+  "Cosmetics": "cosmetics",
+  "Skincare": "skincare",
+  "Hair Care": "hair-care",
+  "Men's Grooming": "mens-grooming",
+  "Soap & Bath": "soap-bath",
+  "Aromatherapy": "aromatherapy",
+  "Essential Oils": "essential-oils",
+  "Vegan Beauty": "vegan-beauty",
+  "Wellness": "wellness",
+  "Health & Wellness": "health-wellness",
+  "Supplements": "supplements",
+  "Fitness": "fitness",
+  "Cannabis": "cbd",
+  "CBD": "cbd",
+  "Pharmacy": "pharmacy",
+  "Natural & Organic": "natural-organic",
+  "Natural Products": "natural-organic",
+  "Food & Beverage": "food",
+  "Food Processing": "food",
+  "Food": "food",
+  "Bakery": "bakery",
+  "Coffee & Tea": "coffee-tea",
+  "Coffee": "coffee-tea",
+  "Confectionery": "confectionery",
+  "Chocolate": "chocolate",
+  "Wine & Spirits": "wine-spirits",
+  "Gourmet Food": "gourmet-food",
+  "Restaurant": "restaurant",
+  "E-commerce": "ecommerce",
+  "Subscription Boxes": "subscription-boxes",
+  "Fashion": "fashion",
+  "Luxury Fashion": "luxury-fashion",
+  "Apparel": "fashion",
+  "Jewelry": "jewelry",
+  "Footwear": "footwear",
+  "Accessories": "accessories",
+  "Home Decor": "home-decor",
+  "Luxury Gifts": "luxury-gifts",
+  "Luxury Retail": "luxury-gifts",
+  "Corporate Gifts": "corporate-gifts",
+  "Wedding & Events": "wedding-events",
+  "Holiday & Seasonal": "holiday-seasonal",
+  "Pet Products": "pet-products",
+  "Baby Products": "baby-products",
+  "Electronics": "electronics",
+  "Retail": "boutique-retail",
+  "Boutique Retail": "boutique-retail",
+  "Spa & Wellness": "spa-wellness",
+  "Stationery": "stationery",
+  "Gift Baskets": "gift-baskets",
+  "Corporate Events": "corporate-events",
+};
+
+// Build name lookup from imported industries array
+const industryNameMap = Object.fromEntries(industries.map((i) => [i.slug, i.name]));
 
 // Each product maps to a distinct zee/ image for use as a secondary spotlight image
 const productImages: Record<string, string> = {
@@ -220,12 +280,22 @@ export default async function LocationPage({
     }));
 
   const siblingCities = location.type === "city"
-    ? location.topCities.filter((c) => c.slug !== slug).slice(0, 3)
+    ? location.topCities.filter((c) => c.slug !== slug).slice(0, 8)
     : [];
 
   const stateCities = location.type === "state"
-    ? location.topCities.slice(0, 8)
+    ? location.topCities
     : [];
+
+  // Map location industries to industry pages, deduped
+  const relatedIndustries = location.industries
+    .map((name) => {
+      const slug = industrySlugMap[name];
+      if (!slug) return null;
+      return { slug, name: industryNameMap[slug] ?? name, href: `/industries/${slug}` };
+    })
+    .filter((x): x is { slug: string; name: string; href: string } => x !== null)
+    .filter((x, i, arr) => arr.findIndex((y) => y.slug === x.slug) === i);
 
   const valueProps = [
     {
@@ -397,6 +467,41 @@ export default async function LocationPage({
         </section>
       )}
 
+      {/* Industries section */}
+      {relatedIndustries.length > 0 && (
+        <section className="section-space pt-0">
+          <Container>
+            <Reveal>
+              <SectionHeading
+                eyebrow="Industries"
+                title={`Packaging for ${location.name}'s key industries.`}
+                description={`Explore packaging formats built around the product categories and distribution needs of ${locLabel}'s most active business sectors.`}
+              />
+            </Reveal>
+            <div className="mt-8 flex flex-wrap gap-3">
+              {relatedIndustries.map((ind) => (
+                <Reveal key={ind.slug}>
+                  <Link
+                    href={ind.href}
+                    className="inline-flex items-center rounded-full border border-[var(--color-shell)] bg-white px-5 py-2.5 text-sm font-semibold text-[var(--color-primary)] transition-colors hover:bg-[var(--color-shell)]"
+                  >
+                    {ind.name}
+                  </Link>
+                </Reveal>
+              ))}
+              <Reveal>
+                <Link
+                  href="/industries"
+                  className="inline-flex items-center rounded-full border border-[rgba(17,17,17,0.12)] bg-transparent px-5 py-2.5 text-sm font-semibold text-[var(--color-muted)] transition-colors hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
+                >
+                  All Industries →
+                </Link>
+              </Reveal>
+            </div>
+          </Container>
+        </section>
+      )}
+
       {/* Related products links */}
       <section className="section-space bg-[linear-gradient(180deg,rgba(248,245,239,0.72),rgba(255,255,255,0.92))]">
         <Container>
@@ -418,6 +523,14 @@ export default async function LocationPage({
                 </Link>
               </Reveal>
             ))}
+            <Reveal>
+              <Link
+                href="/products"
+                className="inline-flex items-center rounded-full border border-[rgba(17,17,17,0.12)] bg-transparent px-5 py-2.5 text-sm font-semibold text-[var(--color-muted)] transition-colors hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
+              >
+                All Products →
+              </Link>
+            </Reveal>
           </div>
         </Container>
       </section>
