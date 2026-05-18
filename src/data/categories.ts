@@ -24,7 +24,7 @@ export const categories: Category[] = [
       "Premium presentation boxes with refined structure, tactile finishes, and elevated unboxing impact.",
     intro:
       "Luxury rigid boxes are designed for brands that need presence, precision, and a memorable reveal. They are ideal for gifting, product launches, and premium retail presentation.",
-    image: "/images/clean/rigid-boxes.jpg",
+    image: "/images/zee/rigid-lid-box.jpg",
     type: "boxes",
     heroLabel: "Signature packaging",
     keyFeatures: [
@@ -76,7 +76,7 @@ export const categories: Category[] = [
       "Durable shipping-ready mailers with premium print treatment for subscription, e-commerce, and launches.",
     intro:
       "Mailer boxes bring together protective performance and premium brand presentation. They are ideal for direct-to-consumer brands that want a stronger arrival experience without sacrificing utility.",
-    image: "/images/clean/mailer-boxes.webp",
+    image: "/images/zee/mailer-blank.jpg",
     type: "boxes",
     heroLabel: "DTC-ready packaging",
     keyFeatures: [
@@ -127,7 +127,7 @@ export const categories: Category[] = [
       "Clean, efficient carton packaging for retail products that still feels elevated and design-led.",
     intro:
       "Folding cartons suit brands that need strong visual branding, efficient storage, and versatile finishing. They work especially well in cosmetics, confectionery, wellness, and retail packaging programs.",
-    image: "/images/clean/folding-cartons.webp",
+    image: "/images/zee/folding-carton-corrugated.jpg",
     type: "boxes",
     heroLabel: "Retail-ready packaging",
     keyFeatures: [
@@ -178,7 +178,7 @@ export const categories: Category[] = [
       "Versatile premium product boxes designed for modern retail, gifting, and direct-to-consumer presentation.",
     intro:
       "Product boxes give brands a flexible foundation for packaging across multiple SKUs. They can be engineered for presentation, shipping support, or a cleaner shelf-ready format depending on the product.",
-    image: "/images/real/product-boxes.webp",
+    image: "/images/zee/product-rigid-box.jpg",
     type: "boxes",
     heroLabel: "Flexible premium packaging",
     keyFeatures: [
@@ -229,7 +229,7 @@ export const categories: Category[] = [
       "Refined packaging for candles, gift sets, and home fragrance collections with boutique presentation.",
     intro:
       "Candle packaging should protect glassware, communicate fragrance quality, and feel worthy of display. We create structures that support both brand perception and practical shipment needs.",
-    image: "/images/clean/candle-boxes.webp",
+    image: "/images/zee/candle-boxes.jpg",
     type: "boxes",
     heroLabel: "Boutique presentation",
     keyFeatures: [
@@ -280,7 +280,7 @@ export const categories: Category[] = [
       "Luxury cosmetic boxes for skincare, makeup, and wellness products that need precision and shelf appeal.",
     intro:
       "Cosmetic packaging needs to balance visual clarity, structural consistency, and tactile quality. We help premium beauty brands develop boxes that feel polished across every customer touchpoint.",
-    image: "/images/clean/cosmetic-boxes.webp",
+    image: "/images/zee/cosmetic-serum-box.jpg",
     type: "boxes",
     heroLabel: "Beauty-ready packaging",
     keyFeatures: [
@@ -331,7 +331,7 @@ export const categories: Category[] = [
       "Elegant fragrance packaging with strong structure, detailed finishing, and collector-level presentation.",
     intro:
       "Perfume packaging deserves a sense of ceremony. We create fragrance boxes with premium materials, secure inserts, and high-end surface finishes that strengthen perception at first touch.",
-    image: "/images/clean/perfume-boxes.png",
+    image: "/images/zee/perfume-sleeve-box.jpg",
     type: "boxes",
     heroLabel: "Fragrance presentation",
     keyFeatures: [
@@ -382,7 +382,7 @@ export const categories: Category[] = [
       "Refined jewelry presentation boxes designed for tactility, protection, and an elevated gifting moment.",
     intro:
       "Jewelry packaging must feel intimate, precise, and unmistakably premium. We develop compact, detail-rich formats that support gifting, keepsake presentation, and retail display.",
-    image: "/images/clean/jewelry-boxes.webp",
+    image: "/images/zee/jewelry-cotton-box.jpg",
     type: "boxes",
     heroLabel: "Presentation-first packaging",
     keyFeatures: [
@@ -433,7 +433,7 @@ export const categories: Category[] = [
       "Soft branded wrapping layers that add texture, elegance, and a stronger inside-the-box experience.",
     intro:
       "Custom tissue paper adds softness and ritual to an unboxing experience. It is an efficient way to extend brand identity inside mailers, rigid boxes, and boutique bags.",
-    image: "/images/real/tissue-paper.webp",
+    image: "/images/zee/tissue-paper-custom.jpg",
     type: "accessories",
     heroLabel: "Unboxing details",
     keyFeatures: [
@@ -481,7 +481,7 @@ export const categories: Category[] = [
       "Retail-ready paper bags with elegant construction, premium handles, and refined brand presence.",
     intro:
       "Paper bags should feel as considered as the packaging inside them. We create premium bag formats for boutiques, gifting, retail counters, and event packaging.",
-    image: "/images/clean/paper-bags.webp",
+    image: "/images/zee/paper-bag-bakery.jpg",
     type: "accessories",
     heroLabel: "Retail finishing touch",
     keyFeatures: [
@@ -532,7 +532,7 @@ export const categories: Category[] = [
       "Minimal, elegant sleeves that wrap cartons, gift boxes, trays, and multipacks with refined branding.",
     intro:
       "Packaging sleeves are a subtle way to add brand presence, hierarchy, or campaign storytelling without redesigning the full structure. They work well across luxury cartons, gift sets, and seasonal releases.",
-    image: "/images/real/sleeves.webp",
+    image: "/images/zee/sleeve-apparel.jpg",
     type: "accessories",
     heroLabel: "Editorial finishing layer",
     keyFeatures: [
@@ -582,7 +582,7 @@ export const categories: Category[] = [
       "Premium branded labels and seals that complete the packaging system with sharp detail and flexibility.",
     intro:
       "Labels and stickers can reinforce premium branding across boxes, tissue, sleeves, jars, and shipping touchpoints. They are especially useful for short-run personalization, sealing, and seasonal updates.",
-    image: "/images/real/labels-stickers.webp",
+    image: "/images/zee/label-body-butter.jpg",
     type: "accessories",
     heroLabel: "Flexible brand detailing",
     keyFeatures: [
@@ -632,7 +632,7 @@ export const categories: Category[] = [
       "Protective and presentation-focused inserts tailored to product fit, organization, and premium reveal.",
     intro:
       "Inserts help packaging feel precise. They improve product security, add order to the reveal, and elevate perceived value when developed as part of the full packaging system.",
-    image: "/images/clean/product-boxes.webp",
+    image: "/images/zee/insert-partitioned.jpg",
     type: "sustainable",
     heroLabel: "Structure and protection",
     keyFeatures: [
@@ -682,7 +682,7 @@ export const categories: Category[] = [
       "Lower-impact packaging strategies using recyclable structures, efficient materials, and elegant restraint.",
     intro:
       "Sustainable packaging at ZEEPACK is about smart decisions, not performative claims. We help brands reduce excess, choose more responsible materials, and build premium experiences with a lighter footprint.",
-    image: "/images/clean/sustainable-packaging.png",
+    image: "/images/zee/sustainable-kraft-box.jpg",
     type: "sustainable",
     heroLabel: "Eco-conscious strategy",
     keyFeatures: [
@@ -731,7 +731,7 @@ export const categories: Category[] = [
     name: "Custom Gift Boxes",
     shortDescription: "Premium gift packaging with magnetic closures, ribbon finishes, and elevated presentation for any occasion.",
     intro: "Custom gift boxes are designed for brands and retailers that need a more considered arrival experience. From magnetic lid formats to ribbon-tie closures, each structure is shaped around the gifting moment.",
-    image: "/images/clean/rigid-boxes.jpg",
+    image: "/images/zee/gift-stationery-box.jpg",
     type: "boxes",
     heroLabel: "Gifting packaging",
     keyFeatures: [
@@ -756,7 +756,7 @@ export const categories: Category[] = [
     name: "Custom Window Boxes",
     shortDescription: "Folding carton and rigid packaging with clear window cutouts for visible product display on retail shelves.",
     intro: "Window boxes combine retail display visibility with clean brand presentation. The clear window format lets customers see the product while maintaining a premium structured exterior.",
-    image: "/images/clean/folding-cartons.webp",
+    image: "/images/zee/window-display-box.jpg",
     type: "boxes",
     heroLabel: "Display packaging",
     keyFeatures: [
@@ -781,7 +781,7 @@ export const categories: Category[] = [
     name: "Custom Kraft Boxes",
     shortDescription: "Natural kraft packaging with an earthy, minimal aesthetic suited to organic, artisan, and eco-conscious brands.",
     intro: "Kraft boxes deliver a clean, natural look that resonates with eco-conscious consumers. The unbleached material can be printed or left natural, making them versatile for artisan, food, beauty, and sustainable product ranges.",
-    image: "/images/clean/sustainable-packaging.png",
+    image: "/images/zee/kraft-recycled-box.jpg",
     type: "boxes",
     heroLabel: "Eco packaging",
     keyFeatures: [
@@ -806,7 +806,7 @@ export const categories: Category[] = [
     name: "Counter Display Boxes",
     shortDescription: "Point-of-sale counter and shelf display packaging that presents multiple units in one clean retail-ready format.",
     intro: "Counter display boxes organize multiple product units in a single retail-ready structure. They are ideal for high-traffic retail placements where visibility, brand consistency, and fast customer access all matter.",
-    image: "/images/clean/product-boxes.webp",
+    image: "/images/zee/display-window-box.jpg",
     type: "boxes",
     heroLabel: "Retail display",
     keyFeatures: [
@@ -831,7 +831,7 @@ export const categories: Category[] = [
     name: "Custom Corrugated Boxes",
     shortDescription: "Durable corrugated shipping and retail packaging with full-color print capability and custom structural options.",
     intro: "Corrugated boxes provide strong protection for shipping, storage, and retail. Available in single-wall, double-wall, and custom die-cut formats, they can be printed with full branding for a more consistent customer-facing experience.",
-    image: "/images/clean/mailer-boxes.webp",
+    image: "/images/zee/corrugated-divider-box.jpg",
     type: "boxes",
     heroLabel: "Shipping & retail",
     keyFeatures: [
@@ -856,7 +856,7 @@ export const categories: Category[] = [
     name: "Custom Soap Boxes",
     shortDescription: "Elegant soap packaging with window cutouts, kraft finishes, and premium label integration for handmade and boutique brands.",
     intro: "Custom soap boxes are designed for artisan, organic, and boutique soap brands that need packaging which reflects the quality of the product. From kraft sleeves to windowed cartons and luxury rigid formats, each style can be built around your bar size and brand aesthetic.",
-    image: "/images/clean/candle-boxes.webp",
+    image: "/images/zee/soap-brown-box.jpg",
     type: "boxes",
     heroLabel: "Artisan packaging",
     keyFeatures: [
@@ -881,7 +881,7 @@ export const categories: Category[] = [
     name: "Custom Mylar Bags & Pouches",
     shortDescription: "High-barrier mylar bags and stand-up pouches for food, supplements, CBD, cannabis, coffee, tea, and specialty products.",
     intro: "Mylar bags and stand-up pouches provide superior barrier protection for moisture, oxygen, and light. They are used across food, supplement, cannabis, coffee, tea, and pet food categories where freshness and shelf life are critical.",
-    image: "/images/real/product-boxes.webp",
+    image: "/images/zee/product-rigid-box.jpg",
     type: "accessories",
     heroLabel: "Barrier packaging",
     keyFeatures: [
@@ -906,7 +906,7 @@ export const categories: Category[] = [
     name: "Wax Melt Packaging",
     shortDescription: "Clamshell, gift box, and custom packaging formats designed specifically for wax melts, snap bars, and home fragrance products.",
     intro: "Wax melt packaging needs to protect the product during transit, display it cleanly at retail, and communicate the fragrance story. From clamshell formats to premium gift boxes, we build wax melt packaging around the product size, scent presentation, and brand direction.",
-    image: "/images/clean/candle-boxes.webp",
+    image: "/images/zee/wax-melt-box.jpg",
     type: "boxes",
     heroLabel: "Home fragrance",
     keyFeatures: [
@@ -931,7 +931,7 @@ export const categories: Category[] = [
     name: "Food Packaging Boxes",
     shortDescription: "Custom food packaging for bakeries, restaurants, confectionery, and specialty food brands including boxes, bags, and cartons.",
     intro: "Food packaging boxes need to balance presentation, food safety, and brand consistency. From bakery cartons to premium chocolate gift boxes, we develop food packaging around the product type, retail environment, and the brand story.",
-    image: "/images/clean/folding-cartons.webp",
+    image: "/images/zee/food-frozen-box.jpg",
     type: "boxes",
     heroLabel: "Food & beverage",
     keyFeatures: [
@@ -956,7 +956,7 @@ export const categories: Category[] = [
     name: "Custom Bakery Boxes",
     shortDescription: "Stylish bakery packaging for cakes, cookies, pastries, bread, and specialty baked goods with custom print and window options.",
     intro: "Custom bakery boxes present baked goods at their best. Window cutouts for visibility, grease-resistant coatings for protection, and premium print for brand consistency make them ideal for patisseries, artisan bakers, and specialty food retailers.",
-    image: "/images/clean/folding-cartons.webp",
+    image: "/images/zee/bakery-divider-box.jpg",
     type: "boxes",
     heroLabel: "Artisan bakery",
     keyFeatures: [
@@ -981,7 +981,7 @@ export const categories: Category[] = [
     name: "Custom Cake Boxes",
     shortDescription: "Strong, food-safe cake packaging in standard and custom sizes for single tiers, multi-tier cakes, and premium patisserie presentation.",
     intro: "Custom cake boxes protect delicate cakes during transport while presenting them in a way that reflects the care and craft behind them. Available in kraft, white, and premium printed finishes for every bakery and patisserie.",
-    image: "/images/clean/rigid-boxes.jpg",
+    image: "/images/zee/rigid-lid-box.jpg",
     type: "boxes",
     heroLabel: "Cake packaging",
     keyFeatures: [
@@ -1006,7 +1006,7 @@ export const categories: Category[] = [
     name: "Coffee & Tea Packaging",
     shortDescription: "Premium coffee bag, tea pouch, and specialty beverage packaging with barrier protection, custom print, and sustainable material options.",
     intro: "Coffee and tea packaging needs to protect freshness, communicate quality, and look good on a shelf. From stand-up pouches with degassing valves to premium rigid gift boxes for specialty blends, we build coffee and tea packaging around the product's story.",
-    image: "/images/clean/folding-cartons.webp",
+    image: "/images/zee/folding-carton-corrugated.jpg",
     type: "boxes",
     heroLabel: "Beverage packaging",
     keyFeatures: [
@@ -1031,7 +1031,7 @@ export const categories: Category[] = [
     name: "Candy & Confectionery Boxes",
     shortDescription: "Custom candy boxes, chocolate boxes, and confectionery packaging with elegant presentation finishes and food-safe materials.",
     intro: "Candy and confectionery packaging is as much about presentation as protection. From ribbon-tied chocolate boxes to printed candy cartons, we build confectionery packaging that makes the product feel worth the moment.",
-    image: "/images/real/folding-cartons.webp",
+    image: "/images/zee/folding-carton-cosmetic.jpg",
     type: "boxes",
     heroLabel: "Confectionery",
     keyFeatures: [
@@ -1056,7 +1056,7 @@ export const categories: Category[] = [
     name: "CBD & Cannabis Packaging",
     shortDescription: "Compliant, premium CBD and cannabis packaging including tincture boxes, gummy packaging, cartridge boxes, and display formats.",
     intro: "CBD and cannabis packaging must balance regulatory compliance, product protection, and strong brand presentation. From child-resistant tincture boxes to premium retail displays, we build CBD packaging around the product format and market channel.",
-    image: "/images/clean/product-boxes.webp",
+    image: "/images/zee/cbd-isolate-box.jpg",
     type: "boxes",
     heroLabel: "CBD packaging",
     keyFeatures: [
@@ -1081,7 +1081,7 @@ export const categories: Category[] = [
     name: "Supplement & Vitamin Boxes",
     shortDescription: "Professional supplement packaging for vitamins, capsules, powder tubs, gummies, and health product ranges with strong retail appeal.",
     intro: "Supplement and vitamin packaging needs to communicate trust, efficacy, and brand quality. From clean carton formats to premium rigid box sets, we develop supplement packaging that positions health products effectively on retail shelves and in direct-to-consumer channels.",
-    image: "/images/clean/folding-cartons.webp",
+    image: "/images/zee/supplement-cardboard-box.jpg",
     type: "boxes",
     heroLabel: "Health packaging",
     keyFeatures: [

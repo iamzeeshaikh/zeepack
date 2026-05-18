@@ -57,7 +57,7 @@ export default function ContactPage() {
         title="Let's Talk About Your Packaging Project"
         description="Whether you are launching something new or refining an existing product, we are here to help shape the packaging direction with clearer structure, material guidance, and presentation logic. We respond within 24 hours on most working days."
         image={{
-          src: "/images/clean/cosmetic-boxes.webp",
+          src: "/images/zee/cosmetic-serum-box.jpg",
           alt: "ZEEPACK contact page premium packaging visual.",
         }}
         highlights={["Custom sizes", "Materials", "Finishes", "Launch packaging"]}

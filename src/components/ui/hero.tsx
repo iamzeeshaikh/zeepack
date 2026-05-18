@@ -150,7 +150,7 @@ export function Hero() {
               {/* Ground shadow */}
               <div className="pointer-events-none absolute inset-x-[12%] bottom-[3%] h-[10%] rounded-full bg-[rgba(17,17,17,0.10)] blur-3xl" />
               <Image
-                src="/images/clean/retail-ready-packaging-1.webp"
+                src="/images/zee/product-rigid-box.jpg"
                 alt="Premium custom packaging boxes by ZEEPACK — luxury presentation packaging for modern brands"
                 fill
                 priority

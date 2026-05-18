@@ -3,17 +3,17 @@ import Image from "next/image";
 const showcaseItems = [
   {
     title: "Rigid presentation box",
-    image: "/images/clean/rigid-boxes.jpg",
+    image: "/images/zee/rigid-lid-box.jpg",
     className: "lg:row-span-2",
   },
   {
     title: "Structured interior packaging",
-    image: "/images/clean/product-boxes.webp",
+    image: "/images/zee/product-rigid-box.jpg",
     className: "",
   },
   {
     title: "Mailer for elevated delivery",
-    image: "/images/clean/mailer-boxes.webp",
+    image: "/images/zee/mailer-blank.jpg",
     className: "",
   },
 ];

@@ -29,7 +29,7 @@ export default function ProductsPage() {
         title="Packaging Formats Built Around Detail, Structure, and Premium Perception"
         description="Explore the full ZEEPACK collection across boxes, supporting layers, and sustainable packaging directions. Every format is selected to help brands shape a cleaner, stronger customer-facing result."
         image={{
-          src: "/images/clean/product-boxes.webp",
+          src: "/images/zee/product-rigid-box.jpg",
           alt: "Premium packaging collection by ZEEPACK.",
         }}
         highlights={["Boxes", "Accessories", "Sustainable options", "Low minimums"]}

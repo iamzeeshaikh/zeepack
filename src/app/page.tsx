@@ -55,7 +55,7 @@ const productCards = [
   {
     title: "Luxury Rigid Boxes",
     href: "/products/rigid-boxes",
-    image: "/images/clean/rigid-boxes.jpg",
+    image: "/images/zee/rigid-lid-box.jpg",
     alt: "Luxury rigid box packaging for premium custom packaging.",
     badge: "Best Seller",
     description:
@@ -64,7 +64,7 @@ const productCards = [
   {
     title: "Custom Mailer Boxes",
     href: "/products/mailer-boxes",
-    image: "/images/clean/mailer-boxes.webp",
+    image: "/images/zee/mailer-blank.jpg",
     alt: "Custom printed mailer box for direct-to-consumer delivery.",
     badge: "DTC Ready",
     description:
@@ -73,7 +73,7 @@ const productCards = [
   {
     title: "Folding Cartons",
     href: "/products/folding-cartons",
-    image: "/images/clean/folding-cartons.webp",
+    image: "/images/zee/folding-carton-corrugated.jpg",
     alt: "Folding carton packaging for retail product presentation.",
     description:
       "Retail-friendly cartons designed for shelf clarity, efficient production, and clean print execution.",
@@ -81,7 +81,7 @@ const productCards = [
   {
     title: "Candle Packaging",
     href: "/products/candle-boxes",
-    image: "/images/real/candle-boxes.webp",
+    image: "/images/zee/candle-window-box.jpg",
     alt: "Premium candle packaging box for gifting and retail.",
     badge: "Premium",
     description:
@@ -90,7 +90,7 @@ const productCards = [
   {
     title: "Cosmetic Packaging",
     href: "/products/cosmetic-boxes",
-    image: "/images/clean/cosmetic-boxes.webp",
+    image: "/images/zee/cosmetic-serum-box.jpg",
     alt: "Cosmetic packaging boxes for beauty and skincare.",
     description:
       "Custom printed boxes for skincare, beauty, and wellness products where precision and shelf appeal matter.",
@@ -98,7 +98,7 @@ const productCards = [
   {
     title: "Jewelry Packaging",
     href: "/products/jewelry-boxes",
-    image: "/images/clean/jewelry-boxes.webp",
+    image: "/images/zee/jewelry-cotton-box.jpg",
     alt: "Luxury jewelry packaging for compact premium presentation.",
     description:
       "Compact luxury packaging designed to support softness, fit, and higher perceived value for fine jewelry.",
@@ -109,19 +109,19 @@ const industryCards = [
   {
     title: "Cosmetic Brands",
     href: "/industries/cosmetics",
-    image: "/images/clean/cosmetic-boxes.webp",
+    image: "/images/zee/cosmetic-serum-box.jpg",
     description: "Beauty packaging that supports clarity and stronger retail presentation across multiple SKUs.",
   },
   {
     title: "Candle Brands",
     href: "/industries/candles",
-    image: "/images/real/candle-boxes.webp",
+    image: "/images/zee/candle-window-box.jpg",
     description: "Packaging for jars, gift sets, and fragrance collections that balances protection with boutique feel.",
   },
   {
     title: "Jewelry Brands",
     href: "/industries/jewelry",
-    image: "/images/clean/jewelry-boxes.webp",
+    image: "/images/zee/jewelry-cotton-box.jpg",
     description: "Compact box systems and supporting layers for jewelry where fit and material feel shape perception.",
   },
   {
@@ -476,7 +476,7 @@ export default function HomePage() {
                 <div className="relative min-h-[420px] overflow-hidden rounded-[32px] bg-[linear-gradient(160deg,rgba(248,245,239,0.98),rgba(238,230,218,0.90))] sm:min-h-[520px]">
                   <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_68%_18%,rgba(255,255,255,0.92),rgba(255,255,255,0.16)_32%,transparent_58%),radial-gradient(circle_at_18%_80%,rgba(198,169,114,0.16),transparent_28%)]" />
                   <Image
-                    src="/images/real/rigid-boxes.webp"
+                    src="/images/zee/rigid-shoulder-box.jpg"
                     alt="Premium custom rigid gift box packaging for luxury brands"
                     fill
                     sizes="(min-width: 1024px) 44vw, 100vw"

@@ -15,37 +15,37 @@ const variantCardsBySlug: Record<string, VariantCard[]> = {
       title: "Magnetic Closure Box",
       description:
         "A presentation-first rigid box with a cleaner reveal and stronger gifting feel.",
-      image: "/images/clean/rigid-boxes.jpg",
+      image: "/images/zee/rigid-lid-box.jpg",
     },
     {
       title: "Two Piece Rigid Box",
       description:
         "Classic lid-and-base structure for premium gifting, launches, and retail display.",
-      image: "/images/real/rigid-boxes.webp",
+      image: "/images/zee/rigid-shoulder-box.jpg",
     },
     {
       title: "Shoulder Neck Box",
       description:
         "A refined, layered format with extra presence and a more architectural opening.",
-      image: "/images/clean/rigid-boxes.jpg",
+      image: "/images/zee/rigid-lid-box.jpg",
     },
     {
       title: "Drawer Style Box",
       description:
         "A sliding rigid format suited to keepsake products, jewelry, and premium kits.",
-      image: "/images/clean/jewelry-boxes.webp",
+      image: "/images/zee/jewelry-cotton-box.jpg",
     },
     {
       title: "Book Style Box",
       description:
         "Elegant hinged construction for stronger storytelling and ceremonial presentation.",
-      image: "/images/real/rigid-boxes.webp",
+      image: "/images/zee/rigid-shoulder-box.jpg",
     },
     {
       title: "Lid and Base Box",
       description:
         "A timeless premium format that balances gifting appeal with practical structure.",
-      image: "/images/real/rigid-boxes.webp",
+      image: "/images/zee/rigid-shoulder-box.jpg",
     },
   ],
   "mailer-boxes": [
@@ -53,37 +53,37 @@ const variantCardsBySlug: Record<string, VariantCard[]> = {
       title: "Tuck Top Mailers",
       description:
         "A clean self-locking format for premium e-commerce and launch shipments.",
-      image: "/images/clean/mailer-boxes.webp",
+      image: "/images/zee/mailer-blank.jpg",
     },
     {
       title: "Subscription Mailers",
       description:
         "Structured for recurring deliveries where presentation and repeatability both matter.",
-      image: "/images/clean/mailer-boxes.webp",
+      image: "/images/zee/mailer-blank.jpg",
     },
     {
       title: "E-commerce Mailers",
       description:
         "Shipping-ready mailers designed to protect products while extending the brand story.",
-      image: "/images/clean/sustainable-packaging.png",
+      image: "/images/zee/sustainable-kraft-box.jpg",
     },
     {
       title: "Kraft Mailers",
       description:
         "A restrained, tactile mailer direction with a more natural and premium tone.",
-      image: "/images/clean/sustainable-packaging.png",
+      image: "/images/zee/sustainable-kraft-box.jpg",
     },
     {
       title: "Printed Mailers",
       description:
         "Exterior and interior branding options for a more memorable arrival experience.",
-      image: "/images/clean/tissue-paper.webp",
+      image: "/images/zee/tissue-paper-custom.jpg",
     },
     {
       title: "Insert Mailers",
       description:
         "Mailer systems built around added support, inserts, and better product organization.",
-      image: "/images/clean/product-boxes.webp",
+      image: "/images/zee/product-rigid-box.jpg",
     },
   ],
   "candle-boxes": [
@@ -91,37 +91,37 @@ const variantCardsBySlug: Record<string, VariantCard[]> = {
       title: "Single Candle Box",
       description:
         "A focused format for retail presentation, gifting, and fragrance-led product launches.",
-      image: "/images/real/candle-boxes.webp",
+      image: "/images/zee/candle-window-box.jpg",
     },
     {
       title: "Gift Set Box",
       description:
         "Supports multiple candles or candle-plus-accessory bundles with cleaner presentation.",
-      image: "/images/clean/candle-boxes.webp",
+      image: "/images/zee/candle-boxes.jpg",
     },
     {
       title: "Seasonal Collection Packaging",
       description:
         "Developed for capsule launches, holiday gifting, and limited-edition candle drops.",
-      image: "/images/clean/rigid-boxes.jpg",
+      image: "/images/zee/rigid-lid-box.jpg",
     },
     {
       title: "Mailer-Ready Candle Box",
       description:
         "Built with added protection considerations for direct-to-consumer delivery.",
-      image: "/images/clean/mailer-boxes.webp",
+      image: "/images/zee/mailer-blank.jpg",
     },
     {
       title: "Rigid Candle Presentation Box",
       description:
         "A more elevated direction for premium home fragrance collections and gifting sets.",
-      image: "/images/clean/rigid-boxes.jpg",
+      image: "/images/zee/rigid-lid-box.jpg",
     },
     {
       title: "Insert-Led Candle Box",
       description:
         "Uses custom inserts to reduce movement and support a more precise reveal.",
-      image: "/images/clean/product-boxes.webp",
+      image: "/images/zee/product-rigid-box.jpg",
     },
   ],
   "cosmetic-boxes": [
@@ -129,37 +129,37 @@ const variantCardsBySlug: Record<string, VariantCard[]> = {
       title: "Serum Carton",
       description:
         "Clean, shelf-ready cosmetic packaging for smaller premium beauty products.",
-      image: "/images/clean/cosmetic-boxes.webp",
+      image: "/images/zee/cosmetic-serum-box.jpg",
     },
     {
       title: "Skincare Set Box",
       description:
         "Presentation-focused formats for coordinated skincare kits and multi-item lines.",
-      image: "/images/clean/cosmetic-boxes.webp",
+      image: "/images/zee/cosmetic-serum-box.jpg",
     },
     {
       title: "Perfume-Style Presentation Box",
       description:
         "A premium direction for beauty launches that need stronger ceremony and protection.",
-      image: "/images/clean/perfume-boxes.png",
+      image: "/images/zee/perfume-sleeve-box.jpg",
     },
     {
       title: "Lipstick and Makeup Carton",
       description:
         "Designed for clarity, elegant print detail, and strong shelf appeal.",
-      image: "/images/clean/rigid-boxes.jpg",
+      image: "/images/zee/rigid-lid-box.jpg",
     },
     {
       title: "Influencer Mailer Set",
       description:
         "A beauty-focused mailer structure for launches, gifting, and campaign sends.",
-      image: "/images/clean/mailer-boxes.webp",
+      image: "/images/zee/mailer-blank.jpg",
     },
     {
       title: "Insert-Led Cosmetic Box",
       description:
         "Keeps jars, bottles, or multi-piece sets more secure and more premium on reveal.",
-      image: "/images/clean/product-boxes.webp",
+      image: "/images/zee/product-rigid-box.jpg",
     },
   ],
   "perfume-boxes": [
@@ -167,37 +167,37 @@ const variantCardsBySlug: Record<string, VariantCard[]> = {
       title: "Single Bottle Rigid Box",
       description:
         "A premium fragrance format built around secure bottle support and ceremonial reveal.",
-      image: "/images/clean/perfume-boxes.png",
+      image: "/images/zee/perfume-sleeve-box.jpg",
     },
     {
       title: "Perfume Gift Set",
       description:
         "Supports bottle, sample, and add-on presentation in one cleaner structure.",
-      image: "/images/clean/cosmetic-boxes.webp",
+      image: "/images/zee/cosmetic-serum-box.jpg",
     },
     {
       title: "Collector Edition Box",
       description:
         "A more dramatic presentation format suited to premium pricing and gifting.",
-      image: "/images/clean/rigid-boxes.jpg",
+      image: "/images/zee/rigid-lid-box.jpg",
     },
     {
       title: "Magnetic Closure Fragrance Box",
       description:
         "A luxurious opening experience with added protection and tactile value.",
-      image: "/images/clean/rigid-boxes.jpg",
+      image: "/images/zee/rigid-lid-box.jpg",
     },
     {
       title: "Launch Kit Fragrance Box",
       description:
         "Combines presentation, insert support, and campaign-level detail for brand launches.",
-      image: "/images/clean/product-boxes.webp",
+      image: "/images/zee/product-rigid-box.jpg",
     },
     {
       title: "Retail Display Fragrance Box",
       description:
         "Engineered for premium shelf presence with refined finishing and clean structure.",
-      image: "/images/clean/cosmetic-boxes.webp",
+      image: "/images/zee/cosmetic-serum-box.jpg",
     },
   ],
   "jewelry-boxes": [
@@ -205,37 +205,37 @@ const variantCardsBySlug: Record<string, VariantCard[]> = {
       title: "Ring Box",
       description:
         "Compact presentation with keepsake-level tactility and gifting appeal.",
-      image: "/images/clean/jewelry-boxes.webp",
+      image: "/images/zee/jewelry-cotton-box.jpg",
     },
     {
       title: "Necklace Box",
       description:
         "Supports elegant arrangement and softer insert-led product positioning.",
-      image: "/images/clean/jewelry-boxes.webp",
+      image: "/images/zee/jewelry-cotton-box.jpg",
     },
     {
       title: "Bracelet Box",
       description:
         "A refined format for retail display, gifting, and premium presentation.",
-      image: "/images/real/rigid-boxes.webp",
+      image: "/images/zee/rigid-shoulder-box.jpg",
     },
     {
       title: "Jewelry Set Box",
       description:
         "Built for multi-piece presentation with better organization and perceived value.",
-      image: "/images/clean/product-boxes.webp",
+      image: "/images/zee/product-rigid-box.jpg",
     },
     {
       title: "Drawer Jewelry Box",
       description:
         "A premium reveal format for collectible, bridal, or keepsake packaging.",
-      image: "/images/clean/rigid-boxes.jpg",
+      image: "/images/zee/rigid-lid-box.jpg",
     },
     {
       title: "Insert-Led Jewelry Box",
       description:
         "Uses soft-touch support structures for a more precise and protected reveal.",
-      image: "/images/clean/product-boxes.webp",
+      image: "/images/zee/product-rigid-box.jpg",
     },
   ],
   "product-boxes": [
@@ -243,122 +243,122 @@ const variantCardsBySlug: Record<string, VariantCard[]> = {
       title: "Retail Product Box",
       description:
         "A versatile premium format for shelf-ready product presentation across multiple SKUs.",
-      image: "/images/clean/rigid-boxes.jpg",
+      image: "/images/zee/rigid-lid-box.jpg",
     },
     {
       title: "Gift-Ready Box",
       description:
         "A stronger presentation route for products that need a more elevated first impression.",
-      image: "/images/clean/rigid-boxes.jpg",
+      image: "/images/zee/rigid-lid-box.jpg",
     },
     {
       title: "Launch Set Box",
       description:
         "Supports product bundles, press kits, and campaign-driven packaging systems.",
-      image: "/images/clean/rigid-boxes.jpg",
+      image: "/images/zee/rigid-lid-box.jpg",
     },
     {
       title: "Protective Branded Box",
       description:
         "Balances shipping support with cleaner outside presentation and finishing.",
-      image: "/images/clean/mailer-boxes.webp",
+      image: "/images/zee/mailer-blank.jpg",
     },
     {
       title: "Insert-Led Product Box",
       description:
         "Built around more precise fit, product support, and premium organization.",
-      image: "/images/clean/product-boxes.webp",
+      image: "/images/zee/product-rigid-box.jpg",
     },
     {
       title: "Multi-SKU Packaging Family",
       description:
         "A coordinated packaging system for brands with multiple product dimensions.",
-      image: "/images/clean/cosmetic-boxes.webp",
+      image: "/images/zee/cosmetic-serum-box.jpg",
     },
   ],
 };
 
 const supportImagesBySlug: Record<string, string> = {
-  "rigid-boxes": "/images/clean/rigid-boxes.jpg",
-  "mailer-boxes": "/images/clean/sustainable-packaging.png",
-  "candle-boxes": "/images/clean/product-boxes.webp",
-  "cosmetic-boxes": "/images/clean/product-boxes.webp",
-  "perfume-boxes": "/images/clean/cosmetic-boxes.webp",
-  "jewelry-boxes": "/images/clean/product-boxes.webp",
-  "product-boxes": "/images/clean/rigid-boxes.jpg",
-  "custom-tissue-paper": "/images/clean/sleeves.webp",
-  "paper-bags": "/images/clean/sleeves.webp",
-  sleeves: "/images/clean/labels-stickers.webp",
-  "labels-and-stickers": "/images/clean/cosmetic-boxes.webp",
-  inserts: "/images/clean/cosmetic-boxes.webp",
-  "sustainable-packaging": "/images/real/paper-bags.webp",
+  "rigid-boxes": "/images/zee/rigid-lid-box.jpg",
+  "mailer-boxes": "/images/zee/sustainable-kraft-box.jpg",
+  "candle-boxes": "/images/zee/product-rigid-box.jpg",
+  "cosmetic-boxes": "/images/zee/product-rigid-box.jpg",
+  "perfume-boxes": "/images/zee/cosmetic-serum-box.jpg",
+  "jewelry-boxes": "/images/zee/product-rigid-box.jpg",
+  "product-boxes": "/images/zee/rigid-lid-box.jpg",
+  "custom-tissue-paper": "/images/zee/sleeve-apparel.jpg",
+  "paper-bags": "/images/zee/sleeve-apparel.jpg",
+  sleeves: "/images/zee/label-body-butter.jpg",
+  "labels-and-stickers": "/images/zee/cosmetic-serum-box.jpg",
+  inserts: "/images/zee/cosmetic-serum-box.jpg",
+  "sustainable-packaging": "/images/zee/paper-bag-kraft.jpg",
 };
 
 const galleryBySlug: Record<string, string[]> = {
   "rigid-boxes": [
-    "/images/clean/rigid-boxes.jpg",
-    "/images/real/rigid-boxes.webp",
-    "/images/real/rigid-boxes.webp",
+    "/images/zee/rigid-lid-box.jpg",
+    "/images/zee/rigid-shoulder-box.jpg",
+    "/images/zee/rigid-shoulder-box.jpg",
   ],
   "mailer-boxes": [
-    "/images/clean/mailer-boxes.webp",
-    "/images/clean/mailer-boxes.webp",
-    "/images/real/mailer-boxes.webp",
+    "/images/zee/mailer-blank.jpg",
+    "/images/zee/mailer-blank.jpg",
+    "/images/zee/mailer-custom-design.jpg",
   ],
   "candle-boxes": [
-    "/images/real/candle-boxes.webp",
-    "/images/clean/candle-boxes.webp",
-    "/images/clean/candle-boxes.webp",
+    "/images/zee/candle-window-box.jpg",
+    "/images/zee/candle-boxes.jpg",
+    "/images/zee/candle-boxes.jpg",
   ],
   "cosmetic-boxes": [
-    "/images/clean/cosmetic-boxes.webp",
-    "/images/clean/cosmetic-boxes.webp",
-    "/images/clean/perfume-boxes.png",
+    "/images/zee/cosmetic-serum-box.jpg",
+    "/images/zee/cosmetic-serum-box.jpg",
+    "/images/zee/perfume-sleeve-box.jpg",
   ],
   "perfume-boxes": [
-    "/images/clean/perfume-boxes.png",
-    "/images/clean/perfume-boxes.png",
-    "/images/real/rigid-boxes.webp",
+    "/images/zee/perfume-sleeve-box.jpg",
+    "/images/zee/perfume-sleeve-box.jpg",
+    "/images/zee/rigid-shoulder-box.jpg",
   ],
   "jewelry-boxes": [
-    "/images/clean/jewelry-boxes.webp",
-    "/images/clean/rigid-boxes.jpg",
-    "/images/real/rigid-boxes.webp",
+    "/images/zee/jewelry-cotton-box.jpg",
+    "/images/zee/rigid-lid-box.jpg",
+    "/images/zee/rigid-shoulder-box.jpg",
   ],
   "product-boxes": [
-    "/images/clean/rigid-boxes.jpg",
-    "/images/real/rigid-boxes.webp",
-    "/images/clean/mailer-boxes.webp",
+    "/images/zee/rigid-lid-box.jpg",
+    "/images/zee/rigid-shoulder-box.jpg",
+    "/images/zee/mailer-blank.jpg",
   ],
   "custom-tissue-paper": [
-    "/images/clean/tissue-paper.webp",
-    "/images/clean/paper-bags.webp",
-    "/images/clean/labels-stickers.webp",
+    "/images/zee/tissue-paper-custom.jpg",
+    "/images/zee/paper-bag-bakery.jpg",
+    "/images/zee/label-body-butter.jpg",
   ],
   "paper-bags": [
-    "/images/clean/paper-bags.webp",
-    "/images/real/paper-bags.webp",
-    "/images/clean/tissue-paper.webp",
+    "/images/zee/paper-bag-bakery.jpg",
+    "/images/zee/paper-bag-kraft.jpg",
+    "/images/zee/tissue-paper-custom.jpg",
   ],
   sleeves: [
-    "/images/clean/sleeves.webp",
-    "/images/clean/sleeves.webp",
-    "/images/clean/folding-cartons.webp",
+    "/images/zee/sleeve-apparel.jpg",
+    "/images/zee/sleeve-apparel.jpg",
+    "/images/zee/folding-carton-corrugated.jpg",
   ],
   "labels-and-stickers": [
-    "/images/clean/labels-stickers.webp",
-    "/images/clean/tissue-paper.webp",
-    "/images/clean/cosmetic-boxes.webp",
+    "/images/zee/label-body-butter.jpg",
+    "/images/zee/tissue-paper-custom.jpg",
+    "/images/zee/cosmetic-serum-box.jpg",
   ],
   inserts: [
-    "/images/clean/product-boxes.webp",
-    "/images/real/rigid-boxes.webp",
-    "/images/clean/cosmetic-boxes.webp",
+    "/images/zee/product-rigid-box.jpg",
+    "/images/zee/rigid-shoulder-box.jpg",
+    "/images/zee/cosmetic-serum-box.jpg",
   ],
   "sustainable-packaging": [
-    "/images/clean/sustainable-packaging.png",
-    "/images/clean/sustainable-packaging.png",
-    "/images/clean/paper-bags.webp",
+    "/images/zee/sustainable-kraft-box.jpg",
+    "/images/zee/sustainable-kraft-box.jpg",
+    "/images/zee/paper-bag-bakery.jpg",
   ],
 };
 

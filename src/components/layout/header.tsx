@@ -21,19 +21,19 @@ const featuredProducts = [
   {
     title: "Luxury Rigid Boxes",
     href: "/products/rigid-boxes",
-    image: "/images/clean/rigid-boxes.jpg",
+    image: "/images/zee/rigid-lid-box.jpg",
     tag: "Best Seller",
   },
   {
     title: "Mailer Boxes",
     href: "/products/mailer-boxes",
-    image: "/images/clean/mailer-boxes.webp",
+    image: "/images/zee/mailer-blank.jpg",
     tag: "DTC Ready",
   },
   {
     title: "Candle Packaging",
     href: "/products/candle-boxes",
-    image: "/images/real/candle-boxes.webp",
+    image: "/images/zee/candle-window-box.jpg",
     tag: "Premium",
   },
 ];

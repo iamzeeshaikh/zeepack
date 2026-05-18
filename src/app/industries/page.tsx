@@ -29,7 +29,7 @@ export default function IndustriesPage() {
         title="Packaging Shaped Around the Way Your Category Sells, Ships, and Presents Itself"
         description="Different products ask different things from packaging. We align structure, finishing, and materials to the category context rather than treating every brand the same."
         image={{
-          src: "/images/clean/cosmetic-boxes.webp",
+          src: "/images/zee/cosmetic-serum-box.jpg",
           alt: "Industry-focused premium packaging by ZEEPACK.",
         }}
         highlights={["Cosmetics", "Candles", "Jewelry", "E-commerce"]}
