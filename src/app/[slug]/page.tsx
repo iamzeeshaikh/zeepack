@@ -25,6 +25,44 @@ export function generateStaticParams() {
   return locationSlugs.map((slug) => ({ slug }));
 }
 
+// Each product maps to a distinct zee/ image for use as a secondary spotlight image
+const productImages: Record<string, string> = {
+  "rigid-boxes": "/images/zee/rigid-shoulder-box.jpg",
+  "mailer-boxes": "/images/zee/mailer-with-inserts.jpg",
+  "folding-cartons": "/images/zee/folding-carton-cosmetic.jpg",
+  "product-boxes": "/images/zee/product-rigid-box.jpg",
+  "gift-boxes": "/images/zee/gift-stationery-box.jpg",
+  "display-boxes": "/images/zee/display-window-box.jpg",
+  "window-boxes": "/images/zee/window-display-box.jpg",
+  "kraft-boxes": "/images/zee/kraft-recycled-box.jpg",
+  "corrugated-boxes": "/images/zee/corrugated-divider-box.jpg",
+  "candle-boxes": "/images/zee/candle-window-box.jpg",
+  "cosmetic-boxes": "/images/zee/cosmetic-jar-box.jpg",
+  "perfume-boxes": "/images/zee/perfume-flip-box.jpg",
+  "jewelry-boxes": "/images/zee/jewelry-cotton-box.jpg",
+  "soap-boxes": "/images/zee/soap-handmade-box.jpg",
+  "wax-melt-boxes": "/images/zee/wax-melt-box.jpg",
+  "cbd-packaging": "/images/zee/cbd-isolate-box.jpg",
+  "supplement-packaging": "/images/zee/supplement-cardboard-box.jpg",
+  "food-boxes": "/images/zee/bakery-divider-box.jpg",
+  "custom-tissue-paper": "/images/zee/tissue-paper-custom.jpg",
+  "paper-bags": "/images/zee/paper-bag-bakery.jpg",
+  "sleeves": "/images/zee/sleeve-soap.jpg",
+  "inserts": "/images/zee/insert-folded.jpg",
+  "labels-and-stickers": "/images/zee/label-body-butter.jpg",
+  "sustainable-packaging": "/images/zee/kraft-gift-box.jpg",
+};
+
+function getSpotlightImage(location: LocationData): string {
+  // Pick the first product image that differs from the hero image
+  for (const productSlug of location.products) {
+    const img = productImages[productSlug];
+    if (img && img !== location.heroImage) return img;
+  }
+  // Fallback: a generic second image that's unlikely to match
+  return "/images/zee/insert-presentation.jpg";
+}
+
 const productNames: Record<string, string> = {
   "rigid-boxes": "Luxury Rigid Boxes",
   "mailer-boxes": "Mailer Boxes",
@@ -149,6 +187,8 @@ export default async function LocationPage({
   const locLabel = location.type === "city"
     ? `${location.name}, ${location.stateAbbr}`
     : location.name;
+
+  const spotlightImage = getSpotlightImage(location);
 
   const faqs = generateFAQs(location);
   const faqSchema = buildFaqSchema(faqs);
@@ -275,8 +315,8 @@ export default async function LocationPage({
           </>
         }
         image={{
-          src: location.heroImage,
-          alt: `Custom packaging for ${location.name} brands`,
+          src: spotlightImage,
+          alt: `${location.name} packaging formats by ZEEPACK`,
         }}
         reverse
         stats={[
