@@ -36,6 +36,7 @@ export const navigation = [
   { label: "Locations", href: "/custom-packaging-usa" },
   { label: "Sustainability", href: "/sustainability" },
   { label: "FAQ", href: "/faq" },
+  { label: "Customize", href: "/customize" },
 ];
 
 export const productMenuGroups = [
