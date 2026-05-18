@@ -278,8 +278,8 @@ export default function CustomPackagingUSAPage() {
         description="Share your product type, quantity, and presentation goals. We'll help shape the right structure, material, and finish direction."
         primaryLabel="Get a Quote"
         primaryHref="/quote"
-        secondaryLabel="View All Products"
-        secondaryHref="/products"
+        secondaryLabel="Customize Your Box"
+        secondaryHref="/customize"
       />
 
       <script

@@ -26,8 +26,8 @@ export default function ThankYouPage() {
             <Link href="/quote" className="chip">
               Submit another quote
             </Link>
-            <Link href="/products" className="chip">
-              Explore packaging
+            <Link href="/customize" className="chip">
+              Customize another box
             </Link>
           </div>
         </div>

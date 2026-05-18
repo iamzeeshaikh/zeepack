@@ -156,8 +156,8 @@ export default function QuotePage() {
         description="Once the product, structure, quantity, and presentation goals are clearer, the packaging conversation becomes much more useful."
         primaryLabel="Submit Your Brief"
         primaryHref="/quote"
-        secondaryLabel="Contact ZEEPACK"
-        secondaryHref="/contact"
+        secondaryLabel="Customize Your Box"
+        secondaryHref="/customize"
       />
 
       <script

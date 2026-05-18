@@ -126,8 +126,8 @@ export default function SustainabilityPage() {
         description="If you want the packaging to feel more refined and more responsible at the same time, we can help shape the right balance."
         primaryLabel="Explore a Quote"
         primaryHref="/quote"
-        secondaryLabel="Talk to ZEEPACK"
-        secondaryHref="/contact"
+        secondaryLabel="Customize Your Box"
+        secondaryHref="/customize"
       />
 
       <script

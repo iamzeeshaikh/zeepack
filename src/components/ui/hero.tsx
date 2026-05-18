@@ -95,8 +95,8 @@ export function Hero() {
             >
               Get a Custom Quote
             </Button>
-            <Button href="/products" variant="ghost" className="px-6 py-3.5 text-[0.92rem]">
-              Explore Packaging
+            <Button href="/customize" variant="ghost" className="px-6 py-3.5 text-[0.92rem]">
+              Customize Your Box
             </Button>
           </motion.div>
 

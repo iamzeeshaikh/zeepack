@@ -64,8 +64,8 @@ export default function IndustriesPage() {
         description="If the product category, launch channel, or retail environment is shaping the packaging decision, we can help narrow the right route."
         primaryLabel="Start a Quote"
         primaryHref="/quote"
-        secondaryLabel="Talk to ZEEPACK"
-        secondaryHref="/contact"
+        secondaryLabel="Customize Your Box"
+        secondaryHref="/customize"
       />
     </>
   );

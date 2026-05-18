@@ -55,8 +55,8 @@ export default function ProductsPage() {
         description="If you are deciding between rigid boxes, cartons, mailers, or supporting layers, we can help shape the most suitable route before production details are finalized."
         primaryLabel="Get a Quote"
         primaryHref="/quote"
-        secondaryLabel="Contact ZEEPACK"
-        secondaryHref="/contact"
+        secondaryLabel="Customize Your Box"
+        secondaryHref="/customize"
       />
     </>
   );

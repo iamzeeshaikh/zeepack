@@ -165,8 +165,8 @@ export default function AboutPage() {
         description="If the product deserves better presentation, stronger structure, or a cleaner premium direction, we can help shape the next step."
         primaryLabel="Get a Quote"
         primaryHref="/quote"
-        secondaryLabel="Contact ZEEPACK"
-        secondaryHref="/contact"
+        secondaryLabel="Customize Your Box"
+        secondaryHref="/customize"
       />
 
       <script

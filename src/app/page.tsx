@@ -313,7 +313,7 @@ export default function HomePage() {
                       {card.description}
                     </p>
                     <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-cta)]">
-                      Explore packaging
+                      Explore format
                       <ArrowRight className="size-4 transition duration-300 group-hover:translate-x-1.5" />
                     </span>
                   </div>
@@ -321,6 +321,50 @@ export default function HomePage() {
               </Reveal>
             ))}
           </div>
+        </Container>
+      </section>
+
+      {/* ── Configurator Promo ── */}
+      <section className="section-space pt-0">
+        <Container>
+          <Reveal>
+            <div className="relative overflow-hidden rounded-[32px] bg-[var(--color-primary)] px-8 py-12 text-center sm:px-16 sm:py-16">
+              {/* Background texture */}
+              <div className="pointer-events-none absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "radial-gradient(circle at 30% 50%, #C6A972 0%, transparent 60%), radial-gradient(circle at 75% 20%, #C6A972 0%, transparent 50%)" }} />
+              <p className="text-[11px] font-bold uppercase tracking-[0.26em] text-[var(--color-taupe)]">
+                Interactive Configurator
+              </p>
+              <h2 className="mx-auto mt-4 max-w-2xl font-display text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl">
+                Build Your Custom Box in Minutes
+              </h2>
+              <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-[rgba(255,255,255,0.65)]">
+                Select your box type, size, material, finish, and quantity. Get a live summary and submit your quote — all without leaving the page.
+              </p>
+              <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                <Link
+                  href="/customize"
+                  className="inline-flex items-center gap-2 rounded-full bg-[var(--color-cta)] px-8 py-3.5 text-sm font-bold text-white transition-opacity hover:opacity-90"
+                >
+                  Start Customizing
+                  <ArrowRight className="size-4" />
+                </Link>
+                <Link
+                  href="/quote"
+                  className="inline-flex items-center gap-2 rounded-full border border-[rgba(255,255,255,0.2)] px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:border-[rgba(255,255,255,0.5)]"
+                >
+                  Get a Quote Directly
+                </Link>
+              </div>
+              <div className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2">
+                {["12 box types", "8 finish options", "7 quantity tiers", "Free design support"].map((feat) => (
+                  <span key={feat} className="flex items-center gap-1.5 text-[12px] text-[rgba(255,255,255,0.55)]">
+                    <span className="h-1 w-1 rounded-full bg-[var(--color-taupe)]" />
+                    {feat}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </Reveal>
         </Container>
       </section>
 
@@ -510,8 +554,8 @@ export default function HomePage() {
         description="Tell us what you are launching, shipping, or refining. We will help shape a packaging direction that feels premium, practical, and brand-aligned."
         primaryLabel="Get a Custom Quote"
         primaryHref="/quote"
-        secondaryLabel="Talk to Packaging Team"
-        secondaryHref="/contact"
+        secondaryLabel="Customize Your Box"
+        secondaryHref="/customize"
       />
 
       <script

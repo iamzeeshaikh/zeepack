@@ -585,8 +585,8 @@ export default async function LocationPage({
         description="Share the product type, quantity, and presentation goals so we can help shape the right structure and material direction."
         primaryLabel="Get a Quote"
         primaryHref="/quote"
-        secondaryLabel="View All Products"
-        secondaryHref="/products"
+        secondaryLabel="Customize Your Box"
+        secondaryHref="/customize"
       />
 
       <script

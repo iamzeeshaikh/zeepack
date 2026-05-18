@@ -530,8 +530,8 @@ export default async function ProductCategoryPage({
         description="Share your quantity, dimensions, material direction, and finish expectations so we can shape the right packaging route around the product."
         primaryLabel="Get a Quote"
         primaryHref="/quote"
-        secondaryLabel="Talk to ZEEPACK"
-        secondaryHref="/contact"
+        secondaryLabel="Customize Your Box"
+        secondaryHref="/customize"
       />
 
       <script
