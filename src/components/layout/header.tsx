@@ -133,6 +133,7 @@ export function Header() {
               onOpen={openDesktopMenu}
               onClose={scheduleCloseMenu}
               onClearClose={clearCloseTimer}
+              dropdownAlign="left"
             >
               <IndustriesMenu />
             </DesktopMenuTrigger>
@@ -275,6 +276,7 @@ function DesktopMenuTrigger({
   onOpen,
   onClose,
   onClearClose,
+  dropdownAlign = "center",
   children,
 }: {
   label: string;
@@ -284,6 +286,7 @@ function DesktopMenuTrigger({
   onOpen: (menu: Exclude<MenuKey, null>) => void;
   onClose: () => void;
   onClearClose: () => void;
+  dropdownAlign?: "center" | "left";
   children: ReactNode;
 }) {
   return (
@@ -308,7 +311,8 @@ function DesktopMenuTrigger({
 
       <div
         className={cn(
-          "absolute left-1/2 top-full z-50 w-max -translate-x-1/2",
+          "absolute top-full z-50 w-max",
+          dropdownAlign === "center" ? "left-1/2 -translate-x-1/2" : "left-0",
           isOpen ? "pointer-events-auto" : "pointer-events-none",
         )}
       >
@@ -415,44 +419,87 @@ function ProductsMenu() {
   );
 }
 
+const industryGroups = [
+  {
+    label: "Beauty & Personal Care",
+    slugs: ["cosmetics", "skincare", "hair-care", "soap-bath", "perfume", "mens-grooming", "aromatherapy", "vegan-beauty"],
+  },
+  {
+    label: "Health & Wellness",
+    slugs: ["health-wellness", "supplements", "cbd", "fitness", "pharmacy", "natural-organic", "yoga-meditation", "dental"],
+  },
+  {
+    label: "Food & Beverage",
+    slugs: ["food", "bakery", "coffee-tea", "chocolate", "wine-spirits", "restaurant", "gourmet-food", "craft-beverage"],
+  },
+  {
+    label: "Fashion & Lifestyle",
+    slugs: ["fashion", "jewelry", "luxury-fashion", "home-decor", "accessories", "watches", "footwear", "stationery"],
+  },
+  {
+    label: "Gifts & Occasions",
+    slugs: ["luxury-gifts", "corporate-gifts", "gift-baskets", "wedding-events", "holiday-seasonal", "corporate-events", "christmas", "mothers-day"],
+  },
+  {
+    label: "Retail & Commerce",
+    slugs: ["ecommerce", "subscription-boxes", "pet-products", "electronics", "baby-products", "kids-toys", "boutique-retail", "influencer-brands"],
+  },
+];
+
 function IndustriesMenu() {
+  const bySlug = Object.fromEntries(industries.map((i) => [i.slug, i]));
+
   return (
-    <div className="w-[min(640px,calc(100vw-2rem))] rounded-[28px] border border-[rgba(17,17,17,0.07)] bg-[rgba(255,255,255,0.98)] p-5 shadow-[0_24px_80px_rgba(17,17,17,0.14)] backdrop-blur-2xl">
+    <div className="w-[min(780px,calc(100vw-2rem))] rounded-[28px] border border-[rgba(17,17,17,0.07)] bg-[rgba(255,255,255,0.98)] p-5 shadow-[0_24px_80px_rgba(17,17,17,0.14)] backdrop-blur-2xl">
       {/* Header strip */}
-      <div className="rounded-[20px] bg-[linear-gradient(145deg,rgba(248,245,239,0.96),rgba(238,230,218,0.88))] p-5">
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-          <div className="max-w-xs">
+      <div className="rounded-[20px] bg-[linear-gradient(145deg,rgba(248,245,239,0.96),rgba(238,230,218,0.88))] p-4">
+        <div className="flex items-center justify-between gap-4">
+          <div>
             <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[var(--color-taupe)]">
               Industry Solutions
             </p>
-            <h3 className="mt-2 font-display text-[1.5rem] leading-[0.96] tracking-[-0.035em] text-[var(--color-primary)]">
+            <h3 className="mt-1 font-display text-[1.35rem] leading-[0.96] tracking-[-0.035em] text-[var(--color-primary)]">
               Packaging shaped around your category.
             </h3>
           </div>
           <Link
             href="/industries"
-            className="inline-flex shrink-0 items-center gap-2 rounded-full border border-[rgba(17,17,17,0.10)] bg-white px-4 py-2.5 text-[13px] font-semibold text-[var(--color-primary)] transition hover:text-[var(--color-cta)]"
+            className="inline-flex shrink-0 items-center gap-2 rounded-full border border-[rgba(17,17,17,0.10)] bg-white px-4 py-2 text-[13px] font-semibold text-[var(--color-primary)] transition hover:text-[var(--color-cta)]"
           >
-            All Industries
+            All 88 Industries
             <ArrowRight className="size-3.5" />
           </Link>
         </div>
       </div>
 
-      <div className="mt-4 grid gap-3 sm:grid-cols-3">
-        {industries.slice(0, 18).map((industry) => (
-          <Link
-            key={industry.slug}
-            href={`/industries/${industry.slug}`}
-            className="group rounded-[18px] border border-[rgba(17,17,17,0.07)] bg-[linear-gradient(160deg,rgba(255,255,255,0.82),rgba(248,245,239,0.70))] p-4 transition hover:border-[rgba(17,17,17,0.11)] hover:shadow-[0_8px_24px_rgba(17,17,17,0.07)]"
+      {/* 3×2 grouped grid */}
+      <div className="mt-3 grid grid-cols-3 gap-2.5">
+        {industryGroups.map((group) => (
+          <div
+            key={group.label}
+            className="rounded-[18px] bg-[linear-gradient(160deg,rgba(255,255,255,0.82),rgba(248,245,239,0.68))] p-3.5"
           >
-            <p className="text-[14px] font-semibold leading-5 text-[var(--color-primary)] transition group-hover:text-[var(--color-cta)]">
-              {industry.name}
+            <p className="px-1 text-[10.5px] font-semibold uppercase tracking-[0.22em] text-[var(--color-taupe)]">
+              {group.label}
             </p>
-            <p className="mt-2 text-[12px] leading-5 text-[var(--color-muted)]">
-              {industry.description}
-            </p>
-          </Link>
+            <div className="mt-2 space-y-px">
+              {group.slugs.map((slug) => {
+                const industry = bySlug[slug];
+                if (!industry) return null;
+                return (
+                  <Link
+                    key={slug}
+                    href={`/industries/${slug}`}
+                    className="group block rounded-[10px] border border-transparent px-2 py-1.5 transition hover:border-[rgba(17,17,17,0.07)] hover:bg-white"
+                  >
+                    <p className="text-[13px] font-medium leading-5 text-[var(--color-primary)] transition group-hover:text-[var(--color-cta)]">
+                      {industry.name}
+                    </p>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
         ))}
       </div>
     </div>
