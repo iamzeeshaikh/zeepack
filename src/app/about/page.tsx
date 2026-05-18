@@ -70,7 +70,7 @@ export default function AboutPage() {
         title="Packaging Built for Brands That Care About Detail"
         description="ZEEPACK works with modern brands that understand the value of presentation, structure, and consistency. We approach packaging as part of the product experience, not as a generic afterthought."
         image={{
-          src: "/images/products/rigid-boxes.jpg",
+          src: "/images/clean/rigid-boxes.jpg",
           alt: "Premium ZEEPACK rigid packaging presentation.",
         }}
         highlights={["Low minimums", "Custom sizes", "Premium finishes", "Insert support"]}
@@ -86,7 +86,7 @@ export default function AboutPage() {
         title="We do not treat packaging like a basic requirement."
         description="Every project is approached with attention to structure, materials, finishing, and the way the packaging should be perceived when it is opened, carried, gifted, or displayed. The goal is to create packaging that feels more intentional, more premium, and more aligned with the brand it represents."
         image={{
-          src: "/images/products/presentation-boxes.webp",
+          src: "/images/real/rigid-boxes.webp",
           alt: "Premium product packaging detail.",
         }}
         stats={[

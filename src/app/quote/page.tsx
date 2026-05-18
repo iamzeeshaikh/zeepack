@@ -43,7 +43,7 @@ export default function QuotePage() {
         title="Tell us what you need and let's shape the right packaging direction."
         description="The strongest quote requests do more than ask for a price. They define the kind of packaging experience your brand needs so structure, materials, and finishing can be evaluated more clearly."
         image={{
-          src: "/images/products/rigid-boxes.jpg",
+          src: "/images/clean/rigid-boxes.jpg",
           alt: "Premium packaging quote page visual.",
         }}
         highlights={["Low minimums", "Custom sizing", "Premium finishes", "Insert options"]}
@@ -110,7 +110,7 @@ export default function QuotePage() {
         title="The cleanest quote handoff comes from clearer packaging priorities."
         description="Some brands need a launch-ready presentation box. Others need a retail carton that scales well, a direct-to-consumer mailer that feels stronger on arrival, or a supporting layer like tissue, sleeves, or inserts. The more clearly the packaging role is defined, the more useful the quote becomes."
         image={{
-          src: "/images/products/mailer-boxes.jpg",
+          src: "/images/clean/mailer-boxes.webp",
           alt: "Premium packaging quote planning visual.",
         }}
         reverse
