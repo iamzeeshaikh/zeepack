@@ -181,25 +181,55 @@ function generateFAQs(location: LocationData): Array<{ question: string; answer:
   const locName = location.type === "city"
     ? `${location.name}, ${location.stateAbbr}`
     : location.name;
+  const locShort = location.name;
   const firstProduct = productNames[location.products[0]] ?? "custom packaging";
+  const secondProduct = productNames[location.products[1]] ?? "mailer boxes";
+  const thirdProduct = productNames[location.products[2]] ?? "folding cartons";
   const firstIndustry = location.industries[0] ?? "local businesses";
+  const secondIndustry = location.industries[1] ?? "retail brands";
+  const thirdIndustry = location.industries[2] ?? "e-commerce brands";
+  const isState = location.type === "state";
 
   return [
     {
       question: `Does ZEEPACK ship custom packaging to ${locName}?`,
-      answer: `Yes. ZEEPACK ships custom packaging nationwide, including to businesses in ${locName}. All packaging is produced to specification and delivered directly to your location, with lead times depending on structure, quantity, and finishing complexity.`,
+      answer: `Yes. ZEEPACK ships custom packaging nationwide, including to businesses in ${locName}. All packaging is produced to specification and delivered directly to your location. Lead times vary depending on the structure type, order quantity, finishing complexity, and whether custom dielines or artwork are required.`,
+    },
+    {
+      question: `What types of custom packaging does ZEEPACK offer to ${locShort} businesses?`,
+      answer: `ZEEPACK offers a wide range of custom packaging formats for ${locShort} businesses — including rigid boxes, mailer boxes, folding cartons, gift boxes, display boxes, kraft boxes, corrugated boxes, candle packaging, cosmetic packaging, jewelry boxes, CBD packaging, supplement packaging, food boxes, tissue paper, paper bags, sleeves, inserts, and labels. The right format depends on your product type, distribution channel, and brand presentation goals.`,
     },
     {
       question: `What is the minimum order quantity for custom packaging in ${locName}?`,
-      answer: `Minimum order quantities vary by product type. Many premium formats — including rigid boxes and mailer boxes — are available in lower minimum quantities suitable for growing brands, launch runs, and boutique operations in ${locName}.`,
+      answer: `Minimum order quantities vary by product type and structure. Many premium formats — including rigid boxes, mailer boxes, and folding cartons — are available in lower minimum quantities suited for growing brands, launch kits, and boutique operations in ${locName}. Contact ZEEPACK with your project details to confirm quantities for a specific format.`,
     },
     {
-      question: `What packaging is most popular for ${firstIndustry.toLowerCase()} brands in ${location.name}?`,
-      answer: `${firstProduct} are commonly requested by ${firstIndustry.toLowerCase()} brands in the area. The right format depends on the product type, price point, retail versus e-commerce context, and the level of presentation the brand needs to communicate at first touch.`,
+      question: `What packaging formats are most popular for ${firstIndustry.toLowerCase()} brands in ${locShort}?`,
+      answer: `${firstProduct} are among the most requested formats by ${firstIndustry.toLowerCase()} brands in the area. The specific choice depends on the product's price point, distribution channel — retail, gifting, or direct-to-consumer — and the level of structural and finish quality the brand needs to communicate at the point of sale or delivery.`,
     },
     {
-      question: `How do I get a custom packaging quote for my ${location.name} business?`,
-      answer: `Request a quote through ZEEPACK's quote page or contact us directly. Share your product type, approximate dimensions, quantity, and any structure or finish preferences. A response typically comes within 24 hours for most standard project requests.`,
+      question: `Can ZEEPACK help ${secondIndustry.toLowerCase()} brands in ${locShort} with custom packaging?`,
+      answer: `Yes. ${secondProduct} and other premium formats are well-suited for ${secondIndustry.toLowerCase()} brands in ${locShort}. ZEEPACK works across structure selection, material routes, insert planning, and finishing direction to develop packaging that fits the product and the brand's intended presentation level.`,
+    },
+    {
+      question: `What finishing options are available on custom packaging for ${locShort} brands?`,
+      answer: `Finishing options available across most formats include foil stamping, embossing, debossing, soft-touch lamination, matte lamination, gloss lamination, and spot UV coating. The right finishing system depends on the product category, budget, and the visual identity of the brand. ZEEPACK can help ${locShort} brands choose finishes that suit both the aesthetic and the practical production constraints.`,
+    },
+    {
+      question: `Does ZEEPACK offer eco-friendly or sustainable packaging for ${locShort} businesses?`,
+      answer: `Yes. Recyclable boards, kraft stocks, FSC-certified materials, reduced-plastic directions, and more efficient structural approaches can all be explored for ${locShort} brands. Sustainable packaging options are available across most product categories without sacrificing the finish quality or brand presentation that premium packaging requires.`,
+    },
+    {
+      question: `How long does custom packaging production take for a ${locShort} business?`,
+      answer: `Production timelines depend on the packaging type, order quantity, finishing requirements, and whether custom structural dielines or new artwork files are involved. Most projects move into production within a few weeks after design approvals are complete. Rush timelines may be possible depending on format and quantity — share your deadline when requesting a quote.`,
+    },
+    {
+      question: `Can ZEEPACK create packaging for ${thirdIndustry.toLowerCase()} brands based in ${locShort}?`,
+      answer: `Yes. ${thirdProduct} and related formats are commonly developed for ${thirdIndustry.toLowerCase()} brands. ZEEPACK works with businesses across ${isState ? locShort : `${locShort} and the broader ${location.stateName} region`} to develop packaging that matches the product category, channel requirements, and the level of presentation the brand is targeting — whether for retail, e-commerce, gifting, or subscription fulfillment.`,
+    },
+    {
+      question: `How do I request a custom packaging quote for my ${locShort} business?`,
+      answer: `Use ZEEPACK's quote page or contact us directly with your project details — product type, approximate dimensions, target quantity, preferred materials, and any finish or structural preferences. Most standard project inquiries receive an initial response within 24 hours. For more complex structures or specialty formats, additional details may be needed before a full quote can be prepared.`,
     },
   ];
 }
