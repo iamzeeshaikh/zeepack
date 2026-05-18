@@ -243,6 +243,16 @@ export const contactFaqs = [
     answer:
       "No. The contact page can be used for boutique runs, early-stage planning, custom sizing questions, and premium packaging advice as well as larger production inquiries.",
   },
+  {
+    question: "Can I contact ZEEPACK to discuss sustainable packaging options?",
+    answer:
+      "Yes. If your brand is exploring recyclable materials, kraft directions, reduced-plastic structures, or FSC-certified board options, that is a great thing to mention when you get in touch so we can focus the conversation accordingly.",
+  },
+  {
+    question: "Can ZEEPACK work with brands based outside the United States?",
+    answer:
+      "ZEEPACK primarily serves brands across the United States. If your brand operates from another region but ships product into U.S. markets, the contact page is the right place to share your project details and discuss what is possible.",
+  },
 ];
 
 export const quoteFaqs = [

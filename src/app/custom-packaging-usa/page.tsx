@@ -70,6 +70,26 @@ const faqs = [
     answer:
       "Use the quote page or contact us directly with your product type, approximate dimensions, quantity estimate, and any structure or finish preferences. An initial response typically comes within 24 hours.",
   },
+  {
+    question: "What finishing options are available for custom packaging in the USA?",
+    answer:
+      "Finishing options available across most custom packaging formats include foil stamping, embossing, debossing, soft-touch lamination, matte lamination, gloss lamination, and spot UV coating. The right finishing direction depends on the product category, brand aesthetic, and material route selected.",
+  },
+  {
+    question: "Can ZEEPACK produce packaging for both retail and e-commerce brands in the USA?",
+    answer:
+      "Yes. ZEEPACK develops packaging suited to both retail shelf presentation and direct-to-consumer e-commerce delivery. Mailer formats, rigid boxes, folding cartons, and supporting layers like tissue paper and inserts can all be shaped around the specific channel requirements of your U.S. brand.",
+  },
+  {
+    question: "What industries does ZEEPACK serve in the United States?",
+    answer:
+      "ZEEPACK serves brands across beauty and cosmetics, fashion and apparel, food and beverage, health and wellness, jewelry, CBD and cannabis, supplements, home décor, gifting, subscription boxes, e-commerce, and many other product categories throughout all 50 U.S. states.",
+  },
+  {
+    question: "Can I order custom packaging samples before committing to a full production run?",
+    answer:
+      "Sample and prototype options can be discussed depending on the structure type and project scope. Reach out through the quote or contact page with your project details to understand what pre-production options are available for your specific packaging format.",
+  },
 ];
 
 const productLinks = [

@@ -2639,33 +2639,53 @@ function buildHighlights(seed: StyleSeed, category: Category) {
 
 function buildStyleFaqs(title: string, category: Category) {
   const categoryName = category.name.toLowerCase();
+  const titleLower = title.toLowerCase();
 
   return [
     {
-      question: `What is a ${title.toLowerCase()}?`,
-      answer: `A ${title.toLowerCase()} is a premium packaging format within our ${categoryName} collection, developed to balance structure, presentation, and a cleaner customer-facing reveal.`,
+      question: `What is a ${titleLower}?`,
+      answer: `A ${titleLower} is a premium packaging format within our ${categoryName} collection, developed to balance structure, presentation, and a cleaner customer-facing reveal.`,
     },
     {
-      question: `Can ${title.toLowerCase()} be made in custom sizes?`,
+      question: `Can ${titleLower} be made in custom sizes?`,
       answer:
         "Yes. We build packaging around the product dimensions, insert needs, and the intended customer experience rather than relying only on fixed stock sizes.",
     },
     {
-      question: `Is ${title.toLowerCase()} suitable for premium packaging?`,
+      question: `Is ${titleLower} suitable for premium packaging?`,
       answer:
         "Yes. This style is especially useful where refined structure, finish compatibility, and brand perception all matter.",
     },
     {
-      question: `Can ${title.toLowerCase()} include inserts?`,
+      question: `Can ${titleLower} include inserts?`,
       answer:
         "Yes. Inserts can be added where fit, protection, and cleaner internal presentation are important.",
     },
     {
-      question: `What finishes work best with ${title.toLowerCase()}?`,
+      question: `What finishes work best with ${titleLower}?`,
       answer: `Popular finish routes include ${category.finishes.slice(0, 3).join(", ").toLowerCase()}, depending on the desired brand direction and material choice.`,
     },
     {
-      question: `How do I request a quote for ${title.toLowerCase()}?`,
+      question: `What materials are available for ${titleLower}?`,
+      answer: `Material options for ${titleLower} typically include ${category.materials.slice(0, 3).join(", ").toLowerCase()}. The best choice depends on the product weight, the intended finish, and the brand's presentation goals.`,
+    },
+    {
+      question: `What is the minimum order quantity for ${titleLower}?`,
+      answer:
+        "Minimum order quantities depend on the specific structure, finish, and dimensions. Low minimum orders can often be explored for launches, test runs, and growing brands. Share your requirements and we will confirm what is possible.",
+    },
+    {
+      question: `Can ${titleLower} be printed with custom artwork and branding?`,
+      answer:
+        "Yes. Custom printing with logo placement, brand colours, typography, and pattern work can all be applied. CMYK and Pantone options are available depending on the colour accuracy required.",
+    },
+    {
+      question: `How long does production take for ${titleLower}?`,
+      answer:
+        "Production timelines vary by quantity, structure complexity, and finishing. Most orders move into production within a few weeks after design approvals are finalised. Share your deadline when requesting a quote.",
+    },
+    {
+      question: `How do I request a quote for ${titleLower}?`,
       answer:
         "You can request a quote by sharing the product type, quantity, dimensions, material preferences, and finishing direction through our quote form or contact page.",
     },

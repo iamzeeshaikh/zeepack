@@ -73,7 +73,47 @@ export default async function IndustryDetailPage({
   const recommendedCategories = content.relatedCategorySlugs
     .map((categorySlug) => getCategoryBySlug(categorySlug))
     .filter((item): item is NonNullable<typeof item> => Boolean(item));
-  const faqSchema = buildFaqSchema(content.faqs);
+
+  // Pad to at least 10 FAQs with generic industry questions
+  const genericIndustryFaqs = [
+    {
+      question: `What types of packaging does ZEEPACK offer for ${industry.name.toLowerCase()} brands?`,
+      answer: `ZEEPACK develops rigid boxes, folding cartons, mailer boxes, gift boxes, product boxes, inserts, tissue paper, labels, and other premium packaging formats for ${industry.name.toLowerCase()} brands. The right format depends on the product type, price point, and distribution channel.`,
+    },
+    {
+      question: `What is the minimum order quantity for ${industry.name.toLowerCase()} packaging?`,
+      answer: `Minimum order quantities vary by structure and finish complexity. Many premium formats used by ${industry.name.toLowerCase()} brands are available in lower minimum quantities suited for launches, boutique brands, and growing businesses.`,
+    },
+    {
+      question: `What finishes are available for ${industry.name.toLowerCase()} packaging?`,
+      answer: `Finishing options include foil stamping, embossing, debossing, soft-touch lamination, matte lamination, gloss lamination, and spot UV. The right system depends on the brand's aesthetic direction and the material route selected.`,
+    },
+    {
+      question: `Does ZEEPACK offer sustainable packaging options for ${industry.name.toLowerCase()} brands?`,
+      answer: `Yes. Recyclable boards, kraft stocks, FSC-certified materials, and reduced-material structures can all be explored. Sustainable directions are available without sacrificing the finish quality or brand presentation that premium packaging requires.`,
+    },
+    {
+      question: `How long does custom packaging production take for ${industry.name.toLowerCase()} brands?`,
+      answer: `Production timelines depend on the format, order quantity, finishing complexity, and whether custom dielines or artwork are needed. Most projects move into production within a few weeks after approvals are complete.`,
+    },
+    {
+      question: `Can ZEEPACK help with both retail and e-commerce packaging for ${industry.name.toLowerCase()} products?`,
+      answer: `Yes. ZEEPACK develops packaging for retail shelf presentation, direct-to-consumer delivery, subscription fulfillment, and gifting formats. The structure and finish direction can be adapted to suit the specific channel.`,
+    },
+    {
+      question: `How do I request a quote for ${industry.name.toLowerCase()} packaging?`,
+      answer: `Use ZEEPACK's quote page or contact us with your product type, approximate dimensions, quantity, material preferences, and any finish or structural notes. Most project inquiries receive an initial response within 24 hours.`,
+    },
+  ];
+
+  const allFaqs = [...content.faqs];
+  for (const faq of genericIndustryFaqs) {
+    if (allFaqs.length >= 10) break;
+    const exists = allFaqs.some((f) => f.question === faq.question);
+    if (!exists) allFaqs.push(faq);
+  }
+
+  const faqSchema = buildFaqSchema(allFaqs);
   const breadcrumbSchema = buildBreadcrumbSchema([
     { name: "Home", path: "/" },
     { name: "Industries", path: "/industries" },
@@ -303,7 +343,7 @@ export default async function IndustryDetailPage({
             />
           </Reveal>
           <div className="mt-10 max-w-4xl">
-            <FAQAccordion items={content.faqs} />
+            <FAQAccordion items={allFaqs} />
           </div>
         </Container>
       </section>
