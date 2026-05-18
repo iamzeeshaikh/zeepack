@@ -2344,7 +2344,7 @@ const assetPoolByCategory: Record<string, string[]> = {
     "/images/zee/rigid-shoulder-box.jpg",
     "/images/zee/rigid-one-piece-box.jpg",
     "/images/zee/rigid-foldable-box.jpg",
-    "/images/zee/rigid-hexagon-box.jpg",
+    "/images/zee/rigid-foldable-box.jpg",
   ],
   "mailer-boxes": [
     "/images/zee/mailer-blank.jpg",

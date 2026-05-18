@@ -49,7 +49,7 @@ export const industries: Industry[] = [
     name: "Fashion",
     description:
       "Premium packaging systems for apparel, accessories, and boutique retail brands that want a considered arrival experience.",
-    image: "/images/industries/apparel.webp",
+    image: "/images/zee/sleeve-apparel.jpg",
     highlights: [
       "Luxury retail bags",
       "Tissue-led unboxing",
@@ -67,7 +67,7 @@ export const industries: Industry[] = [
     name: "Jewelry",
     description:
       "Compact, tactile presentation packaging for jewelry collections where fit, softness, and perceived value matter.",
-    image: "/images/industries/jewelry.webp",
+    image: "/images/zee/jewelry-cotton-box.jpg",
     highlights: [
       "Keepsake presentation",
       "Compact premium boxes",
@@ -120,7 +120,7 @@ export const industries: Industry[] = [
     slug: "perfume",
     name: "Perfume & Fragrance",
     description: "Luxury packaging for perfume, cologne, and fragrance brands that need elevated bottle presentation, inserts, and premium gifting formats.",
-    image: "/images/industries/perfume.webp",
+    image: "/images/zee/perfume-sleeve-box.jpg",
     highlights: ["Bottle insert support", "Premium rigid formats", "Gift set presentation"],
     packagingFocus: ["Perfume boxes", "Rigid gift boxes", "Inserts", "Tissue paper"],
   },
@@ -272,7 +272,7 @@ export const industries: Industry[] = [
     slug: "aromatherapy",
     name: "Aromatherapy",
     description: "Elegant packaging for essential oil, aromatherapy diffuser, and wellness fragrance brands with insert support and premium retail presentation.",
-    image: "/images/industries/perfume.webp",
+    image: "/images/zee/perfume-sleeve-box.jpg",
     highlights: ["Bottle and vial inserts", "Premium carton formats", "Gift set structures"],
     packagingFocus: ["Cosmetic boxes", "Inserts", "Gift boxes", "Rigid boxes"],
   },
@@ -280,7 +280,7 @@ export const industries: Industry[] = [
     slug: "essential-oils",
     name: "Essential Oils",
     description: "Premium packaging for essential oil brands including bottle boxes, dropper cartons, and multi-oil gift sets with insert-led presentation.",
-    image: "/images/industries/perfume.webp",
+    image: "/images/zee/perfume-sleeve-box.jpg",
     highlights: ["Dropper bottle support", "Insert-led fit", "Premium gifting formats"],
     packagingFocus: ["Cosmetic boxes", "Inserts", "Rigid boxes", "Gift boxes"],
   },
@@ -360,7 +360,7 @@ export const industries: Industry[] = [
     slug: "luxury-fashion",
     name: "Luxury Fashion",
     description: "Premium packaging for luxury apparel, accessories, and fashion brands that need editorial-quality presentation and cohesive brand systems.",
-    image: "/images/industries/apparel.webp",
+    image: "/images/zee/sleeve-apparel.jpg",
     highlights: ["Editorial packaging direction", "Tissue-led unboxing", "Premium carry bags"],
     packagingFocus: ["Paper bags", "Tissue paper", "Rigid boxes", "Mailer boxes"],
   },

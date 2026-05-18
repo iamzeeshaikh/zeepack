@@ -127,7 +127,7 @@ const industryCards = [
   {
     title: "Fashion Brands",
     href: "/industries/fashion",
-    image: "/images/industries/apparel.webp",
+    image: "/images/zee/sleeve-apparel.jpg",
     description: "Retail and e-commerce packaging that helps fashion products arrive with a more considered presence.",
   },
   {
