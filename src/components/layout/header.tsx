@@ -422,27 +422,27 @@ function ProductsMenu() {
 const industryGroups = [
   {
     label: "Beauty & Personal Care",
-    slugs: ["cosmetics", "skincare", "hair-care", "soap-bath", "perfume", "mens-grooming", "aromatherapy", "vegan-beauty"],
+    slugs: ["cosmetics", "skincare", "hair-care", "soap-bath", "perfume", "mens-grooming"],
   },
   {
     label: "Health & Wellness",
-    slugs: ["health-wellness", "supplements", "cbd", "fitness", "pharmacy", "natural-organic", "yoga-meditation", "dental"],
+    slugs: ["health-wellness", "supplements", "cbd", "fitness", "pharmacy", "natural-organic"],
   },
   {
     label: "Food & Beverage",
-    slugs: ["food", "bakery", "coffee-tea", "chocolate", "wine-spirits", "restaurant", "gourmet-food", "craft-beverage"],
+    slugs: ["food", "bakery", "coffee-tea", "chocolate", "wine-spirits", "restaurant"],
   },
   {
     label: "Fashion & Lifestyle",
-    slugs: ["fashion", "jewelry", "luxury-fashion", "home-decor", "accessories", "watches", "footwear", "stationery"],
+    slugs: ["fashion", "jewelry", "luxury-fashion", "home-decor", "accessories", "footwear"],
   },
   {
     label: "Gifts & Occasions",
-    slugs: ["luxury-gifts", "corporate-gifts", "gift-baskets", "wedding-events", "holiday-seasonal", "corporate-events", "christmas", "mothers-day"],
+    slugs: ["luxury-gifts", "corporate-gifts", "gift-baskets", "wedding-events", "holiday-seasonal", "corporate-events"],
   },
   {
     label: "Retail & Commerce",
-    slugs: ["ecommerce", "subscription-boxes", "pet-products", "electronics", "baby-products", "kids-toys", "boutique-retail", "influencer-brands"],
+    slugs: ["ecommerce", "subscription-boxes", "pet-products", "electronics", "baby-products", "boutique-retail"],
   },
 ];
 
