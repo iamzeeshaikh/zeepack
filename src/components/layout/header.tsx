@@ -10,12 +10,22 @@ import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Logo } from "@/components/ui/logo";
 import { industries } from "@/data/industries";
+import { allLocations } from "@/data/locations";
 import { navigation, productMenuGroups, siteConfig } from "@/data/site";
 import { cn } from "@/lib/utils";
 
-type MenuKey = "products" | "industries" | null;
+type MenuKey = "products" | "industries" | "locations" | null;
 
 const MENU_CLOSE_DELAY = 180;
+
+// Top states for the mobile drawer (10 most commercially important)
+const mobileLocationLinks = allLocations
+  .filter((l) => l.type === "state")
+  .slice(0, 10)
+  .map((l) => ({ name: l.name, slug: l.slug }));
+
+// All 50 state locations for the desktop dropdown
+const stateLocations = allLocations.filter((l) => l.type === "state");
 
 const featuredProducts = [
   {
@@ -76,7 +86,7 @@ export function Header() {
   };
 
   const primaryNav = useMemo(
-    () => navigation.filter((item) => !["/products", "/industries"].includes(item.href)),
+    () => navigation.filter((item) => !["/products", "/industries", "/custom-packaging-usa"].includes(item.href)),
     [],
   );
 
@@ -125,6 +135,18 @@ export function Header() {
               onClearClose={clearCloseTimer}
             >
               <IndustriesMenu />
+            </DesktopMenuTrigger>
+
+            <DesktopMenuTrigger
+              label="Locations"
+              menuKey="locations"
+              isOpen={openMenu === "locations"}
+              isActive={pathname.startsWith("/custom-packaging-") || pathname.startsWith("/custom-boxes-")}
+              onOpen={openDesktopMenu}
+              onClose={scheduleCloseMenu}
+              onClearClose={clearCloseTimer}
+            >
+              <LocationsMenu />
             </DesktopMenuTrigger>
 
             {primaryNav.slice(1).map((item) => (
@@ -181,6 +203,32 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
+
+            {/* Mobile locations grid */}
+            <div className="rounded-[24px] border border-[rgba(17,17,17,0.07)] bg-white p-4">
+              <p className="px-1 text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--color-muted)]">
+                Top Locations
+              </p>
+              <div className="mt-3 grid grid-cols-2 gap-2">
+                {mobileLocationLinks.map((loc) => (
+                  <Link
+                    key={loc.slug}
+                    href={`/${loc.slug}`}
+                    onClick={() => setOpen(false)}
+                    className="rounded-[14px] border border-[rgba(17,17,17,0.07)] px-3 py-2.5 text-[13px] font-medium text-[var(--color-primary)] transition hover:text-[var(--color-cta)]"
+                  >
+                    {loc.name}
+                  </Link>
+                ))}
+                <Link
+                  href="/custom-packaging-usa"
+                  onClick={() => setOpen(false)}
+                  className="col-span-2 rounded-[14px] border border-[var(--color-cta)] px-3 py-2.5 text-center text-[13px] font-semibold text-[var(--color-cta)] transition hover:bg-[var(--color-cta)] hover:text-white"
+                >
+                  View All 50 States →
+                </Link>
+              </div>
+            </div>
 
             <div className="rounded-[24px] border border-[rgba(17,17,17,0.07)] bg-white p-4">
               <p className="px-1 text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--color-muted)]">
@@ -403,6 +451,48 @@ function IndustriesMenu() {
             </p>
             <p className="mt-2 text-[12px] leading-5 text-[var(--color-muted)]">
               {industry.description}
+            </p>
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function LocationsMenu() {
+  return (
+    <div className="w-[min(680px,calc(100vw-2rem))] rounded-[28px] border border-[rgba(17,17,17,0.07)] bg-[rgba(255,255,255,0.98)] p-5 shadow-[0_24px_80px_rgba(17,17,17,0.14)] backdrop-blur-2xl">
+      {/* Header strip */}
+      <div className="rounded-[20px] bg-[linear-gradient(145deg,rgba(248,245,239,0.96),rgba(238,230,218,0.88))] p-5">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <div className="max-w-xs">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[var(--color-taupe)]">
+              Nationwide Packaging
+            </p>
+            <h3 className="mt-2 font-display text-[1.5rem] leading-[0.96] tracking-[-0.035em] text-[var(--color-primary)]">
+              Custom packaging for every U.S. state.
+            </h3>
+          </div>
+          <Link
+            href="/custom-packaging-usa"
+            className="inline-flex shrink-0 items-center gap-2 rounded-full border border-[rgba(17,17,17,0.10)] bg-white px-4 py-2.5 text-[13px] font-semibold text-[var(--color-primary)] transition hover:text-[var(--color-cta)]"
+          >
+            All 50 States
+            <ArrowRight className="size-3.5" />
+          </Link>
+        </div>
+      </div>
+
+      {/* States grid */}
+      <div className="mt-4 grid grid-cols-5 gap-1.5">
+        {stateLocations.map((state) => (
+          <Link
+            key={state.slug}
+            href={`/${state.slug}`}
+            className="group rounded-[14px] border border-transparent px-2.5 py-2 transition hover:border-[rgba(17,17,17,0.07)] hover:bg-[rgba(248,245,239,0.80)]"
+          >
+            <p className="text-[12.5px] font-semibold leading-5 text-[var(--color-primary)] transition group-hover:text-[var(--color-cta)]">
+              {state.name}
             </p>
           </Link>
         ))}

@@ -33,10 +33,9 @@ export const navigation = [
   { label: "Home", href: "/" },
   { label: "Products", href: "/products" },
   { label: "Industries", href: "/industries" },
+  { label: "Locations", href: "/custom-packaging-usa" },
   { label: "Sustainability", href: "/sustainability" },
   { label: "FAQ", href: "/faq" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
 ];
 
 export const productMenuGroups = [
