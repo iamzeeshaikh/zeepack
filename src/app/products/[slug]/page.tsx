@@ -207,6 +207,12 @@ export default async function ProductCategoryPage({
 
       <ProductTrustStrip />
 
+      <PageLeadForm
+        context={category.name}
+        title={`Get a Quote for ${category.name}`}
+        description="Tell us your quantity, size, and finish direction — we'll respond within 24 hours with pricing and options."
+      />
+
       <VisualSpotlight
         eyebrow="Intro"
         title={category.seoHeading}
@@ -582,12 +588,6 @@ export default async function ProductCategoryPage({
           </Reveal>
         </Container>
       </section>
-
-      <PageLeadForm
-        context={category.name}
-        title={`Get a Quote for ${category.name}`}
-        description="Tell us your quantity, size, and finish direction — we'll respond within 24 hours with pricing and options."
-      />
 
       <CTASection
         title={`Need a quote for ${category.name.toLowerCase()}?`}

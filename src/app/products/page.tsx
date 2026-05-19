@@ -36,6 +36,11 @@ export default function ProductsPage() {
         highlights={["Boxes", "Accessories", "Sustainable options", "Low minimums"]}
       />
 
+      <PageLeadForm
+        title="Get a Custom Packaging Quote"
+        description="Tell us your product, quantity, and finish direction — we'll respond within 24 hours with options and pricing."
+      />
+
       <section className="section-space">
         <Container>
           <Reveal>
@@ -50,11 +55,6 @@ export default function ProductsPage() {
           </div>
         </Container>
       </section>
-
-      <PageLeadForm
-        title="Get a Custom Packaging Quote"
-        description="Tell us your product, quantity, and finish direction — we'll respond within 24 hours with options and pricing."
-      />
 
       <CTASection
         title="Need help choosing the right packaging format?"

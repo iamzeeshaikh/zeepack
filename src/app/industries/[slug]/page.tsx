@@ -230,6 +230,12 @@ export default async function IndustryDetailPage({
         items={content.valueProps}
       />
 
+      <PageLeadForm
+        context={`${industry.name} Packaging`}
+        title={`Get a Quote for ${industry.name} Packaging`}
+        description="Tell us your product type, quantity, and finish direction — we'll respond within 24 hours."
+      />
+
       {industry.slug === "cosmetics" ? (
         <section className="section-space pt-0">
           <Container>
@@ -348,12 +354,6 @@ export default async function IndustryDetailPage({
           </div>
         </Container>
       </section>
-
-      <PageLeadForm
-        context={`${industry.name} Packaging`}
-        title={`Get a Quote for ${industry.name} Packaging`}
-        description="Tell us your product type, quantity, and finish direction — we'll respond within 24 hours."
-      />
 
       <CTASection
         title={`Need packaging shaped around the ${industry.name.toLowerCase()} category?`}

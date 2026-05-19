@@ -36,6 +36,11 @@ export default function IndustriesPage() {
         highlights={["Cosmetics", "Candles", "Jewelry", "E-commerce"]}
       />
 
+      <PageLeadForm
+        title="Get a Quote for Your Industry"
+        description="Tell us your product category, quantity, and packaging goals — we'll respond within 24 hours."
+      />
+
       <section className="section-space">
         <Container>
           <Reveal>
@@ -59,11 +64,6 @@ export default function IndustriesPage() {
           </div>
         </Container>
       </section>
-
-      <PageLeadForm
-        title="Get a Quote for Your Industry"
-        description="Tell us your product category, quantity, and packaging goals — we'll respond within 24 hours."
-      />
 
       <CTASection
         title="Need packaging designed around your exact industry context?"
