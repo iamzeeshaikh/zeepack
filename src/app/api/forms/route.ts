@@ -1,9 +1,9 @@
+import nodemailer from "nodemailer";
 import { NextResponse } from "next/server";
 
 import {
   buildFormEmailHtml,
   buildFormEmailText,
-  FORM_RECIPIENT,
   getFormSubject,
   type FormType,
 } from "@/lib/form-mail";
@@ -17,14 +17,24 @@ function isFormType(value: string): value is FormType {
   return value === "contact" || value === "lead" || value === "quote";
 }
 
+function createTransporter() {
+  return nodemailer.createTransport({
+    host: process.env.SMTP_HOST,
+    port: Number(process.env.SMTP_PORT) || 587,
+    secure: process.env.SMTP_SECURE === "true",
+    auth: {
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASS,
+    },
+  });
+}
+
 export async function POST(request: Request) {
   try {
     const contentType = request.headers.get("content-type") || "";
     let formType: FormType | undefined;
     let payload: Record<string, string> | undefined;
-    let attachments:
-      | Array<{ content: string; filename: string; type?: string }>
-      | undefined;
+    let attachments: nodemailer.SendMailOptions["attachments"];
 
     if (contentType.includes("multipart/form-data")) {
       const formData = await request.formData();
@@ -54,9 +64,9 @@ export async function POST(request: Request) {
         const bytes = await file.arrayBuffer();
         attachments = [
           {
-            content: Buffer.from(bytes).toString("base64"),
             filename: file.name,
-            type: file.type || undefined,
+            content: Buffer.from(bytes),
+            contentType: file.type || undefined,
           },
         ];
         payload.uploadedFile = file.name;
@@ -74,54 +84,35 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Invalid form request." }, { status: 400 });
     }
 
-    const apiKey = process.env.RESEND_API_KEY;
-    const fromEmail =
-      process.env.RESEND_FROM_EMAIL || "ZEEPACK <onboarding@resend.dev>";
-
-    if (!apiKey) {
+    if (!process.env.SMTP_USER || !process.env.SMTP_PASS) {
       return NextResponse.json(
         {
           error:
-            "Email delivery is not configured yet. Add RESEND_API_KEY to enable form sending.",
+            "Email delivery is not configured yet. Add SMTP credentials to enable form sending.",
         },
         { status: 500 },
       );
     }
 
-    const senderReplyEmail = payload.email?.trim();
-    const resendResponse = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-        "User-Agent": "zeepack-forms/1.0",
-      },
-      body: JSON.stringify({
-        from: fromEmail,
-        to: [FORM_RECIPIENT],
-        subject: getFormSubject(formType, payload),
-        html: buildFormEmailHtml(formType, payload),
-        text: buildFormEmailText(formType, payload),
-        reply_to: senderReplyEmail ? [senderReplyEmail] : undefined,
-        attachments,
-      }),
+    const from = `${process.env.SMTP_FROM_NAME || "ZEE Pack"} <${process.env.SMTP_FROM_EMAIL || process.env.SMTP_USER}>`;
+    const to = process.env.SMTP_TO || process.env.SMTP_USER;
+    const replyTo = payload.email?.trim() || undefined;
+
+    const transporter = createTransporter();
+
+    await transporter.sendMail({
+      from,
+      to,
+      replyTo,
+      subject: getFormSubject(formType, payload),
+      html: buildFormEmailHtml(formType, payload),
+      text: buildFormEmailText(formType, payload),
+      attachments,
     });
 
-    const resendData = (await resendResponse.json().catch(() => null)) as
-      | { message?: string }
-      | null;
-
-    if (!resendResponse.ok) {
-      return NextResponse.json(
-        {
-          error: resendData?.message || "We could not send your request email right now.",
-        },
-        { status: resendResponse.status },
-      );
-    }
-
     return NextResponse.json({ success: true });
-  } catch {
+  } catch (err) {
+    console.error("[forms] SMTP error:", err);
     return NextResponse.json(
       { error: "Unexpected error while sending your request." },
       { status: 500 },

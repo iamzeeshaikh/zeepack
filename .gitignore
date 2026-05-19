@@ -7,5 +7,6 @@ dist
 coverage
 zeepack-assets
 .vercel
+.env*.local
 public/ZEE Images/
 public/ZEE Images.zip
