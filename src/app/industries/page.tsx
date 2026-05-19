@@ -2,6 +2,7 @@ import { industries } from "@/data/industries";
 import { createMetadata } from "@/lib/seo";
 import { EditorialHero } from "@/components/sections/editorial-page-sections";
 import { CTASection } from "@/components/ui/cta-section";
+import { PageLeadForm } from "@/components/forms/page-lead-form";
 import { Container } from "@/components/ui/container";
 import { IndustryCard } from "@/components/ui/industry-card";
 import { Reveal } from "@/components/ui/reveal";
@@ -58,6 +59,11 @@ export default function IndustriesPage() {
           </div>
         </Container>
       </section>
+
+      <PageLeadForm
+        title="Get a Quote for Your Industry"
+        description="Tell us your product category, quantity, and packaging goals — we'll respond within 24 hours."
+      />
 
       <CTASection
         title="Need packaging designed around your exact industry context?"

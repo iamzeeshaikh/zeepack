@@ -24,6 +24,7 @@ import {
 import { CategoryCard } from "@/components/ui/category-card";
 import { Container } from "@/components/ui/container";
 import { CTASection } from "@/components/ui/cta-section";
+import { PageLeadForm } from "@/components/forms/page-lead-form";
 import { FAQAccordion } from "@/components/ui/faq-accordion";
 import { ProductTrustStrip } from "@/components/ui/product-trust-strip";
 import { Reveal } from "@/components/ui/reveal";
@@ -581,6 +582,12 @@ export default async function ProductCategoryPage({
           </Reveal>
         </Container>
       </section>
+
+      <PageLeadForm
+        context={category.name}
+        title={`Get a Quote for ${category.name}`}
+        description="Tell us your quantity, size, and finish direction — we'll respond within 24 hours with pricing and options."
+      />
 
       <CTASection
         title={`Need a quote for ${category.name.toLowerCase()}?`}

@@ -3,6 +3,7 @@ import { createMetadata } from "@/lib/seo";
 import { EditorialHero } from "@/components/sections/editorial-page-sections";
 import { ProductsExplorer } from "@/components/sections/products-explorer";
 import { CTASection } from "@/components/ui/cta-section";
+import { PageLeadForm } from "@/components/forms/page-lead-form";
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -49,6 +50,11 @@ export default function ProductsPage() {
           </div>
         </Container>
       </section>
+
+      <PageLeadForm
+        title="Get a Custom Packaging Quote"
+        description="Tell us your product, quantity, and finish direction — we'll respond within 24 hours with options and pricing."
+      />
 
       <CTASection
         title="Need help choosing the right packaging format?"

@@ -8,6 +8,7 @@ import {
   VisualSpotlight,
 } from "@/components/sections/editorial-page-sections";
 import { CTASection } from "@/components/ui/cta-section";
+import { PageLeadForm } from "@/components/forms/page-lead-form";
 import { Container } from "@/components/ui/container";
 import { FAQAccordion } from "@/components/ui/faq-accordion";
 import { Reveal } from "@/components/ui/reveal";
@@ -347,6 +348,12 @@ export default async function IndustryDetailPage({
           </div>
         </Container>
       </section>
+
+      <PageLeadForm
+        context={`${industry.name} Packaging`}
+        title={`Get a Quote for ${industry.name} Packaging`}
+        description="Tell us your product type, quantity, and finish direction — we'll respond within 24 hours."
+      />
 
       <CTASection
         title={`Need packaging shaped around the ${industry.name.toLowerCase()} category?`}
