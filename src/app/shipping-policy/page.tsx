@@ -3,7 +3,7 @@ import { createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
   title: "Shipping Policy | ZEEPACK",
-  description: "Read the shipping policy for packaging orders from ZEEPACK.",
+  description: "ZEEPACK shipping policy — free shipping across the USA with 6 to 10 business day delivery on all custom packaging orders.",
   path: "/shipping-policy",
 });
 
@@ -12,11 +12,102 @@ export default function ShippingPolicyPage() {
     <section className="section-space">
       <Container className="surface-card max-w-4xl p-7 sm:p-9">
         <h1 className="text-5xl text-[var(--color-ink)]">Shipping Policy</h1>
-        <div className="mt-6 grid gap-4 text-base leading-8 text-[var(--color-muted)]">
-          <p>Shipping timelines vary based on project scope, quantity, printing complexity, finish requirements, and final delivery destination.</p>
-          <p>Estimated turnaround and delivery expectations are discussed during the quoting process and confirmed before production begins.</p>
-          <p>Transit timing can vary by carrier and destination. Expedited shipping may be available for selected projects upon request.</p>
-          <p>Please review your shipping address and receiving requirements carefully during order confirmation.</p>
+        <p className="mt-4 text-sm text-[var(--color-muted)]">Last updated: May 2026</p>
+
+        <div className="mt-8 grid gap-8 text-base leading-8 text-[var(--color-muted)]">
+
+          <div>
+            <h2 className="text-xl font-semibold text-[var(--color-ink)]">Free Shipping</h2>
+            <p className="mt-2">
+              ZEEPACK offers <strong className="text-[var(--color-ink)]">free shipping</strong> on
+              all custom packaging orders to the United States. No minimum order value is required
+              to qualify for free shipping.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-xl font-semibold text-[var(--color-ink)]">Handling Time</h2>
+            <p className="mt-2">
+              All ZEEPACK products are custom-manufactured to order. Handling time —
+              from order confirmation and artwork approval to handoff to the carrier — is
+              <strong className="text-[var(--color-ink)]"> 3 to 5 business days</strong>.
+              Orders are fulfilled Monday through Saturday.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-xl font-semibold text-[var(--color-ink)]">Transit Time</h2>
+            <p className="mt-2">
+              Once your order is handed to the carrier, estimated transit time within the
+              United States is
+              <strong className="text-[var(--color-ink)]"> 3 to 5 business days</strong>.
+              Shipments are dispatched Monday through Saturday.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-xl font-semibold text-[var(--color-ink)]">Total Estimated Delivery</h2>
+            <p className="mt-2">
+              Total estimated delivery time from order confirmation to arrival is
+              <strong className="text-[var(--color-ink)]"> 6 to 10 business days</strong>.
+              This covers both handling and transit. Exact timelines are confirmed during
+              the quoting and approval process.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-xl font-semibold text-[var(--color-ink)]">Shipping Area</h2>
+            <p className="mt-2">
+              We currently ship to all addresses within the
+              <strong className="text-[var(--color-ink)]"> United States</strong>, including
+              Alaska and Hawaii. For international shipping enquiries, please contact us directly.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-xl font-semibold text-[var(--color-ink)]">Order Tracking</h2>
+            <p className="mt-2">
+              A tracking number is provided via email once your order has been dispatched.
+              If you have not received tracking details within your confirmed handling window,
+              contact us at{" "}
+              <a href="mailto:Info@zeepack.co" className="text-[var(--color-primary)] underline underline-offset-4">
+                Info@zeepack.co
+              </a>.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-xl font-semibold text-[var(--color-ink)]">Shipping Address</h2>
+            <p className="mt-2">
+              Please ensure your delivery address is accurate at the time of order confirmation.
+              ZEEPACK is not responsible for delays caused by incorrect or incomplete addresses
+              provided by the customer.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-xl font-semibold text-[var(--color-ink)]">Damaged or Lost Shipments</h2>
+            <p className="mt-2">
+              If your order arrives damaged or does not arrive within the estimated window,
+              contact us within <strong className="text-[var(--color-ink)]">5 business days</strong> of
+              the expected delivery date with photos of any damage so we can resolve the issue promptly.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-xl font-semibold text-[var(--color-ink)]">Contact</h2>
+            <p className="mt-2">
+              For shipping questions or rush order enquiries, reach us at{" "}
+              <a href="mailto:Info@zeepack.co" className="text-[var(--color-primary)] underline underline-offset-4">
+                Info@zeepack.co
+              </a>{" "}
+              or call{" "}
+              <a href="tel:+15033580443" className="text-[var(--color-primary)] underline underline-offset-4">
+                (503) 358-0443
+              </a>.
+            </p>
+          </div>
+
         </div>
       </Container>
     </section>

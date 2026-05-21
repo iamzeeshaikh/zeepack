@@ -14,6 +14,7 @@ import {
   Sparkles,
   SprayCan,
   SwatchBook,
+  Tag,
 } from "lucide-react";
 
 import {
@@ -204,6 +205,18 @@ export default async function ProductCategoryPage({
         secondaryLabel="Get a Quote"
         secondaryHref="/quote"
       />
+
+      {/* Visible price — required for Google Merchant Center schema match */}
+      <div className="border-b border-[var(--color-border)] bg-white">
+        <Container>
+          <div className="flex items-center gap-2 py-3 text-sm text-[var(--color-muted)]">
+            <Tag className="size-3.5 shrink-0 text-[var(--color-gold)]" />
+            Starting from{" "}
+            <span className="font-semibold text-[var(--color-foreground)]">$0.30 / piece</span>
+            <span className="hidden sm:inline">— exact pricing via free quote</span>
+          </div>
+        </Container>
+      </div>
 
       <ProductTrustStrip />
 
