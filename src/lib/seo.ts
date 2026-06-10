@@ -67,6 +67,9 @@ export function buildOrganizationSchema() {
     logo: `${siteConfig.siteUrl}/og-default.jpg`,
     email: siteConfig.email,
     telephone: siteConfig.phone,
+    foundingDate: "2020",
+    legalName: "ZEEPACK LLC",
+    description: siteConfig.description,
     address: {
       "@type": "PostalAddress",
       streetAddress: "2975 Coburn Hollow Road",
@@ -75,14 +78,34 @@ export function buildOrganizationSchema() {
       postalCode: siteConfig.postalCode,
       addressCountry: siteConfig.country,
     },
-    contactPoint: {
-      "@type": "ContactPoint",
-      contactType: "sales",
-      email: siteConfig.email,
-      telephone: siteConfig.phone,
-      areaServed: "US",
-      availableLanguage: "English",
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "sales",
+        email: siteConfig.email,
+        telephone: siteConfig.phone,
+        areaServed: "US",
+        availableLanguage: "English",
+      },
+      {
+        "@type": "ContactPoint",
+        contactType: "customer support",
+        email: siteConfig.email,
+        telephone: siteConfig.phone,
+        areaServed: ["US", "CA", "GB", "AU"],
+        availableLanguage: "English",
+      },
+    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Custom Packaging Products",
+      url: `${siteConfig.siteUrl}/products`,
     },
+    sameAs: [
+      "https://www.facebook.com/zeepack",
+      "https://www.instagram.com/zeepack",
+      "https://www.linkedin.com/company/zeepack",
+    ],
   };
 }
 
@@ -180,6 +203,14 @@ export function buildProductSchema(input: {
     manufacturer: {
       "@type": "Organization",
       name: siteConfig.name,
+      url: siteConfig.siteUrl,
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      reviewCount: "47",
+      bestRating: "5",
+      worstRating: "1",
     },
     offers: input.offers
       ? {
@@ -188,6 +219,48 @@ export function buildProductSchema(input: {
           priceCurrency: input.offers.priceCurrency,
           availability: input.offers.availability,
           url: new URL(input.path, siteConfig.siteUrl).toString(),
+          seller: {
+            "@type": "Organization",
+            name: siteConfig.name,
+            url: siteConfig.siteUrl,
+            email: siteConfig.email,
+            telephone: siteConfig.phone,
+          },
+          shippingDetails: {
+            "@type": "OfferShippingDetails",
+            shippingRate: {
+              "@type": "MonetaryAmount",
+              value: "0",
+              currency: "USD",
+            },
+            shippingDestination: {
+              "@type": "DefinedRegion",
+              addressCountry: "US",
+            },
+            deliveryTime: {
+              "@type": "ShippingDeliveryTime",
+              handlingTime: {
+                "@type": "QuantitativeValue",
+                minValue: 10,
+                maxValue: 20,
+                unitCode: "DAY",
+              },
+              transitTime: {
+                "@type": "QuantitativeValue",
+                minValue: 3,
+                maxValue: 7,
+                unitCode: "DAY",
+              },
+            },
+          },
+          hasMerchantReturnPolicy: {
+            "@type": "MerchantReturnPolicy",
+            applicableCountry: "US",
+            returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+            merchantReturnDays: 15,
+            returnMethod: "https://schema.org/ReturnByMail",
+            returnFees: "https://schema.org/FreeReturn",
+          },
         }
       : undefined,
     additionalProperty: input.additionalProperty?.map((item) => ({

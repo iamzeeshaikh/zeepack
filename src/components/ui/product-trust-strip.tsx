@@ -1,4 +1,4 @@
-import { BadgeCheck, Clock3, PackageCheck, Ruler, Sparkles } from "lucide-react";
+import { BadgeCheck, Clock3, PackageCheck, RotateCcw, Ruler, Sparkles, Truck } from "lucide-react";
 
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/ui/reveal";
@@ -11,6 +11,14 @@ const trustItems = [
   {
     title: "Custom sizes and inserts",
     icon: Ruler,
+  },
+  {
+    title: "Free shipping to USA, CA, UK & AU",
+    icon: Truck,
+  },
+  {
+    title: "15-day returns accepted",
+    icon: RotateCcw,
   },
   {
     title: "Typical response within 24 hours",
@@ -50,7 +58,7 @@ export function ProductTrustStrip() {
               </div>
 
               {/* Trust badges */}
-              <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+              <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
                 {trustItems.map((item) => (
                   <div
                     key={item.title}
