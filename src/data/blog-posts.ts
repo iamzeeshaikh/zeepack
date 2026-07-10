@@ -25,7 +25,7 @@ export const blogPosts: BlogPost[] = [
         title: "What each structure is built for",
         paragraphs: [
           "A [rigid box](/products/rigid-boxes) is made from thick chipboard wrapped in printed paper. It does not fold flat, it holds its shape permanently, and it delivers the heavy, premium feel people associate with luxury and gifting. That weight is exactly why it costs more and ships in more volume.",
-          "A [folding carton](/products/folding-cartons) is printed on a single sheet of paperboard, die-cut, and shipped flat until assembled. It is lighter, far more cost-efficient at volume, and ideal for retail products that move quickly and need clean, colourful printing more than heft.",
+          "A folding carton is printed on a single sheet of paperboard, die-cut, and shipped flat until assembled. It is lighter, far more cost-efficient at volume, and ideal for retail products that move quickly and need clean, colourful printing more than heft.",
         ],
       },
       {
@@ -93,7 +93,7 @@ export const blogPosts: BlogPost[] = [
         bullets: [
           "Lightweight apparel or accessories: single-wall E-flute is usually enough.",
           "Heavier or fragile goods: B-flute or double-wall for edge protection.",
-          "Add [custom inserts](/products/inserts) to lock the product in place and prevent movement.",
+          "Add custom inserts to lock the product in place and prevent movement.",
         ],
       },
       {
@@ -139,7 +139,7 @@ export const blogPosts: BlogPost[] = [
       {
         title: "Start with the material",
         paragraphs: [
-          "The biggest footprint decision is the board itself. Recycled-content paperboard and [kraft](/products/kraft-boxes) stocks reduce virgin fibre use while giving a natural, tactile look that reads as honest rather than cheap. For a fully considered eco line, our [sustainable packaging](/products/sustainable-packaging) range pairs recycled board with responsible sourcing.",
+          "The biggest footprint decision is the board itself. Recycled-content paperboard and kraft stocks reduce virgin fibre use while giving a natural, tactile look that reads as honest rather than cheap. For a fully considered eco line, our [sustainable packaging](/products/sustainable-packaging) range pairs recycled board with responsible sourcing.",
         ],
       },
       {
@@ -197,7 +197,7 @@ export const blogPosts: BlogPost[] = [
       {
         title: "Structure signals quality",
         paragraphs: [
-          "The right structure sets the tone. A [cosmetic box](/products/cosmetic-boxes) with a clean tuck and crisp print suits everyday skincare, while a fragrance line often calls for the weight and reveal of a [perfume box](/products/perfume-boxes) or rigid presentation. The structure should match the price point — under-packaging a premium serum undersells it, and over-packaging a mass product wastes margin.",
+          "The right structure sets the tone. A [cosmetic box](/products/cosmetic-boxes) with a clean tuck and crisp print suits everyday skincare, while a fragrance line often calls for the weight and reveal of a perfume box or rigid presentation. The structure should match the price point — under-packaging a premium serum undersells it, and over-packaging a mass product wastes margin.",
         ],
       },
       {
@@ -208,7 +208,7 @@ export const blogPosts: BlogPost[] = [
         bullets: [
           "Fit inserts to the exact bottle or jar to prevent movement.",
           "Plan panel space for ingredients, claims, and regulatory text.",
-          "Consider [jewelry-grade presentation](/products/jewelry-boxes) for premium or gift lines.",
+          "Consider jewelry-grade presentation for premium or gift lines.",
         ],
       },
       {
@@ -272,7 +272,7 @@ export const blogPosts: BlogPost[] = [
       {
         title: "Match the finish to the product",
         paragraphs: [
-          "Finishing should follow the product and price point. A [gift box](/products/gift-boxes) or luxury launch can carry foil and soft-touch together; a high-volume retail carton is usually better served by strong print and one accent. Beauty and fragrance lean on soft-touch and spot UV, as covered in our guide to [cosmetic packaging that builds trust](/blog/custom-cosmetic-packaging-brand-trust). And if sustainability matters, plastic-free finishes on recycled stock keep the pack both premium and recyclable — see [sustainable packaging materials](/blog/sustainable-packaging-materials).",
+          "Finishing should follow the product and price point. A [gift box](/products/gift-boxes) or luxury launch can carry foil and soft-touch together; a high-volume retail carton is usually better served by strong print and one accent. Beauty and fragrance lean on soft-touch and spot UV, as covered in our guide to cosmetic packaging that builds trust. And if sustainability matters, plastic-free finishes on recycled stock keep the pack both premium and recyclable.",
         ],
       },
     ],
