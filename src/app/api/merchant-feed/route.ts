@@ -1,5 +1,6 @@
 import { categories } from "@/data/categories";
 import { productStyles } from "@/data/product-styles";
+import { getUnitPrice } from "@/data/pricing";
 import { siteConfig } from "@/data/site";
 
 function xmlEscape(str: string): string {
@@ -32,6 +33,7 @@ export async function GET() {
     const description = xmlEscape(cat.shortDescription);
     const title = xmlEscape(`${cat.name} | Custom Packaging by ZEEPACK`);
     const productType = xmlEscape(`Custom Packaging > ${cat.name}`);
+    const unitPrice = getUnitPrice(cat);
 
     return `
     <item>
@@ -40,7 +42,7 @@ export async function GET() {
       <g:description>${description}</g:description>
       <g:link>${link}</g:link>
       <g:image_link>${imageLink}</g:image_link>
-      <g:price>0.30 USD</g:price>
+      <g:price>${unitPrice.toFixed(2)} USD</g:price>
       <g:availability>in_stock</g:availability>
       <g:condition>new</g:condition>
       <g:brand>ZEEPACK</g:brand>
@@ -70,6 +72,7 @@ export async function GET() {
     const description = xmlEscape(style.description);
     const title = xmlEscape(`${style.title} | Custom Packaging by ZEEPACK`);
     const productType = xmlEscape(`Custom Packaging > ${style.title}`);
+    const unitPrice = getUnitPrice({ slug: style.slug, title: style.title, materials: style.materialOptions });
 
     return `
     <item>
@@ -78,7 +81,7 @@ export async function GET() {
       <g:description>${description}</g:description>
       <g:link>${link}</g:link>
       <g:image_link>${imageLink}</g:image_link>
-      <g:price>0.30 USD</g:price>
+      <g:price>${unitPrice.toFixed(2)} USD</g:price>
       <g:availability>in_stock</g:availability>
       <g:condition>new</g:condition>
       <g:brand>ZEEPACK</g:brand>

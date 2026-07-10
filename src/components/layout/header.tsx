@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 
 import { Button } from "@/components/ui/button";
+import { CartLink } from "@/components/cart/cart-link";
 import { Container } from "@/components/ui/container";
 import { Logo } from "@/components/ui/logo";
 import { industries } from "@/data/industries";
@@ -173,6 +174,7 @@ export function Header() {
             <Button href="/quote" variant="secondary" className="px-5 py-2.5 text-[13px]">
               Get a Quote
             </Button>
+            <CartLink />
           </div>
 
           {/* Mobile burger */}

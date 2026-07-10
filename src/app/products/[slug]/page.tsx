@@ -14,7 +14,6 @@ import {
   Sparkles,
   SprayCan,
   SwatchBook,
-  Tag,
 } from "lucide-react";
 
 import {
@@ -25,6 +24,8 @@ import {
 import { CategoryCard } from "@/components/ui/category-card";
 import { Container } from "@/components/ui/container";
 import { CTASection } from "@/components/ui/cta-section";
+import { AddToCart } from "@/components/cart/add-to-cart";
+import { getUnitPrice } from "@/data/pricing";
 import { PageLeadForm } from "@/components/forms/page-lead-form";
 import { FAQAccordion } from "@/components/ui/faq-accordion";
 import { ProductTrustStrip } from "@/components/ui/product-trust-strip";
@@ -168,6 +169,7 @@ export default async function ProductCategoryPage({
     description: category.seoBody,
     path: `/products/${category.slug}`,
   });
+  const unitPrice = getUnitPrice(category);
   const productSchema = buildProductSchema({
     name: category.name,
     description: category.seoBody,
@@ -175,12 +177,12 @@ export default async function ProductCategoryPage({
     image: category.image,
     category: "Premium custom packaging",
     offers: {
-      price: "0.30",
+      price: unitPrice.toFixed(2),
       priceCurrency: "USD",
       availability: "https://schema.org/InStock",
     },
     additionalProperty: [
-      { name: "Pricing Note", value: "Starting from $0.30 per piece" },
+      { name: "Pricing Note", value: `Starting from $${unitPrice.toFixed(2)} per piece` },
       { name: "Material Options", value: category.materials.join(", ") },
       { name: "Finishing Options", value: category.finishes.join(", ") },
     ],
@@ -206,14 +208,18 @@ export default async function ProductCategoryPage({
         secondaryHref="/quote"
       />
 
-      {/* Visible price — required for Google Merchant Center schema match */}
-      <div className="border-b border-[var(--color-border)] bg-white">
+      {/* Buyable price + cart — matches the Merchant Center feed price */}
+      <div className="border-b border-[var(--color-border)] bg-[var(--color-shell)]">
         <Container>
-          <div className="flex items-center gap-2 py-3 text-sm text-[var(--color-muted)]">
-            <Tag className="size-3.5 shrink-0 text-[var(--color-gold)]" />
-            Starting from{" "}
-            <span className="font-semibold text-[var(--color-foreground)]">$0.30 / piece</span>
-            <span className="hidden sm:inline">— exact pricing via free quote</span>
+          <div className="py-8">
+            <AddToCart
+              id={category.slug}
+              name={category.name}
+              slug={category.slug}
+              href={`/products/${category.slug}`}
+              image={category.image}
+              price={getUnitPrice(category)}
+            />
           </div>
         </Container>
       </div>

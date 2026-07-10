@@ -5,6 +5,7 @@ import Script from "next/script";
 import { AnnouncementBar } from "@/components/layout/announcement-bar";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
+import { CartProvider } from "@/lib/cart/cart-context";
 import {
   buildLocalBusinessSchema,
   buildOrganizationSchema,
@@ -68,6 +69,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body>
+        <CartProvider>
         <AnnouncementBar />
         <Header />
         <main>{children}</main>
@@ -115,6 +117,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
+        </CartProvider>
       </body>
     </html>
   );

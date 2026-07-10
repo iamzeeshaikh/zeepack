@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Sparkles, Tag } from "lucide-react";
+import { Sparkles } from "lucide-react";
 
 import {
   EditorialHero,
@@ -9,6 +9,8 @@ import {
   VisualSpotlight,
 } from "@/components/sections/editorial-page-sections";
 import { CTASection } from "@/components/ui/cta-section";
+import { AddToCart } from "@/components/cart/add-to-cart";
+import { getUnitPrice } from "@/data/pricing";
 import { Container } from "@/components/ui/container";
 import { FAQAccordion } from "@/components/ui/faq-accordion";
 import { ProductTrustStrip } from "@/components/ui/product-trust-strip";
@@ -83,6 +85,7 @@ export default async function ProductStylePage({
     description: style.overview,
     path: `/products/styles/${style.slug}`,
   });
+  const unitPrice = getUnitPrice({ slug: style.slug, title: style.title, materials: style.materialOptions });
   const productSchema = buildProductSchema({
     name: style.title,
     description: style.overview,
@@ -90,12 +93,12 @@ export default async function ProductStylePage({
     image: style.image,
     category: `${category.name} style`,
     offers: {
-      price: "0.30",
+      price: unitPrice.toFixed(2),
       priceCurrency: "USD",
       availability: "https://schema.org/InStock",
     },
     additionalProperty: [
-      { name: "Pricing Note", value: "Starting from $0.30 per piece" },
+      { name: "Pricing Note", value: `Starting from $${unitPrice.toFixed(2)} per piece` },
       { name: "Use Cases", value: style.useCases.join(", ") },
       { name: "Materials", value: style.materialOptions.join(", ") },
       { name: "Finishes", value: style.finishOptions.join(", ") },
@@ -119,14 +122,18 @@ export default async function ProductStylePage({
         secondaryHref="/quote"
       />
 
-      {/* Visible price — required for Google Merchant Center schema match */}
-      <div className="border-b border-[var(--color-border)] bg-white">
+      {/* Buyable price + cart — matches the Merchant Center feed price */}
+      <div className="border-b border-[var(--color-border)] bg-[var(--color-shell)]">
         <Container>
-          <div className="flex items-center gap-2 py-3 text-sm text-[var(--color-muted)]">
-            <Tag className="size-3.5 shrink-0 text-[var(--color-gold)]" />
-            Starting from{" "}
-            <span className="font-semibold text-[var(--color-foreground)]">$0.30 / piece</span>
-            <span className="hidden sm:inline">— exact pricing via free quote</span>
+          <div className="py-8">
+            <AddToCart
+              id={`style-${style.slug}`}
+              name={style.title}
+              slug={style.slug}
+              href={`/products/styles/${style.slug}`}
+              image={style.image}
+              price={getUnitPrice({ slug: style.slug, title: style.title, materials: style.materialOptions })}
+            />
           </div>
         </Container>
       </div>
