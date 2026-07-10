@@ -23,13 +23,6 @@ function feedId(raw: string): string {
 
 const GMC_BANNED_TERMS = /cbd|cannabis|vape|tobacco/i;
 
-// Merchant Center free-listing capacity for this account. Feeding more than this
-// gets the surplus rejected ("over capacity"), so we cap the feed. We also give
-// every product a globally-unique image, because duplicate images across items
-// are a Merchant quality problem — so the real cap is the number of distinct
-// product images we have (~70), whichever is lower.
-const FEED_CAPACITY = 100;
-
 function renderItem(opts: {
   id: string;
   title: string;
@@ -91,9 +84,14 @@ export async function GET() {
     (style.galleryImages ?? []).forEach(addImage);
   });
 
+  // Hand out globally-unique images first for maximum variety; once the distinct
+  // pool is exhausted, fall back to the product's own (relevant) image rather
+  // than skipping it. Every product is fed — Google fetches them all and accepts
+  // up to the account's current capacity, so more show automatically as capacity
+  // grows, without editing the feed again.
   const usedImages = new Set<string>();
-  const takeImage = (preferred?: string): string | null => {
-    if (preferred && imagePool.includes(preferred) && !usedImages.has(preferred)) {
+  const takeImage = (preferred: string): string => {
+    if (preferred && !usedImages.has(preferred)) {
       usedImages.add(preferred);
       return preferred;
     }
@@ -103,23 +101,20 @@ export async function GET() {
         return img;
       }
     }
-    return null; // no unique image left — product is skipped
+    return preferred; // pool exhausted — reuse the product's own relevant image
   };
 
   const items: string[] = [];
 
   // Categories first — the real product lines, each with its own image.
   for (const cat of allowedCategories) {
-    if (items.length >= FEED_CAPACITY) break;
-    const image = takeImage(cat.image);
-    if (!image) break;
     items.push(
       renderItem({
         id: cat.slug,
         title: `${cat.name} | Custom Packaging by ZEEPACK`,
         description: cat.shortDescription,
         link: absUrl(`/products/${cat.slug}`),
-        image,
+        image: takeImage(cat.image),
         price: getUnitPrice(cat),
         productType: `Custom Packaging > ${cat.name}`,
         mpn: `ZP-${cat.slug}`,
@@ -127,20 +122,16 @@ export async function GET() {
     );
   }
 
-  // Then styles fill the remaining slots, each with a unique image. When the
-  // distinct-image pool is exhausted, the rest are skipped rather than repeating
-  // an image (which Merchant Center flags).
+  // Then every style, each getting a unique image while the pool lasts and its
+  // own relevant image thereafter.
   for (const style of allowedStyles) {
-    if (items.length >= FEED_CAPACITY) break;
-    const image = takeImage(style.image);
-    if (!image) break;
     items.push(
       renderItem({
         id: `style-${style.slug}`,
         title: `${style.title} | Custom Packaging by ZEEPACK`,
         description: style.description,
         link: absUrl(`/products/styles/${style.slug}`),
-        image,
+        image: takeImage(style.image),
         price: getUnitPrice({ slug: style.slug, title: style.title, materials: style.materialOptions }),
         productType: `Custom Packaging > ${style.title}`,
         mpn: `ZP-${style.slug}`,
