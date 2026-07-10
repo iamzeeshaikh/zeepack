@@ -47,7 +47,7 @@ export function ProductTrustStrip() {
                 </div>
                 <p className="mt-3.5 text-[1rem] leading-[1.75] text-[var(--color-primary)] sm:text-[1.05rem]">
                   Starting from{" "}
-                  <span className="font-bold text-[var(--color-cta)]">$0.30 per piece</span>
+                  <span className="font-bold text-[var(--color-cta)]">$0.75 per piece</span>
                   . Final pricing varies by quantity, size, material, printing, and finishing options.
                 </p>
 
