@@ -102,9 +102,9 @@ export function buildOrganizationSchema() {
       url: `${siteConfig.siteUrl}/products`,
     },
     sameAs: [
-      "https://www.facebook.com/zeepack",
-      "https://www.instagram.com/zeepack",
-      "https://www.linkedin.com/company/zeepack",
+      "https://www.facebook.com/zeecustomboxes",
+      "https://www.instagram.com/zeecustomboxes",
+      "https://www.linkedin.com/company/85652701",
     ],
   };
 }
