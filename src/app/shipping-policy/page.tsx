@@ -3,7 +3,7 @@ import { createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
   title: "Shipping Policy | ZEEPACK",
-  description: "ZEEPACK shipping policy — free shipping across the USA with 6 to 10 business day delivery on all custom packaging orders.",
+  description: "ZEEPACK shipping policy — free shipping to the USA, Canada, UK, and Australia on all custom packaging orders.",
   path: "/shipping-policy",
 });
 
@@ -12,7 +12,7 @@ export default function ShippingPolicyPage() {
     <section className="section-space">
       <Container className="surface-card max-w-4xl p-7 sm:p-9">
         <h1 className="text-5xl text-[var(--color-ink)]">Shipping Policy</h1>
-        <p className="mt-4 text-sm text-[var(--color-muted)]">Last updated: May 2026</p>
+        <p className="mt-4 text-sm text-[var(--color-muted)]">Last updated: July 2026</p>
 
         <div className="mt-8 grid gap-8 text-base leading-8 text-[var(--color-muted)]">
 
@@ -20,8 +20,18 @@ export default function ShippingPolicyPage() {
             <h2 className="text-xl font-semibold text-[var(--color-ink)]">Free Shipping</h2>
             <p className="mt-2">
               ZEEPACK offers <strong className="text-[var(--color-ink)]">free shipping</strong> on
-              all custom packaging orders to the United States. No minimum order value is required
-              to qualify for free shipping.
+              all custom packaging orders to the United States, Canada, United Kingdom, and Australia.
+              No minimum order value is required to qualify for free shipping.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-xl font-semibold text-[var(--color-ink)]">Order Cut-Off Time</h2>
+            <p className="mt-2">
+              Our order cut-off time is
+              <strong className="text-[var(--color-ink)]"> 2:00 PM Pacific Standard Time (Los Angeles, GMT-08:00)</strong>.
+              Orders confirmed before the cut-off begin handling the same business day;
+              orders confirmed after the cut-off begin handling the next business day.
             </p>
           </div>
 
@@ -38,8 +48,8 @@ export default function ShippingPolicyPage() {
           <div>
             <h2 className="text-xl font-semibold text-[var(--color-ink)]">Transit Time</h2>
             <p className="mt-2">
-              Once your order is handed to the carrier, estimated transit time within the
-              United States is
+              Once your order is handed to the carrier, estimated transit time to
+              all shipping destinations is
               <strong className="text-[var(--color-ink)]"> 3 to 5 business days</strong>.
               Shipments are dispatched Monday through Saturday.
             </p>
@@ -58,9 +68,16 @@ export default function ShippingPolicyPage() {
           <div>
             <h2 className="text-xl font-semibold text-[var(--color-ink)]">Shipping Area</h2>
             <p className="mt-2">
-              We currently ship to all addresses within the
-              <strong className="text-[var(--color-ink)]"> United States</strong>, including
-              Alaska and Hawaii. For international shipping enquiries, please contact us directly.
+              We ship to the following countries:
+            </p>
+            <ul className="mt-2 list-disc pl-5 space-y-1">
+              <li><strong className="text-[var(--color-ink)]">United States</strong> — including Alaska and Hawaii</li>
+              <li><strong className="text-[var(--color-ink)]">Canada</strong></li>
+              <li><strong className="text-[var(--color-ink)]">United Kingdom</strong></li>
+              <li><strong className="text-[var(--color-ink)]">Australia</strong></li>
+            </ul>
+            <p className="mt-2">
+              For shipping enquiries to other countries, please contact us directly.
             </p>
           </div>
 
