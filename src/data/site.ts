@@ -35,6 +35,7 @@ export const navigation = [
   { label: "Industries", href: "/industries" },
   { label: "Locations", href: "/custom-packaging-usa" },
   { label: "Sustainability", href: "/sustainability" },
+  { label: "Blog", href: "/blog" },
   { label: "FAQ", href: "/faq" },
   { label: "Customize", href: "/customize" },
 ];
@@ -86,6 +87,7 @@ export const footerQuickLinks = [
   { label: "Products", href: "/products" },
   { label: "Industries", href: "/industries" },
   { label: "Sustainability", href: "/sustainability" },
+  { label: "Blog", href: "/blog" },
   { label: "FAQ", href: "/faq" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },

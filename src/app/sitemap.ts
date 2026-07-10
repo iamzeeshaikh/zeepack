@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 
+import { blogPosts } from "@/data/blog-posts";
 import { categories } from "@/data/categories";
 import { industries } from "@/data/industries";
 import { locationSlugs } from "@/data/locations";
@@ -19,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/industries",
     "/sustainability",
     "/faq",
+    "/blog",
     "/html-sitemap",
     ...footerLegalLinks.map((item) => item.href),
   ].map((path) => ({
@@ -63,5 +65,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: slug.includes("custom-packaging-") ? 0.75 : 0.7,
   }));
 
-  return [...staticPages, ...categoryUrls, ...styleUrls, ...industryUrls, usaPageUrl, ...locationUrls];
+  const blogUrls = blogPosts.map((post) => ({
+    url: `${siteConfig.siteUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.publishedAt),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  return [...staticPages, ...categoryUrls, ...styleUrls, ...industryUrls, usaPageUrl, ...blogUrls, ...locationUrls];
 }
