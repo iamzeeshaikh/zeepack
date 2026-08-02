@@ -29,7 +29,7 @@ export function Footer() {
         <Container className="py-12">
           <div className="relative overflow-hidden rounded-[32px] border border-white/[0.07] bg-[linear-gradient(145deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02))] px-8 py-10 sm:px-12 sm:py-12">
             {/* Ambient glow */}
-            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_70%_at_0%_0%,rgba(198,169,114,0.18),transparent_50%),radial-gradient(ellipse_40%_60%_at_100%_100%,rgba(232,96,58,0.08),transparent_50%)]" />
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_70%_at_0%_0%,rgba(198,169,114,0.18),transparent_50%),radial-gradient(ellipse_40%_60%_at_100%_100%,rgba(207,74,38,0.08),transparent_50%)]" />
 
             <div className="relative flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
               <div>
@@ -86,7 +86,7 @@ export function Footer() {
             </p>
             <div className="mt-6 flex items-center gap-3">
               <div className="h-px flex-1 bg-white/[0.08]" />
-              <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-white/30">
+              <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-white/60">
                 Est. USA
               </span>
               <div className="h-px flex-1 bg-white/[0.08]" />
@@ -100,7 +100,7 @@ export function Footer() {
 
           {/* Contact column */}
           <div>
-            <h3 className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/44">
+            <h3 className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/60">
               Contact
             </h3>
             <div className="mt-5 space-y-4">
@@ -134,7 +134,7 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/[0.06] pt-6 sm:flex-row">
-          <p className="text-[13px] text-white/36">
+          <p className="text-[13px] text-white/60">
             © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
           </p>
           <div className="flex items-center gap-3">
@@ -163,7 +163,7 @@ function FooterColumn({
 }) {
   return (
     <div>
-      <h3 className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/44">
+      <h3 className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/60">
         {title}
       </h3>
       <div className="mt-5 grid gap-2.5">

@@ -20,7 +20,7 @@ import {
 } from "@/lib/seo";
 
 export const metadata = createMetadata({
-  title: "Custom Packaging USA | Premium Brand Packaging Nationwide by ZEEPACK",
+  title: "Custom Packaging USA | ZEEPACK",
   description:
     "ZEEPACK creates premium custom packaging for brands across the United States — rigid boxes, mailer boxes, folding cartons, and specialty packaging shipped nationwide with low minimum orders.",
   path: "/custom-packaging-usa",

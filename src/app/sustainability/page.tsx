@@ -20,7 +20,7 @@ import { sustainabilityFaqs } from "@/data/faqs";
 import { buildFaqSchema, createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
-  title: "Sustainable Packaging | Premium Packaging With Smarter Choices",
+  title: "Sustainable Packaging Options | ZEEPACK",
   description:
     "Explore sustainable packaging approaches from ZEEPACK, including recyclable materials, reduced plastic use, efficient inserts, and premium packaging that still feels elevated.",
   path: "/sustainability",

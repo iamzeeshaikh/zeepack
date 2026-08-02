@@ -72,12 +72,12 @@ type WhyChooseItem = {
 
 const categoryMetaOverrides: Partial<Record<string, { title: string; description: string }>> = {
   "rigid-boxes": {
-    title: "Luxury Rigid Boxes | Custom Premium Packaging | ZEEPACK",
+    title: "Luxury Rigid Boxes | Custom Packaging | ZEEPACK",
     description:
       "Explore custom luxury rigid boxes with premium finishes, inserts, and full customization for modern brands.",
   },
   "candle-boxes": {
-    title: "Candle Packaging | Custom Premium Packaging | ZEEPACK",
+    title: "Candle Packaging | Custom Packaging | ZEEPACK",
     description:
       "Explore custom candle packaging with premium finishes, inserts, and full customization for modern brands.",
   },
@@ -127,7 +127,7 @@ export async function generateMetadata({
   const override = categoryMetaOverrides[category.slug];
 
   return createMetadata({
-    title: override?.title ?? `${category.name} | Custom Premium Packaging | ZEEPACK`,
+    title: override?.title ?? `${category.name} | Custom Packaging | ZEEPACK`,
     description:
       override?.description ??
       `Explore custom ${category.name.toLowerCase()} with premium materials, finishes, and full customization for modern brands.`,

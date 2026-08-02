@@ -9,7 +9,7 @@ import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 
 export const metadata = createMetadata({
-  title: "Industries | Premium Packaging by Category",
+  title: "Packaging by Industry | ZEEPACK",
   description:
     "See how ZEEPACK approaches premium packaging for cosmetics, candles, fashion, jewelry, food, and e-commerce brands.",
   path: "/industries",

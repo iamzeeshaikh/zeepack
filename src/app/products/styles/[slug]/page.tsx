@@ -46,7 +46,7 @@ export async function generateMetadata({
   if (!style) return {};
 
   return createMetadata({
-    title: `${style.title} | Premium Packaging Style by ZEEPACK`,
+    title: `${style.title} | ZEEPACK`,
     description: style.overview,
     path: `/products/styles/${style.slug}`,
     keywords: [style.title.toLowerCase(), ...style.useCases.map((item) => item.toLowerCase())],

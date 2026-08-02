@@ -250,7 +250,7 @@ export async function generateMetadata({
   const prefixWord = slug.startsWith("custom-boxes-") ? "Custom Boxes" : "Custom Packaging";
 
   return createMetadata({
-    title: `${prefixWord} in ${locLabel} | Premium Brand Packaging by ZEEPACK`,
+    title: `${prefixWord} in ${locLabel} | ZEEPACK`,
     description: location.blurb.slice(0, 155),
     path: `/${slug}`,
     keywords: [

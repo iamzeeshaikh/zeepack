@@ -74,7 +74,7 @@ export function AddToCart({ id, name, slug, href, image, price, minQty = 100 }: 
         <button
           type="button"
           onClick={() => handleAdd(true)}
-          className="flex-1 rounded-full bg-[var(--color-cta)] px-5 py-3 text-sm font-semibold text-white shadow-[0_14px_28px_rgba(232,96,58,0.28)] transition hover:opacity-95"
+          className="flex-1 rounded-full bg-[var(--color-cta)] px-5 py-3 text-sm font-semibold text-white shadow-[0_14px_28px_rgba(207,74,38,0.28)] transition hover:opacity-95"
         >
           Buy Now
         </button>

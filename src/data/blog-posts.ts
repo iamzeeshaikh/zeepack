@@ -66,7 +66,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "choosing-mailer-boxes-ecommerce",
     title: "How to Choose the Right Mailer Box for E-commerce Shipping",
-    metaTitle: "How To Choose a Mailer Box for E-commerce | Sizing & Strength",
+    metaTitle: "How To Choose a Mailer Box for E-commerce | ZEEPACK",
     metaDescription:
       "A practical guide to choosing e-commerce mailer boxes — sizing, corrugated strength, branding, and protection — so products arrive safely and on brand.",
     excerpt:
@@ -123,7 +123,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "sustainable-packaging-materials",
     title: "Sustainable Packaging: Eco-Friendly Materials That Still Look Premium",
-    metaTitle: "Sustainable Packaging Materials That Still Look Premium | ZEEPACK",
+    metaTitle: "Sustainable Packaging Materials | ZEEPACK",
     metaDescription:
       "Recycled board, kraft, soy inks, and mono-materials let you build eco-friendly packaging that still looks premium. Here is how to go sustainable without losing quality.",
     excerpt:

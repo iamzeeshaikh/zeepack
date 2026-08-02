@@ -21,7 +21,7 @@ import { quoteFaqs } from "@/data/faqs";
 import { buildFaqSchema, createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
-  title: "Get a Quote | Premium Custom Packaging by ZEEPACK",
+  title: "Get a Packaging Quote | ZEEPACK",
   description:
     "Request a premium packaging quote for rigid boxes, mailers, cartons, inserts, paper bags, tissue paper, and other custom packaging formats.",
   path: "/quote",

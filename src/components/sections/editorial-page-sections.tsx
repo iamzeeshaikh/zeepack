@@ -83,7 +83,7 @@ export function EditorialHero({
 }: EditorialHeroProps) {
   return (
     <section className="relative overflow-hidden border-b border-[rgba(17,17,17,0.06)] bg-[radial-gradient(ellipse_60%_60%_at_5%_0%,rgba(198,169,114,0.18),transparent_38%),linear-gradient(180deg,rgba(255,255,255,0.90),rgba(248,245,239,0.98))] py-20 sm:py-28">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-[480px] bg-[radial-gradient(circle_at_88%_18%,rgba(232,96,58,0.05),transparent_28%)]" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[480px] bg-[radial-gradient(circle_at_88%_18%,rgba(207,74,38,0.05),transparent_28%)]" />
       <Container className="relative grid gap-12 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:items-center">
         <Reveal>
           <div className="max-w-2xl">

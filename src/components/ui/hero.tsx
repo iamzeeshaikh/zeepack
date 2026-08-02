@@ -34,7 +34,7 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden pb-0 pt-6 sm:pt-10">
       {/* Ambient gradients */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_8%_-10%,rgba(198,169,114,0.20),transparent),radial-gradient(ellipse_40%_50%_at_96%_10%,rgba(232,96,58,0.07),transparent)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_8%_-10%,rgba(198,169,114,0.20),transparent),radial-gradient(ellipse_40%_50%_at_96%_10%,rgba(207,74,38,0.07),transparent)]" />
 
       <Container className="grid gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:items-center xl:gap-20">
 
@@ -152,7 +152,7 @@ export function Hero() {
             <div className="float-card-delayed absolute -right-5 bottom-14 z-10 sm:-right-8">
               <div className="w-[190px] rounded-[20px] border border-[rgba(17,17,17,0.07)] bg-white p-4 shadow-[0_20px_48px_rgba(17,17,17,0.12)] backdrop-blur-sm">
                 <div className="flex items-center gap-3">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[rgba(232,96,58,0.10)]">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[rgba(207,74,38,0.10)]">
                     <Sparkles className="size-5 text-[var(--color-cta)]" />
                   </div>
                   <div className="min-w-0">

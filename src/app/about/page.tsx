@@ -21,7 +21,7 @@ import { aboutFaqs } from "@/data/faqs";
 import { buildFaqSchema, createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
-  title: "About ZEEPACK | Premium Packaging Built Around Detail",
+  title: "About ZEEPACK | Premium Packaging Makers",
   description:
     "Learn how ZEEPACK approaches premium custom packaging through structure, materials, presentation, and a more considered project process.",
   path: "/about",

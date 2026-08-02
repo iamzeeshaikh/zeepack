@@ -115,7 +115,7 @@ export default function CheckoutPage() {
           <button
             type="submit"
             disabled={submitting}
-            className="w-full rounded-full bg-[var(--color-cta)] px-6 py-3.5 text-sm font-semibold text-white shadow-[0_14px_28px_rgba(232,96,58,0.28)] disabled:opacity-60"
+            className="w-full rounded-full bg-[var(--color-cta)] px-6 py-3.5 text-sm font-semibold text-white shadow-[0_14px_28px_rgba(207,74,38,0.28)] disabled:opacity-60"
           >
             {submitting ? "Placing order…" : "Place Order (Cash on Delivery)"}
           </button>

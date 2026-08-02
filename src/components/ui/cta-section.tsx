@@ -27,7 +27,7 @@ export function CTASection({
       <Container>
         <div className="relative overflow-hidden rounded-[40px] bg-[#0e0d0b] px-8 py-14 text-white shadow-[0_40px_100px_rgba(17,17,17,0.28)] sm:px-12 sm:py-16 lg:px-16 lg:py-20">
           {/* Texture & ambient */}
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_0%_0%,rgba(198,169,114,0.22),transparent_50%),radial-gradient(ellipse_50%_50%_at_100%_100%,rgba(232,96,58,0.12),transparent_50%)]" />
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_0%_0%,rgba(198,169,114,0.22),transparent_50%),radial-gradient(ellipse_50%_50%_at_100%_100%,rgba(207,74,38,0.12),transparent_50%)]" />
 
           {/* Gold dot grid pattern */}
           <div
@@ -88,7 +88,7 @@ export function CTASection({
                   <p className="font-display text-[1.8rem] leading-none tracking-[-0.04em] text-white">
                     {stat.value}
                   </p>
-                  <p className="mt-1.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-white/44">
+                  <p className="mt-1.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-white/60">
                     {stat.label}
                   </p>
                 </div>

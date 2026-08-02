@@ -12,6 +12,19 @@ type MetadataInput = {
   imageAlt?: string;
 };
 
+/**
+ * Google truncates meta descriptions around 155-160 characters. Trim at a word
+ * boundary here so every page is covered rather than each caller remembering.
+ */
+function trimDescription(input: string, limit = 155) {
+  const text = input.trim();
+  if (text.length <= limit) return text;
+
+  const cut = text.slice(0, limit);
+  const lastSpace = cut.lastIndexOf(" ");
+  return `${(lastSpace > limit - 25 ? cut.slice(0, lastSpace) : cut).replace(/[\s,;:.\u2014-]+$/, "")}…`;
+}
+
 export function createMetadata({
   title,
   description,
@@ -23,10 +36,11 @@ export function createMetadata({
 }: MetadataInput): Metadata {
   const url = new URL(path, siteConfig.siteUrl).toString();
   const imageUrl = new URL(image, siteConfig.siteUrl).toString();
+  const summary = trimDescription(description);
 
   return {
     title,
-    description,
+    description: summary,
     keywords,
     alternates: {
       canonical: url,
@@ -37,7 +51,7 @@ export function createMetadata({
     },
     openGraph: {
       title,
-      description,
+      description: summary,
       url,
       siteName: siteConfig.name,
       locale: "en_US",
@@ -52,7 +66,7 @@ export function createMetadata({
     twitter: {
       card: "summary_large_image",
       title,
-      description,
+      description: summary,
       images: [imageUrl],
     },
   };

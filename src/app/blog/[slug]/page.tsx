@@ -165,7 +165,7 @@ export default async function BlogPostPage({
             </p>
             <Link
               href="/quote"
-              className="mt-5 inline-block rounded-full bg-[var(--color-cta)] px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_28px_rgba(232,96,58,0.28)]"
+              className="mt-5 inline-block rounded-full bg-[var(--color-cta)] px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_28px_rgba(207,74,38,0.28)]"
             >
               Get a Free Quote
             </Link>

@@ -20,7 +20,7 @@ import { contactCards, siteConfig } from "@/data/site";
 import { buildFaqSchema, createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
-  title: "Contact ZEEPACK | Let's Talk About Your Packaging Project",
+  title: "Contact ZEEPACK | Packaging Enquiries",
   description:
     "Contact ZEEPACK to discuss custom packaging sizes, materials, finishes, inserts, launch packaging, and ongoing supply needs.",
   path: "/contact",

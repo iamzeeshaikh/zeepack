@@ -85,7 +85,7 @@ export function LeadForm({ title = "Start Your Packaging Project" }: { title?: s
       <button
         type="submit"
         disabled={isSubmitting}
-        className="mt-5 inline-flex rounded-full bg-[var(--color-accent)] px-6 py-3 text-sm font-semibold text-white shadow-[0_18px_30px_rgba(232,96,58,0.24)] transition hover:-translate-y-0.5 disabled:opacity-70"
+        className="mt-5 inline-flex rounded-full bg-[var(--color-accent)] px-6 py-3 text-sm font-semibold text-white shadow-[0_18px_30px_rgba(207,74,38,0.24)] transition hover:-translate-y-0.5 disabled:opacity-70"
       >
         {isSubmitting ? "Sending..." : "Get Custom Quote"}
       </button>

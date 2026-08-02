@@ -95,7 +95,7 @@ export default function RootLayout({
             </a>
             <Link
               href="/quote"
-              className="flex-1 rounded-full bg-[var(--color-cta)] px-4 py-3 text-center text-sm font-semibold text-white shadow-[0_14px_28px_rgba(232,96,58,0.28)]"
+              className="flex-1 rounded-full bg-[var(--color-cta)] px-4 py-3 text-center text-sm font-semibold text-white shadow-[0_14px_28px_rgba(207,74,38,0.28)]"
             >
               Get Custom Quote
             </Link>

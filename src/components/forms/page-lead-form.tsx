@@ -113,7 +113,7 @@ export function PageLeadForm({
             <button
               type="submit"
               disabled={isSubmitting}
-              className="inline-flex items-center gap-2 rounded-full bg-[var(--color-cta)] px-7 py-3 text-sm font-bold text-white shadow-[0_12px_28px_rgba(232,96,58,0.32)] transition hover:opacity-90 disabled:opacity-60"
+              className="inline-flex items-center gap-2 rounded-full bg-[var(--color-cta)] px-7 py-3 text-sm font-bold text-white shadow-[0_12px_28px_rgba(207,74,38,0.32)] transition hover:opacity-90 disabled:opacity-60"
             >
               {isSubmitting ? "Sending…" : "Request a Quote"}
             </button>

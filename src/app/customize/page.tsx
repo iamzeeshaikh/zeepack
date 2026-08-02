@@ -3,7 +3,7 @@ import { PackagingConfigurator } from "@/components/ui/packaging-configurator";
 import { buildBreadcrumbSchema, createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
-  title: "Customize Your Packaging | Interactive Configurator | ZEEPACK",
+  title: "Customize Your Packaging | ZEEPACK",
   description:
     "Configure your custom packaging online. Choose box type, size, material, finish options, quantity, and add-ons. Get an instant quote from ZEEPACK — no page reload needed.",
   path: "/customize",

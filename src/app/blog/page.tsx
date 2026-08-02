@@ -7,7 +7,7 @@ import { blogPosts } from "@/data/blog-posts";
 import { buildBreadcrumbSchema, createMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createMetadata({
-  title: "Packaging Blog: Guides on Boxes, Materials & Design | ZEEPACK",
+  title: "Packaging Guides & Insights | ZEEPACK",
   description:
     "Practical custom packaging guides — rigid boxes vs folding cartons, e-commerce mailers, sustainable materials, cosmetic packaging, and premium finishes.",
   path: "/blog",

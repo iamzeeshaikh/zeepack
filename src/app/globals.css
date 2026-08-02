@@ -10,8 +10,8 @@
   --color-gold: #c6a972;
   --color-gold-strong: #d7b57a;
   --color-accent: #c6a972;
-  --color-cta: #e8603a;
-  --color-cta-hover: #d45530;
+  --color-cta: #cf4a26;
+  --color-cta-hover: #b83c1c;
   --color-cream: #eee6da;
   --color-card: rgba(255, 255, 255, 0.90);
   --color-muted: #6d655a;
@@ -72,7 +72,7 @@
   }
 
   ::selection {
-    background: rgba(232, 96, 58, 0.18);
+    background: rgba(207, 74, 38, 0.18);
   }
 }
 
@@ -94,7 +94,7 @@
   }
 
   .input-shell {
-    @apply w-full rounded-2xl border border-[rgba(17,17,17,0.10)] bg-white px-4 py-3.5 text-sm text-[var(--color-ink)] shadow-[0_10px_20px_rgba(17,17,17,0.04)] placeholder:text-[var(--color-muted)] transition focus:border-[var(--color-cta)] focus:shadow-[0_0_0_4px_rgba(232,96,58,0.10)];
+    @apply w-full rounded-2xl border border-[rgba(17,17,17,0.10)] bg-white px-4 py-3.5 text-sm text-[var(--color-ink)] shadow-[0_10px_20px_rgba(17,17,17,0.04)] placeholder:text-[var(--color-muted)] transition focus:border-[var(--color-cta)] focus:shadow-[0_0_0_4px_rgba(207,74,38,0.10)];
   }
 
   .micro-link {

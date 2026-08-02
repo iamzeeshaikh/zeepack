@@ -384,7 +384,7 @@ export default function HomePage() {
               <Reveal key={step.title} delay={index * 0.06}>
                 <div className="surface-card h-full p-7">
                   <div className="flex items-start justify-between gap-3">
-                    <div className="flex h-11 w-11 items-center justify-center rounded-[16px] bg-[rgba(232,96,58,0.10)]">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-[16px] bg-[rgba(207,74,38,0.10)]">
                       <step.icon className="size-5 text-[var(--color-cta)]" />
                     </div>
                     <span className="font-display text-[2.2rem] leading-none tracking-[-0.04em] text-[rgba(17,17,17,0.06)]">

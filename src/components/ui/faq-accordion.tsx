@@ -22,7 +22,7 @@ export function FAQAccordion({ items }: FAQAccordionProps) {
             className={cn(
               "overflow-hidden rounded-[22px] border transition duration-300",
               isOpen
-                ? "border-[rgba(232,96,58,0.18)] bg-white shadow-[0_8px_32px_rgba(17,17,17,0.08)]"
+                ? "border-[rgba(207,74,38,0.18)] bg-white shadow-[0_8px_32px_rgba(17,17,17,0.08)]"
                 : "border-[rgba(17,17,17,0.07)] bg-white/88 shadow-[0_2px_8px_rgba(17,17,17,0.04)] hover:border-[rgba(17,17,17,0.12)] hover:shadow-[0_6px_20px_rgba(17,17,17,0.06)]",
             )}
           >
@@ -40,7 +40,7 @@ export function FAQAccordion({ items }: FAQAccordionProps) {
               <div className={cn(
                 "flex h-7 w-7 shrink-0 items-center justify-center rounded-full border transition duration-300",
                 isOpen
-                  ? "border-[rgba(232,96,58,0.25)] bg-[rgba(232,96,58,0.08)] text-[var(--color-cta)]"
+                  ? "border-[rgba(207,74,38,0.25)] bg-[rgba(207,74,38,0.08)] text-[var(--color-cta)]"
                   : "border-[rgba(17,17,17,0.09)] bg-[var(--color-shell)] text-[var(--color-muted)]",
               )}>
                 {isOpen

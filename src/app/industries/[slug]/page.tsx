@@ -41,8 +41,8 @@ export async function generateMetadata({
 
   const title =
     industry.slug === "cosmetics"
-      ? "Custom Cosmetic Packaging Boxes for Beauty Brands | ZEEPACK"
-      : `${industry.name} Packaging | Premium Industry Solutions by ZEEPACK`;
+      ? "Custom Cosmetic Packaging Boxes | ZEEPACK"
+      : `${industry.name} Packaging | ZEEPACK`;
   const description =
     industry.slug === "cosmetics"
       ? "Explore custom cosmetic packaging boxes for beauty brands, including skincare packaging, beauty packaging, inserts, cartons, and cosmetic boxes USA support."
