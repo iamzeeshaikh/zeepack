@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -28,7 +27,7 @@ import { CTASection } from "@/components/ui/cta-section";
 import { AddToCart } from "@/components/cart/add-to-cart";
 import { getUnitPrice } from "@/data/pricing";
 import { PageLeadForm } from "@/components/forms/page-lead-form";
-import { PackagingConfigurator } from "@/components/ui/packaging-configurator";
+import { LazyConfigurator } from "@/components/ui/lazy-configurator";
 import { FAQAccordion } from "@/components/ui/faq-accordion";
 import { ProductTrustStrip } from "@/components/ui/product-trust-strip";
 import { Reveal } from "@/components/ui/reveal";
@@ -406,9 +405,7 @@ export default async function ProductCategoryPage({
       {/* Interactive configurator */}
       <section className="section-space pt-0" id="configurator">
         <Container>
-          <Suspense fallback={null}>
-            <PackagingConfigurator />
-          </Suspense>
+          <LazyConfigurator />
         </Container>
       </section>
 
