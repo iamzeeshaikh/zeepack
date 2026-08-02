@@ -269,11 +269,18 @@ export default async function ProductStylePage({
             <SectionHeading
               eyebrow="FAQs"
               title={`Questions about ${style.title.toLowerCase()}.`}
-              description="These are the most common clarifications brands ask before requesting a quote for this style."
+              description={`What brands ask specifically about ${style.title.toLowerCase()} — materials, finishes, and where the format fits.`}
             />
           </Reveal>
           <div className="mt-10 max-w-4xl">
             <FAQAccordion items={style.faq} />
+            <p className="mt-6 text-sm text-[var(--color-muted)]">
+              For minimum order quantities, printing options, lead times, and how to quote,{" "}
+              <Link href="/faq" className="font-semibold text-[var(--color-cta)] underline underline-offset-4">
+                see all packaging FAQs
+              </Link>
+              .
+            </p>
           </div>
         </Container>
       </section>
