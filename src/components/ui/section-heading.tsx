@@ -7,6 +7,8 @@ type SectionHeadingProps = {
   title: string;
   description?: ReactNode;
   align?: "left" | "center";
+  /** Use "h1" when this heading is the page's main title. */
+  as?: "h1" | "h2";
 };
 
 export function SectionHeading({
@@ -14,6 +16,7 @@ export function SectionHeading({
   title,
   description,
   align = "left",
+  as: Tag = "h2",
 }: SectionHeadingProps) {
   return (
     <div
@@ -33,9 +36,9 @@ export function SectionHeading({
           </p>
         </div>
       ) : null}
-      <h2 className="font-display text-[2.2rem] leading-[0.96] tracking-[-0.04em] text-[var(--color-primary)] sm:text-[2.8rem] md:text-[3.2rem]">
+      <Tag className="font-display text-[2.2rem] leading-[0.96] tracking-[-0.04em] text-[var(--color-primary)] sm:text-[2.8rem] md:text-[3.2rem]">
         {title}
-      </h2>
+      </Tag>
       {description ? (
         <p className="mt-5 max-w-2xl text-[1rem] leading-[1.85] text-[var(--color-muted)] sm:text-[1.05rem]">
           {description}

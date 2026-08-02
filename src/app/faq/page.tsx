@@ -35,6 +35,7 @@ export default function FAQPage() {
         <Container>
           <Reveal>
             <SectionHeading
+              as="h1"
               eyebrow="FAQ"
               title="Answers to common packaging, materials, and quote questions."
               description="This page combines the questions brands most often ask while evaluating premium packaging for launches, gifting, retail, and e-commerce."
