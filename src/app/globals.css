@@ -140,3 +140,31 @@
     @apply relative overflow-hidden bg-[#0e0d0b];
   }
 }
+
+/* Configurator summary on phones ─────────────────────────────────────────
+   A sticky column cannot travel in a single-column layout, so below the lg
+   breakpoint the summary becomes a bar fixed to the bottom of the screen. It
+   slides in while the configurator is on screen (the component toggles
+   data-visible from an IntersectionObserver). */
+@media (max-width: 1023px) {
+  [data-summary-panel] {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 40;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 0.75rem;
+    background: var(--color-cream, #f8f5ef);
+    box-shadow: 0 -10px 30px rgba(17, 17, 17, 0.18);
+    transform: translateY(110%);
+    transition: transform 0.25s ease;
+    pointer-events: none;
+  }
+
+  [data-summary-panel][data-visible="true"] {
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+}

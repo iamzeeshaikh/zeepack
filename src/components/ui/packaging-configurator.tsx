@@ -229,6 +229,20 @@ export function PackagingConfigurator() {
   const searchParams = useSearchParams();
   const formRef = useRef<HTMLDivElement>(null);
   const [sel, setSel] = useState<Sel>(INITIAL);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  // On phones the summary is a fixed bar; show it only while the tool is on screen.
+  useEffect(() => {
+    const section = sectionRef.current;
+    const panel = section?.querySelector<HTMLElement>("[data-summary-panel]");
+    if (!section || !panel || !window.matchMedia("(max-width: 1023px)").matches) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => panel.setAttribute("data-visible", String(entry.isIntersecting)),
+      { rootMargin: "-10% 0px -20% 0px" },
+    );
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
 
   // Pre-select box type from URL ?type= param
   useEffect(() => {
@@ -293,7 +307,7 @@ export function PackagingConfigurator() {
   }
 
   return (
-    <div className="py-10">
+    <div className="py-10" ref={sectionRef}>
       <Container>
         <div className="grid gap-6 lg:grid-cols-[1fr_340px] xl:grid-cols-[1fr_360px]">
 
@@ -587,8 +601,8 @@ export function PackagingConfigurator() {
           </div>
 
           {/* ── RIGHT SIDEBAR ── */}
-          <div className="hidden lg:block">
-            <div className="sticky top-24 flex flex-col gap-4">
+          <div className="lg:block">
+            <div data-summary-panel className="flex flex-col gap-4 lg:sticky lg:top-24">
 
               {/* Preview */}
               <div className="overflow-hidden rounded-[20px] border border-[rgba(17,17,17,0.08)] bg-[rgba(248,245,239,0.8)]">
