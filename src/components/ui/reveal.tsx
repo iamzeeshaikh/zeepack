@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import type { ReactNode } from "react";
 
 type RevealProps = {
@@ -9,22 +9,46 @@ type RevealProps = {
   className?: string;
 };
 
+/**
+ * Fade-and-rise on scroll. Content ships visible so the server-rendered text
+ * paints immediately — anything already on screen at load is left alone, and
+ * only sections further down are hidden and then revealed as they come into
+ * view. Starting every block at opacity 0 pushed LCP out by seconds on mobile.
+ */
 export function Reveal({ children, delay = 0, className }: RevealProps) {
-  const reduceMotion = useReducedMotion();
+  const ref = useRef<HTMLDivElement>(null);
+  const [hidden, setHidden] = useState(false);
 
-  if (reduceMotion) {
-    return <div className={className}>{children}</div>;
-  }
+  useEffect(() => {
+    const node = ref.current;
+    if (!node) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (node.getBoundingClientRect().top < window.innerHeight) return;
+
+    setHidden(true);
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setHidden(false);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "-100px" },
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1], delay }}
+    <div
+      ref={ref}
       className={className}
+      data-reveal={hidden ? "hidden" : "shown"}
+      style={delay ? { transitionDelay: `${delay}s` } : undefined}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }
