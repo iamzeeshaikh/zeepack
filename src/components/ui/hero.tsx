@@ -1,9 +1,6 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, BadgeCheck, CheckCircle2, Sparkles, Star } from "lucide-react";
-import { motion } from "framer-motion";
 
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
@@ -45,48 +42,34 @@ export function Hero() {
         <div className="relative z-10">
 
           {/* Eyebrow badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          >
+          <div className="hero-in">
             <span className="inline-flex items-center gap-2 rounded-full border border-[rgba(198,169,114,0.38)] bg-white/88 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--color-taupe)] shadow-[0_6px_20px_rgba(17,17,17,0.06)] backdrop-blur">
               <Sparkles className="size-3.5 text-[var(--color-gold)]" />
               Luxury Custom Packaging
             </span>
-          </motion.div>
+          </div>
 
           {/* Headline */}
-          <motion.h1
-            className="mt-6 font-display leading-[0.88] tracking-[-0.05em] text-[var(--color-primary)]"
-            style={{ fontSize: "clamp(2.8rem, 6vw, 5rem)" }}
-            initial={{ opacity: 0, y: 22 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
+          <h1
+            className="hero-in mt-6 font-display leading-[0.88] tracking-[-0.05em] text-[var(--color-primary)]"
+            style={{ fontSize: "clamp(2.8rem, 6vw, 5rem)", animationDelay: "0.08s" }}
           >
             <span className="block">Premium</span>
             <span className="block italic text-[var(--color-gold)]">Packaging</span>
             <span className="block">That Defines</span>
             <span className="block">Your Brand.</span>
-          </motion.h1>
+          </h1>
 
           {/* Description */}
-          <motion.p
-            className="mt-7 max-w-[44ch] text-[1.05rem] leading-[1.8] text-[var(--color-muted)]"
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}
+          <p
+            className="hero-in mt-7 max-w-[44ch] text-[1.05rem] leading-[1.8] text-[var(--color-muted)]"
+            style={{ animationDelay: "0.16s" }}
           >
             Structured, refined, and built for brands that care about presentation, consistency, and long-term perception across retail, gifting, and e-commerce.
-          </motion.p>
+          </p>
 
           {/* CTAs */}
-          <motion.div
-            className="mt-8 flex flex-col gap-3 sm:flex-row"
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}
-          >
+          <div className="hero-in mt-8 flex flex-col gap-3 sm:flex-row" style={{ animationDelay: "0.22s" }}>
             <Button
               href="/quote"
               variant="secondary"
@@ -98,14 +81,12 @@ export function Hero() {
             <Button href="/customize" variant="ghost" className="px-6 py-3.5 text-[0.92rem]">
               Customize Your Box
             </Button>
-          </motion.div>
+          </div>
 
           {/* Trust badges */}
-          <motion.div
-            className="mt-8 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:gap-x-5 sm:gap-y-2"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.55, delay: 0.3 }}
+          <div
+            className="hero-in mt-8 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:gap-x-5 sm:gap-y-2"
+            style={{ animationDelay: "0.3s" }}
           >
             {trustBadges.map((badge) => (
               <div key={badge} className="flex items-center gap-2">
@@ -113,14 +94,12 @@ export function Hero() {
                 <span className="text-[13px] text-[var(--color-muted)]">{badge}</span>
               </div>
             ))}
-          </motion.div>
+          </div>
 
           {/* Stats row */}
-          <motion.div
-            className="mt-10 flex flex-wrap gap-x-8 gap-y-5 border-t border-[rgba(17,17,17,0.07)] pt-8"
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, delay: 0.36, ease: [0.22, 1, 0.36, 1] }}
+          <div
+            className="hero-in mt-10 flex flex-wrap gap-x-8 gap-y-5 border-t border-[rgba(17,17,17,0.07)] pt-8"
+            style={{ animationDelay: "0.36s" }}
           >
             {stats.map((stat) => (
               <div key={stat.label}>
@@ -132,16 +111,11 @@ export function Hero() {
                 </p>
               </div>
             ))}
-          </motion.div>
+          </div>
         </div>
 
         {/* ── Right column: Image ── */}
-        <motion.div
-          className="relative"
-          initial={{ opacity: 0, scale: 0.95, y: 16 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
-        >
+        <div className="hero-in-frame relative" style={{ animationDelay: "0.12s" }}>
           {/* Main image frame */}
           <div className="relative rounded-[40px] border border-[rgba(17,17,17,0.07)] bg-[linear-gradient(145deg,rgba(255,255,255,0.98),rgba(238,230,218,0.90))] p-4 shadow-[0_40px_80px_rgba(17,17,17,0.13),0_4px_8px_rgba(17,17,17,0.06)] sm:p-5">
             <div className="relative min-h-[400px] overflow-hidden rounded-[32px] bg-[linear-gradient(160deg,rgba(248,245,239,0.98),rgba(238,230,218,0.95))] sm:min-h-[520px] lg:min-h-[580px]">
@@ -201,7 +175,7 @@ export function Hero() {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       </Container>
 
       {/* ── Category marquee strip ── */}
