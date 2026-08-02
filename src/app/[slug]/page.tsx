@@ -14,7 +14,7 @@ import { FAQAccordion } from "@/components/ui/faq-accordion";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { industries } from "@/data/industries";
-import { getLocationBySlug, locationSlugs, type LocationData } from "@/data/locations";
+import { getLocationBySlug, isIndexableLocation, locationSlugs, type LocationData } from "@/data/locations";
 import {
   buildBreadcrumbSchema,
   buildFaqSchema,
@@ -237,6 +237,7 @@ export async function generateMetadata({
     ],
     image: location.heroImage,
     imageAlt: `Custom packaging in ${location.name} by ZEEPACK`,
+    noindex: !isIndexableLocation(location),
   });
 }
 

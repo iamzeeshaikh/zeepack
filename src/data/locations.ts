@@ -1940,6 +1940,49 @@ function buildLocations(): LocationData[] {
   return result;
 }
 
+
+/**
+ * Cities whose location page stays in the index.
+ *
+ * All 164 city pages share the same template, so siblings sat at 65-69% phrase
+ * overlap and competed with each other for the same intent. The major metros —
+ * where the search demand actually is — keep their page indexable; the rest are
+ * marked noindex,follow so they still serve visitors and pass link equity
+ * without diluting the index. Add a slug here to bring a city back.
+ */
+const INDEXABLE_CITY_SLUGS = new Set([
+  "custom-packaging-new-york-city",
+  "custom-packaging-los-angeles",
+  "custom-packaging-chicago",
+  "custom-packaging-houston",
+  "custom-packaging-phoenix",
+  "custom-packaging-philadelphia",
+  "custom-boxes-san-antonio",
+  "custom-packaging-san-diego",
+  "custom-boxes-dallas",
+  "custom-packaging-austin",
+  "custom-packaging-san-jose",
+  "custom-boxes-jacksonville",
+  "custom-packaging-fort-worth",
+  "custom-packaging-columbus",
+  "custom-packaging-charlotte",
+  "custom-boxes-san-francisco",
+  "custom-packaging-indianapolis",
+  "custom-packaging-seattle",
+  "custom-packaging-denver",
+  "custom-packaging-boston",
+  "custom-packaging-nashville",
+  "custom-packaging-atlanta",
+  "custom-packaging-miami",
+  "custom-packaging-las-vegas",
+  "custom-packaging-portland",
+]);
+
+/** State pages are one-per-state and far more distinct, so they all stay indexed. */
+export function isIndexableLocation(location: LocationData): boolean {
+  return location.type === "state" || INDEXABLE_CITY_SLUGS.has(location.slug);
+}
+
 export const allLocations: LocationData[] = buildLocations();
 
 export const locationsBySlug: Record<string, LocationData> = Object.fromEntries(
@@ -1951,3 +1994,8 @@ export function getLocationBySlug(slug: string): LocationData | undefined {
 }
 
 export const locationSlugs: string[] = allLocations.map((loc) => loc.slug);
+
+/** Only these belong in the sitemap — a sitemap should list indexable URLs. */
+export const indexableLocationSlugs: string[] = allLocations
+  .filter(isIndexableLocation)
+  .map((loc) => loc.slug);

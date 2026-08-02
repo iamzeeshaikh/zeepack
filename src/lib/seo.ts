@@ -47,7 +47,9 @@ export function createMetadata({
     },
     robots: {
       index: !noindex,
-      follow: !noindex,
+      // Keep following: a noindex page should still pass link equity onward
+      // rather than becoming a dead end in the crawl.
+      follow: true,
     },
     openGraph: {
       title,

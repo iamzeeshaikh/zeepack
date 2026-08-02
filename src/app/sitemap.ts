@@ -3,8 +3,7 @@ import type { MetadataRoute } from "next";
 import { blogPosts } from "@/data/blog-posts";
 import { categories } from "@/data/categories";
 import { industries } from "@/data/industries";
-import { locationSlugs } from "@/data/locations";
-import { productStyles } from "@/data/product-styles";
+import { indexableLocationSlugs } from "@/data/locations";
 import { footerLegalLinks, siteConfig } from "@/data/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -37,13 +36,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
-  const styleUrls = productStyles.map((style) => ({
-    url: `${siteConfig.siteUrl}/products/styles/${style.slug}`,
-    lastModified,
-    changeFrequency: "monthly" as const,
-    priority: 0.75,
-  }));
-
   const industryUrls = industries.map((industry) => ({
     url: `${siteConfig.siteUrl}/industries/${industry.slug}`,
     lastModified,
@@ -58,7 +50,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   };
 
-  const locationUrls = locationSlugs.map((slug) => ({
+  const locationUrls = indexableLocationSlugs.map((slug) => ({
     url: `${siteConfig.siteUrl}/${slug}`,
     lastModified,
     changeFrequency: "monthly" as const,
@@ -72,5 +64,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...categoryUrls, ...styleUrls, ...industryUrls, usaPageUrl, ...blogUrls, ...locationUrls];
+  return [...staticPages, ...categoryUrls, ...industryUrls, usaPageUrl, ...blogUrls, ...locationUrls];
 }

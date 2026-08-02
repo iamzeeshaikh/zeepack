@@ -52,6 +52,10 @@ export async function generateMetadata({
     keywords: [style.title.toLowerCase(), ...style.useCases.map((item) => item.toLowerCase())],
     image: style.image,
     imageAlt: `${style.title} by ZEEPACK`,
+    // 375 style pages sit at 55-87% phrase overlap with their siblings and
+    // compete with the parent category page, which covers the same intent in
+    // ~2,400 words. They stay crawlable and keep passing link equity.
+    noindex: true,
   });
 }
 
