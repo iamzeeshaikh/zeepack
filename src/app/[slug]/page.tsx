@@ -14,6 +14,7 @@ import { FAQAccordion } from "@/components/ui/faq-accordion";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { industries } from "@/data/industries";
+import { getLocalContent } from "@/data/local-content";
 import { getLocationBySlug, isIndexableLocation, locationSlugs, type LocationData } from "@/data/locations";
 import {
   buildBreadcrumbSchema,
@@ -256,6 +257,7 @@ export default async function LocationPage({
     : location.name;
 
   const spotlightImage = getSpotlightImage(location);
+  const localContent = getLocalContent(slug);
 
   const faqs = generateFAQs(location);
   const faqSchema = buildFaqSchema(faqs);
@@ -420,6 +422,40 @@ export default async function LocationPage({
         description="These are the practical advantages that matter most when evaluating a custom packaging partner for your business."
         items={valueProps}
       />
+
+      {/* Genuinely local detail — the part of the page that is not templated.
+          Only rendered where it has actually been written. */}
+      {localContent && (
+        <section className="section-space pt-0">
+          <Container>
+            <Reveal>
+              <SectionHeading
+                eyebrow={`On the ground in ${location.name}`}
+                title={`What we ship to ${location.name}.`}
+              />
+            </Reveal>
+            <div className="mt-8 max-w-3xl space-y-6">
+              <Reveal>
+                <p className="text-[1.02rem] leading-[1.85] text-[var(--color-muted)]">
+                  {localContent.intro}
+                </p>
+              </Reveal>
+              {localContent.sections?.map((block) => (
+                <Reveal key={block.heading}>
+                  <div>
+                    <h3 className="font-display text-[1.35rem] tracking-[-0.02em] text-[var(--color-primary)]">
+                      {block.heading}
+                    </h3>
+                    <p className="mt-3 text-[1.02rem] leading-[1.85] text-[var(--color-muted)]">
+                      {block.body}
+                    </p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </Container>
+        </section>
+      )}
 
       {/* Internal links — sibling cities (for city pages) or city index (for state pages) */}
       {(siblingCities.length > 0 || stateCities.length > 0) && (

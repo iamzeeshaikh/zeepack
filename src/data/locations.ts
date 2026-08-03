@@ -1,3 +1,5 @@
+import { hasEnoughLocalContent } from "./local-content";
+
 export type LocationType = "state" | "city";
 
 export interface LocationData {
@@ -1942,15 +1944,21 @@ function buildLocations(): LocationData[] {
 
 
 /**
- * Cities whose location page stays in the index.
+ * Cities that stay in the index.
  *
- * All 164 city pages share the same template, so siblings sat at 65-69% phrase
- * overlap and competed with each other for the same intent. The major metros —
- * where the search demand actually is — keep their page indexable; the rest are
- * marked noindex,follow so they still serve visitors and pass link equity
- * without diluting the index. Add a slug here to bring a city back.
+ * A city page earns its place by carrying real local detail (see
+ * src/data/local-content.ts) — not by existing. Without that, every city page
+ * is the same template with a name swapped in, which is thin however the
+ * sentences are arranged.
+ *
+ * Write the content, and the page indexes itself: this rule, the sitemap and
+ * the on-page local section all read from the same source.
+ *
+ * The 25 metros below are grandfathered in while their content is written.
+ * Once a city has its own entry in local-content.ts it no longer needs to be
+ * listed here, and this set can shrink to nothing.
  */
-const INDEXABLE_CITY_SLUGS = new Set([
+const GRANDFATHERED_CITY_SLUGS = new Set([
   "custom-packaging-new-york-city",
   "custom-packaging-los-angeles",
   "custom-packaging-chicago",
@@ -1980,7 +1988,10 @@ const INDEXABLE_CITY_SLUGS = new Set([
 
 /** State pages are one-per-state and far more distinct, so they all stay indexed. */
 export function isIndexableLocation(location: LocationData): boolean {
-  return location.type === "state" || INDEXABLE_CITY_SLUGS.has(location.slug);
+  if (location.type === "state") return true;
+  return (
+    hasEnoughLocalContent(location.slug) || GRANDFATHERED_CITY_SLUGS.has(location.slug)
+  );
 }
 
 export const allLocations: LocationData[] = buildLocations();
