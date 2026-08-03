@@ -390,6 +390,300 @@ export const localContentBySlug: Record<string, LocalContent> = {
       },
     ],
   },
+  "custom-boxes-memphis": {
+    intro:
+      "Memphis has the latest overnight shipping cutoffs in the country because the FedEx superhub sits inside the metro rather than a drive away. An order packed here at ten at night can still make next-morning delivery nationwide, which is a genuine competitive advantage for any brand promising fast dispatch. It also means packaging has to be quick to pack — a structure that takes ninety seconds to assemble quietly eats the hours that advantage is supposed to buy.",
+    sections: [
+      {
+        heading: "Assembly time is the constraint",
+        body: "When the cutoff is the limiting factor, the right packaging is whatever a packer can close fastest without a tape gun, which usually means a crash-lock base and a tuck closure rather than a four-flap carton. Brands running a late-cutoff operation typically standardise on [mailer boxes that close without tape](/products/mailer-boxes) precisely because seconds per parcel compound across a shift.",
+      },
+    ],
+  },
+
+  "custom-packaging-louisville": {
+    intro:
+      "Two things shape packaging demand in Louisville: the UPS Worldport air hub, which gives the metro shipping cutoffs almost as late as Memphis, and the bourbon industry, which has spent two centuries refining how a bottle is presented. The distilleries have set a local standard for gift presentation that spills over into other categories — customers here expect a certain weight and finish from anything sold as a gift.",
+    sections: [
+      {
+        heading: "Bottles are their own problem",
+        body: "Glass is heavy, awkwardly shaped and expensive to replace when it breaks, so spirits packaging is mostly a structural exercise rather than a decorative one. A cradle that holds the neck as well as the base survives a fall far better than one supporting the body alone, which is why most distillers here specify [rigid presentation boxes with a fitted cradle](/products/rigid-boxes) rather than a padded outer.",
+      },
+      {
+        heading: "The air hub effect",
+        body: "Worldport lets local brands quote delivery times that would need a coastal warehouse elsewhere, but it rewards packaging that is already dimensionally efficient. Air freight prices on volume rather than weight, so a box with two centimetres of unnecessary headspace costs money on every parcel for the life of the design.",
+      },
+    ],
+  },
+
+  "custom-packaging-salt-lake-city": {
+    intro:
+      "Utah manufactures a remarkable share of the American supplement industry, and Salt Lake City sits at the centre of it. The concentration of contract manufacturers, ingredient suppliers and label houses along the Wasatch Front means brands here can move from formulation to finished bottle without leaving the valley — and it means local packaging expectations are set by companies that have run this process hundreds of times. Briefs arrive specific, and they arrive with the compliance requirements already resolved.",
+    sections: [
+      {
+        heading: "Bottle and carton have to be decided together",
+        body: "Because contract fillers work to fixed bottle formats, the carton is almost always the variable and the bottle almost never is. Getting the fill format confirmed before the dieline is drawn avoids the common and expensive discovery that a carton fits the sample bottle but not the production one, which is why local brands treat [supplement cartons matched to a fixed bottle](/products/supplement-packaging) as a structural decision rather than a design one.",
+      },
+    ],
+  },
+
+  "custom-packaging-cincinnati": {
+    intro:
+      "Cincinnati has produced more consumer packaging professionals than almost any other American city, largely because of the century of packaged goods development based here. The practical consequence is that a local brand's packaging brief is often written by someone who has run a national launch before, and the questions arrive early: what is the shelf facing, what happens in a club-store pack, how does it perform under a scanner. That rigour tends to produce better packaging and a slower approval process.",
+    sections: [
+      {
+        heading: "Designed for the shelf test",
+        body: "The habit here is to evaluate a design at shelf distance rather than in hand, which surfaces problems — type too fine to read at a metre, a colour that disappears under retail lighting — that look fine on a desk. Brands preparing for grocery or mass retail usually validate the front face on [folding cartons printed for shelf legibility](/products/folding-cartons) before committing to the full run.",
+      },
+    ],
+  },
+
+  "custom-packaging-detroit": {
+    intro:
+      "Detroit's packaging economy is still shaped by automotive supply, where the dominant model is a returnable container that makes hundreds of trips rather than a printed box that makes one. That has trained a generation of local packaging engineers to think in terms of cycles, damage rates and total cost per trip — a framing that transfers usefully to consumer packaging even though the materials are completely different.",
+    sections: [
+      {
+        heading: "Thinking in damage rates",
+        body: "The automotive habit of measuring damage per thousand shipments rather than reacting to individual complaints is worth borrowing, because it turns a packaging decision into an arithmetic one. Once a brand knows its actual breakage rate, the question of whether to upgrade to [corrugated shippers with reinforced corners](/products/corrugated-boxes) answers itself rather than being argued on instinct.",
+      },
+    ],
+  },
+
+  "custom-packaging-minneapolis": {
+    intro:
+      "Several of the country's largest retailers are headquartered in the Twin Cities, and their vendor packaging requirements are unusually prescriptive — case dimensions, label placement, barcode position and pallet configuration are specified rather than suggested. A brand pursuing one of these accounts is designing to a document, not to a preference, and packaging that ignores the specification will be rejected at the distribution centre regardless of how good it looks.",
+    sections: [
+      {
+        heading: "Read the vendor guide first",
+        body: "The expensive mistake is designing the retail carton first and discovering the case requirements afterwards, because case dimensions constrain the unit carton more than most brands expect. Working backwards from the required case configuration usually settles the unit size immediately, and makes [product boxes sized to a retail case spec](/products/product-boxes) a starting constraint rather than a late correction.",
+      },
+      {
+        heading: "Winter freight",
+        body: "The Twin Cities spend months below freezing, and cartons that arrive frozen behave differently — board is more brittle, adhesive bonds are weaker, and a drop that would dent in July can split in January. Testing samples cold rather than at room temperature is the only reliable way to know.",
+      },
+    ],
+  },
+
+  "custom-boxes-anchorage": {
+    intro:
+      "Almost nothing sold in Anchorage was made in Anchorage, and almost everything shipped out of it is seafood. Both facts push packaging in the same direction: it has to survive a long, multi-modal journey with at least one temperature change and usually a barge or air leg. Freight costs several times what it does in the lower forty-eight, which makes packaging weight and cube a first-order cost rather than a rounding error.",
+    sections: [
+      {
+        heading: "Cube costs real money here",
+        body: "When freight is priced this high, a carton with unnecessary void space is paying to fly air across the Gulf of Alaska on every shipment. Flat-packed structures that are erected at destination, and shippers cut to the product rather than to a stock size, pay for themselves faster here than anywhere else we ship — which is why local operations lean on [flat-packed shippers erected on arrival](/products/corrugated-boxes).",
+      },
+      {
+        heading: "Cold chain and condensation",
+        body: "Seafood packaging moves between frozen storage and warmer handling areas repeatedly, and each transition puts moisture on the surface of the carton. Coated or wax-alternative boards hold up through those cycles where an uncoated outer will soften at the corners after the second one.",
+      },
+    ],
+  },
+
+  "custom-packaging-honolulu": {
+    intro:
+      "Every ingredient, container and carton used in Hawaii arrived by sea or air, and that single fact governs packaging economics across the islands. Ocean freight from the mainland takes the better part of a week and prices on volume, so a design that ships flat costs a fraction of one that ships assembled. Reorder lead times are long enough that running out is a genuine risk, and most local brands hold more packaging stock than a mainland business of the same size would.",
+    sections: [
+      {
+        heading: "Humidity is constant, not seasonal",
+        body: "Unlike Gulf Coast markets where humidity peaks in summer, the islands are humid year-round, so packaging stored for months will absorb moisture regardless of when it arrived. Board grades chosen for mainland conditions routinely underperform here, and brands that hold long inventory positions generally step up a grade rather than replacing warped stock.",
+      },
+    ],
+  },
+
+  "custom-boxes-el-paso": {
+    intro:
+      "El Paso and Ciudad Juárez function as a single manufacturing economy divided by a border, and an enormous volume of goods crosses between them daily. Packaging that moves through that crossing is inspected, sometimes opened, and always documented, which makes re-closability and clear external marking worth more than they are on a purely domestic route. A carton that cannot be re-sealed after inspection arrives looking damaged even when the product is fine.",
+    sections: [
+      {
+        heading: "Built to be opened and re-closed",
+        body: "The practical answer is a closure that survives being opened without tearing the board, and external labelling positioned so an inspector does not have to cut through artwork to read it. Manufacturers running cross-border assembly usually keep the presentation carton unopened inside a plain outer, and put the documentation on [labels and stickers applied to the outer case](/products/labels-and-stickers).",
+      },
+    ],
+  },
+
+  "custom-packaging-new-orleans": {
+    intro:
+      "New Orleans exports its food culture more than any other American city — coffee, spice blends, sauces and confection are shipped nationally by producers who started as restaurants or market stalls. That produces a distinctive packaging problem: products developed for local sale in reusable jars have to be re-thought for a parcel that will be handled a dozen times, and the humidity that defines the local climate works against every paper-based solution.",
+    sections: [
+      {
+        heading: "Humid storage, glass contents",
+        body: "Most of these products are packed in glass, which means the shipper is doing structural work while the presentation box is doing brand work, and the two should not be the same box. Producers shipping direct to customers generally protect the retail carton inside a plain corrugated outer, keeping [food boxes designed for humid conditions](/products/food-boxes) intact for the customer rather than absorbing transit damage.",
+      },
+      {
+        heading: "Festival season demand",
+        body: "Demand here is sharply seasonal around the spring festival calendar, and packaging orders that miss that window are effectively a year early. Producers who plan the seasonal run alongside the previous year's reorder avoid paying for expedited production every February.",
+      },
+    ],
+  },
+
+  "custom-packaging-milwaukee": {
+    intro:
+      "Milwaukee's brewing history built a local printing and packaging trade that outlasted many of the breweries themselves, and the craft producers here inherited both the equipment base and the expectations. Local buyers are unusually attentive to print quality on packaging — registration, colour consistency across a run, how a label sits on a curved surface — because the regional standard was set by companies printing millions of labels a year.",
+    sections: [
+      {
+        heading: "Consistency across the run",
+        body: "The difference between a good and a poor print job rarely shows on a single sample; it shows when the last carton is compared to the first. Brands here tend to specify colour tolerance up front and check the tail of the run rather than the head, which matters most on large solid areas where drift is visible — the usual reason a local producer chooses [folding cartons with tight colour tolerance](/products/folding-cartons) over a cheaper quote.",
+      },
+    ],
+  },
+
+  "custom-packaging-kansas-city-ks": {
+    intro:
+      "Kansas City sits at the junction of more rail lines than any American city except Chicago, and it has become a natural consolidation point for brands whose distribution runs in every direction. Packaging specified here is often designed around a full pallet moving intact to a regional centre and then being broken down, which means the master carton needs to work both as a stacked unit and as something a picker handles individually.",
+    sections: [
+      {
+        heading: "Two jobs, one carton",
+        body: "A case optimised purely for pallet stacking is often awkward to lift and slow to open, and one optimised for picking wastes pallet space — the workable middle is usually a case sized to divide evenly into the pallet footprint while staying under a comfortable lifting weight. Getting that division right saves more per year than most material changes, and it makes [corrugated cases sized to pallet dimensions](/products/corrugated-boxes) worth calculating rather than estimating.",
+      },
+    ],
+  },
+
+  "custom-boxes-sacramento": {
+    intro:
+      "Sacramento sits at the edge of the most productive agricultural region in the country, and a large share of local packaging demand comes from producers turning Central Valley crops into finished consumer goods. Harvest timing rather than the retail calendar drives these orders, which makes packaging lead times unusually unforgiving — a carton that arrives two weeks after the fruit does is worthless for that season.",
+    sections: [
+      {
+        heading: "Harvest sets the deadline",
+        body: "Because the window cannot move, most producers here order packaging against a forecast rather than a confirmed volume, and design for a structure that can be reordered quickly at short notice. Keeping the artwork on a stock die rather than a custom one is often worth the small aesthetic compromise, since it turns a six-week reorder into a two-week one.",
+      },
+      {
+        heading: "Farm-gate presentation",
+        body: "A growing share of Valley producers now sell directly at farm shops and markets alongside wholesale, and the same product needs both a bulk case and a retail-facing pack. Designing the retail unit to nest inside the wholesale case avoids running two separate packaging programmes for one product.",
+      },
+    ],
+  },
+
+  "custom-boxes-tampa": {
+    intro:
+      "Tampa combines a working deepwater port with one of the fastest-growing consumer populations in the Southeast, and the packaging demand reflects both. Imported goods arriving through the port are frequently repacked locally for regional distribution, which means a lot of packaging bought here is replacing packaging that was designed somewhere else and did not survive the journey.",
+    sections: [
+      {
+        heading: "Repacking is a real category",
+        body: "When goods arrive in bulk and are re-presented for retail, the packaging decision is being made after the product already exists, so structure has to work around fixed dimensions rather than the other way round. That constraint usually points towards adjustable formats, and [window boxes that display a fixed product](/products/window-boxes) work well where the item cannot be re-sized to suit the carton.",
+      },
+    ],
+  },
+
+  "custom-packaging-orlando": {
+    intro:
+      "Orlando's theme park economy generates packaging volumes that behave unlike ordinary retail. Merchandise moves in enormous quantities through a small number of locations, sales are concentrated in a few hours each day, and almost every purchase is carried by someone who will board a plane within a week. Packaging that cannot survive a suitcase, or that will not fit in one, generates returns that a normal retailer would never see.",
+    sections: [
+      {
+        heading: "Everything goes in a suitcase",
+        body: "The design target is a package that protects a fragile item, packs flat or nests, and still looks like a gift when it arrives home. Producers selling into this market generally avoid rigid protrusions and settle on [gift packaging that packs flat for travel](/products/gift-boxes), because a beautiful box that cannot be carried is returned at the same rate as a broken one.",
+      },
+    ],
+  },
+
+  "custom-boxes-buffalo": {
+    intro:
+      "Buffalo's proximity to the Canadian border makes it a natural staging point for brands selling into Ontario, and a meaningful share of packaging specified here has to satisfy two countries' labelling expectations at once. Bilingual requirements for the Canadian market change how much panel space the design has available, and discovering that after the dieline is approved is an expensive way to learn it.",
+    sections: [
+      {
+        heading: "Plan the second language early",
+        body: "French-language requirements for Canadian retail are not optional, and retrofitting them usually means shrinking the brand elements rather than the regulatory ones. Brands planning cross-border distribution generally leave a dedicated panel free from the start, which is far cheaper than re-drawing artwork once the structure is locked. The same discipline helps at the border itself, where a carton whose declared contents are legible without opening it moves through inspection faster than one that has to be unpacked to be verified.",
+      },
+    ],
+  },
+
+  "custom-boxes-cleveland": {
+    intro:
+      "The medical device and diagnostics companies clustered around Cleveland's hospital systems have packaging requirements that sit between consumer goods and regulated products. Sterile barrier, lot traceability and validated shelf life are routine conversations here, and packaging suppliers who treat them as afterthoughts do not last long in this market. Even the consumer wellness brands spun out of that ecosystem carry the habit.",
+    sections: [
+      {
+        heading: "Documentation travels with the box",
+        body: "In this sector the packaging is part of the record, not just the container, which means lot codes and dates have to be legible after handling and positioned where an inspector expects them. Leaving a defined, uncluttered area for variable data at the design stage avoids the common problem of a code printed over artwork and rendered unreadable.",
+      },
+    ],
+  },
+
+  "custom-boxes-pittsburgh": {
+    intro:
+      "Pittsburgh's transformation from steel to robotics and software has left an unusual industrial base — a lot of local products are heavy, precise, and made in small quantities. Packaging for a fifteen-kilogram instrument built forty at a time is a different discipline from packaging a consumer good, and the economics reverse: the packaging is cheap relative to the contents, so protection matters far more than unit cost.",
+    sections: [
+      {
+        heading: "When the contents outvalue the box",
+        body: "For high-value low-volume goods the right answer is usually more material rather than less, because a single damaged unit costs more than upgrading the packaging for the entire production run. Manufacturers shipping instruments generally specify [heavy-duty corrugated cases with internal bracing](/products/corrugated-boxes) and accept the freight penalty as insurance.",
+      },
+    ],
+  },
+
+  "custom-packaging-baltimore": {
+    intro:
+      "Baltimore pairs a major container port with one of the densest biotech corridors on the East Coast, and the two customer bases want almost opposite things from packaging. Port-driven work is about volume, stacking and cost per container, while the life sciences work is about tolerance, traceability and validated materials. Suppliers here tend to specialise in one or the other rather than serving both well.",
+    sections: [
+      {
+        heading: "Container economics",
+        body: "For anything moving through the port, the meaningful unit is the container rather than the carton, and a small change in case dimensions can change how many cases fit inside one. Calculating the case size against the container's internal dimensions before finalising the die frequently recovers several percent of capacity, which compounds across every shipment for the life of the product.",
+      },
+    ],
+  },
+
+  "custom-packaging-providence": {
+    intro:
+      "Rhode Island was the centre of American costume jewellery manufacturing for most of the twentieth century, and Providence retains the skills, the suppliers and the expectations that came with it. Jewellery packaging here is judged by people who know what a properly made hinge feels like, and a box that looks acceptable in a photograph will be dismissed in the hand if the lid does not sit true.",
+    sections: [
+      {
+        heading: "The lid is the whole product",
+        body: "In jewellery presentation almost all the perceived quality lives in how the box opens — the resistance, the alignment, whether the lid stays where it is put. That is a manufacturing tolerance question rather than a design one, and it is why local brands are unusually specific about [jewellery boxes with a properly aligned lid](/products/jewelry-boxes) rather than choosing on appearance alone.",
+      },
+    ],
+  },
+
+  "custom-boxes-saint-louis": {
+    intro:
+      "St. Louis sits where the Missouri meets the Mississippi, and barge freight remains a genuine option here for anything heavy and non-urgent. That gives local manufacturers a cost structure most metros do not have, but it comes with a packaging consequence: river freight is slow and the cargo holds are humid, so anything moving that way needs to tolerate weeks rather than days in variable conditions.",
+    sections: [
+      {
+        heading: "Slow freight, different spec",
+        body: "Packaging designed for a three-day truck journey is rarely right for a three-week barge one, because the failure mode shifts from impact to moisture and sustained compression. Where the cost saving justifies the slower route, a higher board grade and a moisture barrier usually cost less than the difference in freight.",
+      },
+    ],
+  },
+
+  "custom-packaging-oklahoma-city": {
+    intro:
+      "Oklahoma City's economy runs on energy services, and the packaging demand that follows is mostly industrial rather than consumer — components, fluids and equipment moving to remote sites where there is no loading dock and no forklift. Packaging here is judged on whether two people can move it across uneven ground, which is a very different test from surviving a courier network.",
+    sections: [
+      {
+        heading: "No dock at the destination",
+        body: "When the delivery point is a field site, weight distribution and handholds matter more than stacking strength, and a case that two people cannot lift comfortably will be dragged. Splitting a heavy shipment into smaller units usually costs less in packaging than it saves in damage and handling injury. Weather exposure is the other factor rarely accounted for: material delivered to an open site may sit outdoors for days before it is used, so a carton specified for warehouse conditions will not survive the wait.",
+      },
+    ],
+  },
+
+  "custom-packaging-omaha": {
+    intro:
+      "Omaha's food processing sector is large enough that packaging conversations here start with sanitation and material compliance rather than appearance. Anything that touches food directly, or that will be handled in a processing environment, has to meet requirements that consumer packaging never encounters — and local buyers know exactly which questions to ask about liners and coatings.",
+    sections: [
+      {
+        heading: "Direct contact changes the material",
+        body: "Once packaging touches food directly, the choice of coating and adhesive stops being a cost decision and becomes a compliance one, and substituting a cheaper equivalent is not available. Producers here separate the two roles deliberately, keeping a compliant inner and putting the brand work on [printed outer cartons that never touch product](/products/product-boxes). Keeping those two specifications on separate documents also makes an audit far quicker, because the compliant components can be evidenced without pulling the whole packaging file apart.",
+      },
+    ],
+  },
+
+  "custom-boxes-tucson": {
+    intro:
+      "A large share of the fresh produce entering the United States from Mexico crosses at Nogales, an hour south of Tucson, and much of it is repacked in the region before moving on. That gives the local market an unusual concentration of produce packaging demand, where ventilation, stacking strength when damp, and speed of assembly matter far more than print quality.",
+    sections: [
+      {
+        heading: "Ventilation versus strength",
+        body: "Every vent hole cut into a produce case removes some of the stacking strength that the same case needs when it is chilled and damp, so the two requirements trade directly against each other. Getting the vent pattern right for the specific commodity is worth more than upgrading the board, because a well-placed pattern keeps airflow without cutting through the load-bearing corners.",
+      },
+    ],
+  },
+
+  "custom-boxes-raleigh": {
+    intro:
+      "The Research Triangle has one of the highest concentrations of pharmaceutical and biotech employment in the country, and packaging briefs from this market arrive with an unusual amount already decided. Stability data, storage conditions and labelling requirements are typically settled before a supplier is contacted, which makes the process efficient but leaves little room to propose a structure that changes the product's footprint.",
+    sections: [
+      {
+        heading: "Working inside fixed dimensions",
+        body: "When the primary container is locked by stability testing, the secondary packaging has to accommodate it exactly rather than optimise around it, and the useful contribution shifts to how the carton protects and presents what is already specified. That usually makes the insert the most important decision on the project, since [inserts that immobilise a fixed primary pack](/products/inserts) determine whether the carton can shrink at all.",
+      },
+    ],
+  },
 };
 
 function wordCount(input: string) {
