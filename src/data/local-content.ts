@@ -223,6 +223,173 @@ export const localContentBySlug: Record<string, LocalContent> = {
       },
     ],
   },
+  "custom-packaging-columbus": {
+    intro:
+      "Columbus has quietly become one of the country's main apparel and beauty test markets, largely because the metro's demographics track close to national averages and several large retailers are headquartered here. Brands run limited launches in central Ohio to see whether packaging works before committing nationally, which means the first order is often deliberately small and the second one is very large. Designing a structure that costs sensibly at both quantities matters more here than in markets where volume is predictable.",
+    sections: [
+      {
+        heading: "Test-market economics",
+        body: "A die that only makes sense at fifty thousand units is the wrong choice for a launch measured in hundreds, so the usual approach is a stock-die structure for the test and a custom die once the reorder confirms demand. Keeping the artwork identical across both means the test results still hold when the structure changes underneath, and it avoids a second round of [folding cartons that print consistently across quantities](/products/folding-cartons) being treated as a fresh project.",
+      },
+    ],
+  },
+
+  "custom-packaging-charlotte": {
+    intro:
+      "Charlotte's economy is built on banking, and that shows up in packaging demand in an unusual way — a large share of the region's premium packaging is bought for client and employee gifting rather than for retail sale. These programmes are ordered by procurement teams working to a fixed per-unit budget and a hard delivery date tied to a corporate calendar, which is a very different brief from a consumer brand chasing shelf impact.",
+    sections: [
+      {
+        heading: "Fixed budget, fixed date",
+        body: "Because the deadline usually cannot move, the sensible tradeoffs are in finish rather than structure — a simpler foil treatment protects the schedule far better than a complex one, and reprints are not an option when the event date is set. Programmes at this scale generally settle on [rigid boxes that hold a consistent finish](/products/rigid-boxes) precisely because variation across a few thousand identical gifts is immediately visible.",
+      },
+      {
+        heading: "Volume arrives in one drop",
+        body: "Corporate gifting does not trickle. An entire year's requirement often ships in a single week in November or December, which puts real pressure on storage at the receiving end and makes flat-packed structures worth considering even where a glued box would look marginally better.",
+      },
+    ],
+  },
+
+  "custom-boxes-san-francisco": {
+    intro:
+      "San Francisco's commercial composting programme is among the most established in the country, and residents here genuinely sort their waste. Packaging that claims compostability without meeting the standard gets noticed, and a brand selling to this customer base is more likely to be challenged on its material claims than almost anywhere else. Vague sustainability language is a liability rather than a selling point.",
+    sections: [
+      {
+        heading: "Claims have to survive scrutiny",
+        body: "The safe position is to describe exactly what the packaging is and what happens to it — board type, coating, whether the closure is separable — rather than reaching for a general environmental adjective. Brands that take this seriously usually specify [recyclable packaging with a separable closure](/products/sustainable-packaging) so the instruction on the box is one a resident can actually follow.",
+      },
+      {
+        heading: "Small-format retail",
+        body: "Independent grocers and speciality shops across the city work with narrow shelves and very little back-of-house space, and buyers here will decline a case that occupies a disproportionate share of a stockroom. A shallower case that restocks twice as often is usually more welcome than a deeper one that ties up the floor.",
+      },
+    ],
+  },
+
+  "custom-packaging-indianapolis": {
+    intro:
+      "Indianapolis carries an unusual concentration of pharmaceutical and life sciences employment for a metro its size, and the packaging conventions from that sector have spread into the region's consumer health brands. Batch coding, tamper evidence and serialisation come up in briefs here from companies that are not regulated at all, simply because the people writing the briefs learned packaging in a regulated environment.",
+    sections: [
+      {
+        heading: "Tamper evidence without a redesign",
+        body: "Adding a tamper-evident feature late usually means changing the closure, which changes the dieline and restarts the artwork. Deciding early whether the seal is a tuck flap, a label across the opening or a shrink band lets the structure absorb it, and brands that plan for it tend to specify [supplement cartons with a tamper-evident closure](/products/supplement-packaging) from the first dieline rather than the third.",
+      },
+    ],
+  },
+
+  "custom-packaging-seattle": {
+    intro:
+      "Seattle's coffee trade set the packaging expectations that the rest of the city's food brands now inherit. Roasters here have spent decades on degassing valves, barrier films and the tension between freshness and recyclability, and local customers understand the tradeoff well enough to notice when a bag is chosen badly. Rain is the other constant — a paper outer that arrives soft on a doorstep undoes a good unboxing before it starts.",
+    sections: [
+      {
+        heading: "Barrier versus recyclability",
+        body: "There is no material that is simultaneously the best oxygen barrier and the easiest to recycle, so the honest decision is which one the product actually needs. Shelf-stable goods with a short turnover can often drop to a lighter barrier, while roasted coffee generally cannot — which is why most local roasters keep [barrier bags that hold roast freshness](/products/mylar-bags) for the coffee and move everything else to paper.",
+      },
+      {
+        heading: "Designing for wet doorsteps",
+        body: "Nine months of the year, a parcel in this region will sit in moisture at some point between the van and the door. A moisture-tolerant outer with the presentation packaging protected inside it costs less than replacing the units that arrive with a warped lid and a run in the print.",
+      },
+    ],
+  },
+
+  "custom-packaging-denver": {
+    intro:
+      "Altitude is a real packaging variable in Denver and almost nowhere else in the country. Sealed flexible packaging filled near sea level arrives here visibly inflated, and packaging filled here can collapse when it reaches lower ground, which is enough to make retailers reject stock that is perfectly good. Products with any trapped air need either a vent or a structure that tolerates the pressure difference without looking damaged.",
+    sections: [
+      {
+        heading: "The mile-high pillow effect",
+        body: "The usual fix is a one-way valve or a deliberately under-filled headspace, decided before the fill line is set rather than after the first rejected pallet. Brands shipping across the elevation change tend to keep the presentation carton rigid so the flexible pack inside can move without the outer showing it, which is where [rigid boxes that hide interior movement](/products/rigid-boxes) earn their cost.",
+      },
+      {
+        heading: "Regulated retail moves fast",
+        body: "Colorado's dispensary market has been operating long enough that packaging requirements are settled but enforcement is strict, and label changes are frequent. Structures that let the compliance panel change without a new die are worth more here than a marginally better-looking box that has to be re-tooled each time the rules move.",
+      },
+    ],
+  },
+
+  "custom-packaging-boston": {
+    intro:
+      "Boston's academic calendar governs a surprising amount of local commerce. Two enormous student inflows and outflows each year drive demand for compact, shippable formats in late August and again in May, and brands selling into that pattern need packaging that survives a dormitory mailroom and fits a suitcase at the other end. It is a seasonal spike sharper than anything the retail calendar produces.",
+    sections: [
+      {
+        heading: "Built for a mailroom",
+        body: "University mailrooms stack parcels in bulk and hand them over hours or days later, so packaging here is handled more like warehouse stock than like a doorstep delivery. A structure that stacks flat and resists edge crush survives that far better than one designed only for a courier's van, which is why compact [mailer boxes that stack without crushing](/products/mailer-boxes) tend to outperform premium shippers in this market.",
+      },
+      {
+        heading: "Biotech spillover",
+        body: "The Kendall Square cluster has produced a steady stream of consumer health brands whose founders came from research, and they bring the same tolerance-driven thinking to packaging. That usually means the fill specification is settled before the structure is discussed, which makes the design process faster but leaves less room to change dimensions later.",
+      },
+    ],
+  },
+
+  "custom-packaging-nashville": {
+    intro:
+      "Nashville's visitor economy has reshaped its retail packaging demand over the past decade. A large share of what sells in the city is bought as a memento by someone who will carry it home the same week, which puts a premium on packaging that photographs well, survives a suitcase, and does not look disposable when it is given as a gift on the other end.",
+    sections: [
+      {
+        heading: "Bought once, carried far",
+        body: "Unlike a repeat grocery purchase, a souvenir has one chance to justify its price, and the packaging carries much of that judgement. Local makers selling to visitors usually invest in a presentation outer that a customer would not throw away, then keep the interior simple — [gift boxes that survive a packed suitcase](/products/gift-boxes) do more for a repeat online order later than a heavier structure that arrives dented.",
+      },
+    ],
+  },
+
+  "custom-packaging-atlanta": {
+    intro:
+      "Hartsfield-Jackson and the interstate junctions around it have made Atlanta the distribution centre for the Southeast, which means a great deal of packaging passes through the metro on its way somewhere else. For brands based here, that proximity is a genuine advantage: goods can reach most of the Southeast overnight, so packaging can be specified for a shorter, gentler transit than a national programme would require.",
+    sections: [
+      {
+        heading: "Regional transit, lighter spec",
+        body: "A carton built to survive a week of cross-country handling is over-specified for a next-day regional delivery, and the difference in board grade is money spent on protection the parcel never needs. Brands whose distribution is genuinely regional can often step down a grade and put the saving into print quality, which is where [mailer boxes matched to short-haul transit](/products/mailer-boxes) pay for themselves.",
+      },
+      {
+        heading: "Production for film",
+        body: "The studios operating across the metro buy packaging as set dressing and as promotional product, and those runs are unusual — very short, very fast, and often needing a structure that reads correctly on camera rather than one that survives shipping. Turnaround matters more than durability on this work.",
+      },
+    ],
+  },
+
+  "custom-packaging-miami": {
+    intro:
+      "Miami operates as the trade gateway between the United States and Latin America, and a large share of packaging bought here is destined to cross a border. That adds requirements domestic-only packaging never encounters: Spanish-language panels, import labelling that varies by destination country, and a structure that survives ocean freight and a customs inspection that may involve the box being opened and re-closed.",
+    sections: [
+      {
+        heading: "Two languages, one panel",
+        body: "Bilingual copy needs roughly forty percent more panel area than English alone, and retrofitting it usually costs the design its clarity. Planning the layout bilingually from the start avoids that, and brands exporting from the metro often keep the outer carton language-neutral while carrying the regulatory copy on a replaceable label.",
+      },
+      {
+        heading: "Humidity and gloss",
+        body: "Sustained humidity lifts the edges of laminated board and can bloom a gloss finish during storage. Beauty brands shipping through the region generally specify a matte or soft-touch treatment on [cosmetic boxes that tolerate humid storage](/products/cosmetic-boxes), because the defect appears in the warehouse rather than in transit and is easy to miss until a customer sees it.",
+      },
+    ],
+  },
+
+  "custom-packaging-las-vegas": {
+    intro:
+      "Las Vegas buys packaging on a convention schedule rather than a retail one. The exhibition calendar drives enormous, compressed demand — a brand exhibiting needs its packaging complete before the show opens, and there is no version of the deadline that moves. Around that sits a hospitality sector buying amenity and gifting packaging in volumes that would be unusual anywhere else.",
+    sections: [
+      {
+        heading: "The show date is the deadline",
+        body: "Everything about a convention order is shaped by the fact that late delivery is worthless, which usually means simplifying the finish rather than compressing the production schedule. Exhibitors who need product to look considered on a stand generally specify [display boxes that assemble on site](/products/display-boxes), because flat-packed structures can ship later and still arrive in time.",
+      },
+      {
+        heading: "Hospitality volumes",
+        body: "Resort amenity programmes order in quantities that make small per-unit differences significant, and they reorder on a predictable cycle. That combination rewards spending design time once on a structure that runs efficiently, rather than treating each reorder as a fresh brief.",
+      },
+    ],
+  },
+
+  "custom-packaging-portland": {
+    intro:
+      "Portland's craft producers — coffee roasters, distillers, chocolate makers, small-batch food brands — have built a customer base that reads packaging closely and rewards restraint. Heavy finishes tend to work against a brand here rather than for it, and the local convention leans towards uncoated stock, visible board texture and a single well-executed print treatment instead of layered effects.",
+    sections: [
+      {
+        heading: "Restraint as a house style",
+        body: "Working uncoated changes the whole print calculation: colours sit differently, fine reversed type fills in, and the artwork has to be drawn for the stock rather than adapted to it. Producers who commit to that route usually pair it with [kraft boxes with an uncoated print surface](/products/kraft-boxes) and design the label around the board colour instead of covering it.",
+      },
+      {
+        heading: "Wet-season shipping",
+        body: "The same rain that shapes Seattle's packaging affects Portland's, but the local preference for uncoated stock makes it harder to solve — an uncoated outer is exactly what moisture damages fastest. The workable compromise is usually an uncoated presentation box protected by a plain shipper rather than a coating on the box the customer sees.",
+      },
+    ],
+  },
 };
 
 function wordCount(input: string) {

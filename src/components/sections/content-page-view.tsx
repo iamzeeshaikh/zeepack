@@ -109,7 +109,7 @@ export function ContentPageView({
                     Questions buyers ask before ordering.
                   </h2>
                 </div>
-                <Link href="/faq/" className="micro-link">
+                <Link href="/faq" className="micro-link">
                   Visit the full FAQ page
                 </Link>
               </div>
