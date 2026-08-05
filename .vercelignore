@@ -5,7 +5,7 @@
 node_modules
 coverage
 dist
-zeepack-assets
+zeepack-assets*
 *.log
 public/ZEE Images
 public/ZEE Images.zip

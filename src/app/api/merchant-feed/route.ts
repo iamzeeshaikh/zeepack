@@ -23,6 +23,16 @@ function feedId(raw: string): string {
 
 const GMC_BANNED_TERMS = /cbd|cannabis|vape|tobacco/i;
 
+// Products with no photo of the actual product on file — showing an unrelated
+// stock image in Shopping ads reads as misrepresentation, so keep them out of
+// the feed until a real photo exists.
+const NO_REAL_IMAGE = new Set(["mylar-bags"]);
+
+// The account's current item capacity is ~103; sending more produces an
+// "over capacity, items rejected" feed error. Keep the feed under that limit
+// and raise this once Google grows the account's capacity.
+const FEED_LIMIT = 100;
+
 function renderItem(opts: {
   id: string;
   title: string;
@@ -31,7 +41,6 @@ function renderItem(opts: {
   image: string;
   price: number;
   productType: string;
-  mpn: string;
 }): string {
   return `
     <item>
@@ -46,97 +55,81 @@ function renderItem(opts: {
       <g:brand>ZEEPACK</g:brand>
       <g:google_product_category>2634</g:google_product_category>
       <g:product_type>${xmlEscape(opts.productType)}</g:product_type>
-      <g:mpn>${xmlEscape(opts.mpn)}</g:mpn>
       <g:identifier_exists>no</g:identifier_exists>
       <g:shipping>
         <g:country>US</g:country>
         <g:service>Free Shipping</g:service>
         <g:price>0 USD</g:price>
-        <g:min_handling_time>10</g:min_handling_time>
-        <g:max_handling_time>20</g:max_handling_time>
+        <g:min_handling_time>3</g:min_handling_time>
+        <g:max_handling_time>5</g:max_handling_time>
         <g:min_transit_time>3</g:min_transit_time>
-        <g:max_transit_time>7</g:max_transit_time>
+        <g:max_transit_time>5</g:max_transit_time>
       </g:shipping>
-      <g:return_policy_label>free-returns</g:return_policy_label>
     </item>`;
 }
 
 export async function GET() {
   const allowedCategories = categories.filter(
-    (cat) => !GMC_BANNED_TERMS.test(cat.slug) && !GMC_BANNED_TERMS.test(cat.name)
+    (cat) =>
+      !GMC_BANNED_TERMS.test(cat.slug) &&
+      !GMC_BANNED_TERMS.test(cat.name) &&
+      !NO_REAL_IMAGE.has(cat.slug)
   );
   const allowedStyles = productStyles.filter(
-    (style) => !GMC_BANNED_TERMS.test(style.slug) && !GMC_BANNED_TERMS.test(style.title)
+    (style) =>
+      !GMC_BANNED_TERMS.test(style.slug) &&
+      !GMC_BANNED_TERMS.test(style.title) &&
+      !NO_REAL_IMAGE.has(style.categorySlug)
   );
-
-  // Build the ordered pool of distinct product images (category images first, then
-  // style images and galleries). Each image is handed out to at most one product.
-  const imagePool: string[] = [];
-  const addImage = (img?: string) => {
-    if (img && img.startsWith("/images/zee/") && !imagePool.includes(img)) {
-      imagePool.push(img);
-    }
-  };
-  allowedCategories.forEach((cat) => addImage(cat.image));
-  allowedStyles.forEach((style) => {
-    addImage(style.image);
-    addImage(style.fallbackImage);
-    (style.galleryImages ?? []).forEach(addImage);
-  });
-
-  // Hand out globally-unique images first for maximum variety; once the distinct
-  // pool is exhausted, fall back to the product's own (relevant) image rather
-  // than skipping it. Every product is fed — Google fetches them all and accepts
-  // up to the account's current capacity, so more show automatically as capacity
-  // grows, without editing the feed again.
-  const usedImages = new Set<string>();
-  const takeImage = (preferred: string): string => {
-    if (preferred && !usedImages.has(preferred)) {
-      usedImages.add(preferred);
-      return preferred;
-    }
-    for (const img of imagePool) {
-      if (!usedImages.has(img)) {
-        usedImages.add(img);
-        return img;
-      }
-    }
-    return preferred; // pool exhausted — reuse the product's own relevant image
-  };
 
   const items: string[] = [];
 
-  // Categories first — the real product lines, each with its own image.
+  // Categories first — the main product lines. Each item uses the exact image
+  // shown on its landing page so the ad always matches what the shopper lands on.
   for (const cat of allowedCategories) {
+    if (items.length >= FEED_LIMIT) break;
     items.push(
       renderItem({
         id: cat.slug,
         title: `${cat.name} | Custom Packaging by ZEEPACK`,
         description: cat.shortDescription,
         link: absUrl(`/products/${cat.slug}`),
-        image: takeImage(cat.image),
+        image: cat.image,
         price: getUnitPrice(cat),
         productType: `Custom Packaging > ${cat.name}`,
-        mpn: `ZP-${cat.slug}`,
       })
     );
   }
 
-  // Then every style, each getting a unique image while the pool lasts and its
-  // own relevant image thereafter.
+  // Then styles, round-robin across categories so every product line stays
+  // represented within the capped feed.
+  const stylesByCategory = new Map<string, typeof allowedStyles>();
   for (const style of allowedStyles) {
-    items.push(
-      renderItem({
-        id: `style-${style.slug}`,
-        title: `${style.title} | Custom Packaging by ZEEPACK`,
-        description: style.description,
-        link: absUrl(`/products/styles/${style.slug}`),
-        image: takeImage(style.image),
-        price: getUnitPrice({ slug: style.slug, title: style.title, materials: style.materialOptions }),
-        productType: `Custom Packaging > ${style.title}`,
-        mpn: `ZP-${style.slug}`,
-      })
-    );
+    const bucket = stylesByCategory.get(style.categorySlug) ?? [];
+    bucket.push(style);
+    stylesByCategory.set(style.categorySlug, bucket);
+  }
+  const buckets = [...stylesByCategory.values()];
+  for (let round = 0; items.length < FEED_LIMIT; round++) {
+    let pushedAny = false;
+    for (const bucket of buckets) {
+      if (items.length >= FEED_LIMIT) break;
+      const style = bucket[round];
+      if (!style) continue;
+      pushedAny = true;
+      items.push(
+        renderItem({
+          id: `style-${style.slug}`,
+          title: `${style.title} | Custom Packaging by ZEEPACK`,
+          description: style.description,
+          link: absUrl(`/products/styles/${style.slug}`),
+          image: style.image,
+          price: getUnitPrice({ slug: style.slug, title: style.title, materials: style.materialOptions }),
+          productType: `Custom Packaging > ${style.title}`,
+        })
+      );
+    }
+    if (!pushedAny) break;
   }
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>

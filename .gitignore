@@ -10,3 +10,5 @@ zeepack-assets
 .env*.local
 public/ZEE Images/
 public/ZEE Images.zip
+tsconfig.tsbuildinfo
+zeepack-assets-local/

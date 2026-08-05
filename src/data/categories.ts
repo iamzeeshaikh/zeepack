@@ -981,7 +981,7 @@ export const categories: Category[] = [
     name: "Custom Cake Boxes",
     shortDescription: "Strong, food-safe cake packaging in standard and custom sizes for single tiers, multi-tier cakes, and premium patisserie presentation.",
     intro: "Custom cake boxes protect delicate cakes during transport while presenting them in a way that reflects the care and craft behind them. Available in kraft, white, and premium printed finishes for every bakery and patisserie.",
-    image: "/images/zee/rigid-lid-box.jpg",
+    image: "/images/zee/bakery-window-box.jpg",
     type: "boxes",
     heroLabel: "Cake packaging",
     keyFeatures: [
@@ -1006,7 +1006,7 @@ export const categories: Category[] = [
     name: "Coffee & Tea Packaging",
     shortDescription: "Premium coffee bag, tea pouch, and specialty beverage packaging with barrier protection, custom print, and sustainable material options.",
     intro: "Coffee and tea packaging needs to protect freshness, communicate quality, and look good on a shelf. From stand-up pouches with degassing valves to premium rigid gift boxes for specialty blends, we build coffee and tea packaging around the product's story.",
-    image: "/images/zee/folding-carton-corrugated.jpg",
+    image: "/images/zee/tea-window-box.jpg",
     type: "boxes",
     heroLabel: "Beverage packaging",
     keyFeatures: [
@@ -1031,7 +1031,7 @@ export const categories: Category[] = [
     name: "Candy & Confectionery Boxes",
     shortDescription: "Custom candy boxes, chocolate boxes, and confectionery packaging with elegant presentation finishes and food-safe materials.",
     intro: "Candy and confectionery packaging is as much about presentation as protection. From ribbon-tied chocolate boxes to printed candy cartons, we build confectionery packaging that makes the product feel worth the moment.",
-    image: "/images/zee/folding-carton-cosmetic.jpg",
+    image: "/images/zee/candy-window-box.jpg",
     type: "boxes",
     heroLabel: "Confectionery",
     keyFeatures: [

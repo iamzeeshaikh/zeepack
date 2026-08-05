@@ -75,7 +75,7 @@ export default function RefundReturnsPolicyPage() {
             <h2 className="text-xl font-semibold text-[var(--color-ink)]">Refund Processing Time</h2>
             <p className="mt-2">
               Once the returned item is received and inspected, refunds are processed within
-              <strong className="text-[var(--color-ink)]"> 15 business days</strong>.
+              <strong className="text-[var(--color-ink)]"> 15 days</strong>.
               Refunds are issued in <strong className="text-[var(--color-ink)]">USD</strong> to the original payment method.
             </p>
           </div>

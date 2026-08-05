@@ -18,7 +18,6 @@ import { FAQAccordion } from "@/components/ui/faq-accordion";
 import { Hero } from "@/components/ui/hero";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { TestimonialsGrid } from "@/components/ui/testimonials-grid";
 import { homeFaqs } from "@/data/faqs";
 import {
   buildFaqSchema,
@@ -401,20 +400,6 @@ export default function HomePage() {
               </Reveal>
             ))}
           </div>
-        </Container>
-      </section>
-
-      {/* ── Testimonials ── */}
-      <section className="section-space bg-[linear-gradient(180deg,rgba(248,245,239,0.70),rgba(255,255,255,0.92))]">
-        <Container>
-          <Reveal>
-            <SectionHeading
-              eyebrow="Client Feedback"
-              title="Brands That Trust ZEEPACK"
-              description="Premium brands across retail, gifting, and e-commerce share their experience working with ZEEPACK."
-            />
-          </Reveal>
-          <TestimonialsGrid />
         </Container>
       </section>
 

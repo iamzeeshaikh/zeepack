@@ -204,29 +204,28 @@ export function buildProductSchema(input: {
   };
   additionalProperty?: Array<{ name: string; value: string }>;
 }) {
+  // Canonical URLs on this site never take a trailing slash.
+  const pageUrl = new URL(input.path, siteConfig.siteUrl).toString().replace(/\/$/, "");
+  // SKU is the page slug (last path segment), stable per product.
+  const sku = input.path.split("/").filter(Boolean).pop() ?? input.path;
+
   return {
     "@context": "https://schema.org",
     "@type": "Product",
     name: input.name,
     description: input.description,
+    sku,
     image: [new URL(input.image, siteConfig.siteUrl).toString()],
     brand: {
       "@type": "Brand",
       name: siteConfig.name,
     },
     category: input.category,
-    url: new URL(input.path, siteConfig.siteUrl).toString(),
+    url: pageUrl,
     manufacturer: {
       "@type": "Organization",
       name: siteConfig.name,
       url: siteConfig.siteUrl,
-    },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "47",
-      bestRating: "5",
-      worstRating: "1",
     },
     offers: input.offers
       ? {
@@ -234,7 +233,9 @@ export function buildProductSchema(input: {
           price: input.offers.price,
           priceCurrency: input.offers.priceCurrency,
           availability: input.offers.availability,
-          url: new URL(input.path, siteConfig.siteUrl).toString(),
+          itemCondition: "https://schema.org/NewCondition",
+          priceValidUntil: "2027-08-04",
+          url: pageUrl,
           seller: {
             "@type": "Organization",
             name: siteConfig.name,

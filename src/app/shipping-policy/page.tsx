@@ -29,7 +29,7 @@ export default function ShippingPolicyPage() {
             <h2 className="text-xl font-semibold text-[var(--color-ink)]">Order Cut-Off Time</h2>
             <p className="mt-2">
               Our order cut-off time is
-              <strong className="text-[var(--color-ink)]"> 2:00 PM Pacific Standard Time (Los Angeles, GMT-08:00)</strong>.
+              <strong className="text-[var(--color-ink)]"> 2:00 PM Central Time (GMT-06:00)</strong>.
               Orders confirmed before the cut-off begin handling the same business day;
               orders confirmed after the cut-off begin handling the next business day.
             </p>
