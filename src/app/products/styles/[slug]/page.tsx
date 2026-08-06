@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Sparkles } from "lucide-react";
@@ -10,9 +9,10 @@ import {
 } from "@/components/sections/editorial-page-sections";
 import { CTASection } from "@/components/ui/cta-section";
 import { AddToCart } from "@/components/cart/add-to-cart";
-import { getUnitPrice } from "@/data/pricing";
+import { formatPrice, getUnitPrice } from "@/data/pricing";
 import { Container } from "@/components/ui/container";
 import { FAQAccordion } from "@/components/ui/faq-accordion";
+import { ProductGallery } from "@/components/ui/product-gallery";
 import { ProductTrustStrip } from "@/components/ui/product-trust-strip";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -142,7 +142,11 @@ export default async function ProductStylePage({
         </Container>
       </div>
 
-      <ProductTrustStrip />
+      <ProductTrustStrip
+        fromPrice={formatPrice(
+          getUnitPrice({ slug: style.slug, title: style.title, materials: style.materialOptions }),
+        )}
+      />
 
       <VisualSpotlight
         eyebrow="Style Overview"
@@ -221,22 +225,13 @@ export default async function ProductStylePage({
               description="Supporting visuals help show how this style can move across premium packaging systems."
             />
           </Reveal>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {style.galleryImages.map((image, index) => (
-              <Reveal key={image} delay={index * 0.05}>
-                <div className="editorial-image-frame rounded-[28px] p-3">
-                  <div className="relative min-h-[280px] overflow-hidden rounded-[22px] bg-[linear-gradient(180deg,rgba(248,245,239,0.96),rgba(238,230,218,0.92))]">
-                    <Image
-                      src={image}
-                      alt={`${style.title} gallery image ${index + 1}`}
-                      fill
-                      sizes="(min-width: 768px) 33vw, 100vw"
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
-              </Reveal>
-            ))}
+          <div className="mt-10">
+            <Reveal>
+              <ProductGallery
+                images={[style.image, style.fallbackImage, ...style.galleryImages]}
+                name={style.title}
+              />
+            </Reveal>
           </div>
         </Container>
       </section>

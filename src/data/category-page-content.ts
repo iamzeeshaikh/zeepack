@@ -529,8 +529,14 @@ export function getRelatedCategories(category: Category, categories: Category[])
 }
 
 export function getCategorySeoParagraphs(category: Category) {
-  const [keywordOne, keywordTwo, keywordThree, keywordFour] =
-    getCategorySeoKeywords(category);
+  const keywords = getCategorySeoKeywords(category);
+  const baseName = category.name.toLowerCase();
+  const keywordOne = keywords[0] ?? baseName;
+  const keywordTwo =
+    keywords[1] ?? category.variants[0]?.toLowerCase() ?? `custom ${baseName}`;
+  const keywordThree =
+    keywords[2] ?? category.variants[1]?.toLowerCase() ?? `premium ${baseName}`;
+  const keywordFour = keywords[3] ?? baseName;
 
   return [
     `${category.name} from ZEEPACK are designed for brands that need presentation and protection to work together. Whether the goal is premium retail display, gifting, or a stronger direct-to-consumer reveal, our ${keywordOne} balance material quality, clean structure, and refined finish choices.`,

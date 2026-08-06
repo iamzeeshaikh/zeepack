@@ -614,7 +614,7 @@ export function PackagingConfigurator() {
                 <div className="relative h-48 w-full">
                   <Image
                     src={previewImage}
-                    alt="Package preview"
+                    alt={selectedBox ? `${selectedBox.label} custom packaging preview` : "Custom packaging box preview"}
                     fill
                     className="object-cover transition-all duration-500"
                     sizes="360px"

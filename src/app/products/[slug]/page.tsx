@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
@@ -25,10 +24,11 @@ import { CategoryCard } from "@/components/ui/category-card";
 import { Container } from "@/components/ui/container";
 import { CTASection } from "@/components/ui/cta-section";
 import { AddToCart } from "@/components/cart/add-to-cart";
-import { getUnitPrice } from "@/data/pricing";
+import { formatPrice, getUnitPrice } from "@/data/pricing";
 import { PageLeadForm } from "@/components/forms/page-lead-form";
 import { LazyConfigurator } from "@/components/ui/lazy-configurator";
 import { FAQAccordion } from "@/components/ui/faq-accordion";
+import { ProductGallery } from "@/components/ui/product-gallery";
 import { ProductTrustStrip } from "@/components/ui/product-trust-strip";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -225,7 +225,7 @@ export default async function ProductCategoryPage({
         </Container>
       </div>
 
-      <ProductTrustStrip />
+      <ProductTrustStrip fromPrice={formatPrice(getUnitPrice(category))} />
 
       <PageLeadForm
         context={category.name}
@@ -477,22 +477,13 @@ export default async function ProductCategoryPage({
               description="These supporting visuals help show how the category can move across presentation, protection, and brand refinement."
             />
           </Reveal>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {gallery.map((image, index) => (
-              <Reveal key={image} delay={index * 0.05}>
-                <div className="editorial-image-frame rounded-[28px] p-3">
-                  <div className="relative min-h-[280px] overflow-hidden rounded-[22px] bg-[linear-gradient(180deg,rgba(248,245,239,0.96),rgba(238,230,218,0.92))]">
-                    <Image
-                      src={image}
-                      alt={`${category.name} gallery visual ${index + 1}`}
-                      fill
-                      sizes="(min-width: 768px) 33vw, 100vw"
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
-              </Reveal>
-            ))}
+          <div className="mt-10">
+            <Reveal>
+              <ProductGallery
+                images={[category.image, supportImage, ...gallery]}
+                name={category.name}
+              />
+            </Reveal>
           </div>
           {category.slug === "candle-boxes" ? (
             <Reveal>
