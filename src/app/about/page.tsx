@@ -83,8 +83,8 @@ export default function AboutPage() {
 
       <VisualSpotlight
         eyebrow="Our Approach"
-        title="We do not treat packaging like a basic requirement."
-        description="Every project is approached with attention to structure, materials, finishing, and the way the packaging should be perceived when it is opened, carried, gifted, or displayed. The goal is to create packaging that feels more intentional, more premium, and more aligned with the brand it represents."
+        title="Every box starts with the product, not a stock die-line."
+        description="We take the product's dimensions, weight, and the way it will be opened, carried, gifted, or displayed, and work backwards to the structure, board grade, and finish. That order matters: it is why a ZEEPACK box fits tight, opens clean, and holds its shape through shipping."
         image={{
           src: "/images/zee/rigid-shoulder-box.jpg",
           alt: "Premium product packaging detail.",
@@ -99,8 +99,8 @@ export default function AboutPage() {
 
       <IconFeatureGrid
         eyebrow="What We Focus On"
-        title="A premium packaging process is built on a few details done properly."
-        description="These are the areas we pay the most attention to when shaping a cleaner packaging result."
+        title="The Details We Refuse to Skip"
+        description="Four checkpoints every project passes through before it goes to press."
         items={focusItems}
       />
 

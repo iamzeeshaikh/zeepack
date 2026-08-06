@@ -56,7 +56,7 @@ const FINISHES = [
   { id: "matte-lam", label: "Matte Lamination", sub: "Smooth satin look" },
   { id: "spot-uv", label: "Spot UV", sub: "Selective high gloss" },
   { id: "gold-foil", label: "Gold Foil", sub: "Luxury metallic gold" },
-  { id: "silver-foil", label: "Silver Foil", sub: "Metallic silver cross" },
+  { id: "silver-foil", label: "Silver Foil", sub: "Metallic silver gloss" },
   { id: "embossing", label: "Embossing", sub: "Raised texture" },
   { id: "debossing", label: "Debossing", sub: "Pressed-in texture" },
   { id: "soft-touch", label: "Soft-Touch", sub: "Velvet-like finish" },

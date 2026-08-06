@@ -107,8 +107,8 @@ export default function QuotePage() {
 
       <VisualSpotlight
         eyebrow="Quote Perspective"
-        title="The cleanest quote handoff comes from clearer packaging priorities."
-        description="Some brands need a launch-ready presentation box. Others need a retail carton that scales well, a direct-to-consumer mailer that feels stronger on arrival, or a supporting layer like tissue, sleeves, or inserts. The more clearly the packaging role is defined, the more useful the quote becomes."
+        title="Tell us the product, quantity, and finish level — we quote the rest."
+        description="Some brands need a launch-ready presentation box; others need a retail carton, a direct-to-consumer mailer, or a supporting layer like tissue, sleeves, or inserts. Share dimensions if you have them — if not, we will work them out from the product with you."
         image={{
           src: "/images/zee/mailer-blank.jpg",
           alt: "Premium packaging quote planning visual.",

@@ -21,8 +21,8 @@
 }
 
 @theme inline {
-  --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Times New Roman", serif;
-  --font-body: "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Iowan Old Style", var(--font-lora), "Palatino Linotype", "Book Antiqua", serif;
+  --font-body: "Avenir Next", var(--font-mulish), "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 
 @keyframes marquee {

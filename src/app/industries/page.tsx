@@ -27,8 +27,8 @@ export default function IndustriesPage() {
     <>
       <EditorialHero
         eyebrow="Industries"
-        title="Packaging Shaped Around the Way Your Category Sells, Ships, and Presents Itself"
-        description="Different products ask different things from packaging. We align structure, finishing, and materials to the category context rather than treating every brand the same."
+        title="Packaging That Fits How Your Category Sells"
+        description="A candle jar ships differently than a serum bottle. Each industry page covers the formats, board choices, and finishes that hold up for that shelf, that courier journey, and that customer."
         image={{
           src: "/images/zee/cosmetic-serum-box.jpg",
           alt: "Industry-focused premium packaging by ZEEPACK.",

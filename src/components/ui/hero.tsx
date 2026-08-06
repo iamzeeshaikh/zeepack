@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, BadgeCheck, CheckCircle2, Sparkles } from "lucide-react";
+import { ArrowRight, BadgeCheck, CheckCircle2, Sparkles, Star } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
@@ -65,7 +65,7 @@ export function Hero() {
             className="hero-in mt-7 max-w-[44ch] text-[1.05rem] leading-[1.8] text-[var(--color-muted)]"
             style={{ animationDelay: "0.16s" }}
           >
-            Structured, refined, and built for brands that care about presentation, consistency, and long-term perception across retail, gifting, and e-commerce.
+            Rigid boxes, mailers, and cartons cut to your exact size and spec — foil, emboss, and soft-touch finishing, low minimums, and a quote back within 24 hours.
           </p>
 
           {/* CTAs */}
@@ -163,11 +163,15 @@ export function Hero() {
               </div>
             </div>
 
-            {/* Response-time badge */}
+            {/* Rating badge */}
             <div className="absolute right-4 top-4 z-10 sm:right-5 sm:top-5">
               <div className="rounded-[16px] border border-[rgba(17,17,17,0.07)] bg-white/96 px-3.5 py-2.5 shadow-[0_10px_28px_rgba(17,17,17,0.10)] backdrop-blur-sm">
-                <p className="text-[12px] font-bold text-[var(--color-primary)]">24-hr response</p>
-                <p className="mt-1 text-[10px] font-semibold text-[var(--color-muted)]">On every quote request</p>
+                <div className="flex items-center gap-1.5">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="size-3.5 fill-[var(--color-gold)] text-[var(--color-gold)]" />
+                  ))}
+                </div>
+                <p className="mt-1 text-[10px] font-semibold text-[var(--color-primary)]">5.0 by premium brands</p>
               </div>
             </div>
           </div>

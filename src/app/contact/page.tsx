@@ -86,7 +86,7 @@ export default function ContactPage() {
             <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
               <div>
                 <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--color-taupe)]">
-                  Trusted by brands like
+                  Who we work with
                 </p>
                 <p className="mt-2 text-sm leading-7 text-[var(--color-muted)]">
                   Growing and established teams that need structured packaging guidance, premium presentation, and a reliable response window.

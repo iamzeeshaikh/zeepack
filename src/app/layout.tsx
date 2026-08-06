@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Lora, Mulish } from "next/font/google";
 import Link from "next/link";
 import Script from "next/script";
 
@@ -14,6 +15,11 @@ import {
 } from "@/lib/seo";
 
 import "./globals.css";
+
+// Webfont fallbacks for the platform stacks in globals.css — without these,
+// Windows/Android render every heading in Times New Roman.
+const lora = Lora({ subsets: ["latin"], variable: "--font-lora", display: "swap" });
+const mulish = Mulish({ subsets: ["latin"], variable: "--font-mulish", display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://zeepack.co"),
@@ -55,7 +61,7 @@ export default function RootLayout({
   const websiteSchema = buildWebsiteSchema();
 
   return (
-    <html lang="en">
+    <html lang="en" className={`${lora.variable} ${mulish.variable}`}>
       <head>
         {/* ZeeOps live chat — replaced Zendesk/Zopim. Conversations land in the
             dashboard at chat.zeeops.dev under the `zeepack` site. */}

@@ -240,8 +240,8 @@ export default function HomePage() {
           <Reveal>
             <SectionHeading
               eyebrow="What We Offer"
-              title="Packaging Built Around Structure, Detail, and Presentation"
-              description="The goal is not to make packaging louder. It is to make it clearer, better fitted, and more aligned with how your brand should be experienced."
+              title="What Goes Into Every Box We Make"
+              description="Custom die-lines, board grades from SBS to heavy rigid stock, and finishing like foil, emboss, and soft-touch — specified for your product, not picked from a template."
             />
           </Reveal>
 
@@ -410,8 +410,8 @@ export default function HomePage() {
             <div className="flex items-end justify-between gap-6">
               <SectionHeading
                 eyebrow="Industries"
-                title="Premium Packaging for Every Sector"
-                description="Each industry asks something different from packaging. We align structure, materials, and finishing with how products are sold, shipped, gifted, or displayed."
+                title="Built for the Way Your Industry Sells"
+                description="A cosmetics carton lives on a shelf; a subscription mailer survives a courier network. We spec structure, materials, and finish for the route your product actually takes."
               />
               <Link
                 href="/industries"

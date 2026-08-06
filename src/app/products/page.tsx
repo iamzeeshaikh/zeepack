@@ -27,8 +27,8 @@ export default function ProductsPage() {
     <>
       <EditorialHero
         eyebrow="Product Collection"
-        title="Packaging Formats Built Around Detail, Structure, and Premium Perception"
-        description="Explore the full ZEEPACK collection across boxes, supporting layers, and sustainable packaging directions. Every format is selected to help brands shape a cleaner, stronger customer-facing result."
+        title="Every Format, From Rigid Boxes to Tissue Paper"
+        description="Boxes, supporting layers, and sustainable stocks — each category lists its sizes, materials, finishes, and starting price, so you can compare formats before you ask for a quote."
         image={{
           src: "/images/zee/product-rigid-box.jpg",
           alt: "Premium packaging collection by ZEEPACK.",

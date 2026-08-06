@@ -7,7 +7,7 @@ import { indexableLocationSlugs } from "@/data/locations";
 import { footerLegalLinks, siteConfig } from "@/data/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date("2026-05-17T00:00:00.000Z");
+  const lastModified = new Date("2026-08-06T00:00:00.000Z");
 
   const staticPages = [
     "/",

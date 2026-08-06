@@ -16,7 +16,7 @@ Premium custom packaging website built with Next.js App Router, TypeScript, Tail
 1. Open the project folder:
 
 ```bash
-cd /Users/sajjadahmad/Documents/zeepack
+cd "/Volumes/MY PASSPORT/zeepack"
 ```
 
 2. Install dependencies:
@@ -31,10 +31,13 @@ npm install
 cp .env.example .env.local
 ```
 
-Then add:
+Then add (nodemailer SMTP):
 
-- `RESEND_API_KEY`
-- `RESEND_FROM_EMAIL`
+- `SMTP_HOST`
+- `SMTP_PORT`
+- `SMTP_SECURE`
+- `SMTP_USER`
+- `SMTP_PASS`
 
 Form submissions are configured to send to:
 

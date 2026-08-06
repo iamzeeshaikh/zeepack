@@ -483,14 +483,13 @@ export default async function LocationPage({
             </Reveal>
             <div className="mt-8 flex flex-wrap gap-3">
               {(location.type === "city" ? siblingCities : stateCities).map((city) => (
-                <Reveal key={city.slug}>
-                  <Link
-                    href={`/${city.slug}`}
-                    className="inline-flex items-center rounded-full border border-[var(--color-shell)] bg-white px-5 py-2.5 text-sm font-semibold text-[var(--color-primary)] transition-colors hover:bg-[var(--color-shell)]"
-                  >
-                    {city.name}
-                  </Link>
-                </Reveal>
+                <Link
+                  key={city.slug}
+                  href={`/${city.slug}`}
+                  className="inline-flex items-center rounded-full border border-[var(--color-shell)] bg-white px-5 py-2.5 text-sm font-semibold text-[var(--color-primary)] transition-colors hover:bg-[var(--color-shell)]"
+                >
+                  {city.name}
+                </Link>
               ))}
               {location.type === "city" && (
                 <Reveal>
@@ -528,14 +527,13 @@ export default async function LocationPage({
             </Reveal>
             <div className="mt-8 flex flex-wrap gap-3">
               {relatedIndustries.map((ind) => (
-                <Reveal key={ind.slug}>
-                  <Link
-                    href={ind.href}
-                    className="inline-flex items-center rounded-full border border-[var(--color-shell)] bg-white px-5 py-2.5 text-sm font-semibold text-[var(--color-primary)] transition-colors hover:bg-[var(--color-shell)]"
-                  >
-                    {ind.name}
-                  </Link>
-                </Reveal>
+                <Link
+                  key={ind.slug}
+                  href={ind.href}
+                  className="inline-flex items-center rounded-full border border-[var(--color-shell)] bg-white px-5 py-2.5 text-sm font-semibold text-[var(--color-primary)] transition-colors hover:bg-[var(--color-shell)]"
+                >
+                  {ind.name}
+                </Link>
               ))}
               <Reveal>
                 <Link
@@ -562,14 +560,13 @@ export default async function LocationPage({
           </Reveal>
           <div className="mt-8 flex flex-wrap gap-3">
             {resolvedProducts.map((p) => (
-              <Reveal key={p.slug}>
-                <Link
-                  href={p.href}
-                  className="inline-flex items-center rounded-full border border-[var(--color-shell)] bg-white px-5 py-2.5 text-sm font-semibold text-[var(--color-primary)] transition-colors hover:bg-[var(--color-shell)]"
-                >
-                  {p.name}
-                </Link>
-              </Reveal>
+              <Link
+                key={p.slug}
+                href={p.href}
+                className="inline-flex items-center rounded-full border border-[var(--color-shell)] bg-white px-5 py-2.5 text-sm font-semibold text-[var(--color-primary)] transition-colors hover:bg-[var(--color-shell)]"
+              >
+                {p.name}
+              </Link>
             ))}
             <Reveal>
               <Link

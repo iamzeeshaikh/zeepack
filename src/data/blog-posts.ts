@@ -1,4 +1,23 @@
-import type { BlogPost } from "./catalog";
+export type BlogPost = {
+  slug: string;
+  title: string;
+  metaTitle: string;
+  metaDescription: string;
+  excerpt: string;
+  image: string;
+  imageAlt: string;
+  category: string;
+  publishedAt: string;
+  readTime: string;
+  intro: string;
+  sections: Array<{
+    title: string;
+    paragraphs: string[];
+    bullets?: string[];
+  }>;
+  faq: Array<{ question: string; answer: string }>;
+  relatedSlugs: string[];
+};
 
 // Packaging-focused blog for ZEEPACK. Body paragraphs may contain inline
 // [anchor](/path) markdown links, which the blog renderer turns into internal

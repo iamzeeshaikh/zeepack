@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Logo } from "@/components/ui/logo";
 import {
-  footerPopularSearches,
   footerProductLinks,
   footerLegalLinks,
   footerQuickLinks,
@@ -77,7 +76,7 @@ export function Footer() {
 
       {/* Main footer grid */}
       <Container className="py-14">
-        <div className="grid gap-12 lg:grid-cols-[1.4fr_0.8fr_0.9fr_0.9fr_0.8fr_1.1fr]">
+        <div className="grid gap-12 lg:grid-cols-[1.4fr_0.8fr_0.9fr_0.8fr_1.1fr]">
           {/* Brand column */}
           <div className="max-w-[280px]">
             <Logo theme="dark" />
@@ -95,7 +94,6 @@ export function Footer() {
 
           <FooterColumn title="Quick Links" items={footerQuickLinks} />
           <FooterColumn title="Product Links" items={footerProductLinks} />
-          <FooterColumn title="Popular Searches" items={footerPopularSearches} />
           <FooterColumn title="Legal" items={footerLegalLinks} />
 
           {/* Contact column */}
