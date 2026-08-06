@@ -298,7 +298,66 @@ const galleryBySlug: Record<string, string[]> = {
   "rigid-boxes": [
     "/images/zee/rigid-lid-box.jpg",
     "/images/zee/rigid-shoulder-box.jpg",
-    "/images/zee/rigid-shoulder-box.jpg",
+    "/images/zee/product-rigid-box.jpg",
+  ],
+  "folding-cartons": [
+    "/images/zee/gallery-carton-red.jpg",
+    "/images/zee/gallery-carton-set.jpg",
+  ],
+  sleeves: [
+    "/images/zee/gallery-sleeve-tray.jpg",
+    "/images/zee/gallery-cup-sleeve.jpg",
+  ],
+  inserts: [
+    "/images/zee/gallery-insert-tray.jpg",
+    "/images/zee/gallery-insert-cradle.jpg",
+  ],
+  "gift-boxes": [
+    "/images/zee/gallery-gift-bronze.jpg",
+    "/images/zee/gallery-gift-aubergine.jpg",
+  ],
+  "window-boxes": [
+    "/images/zee/gallery-window-kraft-set.jpg",
+    "/images/zee/gallery-window-candle.jpg",
+    "/images/zee/gallery-window-chocolate.jpg",
+  ],
+  "kraft-boxes": [
+    "/images/zee/gallery-kraft-pillow.jpg",
+    "/images/zee/gallery-subscription-kraft.jpg",
+  ],
+  "display-boxes": [
+    "/images/zee/gallery-display-counter.jpg",
+    "/images/zee/gallery-carton-set.jpg",
+  ],
+  "corrugated-boxes": [
+    "/images/zee/gallery-subscription-kraft.jpg",
+    "/images/zee/gallery-insert-tray.jpg",
+  ],
+  "soap-boxes": [
+    "/images/zee/gallery-soap-charcoal.jpg",
+    "/images/zee/gallery-soap-band.jpg",
+    "/images/zee/gallery-soap-sleeves.jpg",
+  ],
+  "food-boxes": [
+    "/images/zee/gallery-cake-window.jpg",
+    "/images/zee/gallery-window-pizza.jpg",
+  ],
+  "bakery-boxes": [
+    "/images/zee/gallery-cake-window.jpg",
+  ],
+  "cake-boxes": [
+    "/images/zee/gallery-cake-window.jpg",
+  ],
+  "coffee-tea-boxes": [
+    "/images/zee/gallery-cup-sleeve.jpg",
+    "/images/zee/gallery-cup-sleeves-set.jpg",
+  ],
+  "candy-boxes": [
+    "/images/zee/gallery-window-chocolate.jpg",
+    "/images/zee/gallery-gift-bronze.jpg",
+  ],
+  "cbd-packaging": [
+    "/images/zee/gallery-cbd-carton.jpg",
   ],
   "mailer-boxes": [
     "/images/zee/mailer-blank.jpg",
