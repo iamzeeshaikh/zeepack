@@ -305,6 +305,7 @@ const galleryBySlug: Record<string, string[]> = {
     "/images/zee/gallery-carton-set.jpg",
   ],
   sleeves: [
+    "/images/zee/sleeve-apparel.jpg",
     "/images/zee/gallery-sleeve-tray.jpg",
     "/images/zee/gallery-cup-sleeve.jpg",
   ],
@@ -399,19 +400,9 @@ const galleryBySlug: Record<string, string[]> = {
     "/images/zee/paper-bag-kraft.jpg",
     "/images/zee/tissue-paper-custom.jpg",
   ],
-  sleeves: [
-    "/images/zee/sleeve-apparel.jpg",
-    "/images/zee/sleeve-apparel.jpg",
-    "/images/zee/folding-carton-corrugated.jpg",
-  ],
   "labels-and-stickers": [
     "/images/zee/label-body-butter.jpg",
     "/images/zee/tissue-paper-custom.jpg",
-    "/images/zee/cosmetic-serum-box.jpg",
-  ],
-  inserts: [
-    "/images/zee/product-rigid-box.jpg",
-    "/images/zee/rigid-shoulder-box.jpg",
     "/images/zee/cosmetic-serum-box.jpg",
   ],
   "sustainable-packaging": [
