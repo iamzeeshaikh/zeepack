@@ -881,7 +881,7 @@ export const categories: Category[] = [
     name: "Custom Mylar Bags & Pouches",
     shortDescription: "High-barrier mylar bags and stand-up pouches for food, supplements, CBD, cannabis, coffee, tea, and specialty products.",
     intro: "Mylar bags and stand-up pouches provide superior barrier protection for moisture, oxygen, and light. They are used across food, supplement, cannabis, coffee, tea, and pet food categories where freshness and shelf life are critical.",
-    image: "/images/zee/product-rigid-box.jpg",
+    image: "/images/zee/gallery-mylar-duo.jpg",
     type: "accessories",
     heroLabel: "Barrier packaging",
     keyFeatures: [

@@ -42,7 +42,7 @@ export function ProductGallery({ images, name }: ProductGalleryProps) {
               fill
               sizes="(min-width: 1024px) 60vw, 100vw"
               className={cn(
-                "object-cover transition-opacity duration-300",
+                "object-contain p-4 transition-opacity duration-300 sm:p-6",
                 index === active ? "opacity-100" : "opacity-0",
               )}
               aria-hidden={index === active ? undefined : true}

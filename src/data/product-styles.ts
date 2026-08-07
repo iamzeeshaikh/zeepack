@@ -2498,12 +2498,18 @@ const assetPoolByCategory: Record<string, string[]> = {
     "/images/zee/product-rigid-box.jpg",
     "/images/zee/folding-carton-corrugated.jpg",
     "/images/zee/folding-carton-cosmetic.jpg",
+      "/images/zee/gallery-mylar-duo.jpg",
+    "/images/zee/gallery-mylar-foil-set.jpg",
+    "/images/zee/gallery-mylar-window.jpg",
+    "/images/zee/gallery-mylar-black.jpg",
   ],
   "wax-melt-boxes": [
     "/images/zee/wax-melt-box.jpg",
     "/images/zee/candle-boxes.jpg",
     "/images/zee/candle-window-box.jpg",
     "/images/zee/candle-dust-cover.jpg",
+      "/images/zee/gallery-waxmelt-mailer.jpg",
+    "/images/zee/gallery-waxmelt-clamshell.jpg",
   ],
   "food-boxes": [
     "/images/zee/food-frozen-box.jpg",
@@ -2555,7 +2561,7 @@ const assetPoolByCategory: Record<string, string[]> = {
     "/images/zee/supplement-dietary-box.jpg",
     "/images/zee/folding-carton-corrugated.jpg",
     "/images/zee/product-rigid-box.jpg",
-  ],
+    ],
 };
 
 const styleRecords = buildStyleRecords();
