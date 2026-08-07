@@ -29,10 +29,12 @@ import { PageLeadForm } from "@/components/forms/page-lead-form";
 import { LazyConfigurator } from "@/components/ui/lazy-configurator";
 import { FAQAccordion } from "@/components/ui/faq-accordion";
 import { ProductGallery } from "@/components/ui/product-gallery";
+import { ProductReviews } from "@/components/ui/product-reviews";
 import { ProductTrustStrip } from "@/components/ui/product-trust-strip";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { categories, type Category, getCategoryBySlug } from "@/data/categories";
+import { getReviewsByProduct } from "@/data/reviews";
 import {
   getCategoryGallery,
   getCategorySeoKeywords,
@@ -171,12 +173,20 @@ export default async function ProductCategoryPage({
     path: `/products/${category.slug}`,
   });
   const unitPrice = getUnitPrice(category);
+  const reviews = getReviewsByProduct(category.slug);
+
   const productSchema = buildProductSchema({
     name: category.name,
     description: category.seoBody,
     path: `/products/${category.slug}`,
     image: category.image,
     category: "Premium custom packaging",
+    reviews: reviews.map((r) => ({
+      author: r.author,
+      rating: r.rating,
+      text: r.text,
+      date: r.date,
+    })),
     offers: {
       price: unitPrice.toFixed(2),
       priceCurrency: "USD",
@@ -226,6 +236,8 @@ export default async function ProductCategoryPage({
       </div>
 
       <ProductTrustStrip fromPrice={formatPrice(getUnitPrice(category))} />
+
+      <ProductReviews reviews={reviews} name={category.name} />
 
       <PageLeadForm
         context={category.name}

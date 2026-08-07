@@ -203,6 +203,8 @@ export function buildProductSchema(input: {
     availability: string;
   };
   additionalProperty?: Array<{ name: string; value: string }>;
+  /** Real customer reviews only — feeds aggregateRating; omit when none exist. */
+  reviews?: Array<{ author: string; rating: number; text: string; date: string }>;
 }) {
   // Canonical URLs on this site never take a trailing slash.
   const pageUrl = new URL(input.path, siteConfig.siteUrl).toString().replace(/\/$/, "");
@@ -285,6 +287,33 @@ export function buildProductSchema(input: {
       name: item.name,
       value: item.value,
     })),
+    ...(input.reviews && input.reviews.length
+      ? {
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: (
+              Math.round(
+                (input.reviews.reduce((sum, r) => sum + r.rating, 0) /
+                  input.reviews.length) *
+                  10,
+              ) / 10
+            ).toFixed(1),
+            reviewCount: input.reviews.length,
+            bestRating: "5",
+          },
+          review: input.reviews.map((r) => ({
+            "@type": "Review",
+            author: { "@type": "Person", name: r.author },
+            reviewRating: {
+              "@type": "Rating",
+              ratingValue: String(r.rating),
+              bestRating: "5",
+            },
+            reviewBody: r.text,
+            datePublished: r.date,
+          })),
+        }
+      : {}),
   };
 }
 
