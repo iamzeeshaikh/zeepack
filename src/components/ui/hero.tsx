@@ -51,7 +51,7 @@ export function Hero() {
 
           {/* Headline */}
           <h1
-            className="hero-in mt-6 font-display leading-[0.88] tracking-[-0.05em] text-[var(--color-primary)]"
+            className="hero-in-headline mt-6 font-display leading-[0.88] tracking-[-0.05em] text-[var(--color-primary)]"
             style={{ fontSize: "clamp(2.8rem, 6vw, 5rem)", animationDelay: "0.08s" }}
           >
             <span className="block">Premium</span>

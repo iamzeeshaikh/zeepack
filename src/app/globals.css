@@ -214,14 +214,31 @@
     transform: none;
   }
 }
+/* Transform-only rise for the headline. The h1 is the LCP element, and an
+   element sitting at opacity 0 is not an LCP candidate at all — fading it in
+   pushed LCP out to ~5s and handed the metric to the announcement-bar marquee.
+   Sliding without fading keeps the motion and lets the headline count from the
+   first paint. */
+@keyframes hero-rise-opaque {
+  from {
+    transform: translateY(18px);
+  }
+  to {
+    transform: none;
+  }
+}
 .hero-in {
   animation: hero-rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.hero-in-headline {
+  animation: hero-rise-opaque 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 .hero-in-frame {
   animation: hero-frame-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 @media (prefers-reduced-motion: reduce) {
   .hero-in,
+  .hero-in-headline,
   .hero-in-frame {
     animation: none;
   }
