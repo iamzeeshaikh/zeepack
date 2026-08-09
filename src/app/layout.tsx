@@ -40,7 +40,8 @@ export const metadata: Metadata = {
     ],
     shortcut: ["/icon.svg"],
     apple: [
-      { url: "/apple-icon.svg", type: "image/svg+xml" },
+      // Next's apple-icon file convention does not support SVG — must be a raster.
+      { url: "/apple-icon.png", type: "image/png" },
     ],
   },
   ...createMetadata({
