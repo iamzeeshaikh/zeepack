@@ -372,7 +372,7 @@ export default async function LocationPage({
                     href={resolvedProducts[0].href}
                     className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4"
                   >
-                    {resolvedProducts[0].name.toLowerCase()}
+                    our custom {resolvedProducts[0].name.toLowerCase()}
                   </Link>{" "}
                   when deciding how much structure and finish quality the packaging should carry.
                 </>
@@ -387,7 +387,7 @@ export default async function LocationPage({
                   href={resolvedProducts[1].href}
                   className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4"
                 >
-                  {resolvedProducts[1].name.toLowerCase()}
+                  custom {resolvedProducts[1].name.toLowerCase()} for ecommerce
                 </Link>{" "}
                 when the packaging needs to perform both on shelf and in transit.
               </p>

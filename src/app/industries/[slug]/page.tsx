@@ -150,16 +150,16 @@ export default async function IndustryDetailPage({
                   ZEEPACK develops custom cosmetic packaging for brands that need stronger beauty presentation, cleaner product fit, and more deliberate packaging systems across launches, retail shelves, and direct-to-consumer delivery. From skincare packaging to fragrance-led collections, the goal is to create cosmetic boxes that feel structured, premium, and commercially practical.
                 </p>
                 <p className="mt-4">
-                  Whether a line is built around jars, bottles, palettes, or bundled sets, the final structure needs to support both protection and presentation. Some brands compare beauty formats with <Link href="/products/rigid-boxes" className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">rigid boxes</Link> when they need a more elevated reveal for gifting, premium launches, or higher-value skincare presentation.
+                  Whether a line is built around jars, bottles, palettes, or bundled sets, the final structure needs to support both protection and presentation. Some brands compare beauty formats with <Link href="/products/rigid-boxes" className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">rigid boxes for premium beauty launches</Link> when they need a more elevated reveal for gifting, premium launches, or higher-value skincare presentation.
                 </p>
                 <p className="mt-4">
-                  Other collections need efficient shelf-ready formats, especially when multiple SKUs need cleaner print hierarchy and easier merchandising. In those cases, <Link href="/products/folding-cartons" className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">folding cartons</Link> often become part of the packaging system for creams, serums, and makeup products that need consistency without excess structure.
+                  Other collections need efficient shelf-ready formats, especially when multiple SKUs need cleaner print hierarchy and easier merchandising. In those cases, <Link href="/products/folding-cartons" className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">folding cartons for shelf-ready SKUs</Link> often become part of the packaging system for creams, serums, and makeup products that need consistency without excess structure.
                 </p>
                 <p className="mt-4">
-                  Product support also matters when packaging needs to hold bottles, jars, or multi-piece beauty sets securely. Brands often add <Link href="/products/inserts" className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">custom inserts</Link> to improve fit, reduce movement, and keep the unboxing sequence more controlled for premium beauty packaging.
+                  Product support also matters when packaging needs to hold bottles, jars, or multi-piece beauty sets securely. Brands often add <Link href="/products/inserts" className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">custom inserts that hold bottles and jars</Link> to improve fit, reduce movement, and keep the unboxing sequence more controlled for premium beauty packaging.
                 </p>
                 <p className="mt-4">
-                  When a collection also ships directly, the structure may need to balance shelf presentation with practical transit protection. That is why some beauty brands also review <Link href="/products/mailer-boxes" className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">mailer boxes</Link> for influencer sends, ecommerce kits, and launch packaging that still needs a cleaner branded arrival.
+                  When a collection also ships directly, the structure may need to balance shelf presentation with practical transit protection. That is why some beauty brands also review <Link href="/products/mailer-boxes" className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">mailer boxes built for direct shipping</Link> for influencer sends, ecommerce kits, and launch packaging that still needs a cleaner branded arrival.
                 </p>
               </>
             ) : (
@@ -176,7 +176,7 @@ export default async function IndustryDetailPage({
                       href={`/products/${recommendedCategories[0].slug}`}
                       className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4"
                     >
-                      {recommendedCategories[0].name.toLowerCase()}
+                      our custom {recommendedCategories[0].name.toLowerCase()}
                     </Link>{" "}
                     when deciding how much structure, print presence, and product support the packaging should carry.
                   </p>
