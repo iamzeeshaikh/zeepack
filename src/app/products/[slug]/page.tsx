@@ -608,7 +608,7 @@ function buildLongSections(category: Category): LongSection[] {
               Custom candle packaging helps brands present fragrance products with more clarity, structure, and consistency across collections. For modern candle brands, the box often carries as much perception as the vessel itself, which is why the packaging needs to feel intentional rather than generic.
             </>,
             <>
-              At ZEEPACK, candle packaging is shaped around the jar, the lid, the insert requirements, and the overall gifting or retail direction. Some brands also compare candle box formats with <Link href={categoryHref("rigid-boxes")} className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">rigid boxes</Link> when they want stronger structure and a more elevated reveal for premium collections.
+              At ZEEPACK, candle packaging is shaped around the jar, the lid, the insert requirements, and the overall gifting or retail direction. Some brands also compare candle box formats with <Link href={categoryHref("rigid-boxes")} className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">rigid boxes for premium collections</Link> when they want stronger structure and a more elevated reveal for premium collections.
             </>,
           ],
         },
@@ -630,7 +630,7 @@ function buildLongSections(category: Category): LongSection[] {
               Candle brands often need packaging that works across several moments at once: boutique retail shelves, gifting, influencer sends, and direct-to-consumer delivery. That means the structure has to feel premium while still remaining commercially practical.
             </>,
             <>
-              Many collections also sit beside adjacent premium product categories, especially beauty and wellness. For that reason, some brands align their candle box direction with <Link href={categoryHref("cosmetic-boxes")} className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">cosmetic packaging</Link> so launches, gift sets, and multi-category brand systems feel more consistent.
+              Many collections also sit beside adjacent premium product categories, especially beauty and wellness. For that reason, some brands align their candle box direction with <Link href={categoryHref("cosmetic-boxes")} className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">cosmetic and beauty packaging</Link> so launches, gift sets, and multi-category brand systems feel more consistent.
             </>,
             <>
               Brands shipping candles directly also compare protective formats such as <Link href="/products/mailer-boxes" className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">mailer boxes for direct-to-customer shipping</Link> when the arrival experience matters as much as the shelf-ready presentation.
@@ -669,10 +669,10 @@ function buildLongSections(category: Category): LongSection[] {
               Luxury rigid boxes work especially well in retail presentation, curated gifting, and premium ecommerce because they hold their shape, support inserts more effectively, and make the product reveal feel cleaner. This makes them a strong choice for collections that need structure, consistency, and stronger perceived value.
             </>,
             <>
-              They are also widely used in beauty, fragrance, candles, jewelry, and launch sets where the packaging itself contributes to the brand experience. Brands building a broader packaging system often extend the same design direction into <Link href={categoryHref("cosmetic-boxes")} className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">cosmetic packaging</Link> or supporting layers so the product line feels aligned across retail shelves, gifting moments, and direct-to-consumer delivery.
+              They are also widely used in beauty, fragrance, candles, jewelry, and launch sets where the packaging itself contributes to the brand experience. Brands building a broader packaging system often extend the same design direction into <Link href={categoryHref("cosmetic-boxes")} className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">cosmetic packaging for beauty ranges</Link> or supporting layers so the product line feels aligned across retail shelves, gifting moments, and direct-to-consumer delivery.
             </>,
             <>
-              Rigid boxes also pair naturally with <Link href={categoryHref("inserts")} className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">custom inserts</Link> when brands need product fit, presentation control, and better support for fragile or premium items.
+              Rigid boxes also pair naturally with <Link href={categoryHref("inserts")} className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">custom inserts for product fit</Link> when brands need product fit, presentation control, and better support for fragile or premium items.
             </>,
           ],
         },
@@ -708,7 +708,7 @@ function buildLongSections(category: Category): LongSection[] {
               Many packaging systems need to work across several channels at once, from retail shelves to gifting moments to ecommerce delivery. That makes it important to choose a format that supports both presentation and practical use.
             </>,
             <>
-              Brands often extend the same visual language across neighboring categories, especially when collections include beauty, fragrance, or lifestyle products. In those situations, aligning the packaging direction with <Link href={categoryHref("cosmetic-boxes")} className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">cosmetic packaging</Link> or other premium formats can help the overall range feel more consistent.
+              Brands often extend the same visual language across neighboring categories, especially when collections include beauty, fragrance, or lifestyle products. In those situations, aligning the packaging direction with <Link href={categoryHref("cosmetic-boxes")} className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">custom cosmetic packaging</Link> or other premium formats can help the overall range feel more consistent.
             </>,
           ],
         },

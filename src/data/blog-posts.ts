@@ -101,7 +101,7 @@ export const blogPosts: BlogPost[] = [
       {
         title: "Start with the right size",
         paragraphs: [
-          "Size the [mailer box](/products/mailer-boxes) to the product plus protection, not to a round number. Too much empty space means the product shifts in transit and you pay for air in dimensional-weight pricing. Too tight and it crushes at the corners. Measure the product with its inserts or void fill, then add a small, consistent clearance.",
+          "Size the [custom mailer boxes](/products/mailer-boxes) to the product plus protection, not to a round number. Too much empty space means the product shifts in transit and you pay for air in dimensional-weight pricing. Too tight and it crushes at the corners. Measure the product with its inserts or void fill, then add a small, consistent clearance.",
         ],
       },
       {

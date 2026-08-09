@@ -100,7 +100,7 @@ export default function TermsConditionsPage() {
               Shipping terms, estimated delivery timelines, and carrier responsibilities are governed
               by our{" "}
               <a href="/shipping-policy" className="text-[var(--color-primary)] underline underline-offset-4">
-                Shipping Policy
+                Shipping Policy for delivery timelines
               </a>
               , which forms part of these Terms &amp; Conditions. ZEEPACK is not liable for delays
               caused by carriers, customs, natural events, or circumstances beyond our control.
