@@ -34,6 +34,7 @@ import { ProductTrustStrip } from "@/components/ui/product-trust-strip";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { categories, type Category, getCategoryBySlug } from "@/data/categories";
+import { industries } from "@/data/industries";
 import { getReviewsByProduct } from "@/data/reviews";
 import {
   getCategoryGallery,
@@ -607,7 +608,7 @@ function buildLongSections(category: Category): LongSection[] {
               Custom candle packaging helps brands present fragrance products with more clarity, structure, and consistency across collections. For modern candle brands, the box often carries as much perception as the vessel itself, which is why the packaging needs to feel intentional rather than generic.
             </>,
             <>
-              At ZEEPACK, candle packaging is shaped around the jar, the lid, the insert requirements, and the overall gifting or retail direction. Some brands also compare candle box formats with <Link href="/products/luxury-rigid-boxes" className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">rigid boxes</Link> when they want stronger structure and a more elevated reveal for premium collections.
+              At ZEEPACK, candle packaging is shaped around the jar, the lid, the insert requirements, and the overall gifting or retail direction. Some brands also compare candle box formats with <Link href={categoryHref("rigid-boxes")} className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">rigid boxes</Link> when they want stronger structure and a more elevated reveal for premium collections.
             </>,
           ],
         },
@@ -618,7 +619,7 @@ function buildLongSections(category: Category): LongSection[] {
               Candle packaging has to protect fragile vessels while still supporting a premium product story. The board direction, insert fit, and outer proportions all influence whether custom candle boxes feel polished, practical, and ready for display.
             </>,
             <>
-              Printed candle boxes also benefit from controlled finishing. Foil details, embossing, matte coatings, and restrained color direction can help luxury candle packaging feel more refined on shelf and more memorable in hand. When a lighter secondary format is needed, some brands also compare candle cartons with <Link href="/products/folding-cartons" className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">folding cartons</Link> to keep presentation strong while improving format efficiency.
+              Printed candle boxes also benefit from controlled finishing. Foil details, embossing, matte coatings, and restrained color direction can help luxury candle packaging feel more refined on shelf and more memorable in hand. When a lighter secondary format is needed, some brands also compare candle cartons with <Link href="/products/folding-cartons" className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">folding cartons for lighter secondary formats</Link> to keep presentation strong while improving format efficiency.
             </>,
           ],
         },
@@ -629,10 +630,10 @@ function buildLongSections(category: Category): LongSection[] {
               Candle brands often need packaging that works across several moments at once: boutique retail shelves, gifting, influencer sends, and direct-to-consumer delivery. That means the structure has to feel premium while still remaining commercially practical.
             </>,
             <>
-              Many collections also sit beside adjacent premium product categories, especially beauty and wellness. For that reason, some brands align their candle box direction with <Link href="/products/cosmetic-packaging" className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">cosmetic packaging</Link> so launches, gift sets, and multi-category brand systems feel more consistent.
+              Many collections also sit beside adjacent premium product categories, especially beauty and wellness. For that reason, some brands align their candle box direction with <Link href={categoryHref("cosmetic-boxes")} className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">cosmetic packaging</Link> so launches, gift sets, and multi-category brand systems feel more consistent.
             </>,
             <>
-              Brands shipping candles directly also compare protective formats such as <Link href="/products/mailer-boxes" className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">mailer boxes</Link> when the arrival experience matters as much as the shelf-ready presentation.
+              Brands shipping candles directly also compare protective formats such as <Link href="/products/mailer-boxes" className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">mailer boxes for direct-to-customer shipping</Link> when the arrival experience matters as much as the shelf-ready presentation.
             </>,
           ],
         },
@@ -646,7 +647,7 @@ function buildLongSections(category: Category): LongSection[] {
               Luxury rigid boxes are built for brands that need more than functional packaging. They help shape a stronger first impression, a more considered unboxing sequence, and a clearer sense of product value. For premium collections, gifting programs, and launches, rigid structures are often chosen because they feel substantial, precise, and intentionally made.
             </>,
             <>
-              At ZEEPACK, custom rigid boxes are developed around the product itself, the opening style, and the finish language the brand wants to communicate. Some brands compare them with <Link href="/products/mailer-boxes" className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">mailer boxes</Link> when balancing shipping practicality with presentation, but rigid formats remain the stronger route when premium perception is the priority.
+              At ZEEPACK, custom rigid boxes are developed around the product itself, the opening style, and the finish language the brand wants to communicate. Some brands compare them with <Link href="/products/mailer-boxes" className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">mailer boxes built for transit protection</Link> when balancing shipping practicality with presentation, but rigid formats remain the stronger route when premium perception is the priority.
             </>,
           ],
         },
@@ -657,7 +658,7 @@ function buildLongSections(category: Category): LongSection[] {
               Premium packaging usually works best when structure and finish support one another. Board thickness, wrap material, insert fit, and outer proportions all influence whether the packaging feels polished or overworked. That is why rigid boxes are often used for high-value products where the reveal matters almost as much as the product itself.
             </>,
             <>
-              Rigid structures also allow more controlled finishing details. Foil accents, embossing, debossing, and softer outer textures can create a more elevated result when used with restraint. Brands that need a lighter retail format for supporting SKUs may also pair rigid structures with <Link href="/products/folding-cartons" className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">folding cartons</Link> while keeping a consistent premium design language across the packaging family.
+              Rigid structures also allow more controlled finishing details. Foil accents, embossing, debossing, and softer outer textures can create a more elevated result when used with restraint. Brands that need a lighter retail format for supporting SKUs may also pair rigid structures with <Link href="/products/folding-cartons" className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">folding cartons for supporting retail SKUs</Link> while keeping a consistent premium design language across the packaging family.
             </>,
           ],
         },
@@ -668,10 +669,10 @@ function buildLongSections(category: Category): LongSection[] {
               Luxury rigid boxes work especially well in retail presentation, curated gifting, and premium ecommerce because they hold their shape, support inserts more effectively, and make the product reveal feel cleaner. This makes them a strong choice for collections that need structure, consistency, and stronger perceived value.
             </>,
             <>
-              They are also widely used in beauty, fragrance, candles, jewelry, and launch sets where the packaging itself contributes to the brand experience. Brands building a broader packaging system often extend the same design direction into <Link href="/products/cosmetic-packaging" className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">cosmetic packaging</Link> or supporting layers so the product line feels aligned across retail shelves, gifting moments, and direct-to-consumer delivery.
+              They are also widely used in beauty, fragrance, candles, jewelry, and launch sets where the packaging itself contributes to the brand experience. Brands building a broader packaging system often extend the same design direction into <Link href={categoryHref("cosmetic-boxes")} className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">cosmetic packaging</Link> or supporting layers so the product line feels aligned across retail shelves, gifting moments, and direct-to-consumer delivery.
             </>,
             <>
-              Rigid boxes also pair naturally with <Link href="/products/custom-inserts" className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">custom inserts</Link> when brands need product fit, presentation control, and better support for fragile or premium items.
+              Rigid boxes also pair naturally with <Link href={categoryHref("inserts")} className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">custom inserts</Link> when brands need product fit, presentation control, and better support for fragile or premium items.
             </>,
           ],
         },
@@ -685,7 +686,7 @@ function buildLongSections(category: Category): LongSection[] {
               {category.name} should help a brand feel more consistent across retail, gifting, and shipping touchpoints. The strongest packaging directions usually come from clearer sizing, better structure, and a finish strategy that supports the product rather than overpowering it.
             </>,
             <>
-              At ZEEPACK, each packaging format is shaped around the product, the brand tone, and the way the box or supporting layer should be experienced. Some brands also compare related formats such as <Link href="/products/luxury-rigid-boxes" className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">luxury rigid boxes</Link> when they need stronger structure and a more elevated reveal.
+              At ZEEPACK, each packaging format is shaped around the product, the brand tone, and the way the box or supporting layer should be experienced. Some brands also compare related formats such as <Link href={categoryHref("rigid-boxes")} className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">luxury rigid boxes</Link> when they need stronger structure and a more elevated reveal.
             </>,
           ],
         },
@@ -696,7 +697,7 @@ function buildLongSections(category: Category): LongSection[] {
               Premium packaging works best when structure, print clarity, and material choice all support one another. That balance helps the format feel more polished in hand, more useful in transit, and more aligned with long-term brand perception.
             </>,
             <>
-              Depending on the product and retail context, brands may also compare adjacent structures such as <Link href="/products/folding-cartons" className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">folding cartons</Link> when they want a more efficient secondary format without losing presentation quality.
+              Depending on the product and retail context, brands may also compare adjacent structures such as <Link href="/products/folding-cartons" className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">folding cartons for lighter retail packaging</Link> when they want a more efficient secondary format without losing presentation quality.
             </>,
           ],
         },
@@ -707,7 +708,7 @@ function buildLongSections(category: Category): LongSection[] {
               Many packaging systems need to work across several channels at once, from retail shelves to gifting moments to ecommerce delivery. That makes it important to choose a format that supports both presentation and practical use.
             </>,
             <>
-              Brands often extend the same visual language across neighboring categories, especially when collections include beauty, fragrance, or lifestyle products. In those situations, aligning the packaging direction with <Link href="/products/cosmetic-packaging" className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">cosmetic packaging</Link> or other premium formats can help the overall range feel more consistent.
+              Brands often extend the same visual language across neighboring categories, especially when collections include beauty, fragrance, or lifestyle products. In those situations, aligning the packaging direction with <Link href={categoryHref("cosmetic-boxes")} className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4">cosmetic packaging</Link> or other premium formats can help the overall range feel more consistent.
             </>,
           ],
         },
@@ -771,17 +772,17 @@ function buildUseCases(category: Category): UseCaseItem[] {
   switch (category.slug) {
     case "candle-boxes":
       return [
-        { title: "Retail Candles", href: "/industries/candle-packaging", body: "Useful for candle lines that need a stronger shelf-ready presence and cleaner product story." },
-        { title: "Luxury Candles", href: "/industries/candle-packaging", body: "A strong fit for premium fragrance collections where presentation and perceived value both matter." },
-        { title: "Gift Sets", href: "/industries/food-packaging", body: "Suitable for seasonal gifting, curated bundles, and launch kits that need more structure." },
-        { title: "Ecommerce Packaging", href: "/industries/ecommerce-packaging", body: "Helpful for brands shipping fragile vessels directly and needing a better arrival experience." },
+        { title: "Retail Candles", href: industryHref("candles"), body: "Useful for candle lines that need a stronger shelf-ready presence and cleaner product story." },
+        { title: "Luxury Candles", href: industryHref("candles"), body: "A strong fit for premium fragrance collections where presentation and perceived value both matter." },
+        { title: "Gift Sets", href: industryHref("food"), body: "Suitable for seasonal gifting, curated bundles, and launch kits that need more structure." },
+        { title: "Ecommerce Packaging", href: industryHref("ecommerce"), body: "Helpful for brands shipping fragile vessels directly and needing a better arrival experience." },
       ];
     case "rigid-boxes":
       return [
-        { title: "Cosmetic Packaging", href: "/industries/cosmetic-packaging", body: "Useful for skincare and beauty collections that need premium shelf presence and cleaner product fit." },
-        { title: "Candle Packaging", href: "/industries/candle-packaging", body: "A strong option for candle jars and gift sets where protection and gifting appeal work together." },
-        { title: "Jewelry Packaging", href: "/industries/jewelry-packaging", body: "Ideal for compact premium products that benefit from tactile wraps and more refined presentation." },
-        { title: "Gift Packaging", href: "/industries/food-packaging", body: "Well suited to curated gift sets, seasonal launches, and presentation-led premium packaging." },
+        { title: "Cosmetic Packaging", href: industryHref("cosmetics"), body: "Useful for skincare and beauty collections that need premium shelf presence and cleaner product fit." },
+        { title: "Candle Packaging", href: industryHref("candles"), body: "A strong option for candle jars and gift sets where protection and gifting appeal work together." },
+        { title: "Jewelry Packaging", href: industryHref("jewelry"), body: "Ideal for compact premium products that benefit from tactile wraps and more refined presentation." },
+        { title: "Gift Packaging", href: industryHref("food"), body: "Well suited to curated gift sets, seasonal launches, and presentation-led premium packaging." },
       ];
     default:
       return category.industries.slice(0, 4).map((industry) => ({
@@ -974,24 +975,44 @@ function buildWhyChooseHeading(category: Category) {
   return `Why Choose ${category.name}`;
 }
 
+/**
+ * Industry slugs as they exist in src/data/industries.ts. Keyed by the word we
+ * match on so a miss falls through to a real page rather than a 404 — an
+ * earlier version appended "-packaging" to every one of these, which produced
+ * 171 links to URLs the route never generates.
+ */
+const INDUSTRY_HREF_MATCHES: [test: string[], slug: string][] = [
+  [["cosmetic", "skincare", "wellness"], "cosmetics"],
+  [["candle", "fragrance"], "candles"],
+  [["jewelry"], "jewelry"],
+  [["fashion"], "fashion"],
+  [["food", "gift"], "food"],
+];
+
+const INDUSTRY_FALLBACK_SLUG = "ecommerce";
+
 function mapIndustryToHref(industry: string) {
   const normalized = industry.toLowerCase();
-  if (normalized.includes("cosmetic") || normalized.includes("skincare") || normalized.includes("wellness")) {
-    return "/industries/cosmetic-packaging";
+  const match = INDUSTRY_HREF_MATCHES.find(([tests]) => tests.some((t) => normalized.includes(t)));
+  const slug = match?.[1] ?? INDUSTRY_FALLBACK_SLUG;
+  return industryHref(slug);
+}
+
+/** Resolves against the industries data so a renamed slug fails the build, not the crawl. */
+function industryHref(slug: string) {
+  const industry = industries.find((item) => item.slug === slug);
+  if (!industry) {
+    throw new Error(`industryHref: no industry with slug "${slug}" in src/data/industries.ts`);
   }
-  if (normalized.includes("candle") || normalized.includes("fragrance")) {
-    return "/industries/candle-packaging";
+  return `/industries/${industry.slug}`;
+}
+
+/** Same guarantee for product category links written inline in the prose. */
+function categoryHref(slug: string) {
+  if (!getCategoryBySlug(slug)) {
+    throw new Error(`categoryHref: no category with slug "${slug}" in src/data/categories.ts`);
   }
-  if (normalized.includes("jewelry")) {
-    return "/industries/jewelry-packaging";
-  }
-  if (normalized.includes("fashion")) {
-    return "/industries/fashion-packaging";
-  }
-  if (normalized.includes("food") || normalized.includes("gift")) {
-    return "/industries/food-packaging";
-  }
-  return "/industries/ecommerce-packaging";
+  return `/products/${slug}`;
 }
 
 function pickFeatureIcon(feature: string) {

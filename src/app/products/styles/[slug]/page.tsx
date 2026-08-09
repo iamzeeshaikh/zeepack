@@ -161,7 +161,7 @@ export default async function ProductStylePage({
                 href={`/products/${category.slug}`}
                 className="font-semibold text-[var(--color-primary)] underline decoration-[rgba(198,169,114,0.5)] underline-offset-4"
               >
-                {category.name.toLowerCase()}
+                the full {category.name.toLowerCase()} collection
               </Link>{" "}
               when brands are narrowing structure, finish direction, and product fit.
             </p>

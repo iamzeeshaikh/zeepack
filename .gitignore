@@ -12,3 +12,7 @@ public/ZEE Images/
 public/ZEE Images.zip
 tsconfig.tsbuildinfo
 zeepack-assets-local/
+
+# macOS AppleDouble sidecars created on the exFAT drive
+._*
+.DS_Store

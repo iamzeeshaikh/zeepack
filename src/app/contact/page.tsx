@@ -239,7 +239,7 @@ export default function ContactPage() {
       <a
         href={whatsappHref}
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
         className="fixed bottom-5 right-5 z-40 inline-flex items-center gap-2 rounded-full bg-[#111111] px-5 py-3 text-sm font-semibold text-white shadow-[0_20px_40px_rgba(17,17,17,0.24)] transition hover:-translate-y-0.5 hover:bg-[#1f1f1f]"
       >
