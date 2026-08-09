@@ -10,23 +10,28 @@ import { Button } from "@/components/ui/button";
 import { CartLink } from "@/components/cart/cart-link";
 import { Container } from "@/components/ui/container";
 import { Logo } from "@/components/ui/logo";
-import { industries } from "@/data/industries";
-import { allLocations } from "@/data/locations";
 import { navigation, productMenuGroups, siteConfig } from "@/data/site";
 import { cn } from "@/lib/utils";
 
 type MenuKey = "products" | "industries" | "locations" | null;
 
+/**
+ * The nav only ever renders a name and a slug. Importing @/data/industries and
+ * @/data/locations here pulled both files — 160KB of descriptions, image paths
+ * and highlight copy — into the client bundle of every single page, because
+ * this is a client component. The server derives these two lists instead and
+ * passes them down, so only the ~68 pairs actually rendered cross the wire.
+ */
+export type NavLink = { name: string; slug: string };
+
+export type HeaderProps = {
+  /** Every location with type === "state", in source order. */
+  states: NavLink[];
+  /** name keyed by slug, for the slugs listed in industryGroups. */
+  industryNames: Record<string, string>;
+};
+
 const MENU_CLOSE_DELAY = 180;
-
-// Top states for the mobile drawer (10 most commercially important)
-const mobileLocationLinks = allLocations
-  .filter((l) => l.type === "state")
-  .slice(0, 10)
-  .map((l) => ({ name: l.name, slug: l.slug }));
-
-// All 50 state locations for the desktop dropdown
-const stateLocations = allLocations.filter((l) => l.type === "state");
 
 const featuredProducts = [
   {
@@ -49,8 +54,10 @@ const featuredProducts = [
   },
 ];
 
-export function Header() {
+export function Header({ states, industryNames }: HeaderProps) {
   const pathname = usePathname();
+  // Top states for the mobile drawer (10 most commercially important)
+  const mobileLocationLinks = useMemo(() => states.slice(0, 10), [states]);
   const closeTimerRef = useRef<number | null>(null);
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -136,7 +143,7 @@ export function Header() {
               onClearClose={clearCloseTimer}
               dropdownAlign="left"
             >
-              <IndustriesMenu />
+              <IndustriesMenu industryNames={industryNames} />
             </DesktopMenuTrigger>
 
             <DesktopMenuTrigger
@@ -148,7 +155,7 @@ export function Header() {
               onClose={scheduleCloseMenu}
               onClearClose={clearCloseTimer}
             >
-              <LocationsMenu />
+              <LocationsMenu states={states} />
             </DesktopMenuTrigger>
 
             {primaryNav.slice(1).map((item) => (
@@ -446,8 +453,7 @@ const industryGroups = [
   },
 ];
 
-function IndustriesMenu() {
-  const bySlug = Object.fromEntries(industries.map((i) => [i.slug, i]));
+function IndustriesMenu({ industryNames }: { industryNames: Record<string, string> }) {
 
   return (
     <div className="w-[min(780px,calc(100vw-2rem))] rounded-[28px] border border-[rgba(17,17,17,0.07)] bg-[rgba(255,255,255,0.98)] p-5 shadow-[0_24px_80px_rgba(17,17,17,0.14)] backdrop-blur-2xl">
@@ -484,8 +490,8 @@ function IndustriesMenu() {
             </p>
             <div className="mt-2 space-y-px">
               {group.slugs.map((slug) => {
-                const industry = bySlug[slug];
-                if (!industry) return null;
+                const name = industryNames[slug];
+                if (!name) return null;
                 return (
                   <Link
                     key={slug}
@@ -493,7 +499,7 @@ function IndustriesMenu() {
                     className="group block rounded-[10px] border border-transparent px-2 py-1.5 transition hover:border-[rgba(17,17,17,0.07)] hover:bg-white"
                   >
                     <p className="text-[13px] font-medium leading-5 text-[var(--color-primary)] transition group-hover:text-[var(--color-cta)]">
-                      {industry.name}
+                      {name}
                     </p>
                   </Link>
                 );
@@ -506,7 +512,7 @@ function IndustriesMenu() {
   );
 }
 
-function LocationsMenu() {
+function LocationsMenu({ states }: { states: NavLink[] }) {
   return (
     <div className="w-[min(680px,calc(100vw-2rem))] rounded-[28px] border border-[rgba(17,17,17,0.07)] bg-[rgba(255,255,255,0.98)] p-5 shadow-[0_24px_80px_rgba(17,17,17,0.14)] backdrop-blur-2xl">
       {/* Header strip */}
@@ -532,7 +538,7 @@ function LocationsMenu() {
 
       {/* States grid */}
       <div className="mt-4 grid grid-cols-5 gap-1.5">
-        {stateLocations.map((state) => (
+        {states.map((state) => (
           <Link
             key={state.slug}
             href={`/${state.slug}`}

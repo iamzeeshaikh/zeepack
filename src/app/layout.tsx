@@ -6,6 +6,8 @@ import Script from "next/script";
 import { AnnouncementBar } from "@/components/layout/announcement-bar";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
+import { industries } from "@/data/industries";
+import { allLocations } from "@/data/locations";
 import { CartProvider } from "@/lib/cart/cart-context";
 import {
   buildLocalBusinessSchema,
@@ -65,6 +67,13 @@ export default function RootLayout({
   const localBusinessSchema = buildLocalBusinessSchema();
   const websiteSchema = buildWebsiteSchema();
 
+  // Derived here, in a server component, so @/data/locations (120KB) and
+  // @/data/industries (40KB) stay out of the client bundle. See HeaderProps.
+  const navStates = allLocations
+    .filter((l) => l.type === "state")
+    .map((l) => ({ name: l.name, slug: l.slug }));
+  const navIndustryNames = Object.fromEntries(industries.map((i) => [i.slug, i.name]));
+
   return (
     <html lang="en" className={`${lora.variable} ${mulish.variable}`}>
       <head>
@@ -79,7 +88,7 @@ export default function RootLayout({
       <body>
         <CartProvider>
         <AnnouncementBar />
-        <Header />
+        <Header states={navStates} industryNames={navIndustryNames} />
         <main>{children}</main>
         <Footer />
 
