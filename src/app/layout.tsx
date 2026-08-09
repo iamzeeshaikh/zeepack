@@ -18,8 +18,13 @@ import "./globals.css";
 
 // Webfont fallbacks for the platform stacks in globals.css — without these,
 // Windows/Android render every heading in Times New Roman.
-const lora = Lora({ subsets: ["latin"], variable: "--font-lora", display: "swap" });
-const mulish = Mulish({ subsets: ["latin"], variable: "--font-mulish", display: "swap" });
+// Neither face is preloaded. Both are display:swap, so text paints in the
+// fallback regardless, but next/font preloads by default and the two files
+// (67KB) were landing at High priority next to the render-blocking stylesheet.
+// On Slow 4G that starved the 16KB CSS for 1.8s and dragged FCP to 3.1s. The
+// CSS still references them, so they start as soon as it parses.
+const lora = Lora({ subsets: ["latin"], variable: "--font-lora", display: "swap", preload: false });
+const mulish = Mulish({ subsets: ["latin"], variable: "--font-mulish", display: "swap", preload: false });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://zeepack.co"),
@@ -67,7 +72,7 @@ export default function RootLayout({
             dashboard at chat.zeeops.dev under the `zeepack` site. */}
         <Script
           id="zeeops-chat"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           src="https://chat.zeeops.dev/widget.js?siteId=zeepack"
         />
       </head>
