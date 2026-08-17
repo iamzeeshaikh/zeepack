@@ -20,11 +20,14 @@ export const siteConfig = {
   email: "Info@zeepack.co",
   phone: "(503) 358-0443",
   phoneHref: "tel:+15033580443",
-  address: "2975 Coburn Hollow Road Bloomington, IL 61701 United States",
-  city: "Bloomington",
-  state: "IL",
-  postalCode: "61701",
+  address: "1121 Neshaminy Valley Drive, Bensalem, PA 19020, United States",
+  streetAddress: "1121 Neshaminy Valley Drive",
+  city: "Bensalem",
+  state: "PA",
+  postalCode: "19020",
   country: "US",
+  parentCompany: "ZEE Custom Boxes",
+  parentCompanyUrl: "https://zeecustomboxes.com",
   description:
     "ZEEPACK creates premium custom packaging for modern brands across retail, gifting, and e-commerce with a focus on structure, materials, finishing, and refined presentation.",
 };
@@ -282,7 +285,7 @@ export const contactCards = [
   {
     title: "Address",
     value: siteConfig.address,
-    href: "https://maps.google.com/?q=2975+Coburn+Hollow+Road+Bloomington+IL+61701",
+    href: "https://maps.google.com/?q=1121+Neshaminy+Valley+Drive+Bensalem+PA+19020",
     icon: MapPin,
   },
 ];

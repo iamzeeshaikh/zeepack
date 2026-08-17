@@ -203,7 +203,7 @@ export default function ContactPage() {
           <div className="mt-8 overflow-hidden rounded-[30px] border border-[rgba(17,17,17,0.08)] bg-white shadow-[0_18px_44px_rgba(17,17,17,0.06)]">
             <iframe
               title="ZEEPACK office map"
-              src="https://www.google.com/maps?q=2975%20Coburn%20Hollow%20Road%20Bloomington%2C%20IL%2061701%20United%20States&z=14&output=embed"
+              src="https://www.google.com/maps?q=1121%20Neshaminy%20Valley%20Drive%20Bensalem%2C%20PA%2019020%20United%20States&z=14&output=embed"
               className="h-[360px] w-full border-0"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

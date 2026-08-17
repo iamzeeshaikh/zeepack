@@ -120,6 +120,18 @@ export function Footer() {
                 <MapPin className="mt-0.5 size-4 shrink-0 text-[var(--color-gold)]" />
                 <span>{siteConfig.address}</span>
               </div>
+              <p className="text-[12px] text-white/45">
+                {siteConfig.name} is a brand of{" "}
+                <a
+                  href={siteConfig.parentCompanyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline decoration-white/25 underline-offset-2 transition hover:text-[var(--color-gold-strong)]"
+                >
+                  {siteConfig.parentCompany}
+                </a>
+                .
+              </p>
             </div>
 
             {/* Response time badge */}

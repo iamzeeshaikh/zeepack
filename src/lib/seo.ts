@@ -88,7 +88,7 @@ export function buildOrganizationSchema() {
     description: siteConfig.description,
     address: {
       "@type": "PostalAddress",
-      streetAddress: "2975 Coburn Hollow Road",
+      streetAddress: siteConfig.streetAddress,
       addressLocality: siteConfig.city,
       addressRegion: siteConfig.state,
       postalCode: siteConfig.postalCode,
@@ -117,6 +117,25 @@ export function buildOrganizationSchema() {
       name: "Custom Packaging Products",
       url: `${siteConfig.siteUrl}/products`,
     },
+    parentOrganization: {
+      "@type": "Organization",
+      name: siteConfig.parentCompany,
+      url: siteConfig.parentCompanyUrl,
+      telephone: siteConfig.phone,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: siteConfig.streetAddress,
+        addressLocality: siteConfig.city,
+        addressRegion: siteConfig.state,
+        postalCode: siteConfig.postalCode,
+        addressCountry: siteConfig.country,
+      },
+      sameAs: [
+        "https://www.facebook.com/zeecustomboxes/",
+        "https://www.instagram.com/zeecustomboxes/",
+        "https://www.linkedin.com/company/85652701",
+      ],
+    },
   };
 }
 
@@ -143,7 +162,7 @@ export function buildLocalBusinessSchema() {
     priceRange: "$$",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "2975 Coburn Hollow Road",
+      streetAddress: siteConfig.streetAddress,
       addressLocality: siteConfig.city,
       addressRegion: siteConfig.state,
       postalCode: siteConfig.postalCode,
