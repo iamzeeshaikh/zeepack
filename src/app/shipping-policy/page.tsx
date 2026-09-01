@@ -119,8 +119,8 @@ export default function ShippingPolicyPage() {
                 Info@zeepack.co
               </a>{" "}
               or call{" "}
-              <a href="tel:+15033580443" className="text-[var(--color-primary)] underline underline-offset-4">
-                (503) 358-0443
+              <a href="tel:+15034614788" className="text-[var(--color-primary)] underline underline-offset-4">
+                (503) 461-4788
               </a>.
             </p>
           </div>

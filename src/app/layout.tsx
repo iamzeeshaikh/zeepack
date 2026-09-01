@@ -95,7 +95,7 @@ export default function RootLayout({
 
         {/* WhatsApp floating button */}
         <a
-          href="https://api.whatsapp.com/send/?phone=15033580443&text=Hi+ZEEPACK!+I+need+more+info+about+custom+packaging.&type=phone_number&app_absent=0"
+          href="https://api.whatsapp.com/send/?phone=15034614788&text=Hi+ZEEPACK!+I+need+more+info+about+custom+packaging.&type=phone_number&app_absent=0"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Chat with ZEEPACK on WhatsApp"
@@ -109,7 +109,7 @@ export default function RootLayout({
         <div className="fixed inset-x-0 bottom-0 z-40 border-t border-[rgba(17,17,17,0.08)] bg-white/97 p-3 shadow-[0_-16px_32px_rgba(17,17,17,0.09)] backdrop-blur-xl sm:hidden">
           <div className="mx-auto flex max-w-7xl gap-3 px-2">
             <a
-              href="tel:+15033580443"
+              href="tel:+15034614788"
               className="flex-1 rounded-full border border-[rgba(17,17,17,0.09)] bg-[var(--color-shell)] px-4 py-3 text-center text-sm font-semibold text-[var(--color-primary)]"
             >
               Call Now

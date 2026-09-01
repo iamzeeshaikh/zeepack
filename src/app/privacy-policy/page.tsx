@@ -27,8 +27,8 @@ export default function PrivacyPolicyPage() {
                 Info@zeepack.co
               </a>{" "}
               and our phone number is{" "}
-              <a href="tel:+15033580443" className="text-[var(--color-primary)] underline underline-offset-4">
-                (503) 358-0443
+              <a href="tel:+15034614788" className="text-[var(--color-primary)] underline underline-offset-4">
+                (503) 461-4788
               </a>.
             </p>
           </div>
@@ -166,8 +166,8 @@ export default function PrivacyPolicyPage() {
                 Info@zeepack.co
               </a>{" "}
               or call{" "}
-              <a href="tel:+15033580443" className="text-[var(--color-primary)] underline underline-offset-4">
-                (503) 358-0443
+              <a href="tel:+15034614788" className="text-[var(--color-primary)] underline underline-offset-4">
+                (503) 461-4788
               </a>.
             </p>
           </div>

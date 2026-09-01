@@ -588,7 +588,7 @@ export function PackagingConfigurator() {
                       {isSubmitting ? "Sending…" : "Submit Quote Request"}
                     </button>
                     <a
-                      href="tel:+15033580443"
+                      href="tel:+15034614788"
                       className="flex items-center justify-center gap-2 rounded-[14px] border border-[rgba(17,17,17,0.12)] px-5 py-3.5 text-sm font-semibold text-[var(--color-primary)] transition-colors hover:border-[var(--color-cta)] hover:text-[var(--color-cta)]"
                     >
                       <PhoneCall className="h-4 w-4" />
@@ -699,7 +699,7 @@ export function PackagingConfigurator() {
                   Get a Quote
                 </button>
                 <a
-                  href="tel:+15033580443"
+                  href="tel:+15034614788"
                   className="mt-2.5 flex w-full items-center justify-center gap-2 rounded-[14px] border border-[rgba(17,17,17,0.1)] px-4 py-3 text-sm font-semibold text-[var(--color-primary)] transition-colors hover:border-[var(--color-cta)] hover:text-[var(--color-cta)]"
                 >
                   <PhoneCall className="h-3.5 w-3.5" />
@@ -738,7 +738,7 @@ export function PackagingConfigurator() {
             Get a Quote for This Configuration
           </button>
           <a
-            href="tel:+15033580443"
+            href="tel:+15034614788"
             className="flex w-full items-center justify-center gap-2 rounded-[16px] border border-[rgba(17,17,17,0.12)] px-6 py-3.5 text-sm font-semibold text-[var(--color-primary)] transition-colors hover:border-[var(--color-cta)]"
           >
             <PhoneCall className="h-4 w-4" />
