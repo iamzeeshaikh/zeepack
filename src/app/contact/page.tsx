@@ -48,7 +48,7 @@ export default function ContactPage() {
       telephone: siteConfig.phone,
     },
   };
-  const whatsappHref = "https://wa.me/15033580443";
+  const whatsappHref = "https://wa.me/15034614788";
 
   return (
     <>
