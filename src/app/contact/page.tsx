@@ -48,7 +48,7 @@ export default function ContactPage() {
       telephone: siteConfig.phone,
     },
   };
-  const whatsappHref = "https://wa.me/15034614788";
+  const whatsappHref = "https://wa.me/15034614788?text=" + encodeURIComponent("Hi ZEEPACK! I need more info about custom packaging. https://zeepack.co/");
 
   return (
     <>

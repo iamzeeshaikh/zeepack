@@ -95,7 +95,7 @@ export default function RootLayout({
 
         {/* WhatsApp floating button */}
         <a
-          href="https://api.whatsapp.com/send/?phone=15034614788&text=Hi+ZEEPACK!+I+need+more+info+about+custom+packaging.&type=phone_number&app_absent=0"
+          href="https://api.whatsapp.com/send/?phone=15034614788&text=Hi+ZEEPACK!+I+need+more+info+about+custom+packaging.+https%3A%2F%2Fzeepack.co%2F&type=phone_number&app_absent=0"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Chat with ZEEPACK on WhatsApp"
